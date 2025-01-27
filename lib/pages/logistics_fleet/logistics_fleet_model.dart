@@ -2,7 +2,6 @@ import '/components_2/fleet/fleet_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
-import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'logistics_fleet_widget.dart' show LogisticsFleetWidget;
 import 'package:expandable/expandable.dart';
@@ -43,9 +42,6 @@ class LogisticsFleetModel extends FlutterFlowModel<LogisticsFleetWidget> {
 
   // Model for Fleet component.
   late FleetModel fleetModel4;
-  // State field(s) for GoogleMap widget.
-  LatLng? googleMapsCenter;
-  final googleMapsController = Completer<GoogleMapController>();
   // Model for Footer component.
   late FooterModel footerModel;
   // Model for SearchBar component.

@@ -3,7 +3,6 @@ import '/components_2/fleet/fleet_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
-import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:styled_divider/styled_divider.dart';
@@ -78,7 +77,6 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        resizeToAvoidBottomInset: false,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
@@ -1379,39 +1377,11 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                               ],
                                             ),
                                           ),
-                                          Expanded(
+                                          const Expanded(
                                             flex: 7,
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Expanded(
-                                                  child: FlutterFlowGoogleMap(
-                                                    controller: _model
-                                                        .googleMapsController,
-                                                    onCameraIdle: (latLng) =>
-                                                        _model.googleMapsCenter =
-                                                            latLng,
-                                                    initialLocation: _model
-                                                            .googleMapsCenter ??=
-                                                        const LatLng(13.106061,
-                                                            -59.613158),
-                                                    markerColor:
-                                                        GoogleMarkerColor.rose,
-                                                    mapType: MapType.normal,
-                                                    style:
-                                                        GoogleMapStyle.standard,
-                                                    initialZoom: 14.0,
-                                                    allowInteraction: true,
-                                                    allowZoom: true,
-                                                    showZoomControls: false,
-                                                    showLocation: true,
-                                                    showCompass: false,
-                                                    showMapToolbar: false,
-                                                    showTraffic: false,
-                                                    centerMapOnMarkerTap: true,
-                                                  ),
-                                                ),
-                                              ],
+                                              children: [],
                                             ),
                                           ),
                                         ],

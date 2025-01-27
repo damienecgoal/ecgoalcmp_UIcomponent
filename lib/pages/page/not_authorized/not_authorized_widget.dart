@@ -1,0 +1,391 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'not_authorized_model.dart';
+export 'not_authorized_model.dart';
+
+class NotAuthorizedWidget extends StatefulWidget {
+  const NotAuthorizedWidget({super.key});
+
+  @override
+  State<NotAuthorizedWidget> createState() => _NotAuthorizedWidgetState();
+}
+
+class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
+  late NotAuthorizedModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => NotAuthorizedModel());
+
+    _model.textController ??= TextEditingController();
+    _model.textFieldFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        body: SafeArea(
+          top: true,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              if (responsiveVisibility(
+                context: context,
+                phone: false,
+                tablet: false,
+                tabletLandscape: false,
+              ))
+                Padding(
+                  padding: EdgeInsets.all(60.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'You are not authorized!',
+                        style:
+                            FlutterFlowTheme.of(context).headlineLarge.override(
+                                  fontFamily: 'Public Sans',
+                                  letterSpacing: 0.0,
+                                ),
+                      ),
+                      Text(
+                        'You do not have permission to view this page using the credentials that you have provided while login.\nPlease contact your site administrator.',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily: 'Public Sans',
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryTitle,
+                              letterSpacing: 0.0,
+                              lineHeight: 1.4,
+                            ),
+                      ),
+                      MouseRegion(
+                        opaque: false,
+                        cursor: MouseCursor.defer ?? MouseCursor.defer,
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 0.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(0.0),
+                            child: Container(
+                              width: 380.0,
+                              height: 44.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(0.0),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                        'Analytics',
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.fade,
+                                          ),
+                                        },
+                                      );
+                                    },
+                                    text: 'Back to home',
+                                    options: FFButtonOptions(
+                                      height: 60.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Public Sans',
+                                            color: Colors.white,
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
+                                          ),
+                                      elevation: 0.0,
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        onEnter: ((event) async {
+                          safeSetState(() => _model.mouseRegionHovered = true);
+                        }),
+                        onExit: ((event) async {
+                          safeSetState(() => _model.mouseRegionHovered = false);
+                        }),
+                      ),
+                    ].divide(SizedBox(height: 14.0)),
+                  ),
+                ),
+              if (responsiveVisibility(
+                context: context,
+                tablet: false,
+                tabletLandscape: false,
+                desktop: false,
+              ))
+                Padding(
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'We are launching soon',
+                        style:
+                            FlutterFlowTheme.of(context).headlineLarge.override(
+                                  fontFamily: 'Public Sans',
+                                  letterSpacing: 0.0,
+                                ),
+                      ),
+                      Text(
+                        'We\'re creating something awesome. Please subscribe to get notified when it\'s ready!',
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily: 'Public Sans',
+                              letterSpacing: 0.0,
+                            ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(0.0),
+                          child: Container(
+                            width: 380.0,
+                            height: 44.0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(0.0),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: TextFormField(
+                                    controller: _model.textController,
+                                    focusNode: _model.textFieldFocusNode,
+                                    autofocus: true,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      labelStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Public Sans',
+                                            letterSpacing: 0.0,
+                                          ),
+                                      hintText: 'Email',
+                                      hintStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Public Sans',
+                                            letterSpacing: 0.0,
+                                          ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .lineColor,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(12.0),
+                                          bottomRight: Radius.circular(0.0),
+                                          topLeft: Radius.circular(12.0),
+                                          topRight: Radius.circular(0.0),
+                                        ),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(12.0),
+                                          bottomRight: Radius.circular(0.0),
+                                          topLeft: Radius.circular(12.0),
+                                          topRight: Radius.circular(0.0),
+                                        ),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(12.0),
+                                          bottomRight: Radius.circular(0.0),
+                                          topLeft: Radius.circular(12.0),
+                                          topRight: Radius.circular(0.0),
+                                        ),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(12.0),
+                                          bottomRight: Radius.circular(0.0),
+                                          topLeft: Radius.circular(12.0),
+                                          topRight: Radius.circular(0.0),
+                                        ),
+                                      ),
+                                      filled: true,
+                                      fillColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      contentPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              16.0, 0.0, 16.0, 0.0),
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Public Sans',
+                                          letterSpacing: 0.0,
+                                        ),
+                                    validator: _model.textControllerValidator
+                                        .asValidator(context),
+                                  ),
+                                ),
+                                FFButtonWidget(
+                                  onPressed: () {
+                                    print('Button pressed ...');
+                                  },
+                                  text: 'Notify',
+                                  options: FFButtonOptions(
+                                    height: 60.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        24.0, 0.0, 24.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily: 'Public Sans',
+                                          color: Colors.white,
+                                          fontSize: 14.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                    elevation: 0.0,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(12.0),
+                                      topLeft: Radius.circular(0.0),
+                                      topRight: Radius.circular(12.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ].divide(SizedBox(height: 14.0)),
+                  ),
+                ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  child: Stack(
+                    alignment: AlignmentDirectional(0.0, 1.0),
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          'assets/images/bg-shape-image-dark.png',
+                          width: double.infinity,
+                          height: 260.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      if (responsiveVisibility(
+                        context: context,
+                        phone: false,
+                        tablet: false,
+                        tabletLandscape: false,
+                      ))
+                        Align(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 80.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                'assets/images/page-misc-you-are-not-authorized.png',
+                                height: 600.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                      if (responsiveVisibility(
+                        context: context,
+                        tablet: false,
+                        tabletLandscape: false,
+                        desktop: false,
+                      ))
+                        Align(
+                          alignment: AlignmentDirectional(0.0, -1.0),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 40.0, 0.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                'assets/images/page-misc-launching-soon.png',
+                                height: 400.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

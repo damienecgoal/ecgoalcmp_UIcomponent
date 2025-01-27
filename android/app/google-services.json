@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "495813636757",
+    "project_id": "metronic-2a9tmj",
+    "storage_bucket": "metronic-2a9tmj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495813636757:android:b75cb5ec0006416eaa619c",
+        "android_client_info": {
+          "package_name": "com.metronic.dashboard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZeCCOZNO18p6i8KvOsEVCxp4HSX6Yr28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495813636757:android:fba308408a438303aa619c",
+        "android_client_info": {
+          "package_name": "com.nexium.dashboard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZeCCOZNO18p6i8KvOsEVCxp4HSX6Yr28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

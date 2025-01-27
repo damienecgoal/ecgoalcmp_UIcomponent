@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyA2DwH5yrDTuKDgwKvl-omjJSE_8LoU5kI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>495813636757</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nexium.dashboard</string>
+	<key>PROJECT_ID</key>
+	<string>metronic-2a9tmj</string>
+	<key>STORAGE_BUCKET</key>
+	<string>metronic-2a9tmj.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:495813636757:ios:789133bff6f33a8baa619c</string>
+</dict>
+</plist>

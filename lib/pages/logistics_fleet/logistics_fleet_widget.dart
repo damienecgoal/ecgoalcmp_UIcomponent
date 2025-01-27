@@ -6,13 +6,10 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'logistics_fleet_model.dart';
@@ -43,7 +40,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -92,25 +89,25 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 60.0),
                                     child: Container(
                                       width: double.infinity,
@@ -118,7 +115,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -143,7 +140,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 24.0, 0.0, 0.0),
                                                   child: Text(
@@ -164,7 +161,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 20.0),
                                                     child:
@@ -175,7 +172,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -189,7 +186,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                 Container(
                                                                   width: double
                                                                       .infinity,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x00000000),
                                                                   child:
                                                                       ExpandableNotifier(
@@ -206,7 +203,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                             () =>
                                                                                 safeSetState(() {}),
                                                                         child:
-                                                                            FleetWidget(
+                                                                            const FleetWidget(
                                                                           pin:
                                                                               'VOL-342808',
                                                                           location:
@@ -227,7 +224,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                       ),
                                                                       expanded:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             20.0,
                                                                             0.0,
@@ -273,15 +270,15 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                   animateFromLastPercent: true,
                                                                                   progressColor: FlutterFlowTheme.of(context).primary,
                                                                                   backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                                                                                  barRadius: Radius.circular(50.0),
+                                                                                  barRadius: const Radius.circular(50.0),
                                                                                   padding: EdgeInsets.zero,
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                             Stack(
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -311,7 +308,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -342,10 +339,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -357,7 +354,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -388,10 +385,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -403,7 +400,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -434,16 +431,16 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 18.0)),
+                                                                                  ].divide(const SizedBox(height: 18.0)),
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                          ].divide(SizedBox(height: 24.0)),
+                                                                          ].divide(const SizedBox(height: 24.0)),
                                                                         ),
                                                                       ),
                                                                       theme:
@@ -475,7 +472,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -489,7 +486,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                 Container(
                                                                   width: double
                                                                       .infinity,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x00000000),
                                                                   child:
                                                                       ExpandableNotifier(
@@ -506,7 +503,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                             () =>
                                                                                 safeSetState(() {}),
                                                                         child:
-                                                                            FleetWidget(
+                                                                            const FleetWidget(
                                                                           pin:
                                                                               'VOL-954784',
                                                                           location:
@@ -527,7 +524,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                       ),
                                                                       expanded:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             20.0,
                                                                             0.0,
@@ -573,15 +570,15 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                   animateFromLastPercent: true,
                                                                                   progressColor: FlutterFlowTheme.of(context).primary,
                                                                                   backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                                                                                  barRadius: Radius.circular(50.0),
+                                                                                  barRadius: const Radius.circular(50.0),
                                                                                   padding: EdgeInsets.zero,
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                             Stack(
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -611,7 +608,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -642,10 +639,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -657,7 +654,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -688,10 +685,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -703,7 +700,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -734,16 +731,16 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 18.0)),
+                                                                                  ].divide(const SizedBox(height: 18.0)),
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                          ].divide(SizedBox(height: 24.0)),
+                                                                          ].divide(const SizedBox(height: 24.0)),
                                                                         ),
                                                                       ),
                                                                       theme:
@@ -775,7 +772,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -789,7 +786,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                 Container(
                                                                   width: double
                                                                       .infinity,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x00000000),
                                                                   child:
                                                                       ExpandableNotifier(
@@ -806,7 +803,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                             () =>
                                                                                 safeSetState(() {}),
                                                                         child:
-                                                                            FleetWidget(
+                                                                            const FleetWidget(
                                                                           pin:
                                                                               'VOL-342808',
                                                                           location:
@@ -827,7 +824,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                       ),
                                                                       expanded:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             20.0,
                                                                             0.0,
@@ -873,15 +870,15 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                   animateFromLastPercent: true,
                                                                                   progressColor: FlutterFlowTheme.of(context).primary,
                                                                                   backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                                                                                  barRadius: Radius.circular(50.0),
+                                                                                  barRadius: const Radius.circular(50.0),
                                                                                   padding: EdgeInsets.zero,
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                             Stack(
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -911,7 +908,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -942,10 +939,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -957,7 +954,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -988,10 +985,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -1003,7 +1000,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1034,16 +1031,16 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 18.0)),
+                                                                                  ].divide(const SizedBox(height: 18.0)),
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                          ].divide(SizedBox(height: 24.0)),
+                                                                          ].divide(const SizedBox(height: 24.0)),
                                                                         ),
                                                                       ),
                                                                       theme:
@@ -1075,7 +1072,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1089,7 +1086,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                 Container(
                                                                   width: double
                                                                       .infinity,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x00000000),
                                                                   child:
                                                                       ExpandableNotifier(
@@ -1106,7 +1103,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                             () =>
                                                                                 safeSetState(() {}),
                                                                         child:
-                                                                            FleetWidget(
+                                                                            const FleetWidget(
                                                                           pin:
                                                                               'VOL-343908',
                                                                           location:
@@ -1127,7 +1124,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                       ),
                                                                       expanded:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             20.0,
                                                                             0.0,
@@ -1173,15 +1170,15 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                   animateFromLastPercent: true,
                                                                                   progressColor: FlutterFlowTheme.of(context).primary,
                                                                                   backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                                                                                  barRadius: Radius.circular(50.0),
+                                                                                  barRadius: const Radius.circular(50.0),
                                                                                   padding: EdgeInsets.zero,
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                             Stack(
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1211,7 +1208,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1242,10 +1239,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -1257,7 +1254,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1288,10 +1285,10 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -1303,7 +1300,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                           size: 22.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1334,16 +1331,16 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 16.0)),
+                                                                                      ].divide(const SizedBox(width: 16.0)),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 18.0)),
+                                                                                  ].divide(const SizedBox(height: 18.0)),
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                          ].divide(SizedBox(height: 24.0)),
+                                                                          ].divide(const SizedBox(height: 24.0)),
                                                                         ),
                                                                       ),
                                                                       theme:
@@ -1373,7 +1370,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 32.0)),
                                                       ),
                                                     ),
@@ -1396,7 +1393,7 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                                                             latLng,
                                                     initialLocation: _model
                                                             .googleMapsCenter ??=
-                                                        LatLng(13.106061,
+                                                        const LatLng(13.106061,
                                                             -59.613158),
                                                     markerColor:
                                                         GoogleMarkerColor.rose,
@@ -1425,25 +1422,25 @@ class _LogisticsFleetWidgetState extends State<LogisticsFleetWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 114.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 114.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

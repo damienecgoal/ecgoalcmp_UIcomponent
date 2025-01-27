@@ -1,13 +1,9 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'verify_email_model.dart';
 export 'verify_email_model.dart';
 
@@ -51,11 +47,11 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Stack(
               children: [
                 Align(
-                  alignment: AlignmentDirectional(-0.26, -0.5),
+                  alignment: const AlignmentDirectional(-0.26, -0.5),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: SvgPicture.asset(
@@ -65,7 +61,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.31, 0.46),
+                  alignment: const AlignmentDirectional(0.31, 0.46),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: SvgPicture.asset(
@@ -75,15 +71,15 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     child: Container(
                       width: 460.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 12.0,
                             color: Color(0x33000000),
@@ -96,7 +92,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(40.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -148,7 +144,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                                         lineHeight: 1.5,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
                             Form(
                               key: _model.formKey,
@@ -168,10 +164,10 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                                     options: FFButtonOptions(
                                       width: double.infinity,
                                       height: 44.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -183,7 +179,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 2.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -191,7 +187,7 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -201,13 +197,13 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                                         Expanded(
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: RichText(
                                               textScaler: MediaQuery.of(context)
                                                   .textScaler,
                                               text: TextSpan(
                                                 children: [
-                                                  TextSpan(
+                                                  const TextSpan(
                                                     text:
                                                         'Didn\'t get the mail?  ',
                                                     style: TextStyle(
@@ -240,10 +236,10 @@ class _VerifyEmailWidgetState extends State<VerifyEmailWidget> {
                                       ],
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 16.0)),
+                                ].divide(const SizedBox(height: 16.0)),
                               ),
                             ),
-                          ].divide(SizedBox(height: 28.0)),
+                          ].divide(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),

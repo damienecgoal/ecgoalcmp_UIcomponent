@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'lason_video_model.dart';
 export 'lason_video_model.dart';
 
@@ -48,7 +45,7 @@ class _LasonVideoWidgetState extends State<LasonVideoWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -82,7 +79,7 @@ class _LasonVideoWidgetState extends State<LasonVideoWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.topic,
+                  widget.topic,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,7 +91,7 @@ class _LasonVideoWidgetState extends State<LasonVideoWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.time,
+                  widget.time,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -104,9 +101,9 @@ class _LasonVideoWidgetState extends State<LasonVideoWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(height: 6.0)),
+            ].divide(const SizedBox(height: 6.0)),
           ),
-        ].divide(SizedBox(width: 12.0)),
+        ].divide(const SizedBox(width: 12.0)),
       ),
     );
   }

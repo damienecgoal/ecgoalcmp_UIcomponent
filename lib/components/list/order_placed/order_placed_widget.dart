@@ -2,11 +2,8 @@ import '/components/nodal/order_list_nodal/order_list_nodal_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'order_placed_model.dart';
 export 'order_placed_model.dart';
@@ -60,12 +57,12 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 20.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 20.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -103,7 +100,7 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.id,
+                          widget.id,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -126,7 +123,7 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.date,
+                          widget.date,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -152,9 +149,9 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.status!,
-                          titleColor: widget!.statusColor!,
-                          bgColor: widget!.statusBG!,
+                          title: widget.status!,
+                          titleColor: widget.statusColor!,
+                          bgColor: widget.statusBG!,
                         ),
                       ),
                     ],
@@ -169,7 +166,7 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.spent,
+                          widget.spent,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -201,12 +198,12 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
                               context: context,
                               isGlobal: false,
                               avoidOverflow: false,
-                              targetAnchor: AlignmentDirectional(0.0, 2.0)
+                              targetAnchor: const AlignmentDirectional(0.0, 2.0)
                                   .resolve(Directionality.of(context)),
-                              followerAnchor: AlignmentDirectional(0.0, 0.0)
+                              followerAnchor: const AlignmentDirectional(0.0, 0.0)
                                   .resolve(Directionality.of(context)),
                               builder: (dialogContext) {
-                                return Material(
+                                return const Material(
                                   color: Colors.transparent,
                                   child: WebViewAware(
                                     child: OrderListNodalWidget(),
@@ -222,10 +219,10 @@ class _OrderPlacedWidgetState extends State<OrderPlacedWidget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 6.0)),
+                    ].divide(const SizedBox(width: 6.0)),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

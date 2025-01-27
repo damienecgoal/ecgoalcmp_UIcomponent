@@ -19,12 +19,10 @@ import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'customer_details_model.dart';
@@ -55,7 +53,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -116,19 +114,19 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -141,7 +139,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                 clipBehavior: Clip.none,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -258,7 +256,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 8.0)),
+                                        ].divide(const SizedBox(height: 8.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -269,7 +267,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                               onPressed: () async {
                                                 showDialog(
                                                   barrierColor:
-                                                      Color(0x34000000),
+                                                      const Color(0x34000000),
                                                   context: context,
                                                   builder: (dialogContext) {
                                                     return Dialog(
@@ -279,7 +277,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -296,7 +294,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                 ?.unfocus();
                                                           },
                                                           child:
-                                                              WarningDeleteWidget(),
+                                                              const WarningDeleteWidget(),
                                                         ),
                                                       ),
                                                     );
@@ -306,14 +304,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                               text: 'Delete Customer',
                                               options: FFButtonOptions(
                                                 height: 40.0,
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color: Color(0x34EA5455),
+                                                color: const Color(0x34EA5455),
                                                 textStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .titleSmall
@@ -326,7 +324,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                                 elevation: 0.0,
-                                                borderSide: BorderSide(
+                                                borderSide: const BorderSide(
                                                   color: Colors.transparent,
                                                   width: 0.0,
                                                 ),
@@ -335,12 +333,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 16.0)),
+                                        ].divide(const SizedBox(width: 16.0)),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -358,7 +356,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -374,7 +372,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -384,7 +382,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -410,7 +408,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
@@ -449,7 +447,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 12.0)),
                                                         ),
                                                       ),
@@ -476,7 +474,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     .primary,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                               title: '184',
                                                               method: 'Orders',
@@ -498,7 +496,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     .primary,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                               title: '\$12,378',
                                                               method: 'Spent',
@@ -577,7 +575,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
                                                           Row(
@@ -619,7 +617,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
                                                           Row(
@@ -658,11 +656,11 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       FlutterFlowTheme.of(
                                                                               context)
                                                                           .success,
-                                                                  bgColor: Color(
+                                                                  bgColor: const Color(
                                                                       0x3428C76F),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
                                                           Row(
@@ -704,7 +702,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
                                                           Row(
@@ -746,10 +744,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 18.0)),
                                                       ),
                                                       Builder(
@@ -757,7 +755,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             FFButtonWidget(
                                                           onPressed: () async {
                                                             showDialog(
-                                                              barrierColor: Color(
+                                                              barrierColor: const Color(
                                                                   0x34000000),
                                                               context: context,
                                                               builder:
@@ -770,7 +768,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                   backgroundColor:
                                                                       Colors
                                                                           .transparent,
-                                                                  alignment: AlignmentDirectional(
+                                                                  alignment: const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -790,7 +788,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          EditUserInformationWidget(),
+                                                                          const EditUserInformationWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -802,14 +800,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               FFButtonOptions(
                                                             height: 40.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -832,7 +830,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -845,9 +843,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                         ),
                                                       ),
                                                     ]
-                                                        .divide(SizedBox(
+                                                        .divide(const SizedBox(
                                                             height: 28.0))
-                                                        .addToEnd(SizedBox(
+                                                        .addToEnd(const SizedBox(
                                                             height: 8.0)),
                                                   ),
                                                 ),
@@ -855,7 +853,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                               Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -868,15 +866,15 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                   ],
                                                   gradient: LinearGradient(
                                                     colors: [
-                                                      Color(0xFFB9B3F8),
+                                                      const Color(0xFFB9B3F8),
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .primary
                                                     ],
-                                                    stops: [0.0, 1.0],
-                                                    begin: AlignmentDirectional(
+                                                    stops: const [0.0, 1.0],
+                                                    begin: const AlignmentDirectional(
                                                         1.0, -1.0),
-                                                    end: AlignmentDirectional(
+                                                    end: const AlignmentDirectional(
                                                         -1.0, 1.0),
                                                   ),
                                                   borderRadius:
@@ -884,7 +882,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -894,7 +892,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     12.0,
@@ -959,7 +957,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               1.4,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         20.0)),
                                                               ),
@@ -986,7 +984,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             FFButtonWidget(
                                                           onPressed: () async {
                                                             showDialog(
-                                                              barrierColor: Color(
+                                                              barrierColor: const Color(
                                                                   0x34000000),
                                                               context: context,
                                                               builder:
@@ -999,7 +997,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                   backgroundColor:
                                                                       Colors
                                                                           .transparent,
-                                                                  alignment: AlignmentDirectional(
+                                                                  alignment: const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -1019,7 +1017,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          UpgradePlanWidget(),
+                                                                          const UpgradePlanWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -1034,14 +1032,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                 double.infinity,
                                                             height: 40.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1063,7 +1061,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -1080,14 +1078,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                         ),
                                                       ),
                                                     ]
-                                                        .divide(SizedBox(
+                                                        .divide(const SizedBox(
                                                             height: 32.0))
-                                                        .addToEnd(SizedBox(
+                                                        .addToEnd(const SizedBox(
                                                             height: 8.0)),
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 28.0)),
+                                            ].divide(const SizedBox(height: 28.0)),
                                           ),
                                         ),
                                         Expanded(
@@ -1104,6 +1102,16 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered1 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered1 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -1140,7 +1148,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -1156,7 +1164,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered1!
+                                                                  _model.mouseRegionHovered1
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
@@ -1179,7 +1187,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered1!
+                                                                        _model.mouseRegionHovered1
                                                                             ? FlutterFlowTheme.of(context).primary
                                                                             : FlutterFlowTheme.of(context).primaryText,
                                                                         FlutterFlowTheme.of(context)
@@ -1194,27 +1202,27 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered1 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered1 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered2 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered2 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -1251,7 +1259,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -1267,7 +1275,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered2!
+                                                                  _model.mouseRegionHovered2
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
@@ -1290,7 +1298,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered2!
+                                                                        _model.mouseRegionHovered2
                                                                             ? FlutterFlowTheme.of(context).primary
                                                                             : FlutterFlowTheme.of(context).primaryText,
                                                                         FlutterFlowTheme.of(context)
@@ -1305,27 +1313,27 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered2 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered2 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered3 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered3 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -1362,7 +1370,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -1379,7 +1387,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered3!
+                                                                  _model.mouseRegionHovered3
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
@@ -1402,7 +1410,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered3!
+                                                                        _model.mouseRegionHovered3
                                                                             ? FlutterFlowTheme.of(context).primary
                                                                             : FlutterFlowTheme.of(context).primaryText,
                                                                         FlutterFlowTheme.of(context)
@@ -1417,27 +1425,27 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered3 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered3 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered4 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered4 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -1474,7 +1482,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -1490,7 +1498,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered4!
+                                                                  _model.mouseRegionHovered4
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
@@ -1513,7 +1521,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered4!
+                                                                        _model.mouseRegionHovered4
                                                                             ? FlutterFlowTheme.of(context).primary
                                                                             : FlutterFlowTheme.of(context).primaryText,
                                                                         FlutterFlowTheme.of(context)
@@ -1528,22 +1536,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered4 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered4 =
-                                                          false);
-                                                    }),
                                                   ),
                                                 ],
                                               ),
@@ -1553,7 +1551,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                       'Security') {
                                                     return Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -1571,7 +1569,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -1593,7 +1591,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(
                                                                           20.0),
                                                               child: Column(
@@ -1623,7 +1621,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                         .infinity,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x34FF9F43),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -1632,7 +1630,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          EdgeInsets.all(
+                                                                          const EdgeInsets.all(
                                                                               16.0),
                                                                       child:
                                                                           Column(
@@ -1662,7 +1660,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   fontWeight: FontWeight.w500,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 8.0)),
+                                                                        ].divide(const SizedBox(height: 8.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -1692,6 +1690,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             MouseRegion(
                                                                               opaque: false,
                                                                               cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                              onEnter: ((event) async {
+                                                                                safeSetState(() => _model.mouseRegionHovered5 = true);
+                                                                              }),
+                                                                              onExit: ((event) async {
+                                                                                safeSetState(() => _model.mouseRegionHovered5 = false);
+                                                                              }),
                                                                               child: TextFormField(
                                                                                 controller: _model.textController1,
                                                                                 focusNode: _model.textFieldFocusNode1,
@@ -1714,7 +1718,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   enabledBorder: OutlineInputBorder(
                                                                                     borderSide: BorderSide(
                                                                                       color: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered5! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered5 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       width: 1.0,
@@ -1742,7 +1746,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     ),
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                   ),
-                                                                                  contentPadding: EdgeInsets.all(16.0),
+                                                                                  contentPadding: const EdgeInsets.all(16.0),
                                                                                   suffixIcon: InkWell(
                                                                                     onTap: () => safeSetState(
                                                                                       () => _model.passwordVisibility1 = !_model.passwordVisibility1,
@@ -1762,14 +1766,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     ),
                                                                                 validator: _model.textController1Validator.asValidator(context),
                                                                               ),
-                                                                              onEnter: ((event) async {
-                                                                                safeSetState(() => _model.mouseRegionHovered5 = true);
-                                                                              }),
-                                                                              onExit: ((event) async {
-                                                                                safeSetState(() => _model.mouseRegionHovered5 = false);
-                                                                              }),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                       ),
                                                                       Expanded(
@@ -1793,6 +1791,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             MouseRegion(
                                                                               opaque: false,
                                                                               cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                              onEnter: ((event) async {
+                                                                                safeSetState(() => _model.mouseRegionHovered6 = true);
+                                                                              }),
+                                                                              onExit: ((event) async {
+                                                                                safeSetState(() => _model.mouseRegionHovered6 = false);
+                                                                              }),
                                                                               child: TextFormField(
                                                                                 controller: _model.textController2,
                                                                                 focusNode: _model.textFieldFocusNode2,
@@ -1815,7 +1819,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   enabledBorder: OutlineInputBorder(
                                                                                     borderSide: BorderSide(
                                                                                       color: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered6! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered6 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       width: 1.0,
@@ -1843,7 +1847,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     ),
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                   ),
-                                                                                  contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                                                                                  contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                                                                                   suffixIcon: InkWell(
                                                                                     onTap: () => safeSetState(
                                                                                       () => _model.passwordVisibility2 = !_model.passwordVisibility2,
@@ -1863,17 +1867,11 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     ),
                                                                                 validator: _model.textController2Validator.asValidator(context),
                                                                               ),
-                                                                              onEnter: ((event) async {
-                                                                                safeSetState(() => _model.mouseRegionHovered6 = true);
-                                                                              }),
-                                                                              onExit: ((event) async {
-                                                                                safeSetState(() => _model.mouseRegionHovered6 = false);
-                                                                              }),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             28.0)),
                                                                   ),
@@ -1889,12 +1887,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           44.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -1916,7 +1914,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -1927,7 +1925,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               8.0),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                               ),
@@ -1941,7 +1939,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -1963,7 +1961,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(
                                                                           20.0),
                                                               child: Column(
@@ -2013,7 +2011,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             .start,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -2059,21 +2057,21 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   highlightColor: Colors.transparent,
                                                                                   onTap: () async {
                                                                                     showDialog(
-                                                                                      barrierColor: Color(0x34000000),
+                                                                                      barrierColor: const Color(0x34000000),
                                                                                       context: context,
                                                                                       builder: (dialogContext) {
                                                                                         return Dialog(
                                                                                           elevation: 0,
                                                                                           insetPadding: EdgeInsets.zero,
                                                                                           backgroundColor: Colors.transparent,
-                                                                                          alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                          alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                           child: WebViewAware(
                                                                                             child: GestureDetector(
                                                                                               onTap: () {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: OneTimePasswordWidget(),
+                                                                                              child: const OneTimePasswordWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -2092,7 +2090,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 color: FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 size: 22.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                           ),
                                                                         ],
                                                                       ),
@@ -2122,7 +2120,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               1.3,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                               ),
@@ -2136,7 +2134,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -2166,7 +2164,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -2206,7 +2204,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               20.0,
                                                                               16.0,
                                                                               20.0,
@@ -2221,7 +2219,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 flex: 6,
                                                                                 child: Container(
                                                                                   width: 190.0,
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2244,7 +2242,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 flex: 4,
                                                                                 child: Container(
                                                                                   width: 190.0,
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2267,7 +2265,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 flex: 3,
                                                                                 child: Container(
                                                                                   width: 190.0,
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2290,7 +2288,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 flex: 4,
                                                                                 child: Container(
                                                                                   width: 190.0,
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2309,7 +2307,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 24.0)),
+                                                                            ].divide(const SizedBox(width: 24.0)),
                                                                           ),
                                                                         ),
                                                                         Divider(
@@ -2486,12 +2484,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     ),
                                                                   ],
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       24.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 28.0)),
                                                       ),
                                                     );
@@ -2499,7 +2497,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                       'Address & Billing') {
                                                     return Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -2517,7 +2515,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -2539,7 +2537,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(
                                                                           20.0),
                                                               child: Column(
@@ -2575,21 +2573,21 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           onPressed:
                                                                               () async {
                                                                             showDialog(
-                                                                              barrierColor: Color(0x34000000),
+                                                                              barrierColor: const Color(0x34000000),
                                                                               context: context,
                                                                               builder: (dialogContext) {
                                                                                 return Dialog(
                                                                                   elevation: 0,
                                                                                   insetPadding: EdgeInsets.zero,
                                                                                   backgroundColor: Colors.transparent,
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   child: WebViewAware(
                                                                                     child: GestureDetector(
                                                                                       onTap: () {
                                                                                         FocusScope.of(dialogContext).unfocus();
                                                                                         FocusManager.instance.primaryFocus?.unfocus();
                                                                                       },
-                                                                                      child: AddNewAddressWidget(),
+                                                                                      child: const AddNewAddressWidget(),
                                                                                     ),
                                                                                   ),
                                                                                 );
@@ -2602,18 +2600,18 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 40.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347367F0),
+                                                                                const Color(0x347367F0),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).primary,
@@ -2622,7 +2620,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -2641,7 +2639,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       Container(
                                                                         width: double
                                                                             .infinity,
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x00000000),
                                                                         child:
                                                                             ExpandableNotifier(
@@ -2651,7 +2649,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               ExpandablePanel(
                                                                             header:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2698,10 +2696,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 child: StatusCardWidget(
                                                                                                   title: 'Default Address',
                                                                                                   titleColor: FlutterFlowTheme.of(context).success,
-                                                                                                  bgColor: Color(0x3328C76F),
+                                                                                                  bgColor: const Color(0x3328C76F),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                                           ),
                                                                                           Text(
                                                                                             '23 Shatinon Mekalan',
@@ -2712,9 +2710,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(height: 4.0)),
+                                                                                        ].divide(const SizedBox(height: 4.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 12.0)),
+                                                                                    ].divide(const SizedBox(width: 12.0)),
                                                                                   ),
                                                                                   Row(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -2740,8 +2738,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               context: context,
                                                                                               isGlobal: false,
                                                                                               avoidOverflow: false,
-                                                                                              targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                              followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                              followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                               builder: (dialogContext) {
                                                                                                 return Material(
                                                                                                   color: Colors.transparent,
@@ -2751,7 +2749,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         FocusScope.of(dialogContext).unfocus();
                                                                                                         FocusManager.instance.primaryFocus?.unfocus();
                                                                                                       },
-                                                                                                      child: AddressBookWidget(),
+                                                                                                      child: const AddressBookWidget(),
                                                                                                     ),
                                                                                                   ),
                                                                                                 );
@@ -2765,7 +2763,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 16.0)),
+                                                                                    ].divide(const SizedBox(width: 16.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -2780,7 +2778,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             ),
                                                                             expanded:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 0.0, 20.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 0.0, 20.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -2821,11 +2819,11 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 10.0)),
+                                                                                ].divide(const SizedBox(height: 10.0)),
                                                                               ),
                                                                             ),
                                                                             theme:
-                                                                                ExpandableThemeData(
+                                                                                const ExpandableThemeData(
                                                                               tapHeaderToExpand: true,
                                                                               tapBodyToExpand: true,
                                                                               tapBodyToCollapse: true,
@@ -2846,7 +2844,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           width:
                                                                               double.infinity,
                                                                           color:
-                                                                              Color(0x00000000),
+                                                                              const Color(0x00000000),
                                                                           child:
                                                                               ExpandableNotifier(
                                                                             controller:
@@ -2862,7 +2860,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     color: FlutterFlowTheme.of(context).lineColor,
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2903,7 +2901,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                             fontWeight: FontWeight.w500,
                                                                                                           ),
                                                                                                     ),
-                                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                                 ),
                                                                                                 Text(
                                                                                                   '45 Roker Terrace',
@@ -2914,9 +2912,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 4.0)),
+                                                                                              ].divide(const SizedBox(height: 4.0)),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                                         ),
                                                                                         Row(
                                                                                           mainAxisSize: MainAxisSize.max,
@@ -2942,8 +2940,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     context: context,
                                                                                                     isGlobal: false,
                                                                                                     avoidOverflow: false,
-                                                                                                    targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     builder: (dialogContext) {
                                                                                                       return Material(
                                                                                                         color: Colors.transparent,
@@ -2953,7 +2951,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: AddressBookWidget(),
+                                                                                                            child: const AddressBookWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -2967,7 +2965,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 16.0)),
+                                                                                          ].divide(const SizedBox(width: 16.0)),
                                                                                         ),
                                                                                       ],
                                                                                     ),
@@ -2982,7 +2980,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 ),
                                                                               ),
                                                                               expanded: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(36.0, 20.0, 0.0, 20.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(36.0, 20.0, 0.0, 20.0),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -3032,10 +3030,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 10.0)),
+                                                                                  ].divide(const SizedBox(height: 10.0)),
                                                                                 ),
                                                                               ),
-                                                                              theme: ExpandableThemeData(
+                                                                              theme: const ExpandableThemeData(
                                                                                 tapHeaderToExpand: true,
                                                                                 tapBodyToExpand: true,
                                                                                 tapBodyToCollapse: true,
@@ -3057,7 +3055,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           width:
                                                                               double.infinity,
                                                                           color:
-                                                                              Color(0x00000000),
+                                                                              const Color(0x00000000),
                                                                           child:
                                                                               ExpandableNotifier(
                                                                             controller:
@@ -3073,7 +3071,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     color: FlutterFlowTheme.of(context).lineColor,
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -3114,7 +3112,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                             fontWeight: FontWeight.w500,
                                                                                                           ),
                                                                                                     ),
-                                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                                 ),
                                                                                                 Text(
                                                                                                   '512 Water Plant',
@@ -3125,9 +3123,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 4.0)),
+                                                                                              ].divide(const SizedBox(height: 4.0)),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                                         ),
                                                                                         Row(
                                                                                           mainAxisSize: MainAxisSize.max,
@@ -3153,8 +3151,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     context: context,
                                                                                                     isGlobal: false,
                                                                                                     avoidOverflow: false,
-                                                                                                    targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     builder: (dialogContext) {
                                                                                                       return Material(
                                                                                                         color: Colors.transparent,
@@ -3164,7 +3162,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: AddressBookWidget(),
+                                                                                                            child: const AddressBookWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -3178,7 +3176,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 16.0)),
+                                                                                          ].divide(const SizedBox(width: 16.0)),
                                                                                         ),
                                                                                       ],
                                                                                     ),
@@ -3193,7 +3191,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 ),
                                                                               ),
                                                                               expanded: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 0.0, 20.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 0.0, 20.0),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -3243,10 +3241,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 10.0)),
+                                                                                  ].divide(const SizedBox(height: 10.0)),
                                                                                 ),
                                                                               ),
-                                                                              theme: ExpandableThemeData(
+                                                                              theme: const ExpandableThemeData(
                                                                                 tapHeaderToExpand: true,
                                                                                 tapBodyToExpand: true,
                                                                                 tapBodyToCollapse: true,
@@ -3259,7 +3257,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                               ),
@@ -3273,7 +3271,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -3295,7 +3293,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(
                                                                           20.0),
                                                               child: Column(
@@ -3331,21 +3329,21 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           onPressed:
                                                                               () async {
                                                                             showDialog(
-                                                                              barrierColor: Color(0x34000000),
+                                                                              barrierColor: const Color(0x34000000),
                                                                               context: context,
                                                                               builder: (dialogContext) {
                                                                                 return Dialog(
                                                                                   elevation: 0,
                                                                                   insetPadding: EdgeInsets.zero,
                                                                                   backgroundColor: Colors.transparent,
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   child: WebViewAware(
                                                                                     child: GestureDetector(
                                                                                       onTap: () {
                                                                                         FocusScope.of(dialogContext).unfocus();
                                                                                         FocusManager.instance.primaryFocus?.unfocus();
                                                                                       },
-                                                                                      child: AddNewAddressWidget(),
+                                                                                      child: const AddNewAddressWidget(),
                                                                                     ),
                                                                                   ),
                                                                                 );
@@ -3358,18 +3356,18 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 40.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347367F0),
+                                                                                const Color(0x347367F0),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).primary,
@@ -3378,7 +3376,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -3397,7 +3395,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       Container(
                                                                         width: double
                                                                             .infinity,
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x00000000),
                                                                         child:
                                                                             ExpandableNotifier(
@@ -3407,7 +3405,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               ExpandablePanel(
                                                                             header:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -3457,7 +3455,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                       fontWeight: FontWeight.w500,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                                           ),
                                                                                           Text(
                                                                                             '23 Shatinon Mekalan',
@@ -3468,9 +3466,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(height: 4.0)),
+                                                                                        ].divide(const SizedBox(height: 4.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 12.0)),
+                                                                                    ].divide(const SizedBox(width: 12.0)),
                                                                                   ),
                                                                                   Row(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -3489,14 +3487,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                   elevation: 0,
                                                                                                   insetPadding: EdgeInsets.zero,
                                                                                                   backgroundColor: Colors.transparent,
-                                                                                                  alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                  alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                   child: WebViewAware(
                                                                                                     child: GestureDetector(
                                                                                                       onTap: () {
                                                                                                         FocusScope.of(dialogContext).unfocus();
                                                                                                         FocusManager.instance.primaryFocus?.unfocus();
                                                                                                       },
-                                                                                                      child: EditCardWidget(),
+                                                                                                      child: const EditCardWidget(),
                                                                                                     ),
                                                                                                   ),
                                                                                                 );
@@ -3526,8 +3524,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               context: context,
                                                                                               isGlobal: false,
                                                                                               avoidOverflow: false,
-                                                                                              targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                              followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                              followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                               builder: (dialogContext) {
                                                                                                 return Material(
                                                                                                   color: Colors.transparent,
@@ -3537,7 +3535,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         FocusScope.of(dialogContext).unfocus();
                                                                                                         FocusManager.instance.primaryFocus?.unfocus();
                                                                                                       },
-                                                                                                      child: MethodPrimaryWidget(),
+                                                                                                      child: const MethodPrimaryWidget(),
                                                                                                     ),
                                                                                                   ),
                                                                                                 );
@@ -3551,7 +3549,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 16.0)),
+                                                                                    ].divide(const SizedBox(width: 16.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -3566,7 +3564,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             ),
                                                                             expanded:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 20.0, 20.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 20.0, 20.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -3630,7 +3628,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 12.0)),
+                                                                                    ].divide(const SizedBox(height: 12.0)),
                                                                                   ),
                                                                                   Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -3690,7 +3688,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 12.0)),
+                                                                                    ].divide(const SizedBox(height: 12.0)),
                                                                                   ),
                                                                                   Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -3741,7 +3739,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 12.0)),
+                                                                                    ].divide(const SizedBox(height: 12.0)),
                                                                                   ),
                                                                                   Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -3795,7 +3793,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               fit: BoxFit.cover,
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 8.0)),
+                                                                                        ].divide(const SizedBox(width: 8.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3812,7 +3810,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           Container(
                                                                                             width: 20.0,
                                                                                             height: 20.0,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               color: Color(0x3428C76F),
                                                                                               shape: BoxShape.circle,
                                                                                             ),
@@ -3822,15 +3820,15 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                               size: 16.0,
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 8.0)),
+                                                                                        ].divide(const SizedBox(width: 8.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 12.0)),
+                                                                                    ].divide(const SizedBox(height: 12.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ),
                                                                             theme:
-                                                                                ExpandableThemeData(
+                                                                                const ExpandableThemeData(
                                                                               tapHeaderToExpand: true,
                                                                               tapBodyToExpand: true,
                                                                               tapBodyToCollapse: true,
@@ -3851,7 +3849,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           width:
                                                                               double.infinity,
                                                                           color:
-                                                                              Color(0x00000000),
+                                                                              const Color(0x00000000),
                                                                           child:
                                                                               ExpandableNotifier(
                                                                             controller:
@@ -3867,7 +3865,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     color: FlutterFlowTheme.of(context).lineColor,
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -3923,10 +3921,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                       child: StatusCardWidget(
                                                                                                         title: 'Primary',
                                                                                                         titleColor: FlutterFlowTheme.of(context).success,
-                                                                                                        bgColor: Color(0x3328C76F),
+                                                                                                        bgColor: const Color(0x3328C76F),
                                                                                                       ),
                                                                                                     ),
-                                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                                 ),
                                                                                                 Text(
                                                                                                   '45 Roker Terrace',
@@ -3937,9 +3935,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 4.0)),
+                                                                                              ].divide(const SizedBox(height: 4.0)),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                                         ),
                                                                                         Row(
                                                                                           mainAxisSize: MainAxisSize.max,
@@ -3958,14 +3956,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         elevation: 0,
                                                                                                         insetPadding: EdgeInsets.zero,
                                                                                                         backgroundColor: Colors.transparent,
-                                                                                                        alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                        alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                         child: WebViewAware(
                                                                                                           child: GestureDetector(
                                                                                                             onTap: () {
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: EditCardWidget(),
+                                                                                                            child: const EditCardWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -3995,8 +3993,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     context: context,
                                                                                                     isGlobal: false,
                                                                                                     avoidOverflow: false,
-                                                                                                    targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     builder: (dialogContext) {
                                                                                                       return Material(
                                                                                                         color: Colors.transparent,
@@ -4006,7 +4004,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: MethodPrimaryWidget(),
+                                                                                                            child: const MethodPrimaryWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -4020,7 +4018,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 16.0)),
+                                                                                          ].divide(const SizedBox(width: 16.0)),
                                                                                         ),
                                                                                       ],
                                                                                     ),
@@ -4035,7 +4033,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 ),
                                                                               ),
                                                                               expanded: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 20.0, 20.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 20.0, 20.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -4099,7 +4097,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                     Column(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -4159,7 +4157,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                     Column(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -4210,7 +4208,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                     Column(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -4264,7 +4262,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 fit: BoxFit.cover,
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                                         ),
                                                                                         Row(
                                                                                           mainAxisSize: MainAxisSize.max,
@@ -4281,7 +4279,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             Container(
                                                                                               width: 20.0,
                                                                                               height: 20.0,
-                                                                                              decoration: BoxDecoration(
+                                                                                              decoration: const BoxDecoration(
                                                                                                 color: Color(0x3428C76F),
                                                                                                 shape: BoxShape.circle,
                                                                                               ),
@@ -4291,14 +4289,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 size: 16.0,
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
                                                                               ),
-                                                                              theme: ExpandableThemeData(
+                                                                              theme: const ExpandableThemeData(
                                                                                 tapHeaderToExpand: true,
                                                                                 tapBodyToExpand: true,
                                                                                 tapBodyToCollapse: true,
@@ -4320,7 +4318,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           width:
                                                                               double.infinity,
                                                                           color:
-                                                                              Color(0x00000000),
+                                                                              const Color(0x00000000),
                                                                           child:
                                                                               ExpandableNotifier(
                                                                             controller:
@@ -4336,7 +4334,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     color: FlutterFlowTheme.of(context).lineColor,
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -4386,7 +4384,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                             fontWeight: FontWeight.w500,
                                                                                                           ),
                                                                                                     ),
-                                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                                 ),
                                                                                                 Text(
                                                                                                   '512 Water Plant',
@@ -4397,9 +4395,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 4.0)),
+                                                                                              ].divide(const SizedBox(height: 4.0)),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                                         ),
                                                                                         Row(
                                                                                           mainAxisSize: MainAxisSize.max,
@@ -4418,14 +4416,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                         elevation: 0,
                                                                                                         insetPadding: EdgeInsets.zero,
                                                                                                         backgroundColor: Colors.transparent,
-                                                                                                        alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                        alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                         child: WebViewAware(
                                                                                                           child: GestureDetector(
                                                                                                             onTap: () {
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: EditCardWidget(),
+                                                                                                            child: const EditCardWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -4455,8 +4453,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     context: context,
                                                                                                     isGlobal: false,
                                                                                                     avoidOverflow: false,
-                                                                                                    targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     builder: (dialogContext) {
                                                                                                       return Material(
                                                                                                         color: Colors.transparent,
@@ -4466,7 +4464,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: MethodPrimaryWidget(),
+                                                                                                            child: const MethodPrimaryWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -4480,7 +4478,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 16.0)),
+                                                                                          ].divide(const SizedBox(width: 16.0)),
                                                                                         ),
                                                                                       ],
                                                                                     ),
@@ -4495,7 +4493,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 ),
                                                                               ),
                                                                               expanded: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 20.0, 20.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 20.0, 20.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -4559,7 +4557,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                     Column(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -4619,7 +4617,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                     Column(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -4670,7 +4668,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                     Column(
                                                                                       mainAxisSize: MainAxisSize.max,
@@ -4724,7 +4722,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 fit: BoxFit.cover,
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                                         ),
                                                                                         Row(
                                                                                           mainAxisSize: MainAxisSize.max,
@@ -4741,7 +4739,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             Container(
                                                                                               width: 20.0,
                                                                                               height: 20.0,
-                                                                                              decoration: BoxDecoration(
+                                                                                              decoration: const BoxDecoration(
                                                                                                 color: Color(0x3428C76F),
                                                                                                 shape: BoxShape.circle,
                                                                                               ),
@@ -4751,14 +4749,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                 size: 16.0,
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 12.0)),
+                                                                                      ].divide(const SizedBox(height: 12.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
                                                                               ),
-                                                                              theme: ExpandableThemeData(
+                                                                              theme: const ExpandableThemeData(
                                                                                 tapHeaderToExpand: true,
                                                                                 tapBodyToExpand: true,
                                                                                 tapBodyToCollapse: true,
@@ -4771,13 +4769,13 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 28.0)),
                                                       ),
                                                     );
@@ -4785,7 +4783,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                       'Notifications') {
                                                     return Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -4803,7 +4801,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -4833,7 +4831,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -4865,13 +4863,13 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 6.0)),
+                                                                        ].divide(const SizedBox(height: 6.0)),
                                                                       ),
                                                                     ],
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -4904,7 +4902,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 20.0, 16.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 16.0, 20.0, 16.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -4912,7 +4910,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     flex: 6,
                                                                                     child: Container(
                                                                                       width: 190.0,
-                                                                                      decoration: BoxDecoration(),
+                                                                                      decoration: const BoxDecoration(),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -4935,7 +4933,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     flex: 4,
                                                                                     child: Container(
                                                                                       width: 190.0,
-                                                                                      decoration: BoxDecoration(),
+                                                                                      decoration: const BoxDecoration(),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -4958,7 +4956,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     flex: 4,
                                                                                     child: Container(
                                                                                       width: 190.0,
-                                                                                      decoration: BoxDecoration(),
+                                                                                      decoration: const BoxDecoration(),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -4981,7 +4979,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     flex: 2,
                                                                                     child: Container(
                                                                                       width: 190.0,
-                                                                                      decoration: BoxDecoration(),
+                                                                                      decoration: const BoxDecoration(),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5000,7 +4998,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 24.0)),
+                                                                                ].divide(const SizedBox(width: 24.0)),
                                                                               ),
                                                                             ),
                                                                             Divider(
@@ -5022,7 +5020,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -5041,7 +5039,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5071,7 +5069,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5101,7 +5099,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 2,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5128,7 +5126,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 24.0)),
+                                                                                  ].divide(const SizedBox(width: 24.0)),
                                                                                 ),
                                                                               ),
                                                                               Divider(
@@ -5141,14 +5139,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                         ),
                                                                         Container(
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -5167,7 +5165,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5197,7 +5195,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5227,7 +5225,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 2,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5254,7 +5252,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 24.0)),
+                                                                                  ].divide(const SizedBox(width: 24.0)),
                                                                                 ),
                                                                               ),
                                                                               Divider(
@@ -5277,7 +5275,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -5296,7 +5294,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5326,7 +5324,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5356,7 +5354,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 2,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5383,7 +5381,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 24.0)),
+                                                                                  ].divide(const SizedBox(width: 24.0)),
                                                                                 ),
                                                                               ),
                                                                               Divider(
@@ -5396,14 +5394,14 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                         ),
                                                                         Container(
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -5422,7 +5420,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5452,7 +5450,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 4,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5482,7 +5480,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     Expanded(
                                                                                       flex: 2,
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Theme(
                                                                                           data: ThemeData(
                                                                                             checkboxTheme: CheckboxThemeData(
@@ -5509,7 +5507,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 24.0)),
+                                                                                  ].divide(const SizedBox(width: 24.0)),
                                                                                 ),
                                                                               ),
                                                                             ],
@@ -5520,7 +5518,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -5543,12 +5541,12 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             FFButtonOptions(
                                                                           height:
                                                                               40.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -5565,7 +5563,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           elevation:
                                                                               0.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -5587,18 +5585,18 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                             FFButtonOptions(
                                                                           height:
                                                                               40.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
                                                                               0.0),
                                                                           color:
-                                                                              Color(0x34A8AAAE),
+                                                                              const Color(0x34A8AAAE),
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
@@ -5609,7 +5607,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           elevation:
                                                                               0.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -5619,24 +5617,24 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               BorderRadius.circular(8.0),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             12.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       24.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 28.0)),
                                                       ),
                                                     );
                                                   } else {
                                                     return Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -5680,7 +5678,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               size: 26.0,
                                                                             ),
-                                                                            bg: Color(0x347367F0),
+                                                                            bg: const Color(0x347367F0),
                                                                             title:
                                                                                 'Account Balance',
                                                                             value:
@@ -5706,7 +5704,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               color: FlutterFlowTheme.of(context).warning,
                                                                               size: 26.0,
                                                                             ),
-                                                                            bg: Color(0x34FF9F43),
+                                                                            bg: const Color(0x34FF9F43),
                                                                             title:
                                                                                 'Wishlist',
                                                                             value:
@@ -5719,7 +5717,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 FlutterFlowTheme.of(context).warning,
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 28.0)),
                                                                     ),
                                                                   ),
@@ -5738,7 +5736,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryBackground,
-                                                                            boxShadow: [
+                                                                            boxShadow: const [
                                                                               BoxShadow(
                                                                                 blurRadius: 12.0,
                                                                                 color: Color(0x14000000),
@@ -5755,7 +5753,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(20.0),
+                                                                                const EdgeInsets.all(20.0),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -5770,7 +5768,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                       color: FlutterFlowTheme.of(context).success,
                                                                                       size: 26.0,
                                                                                     ),
-                                                                                    bg: Color(0x3328C76F),
+                                                                                    bg: const Color(0x3328C76F),
                                                                                     size: 42.0,
                                                                                   ),
                                                                                 ),
@@ -5797,10 +5795,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           child: StatusCardWidget(
                                                                                             title: 'Platinum member',
                                                                                             titleColor: FlutterFlowTheme.of(context).success,
-                                                                                            bgColor: Color(0x3328C76F),
+                                                                                            bgColor: const Color(0x3328C76F),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 8.0)),
+                                                                                      ].divide(const SizedBox(width: 8.0)),
                                                                                     ),
                                                                                     Text(
                                                                                       '3000 points to next tier',
@@ -5811,9 +5809,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 10.0)),
+                                                                                  ].divide(const SizedBox(height: 10.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 22.0)),
+                                                                              ].divide(const SizedBox(height: 22.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -5830,7 +5828,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                               color: FlutterFlowTheme.of(context).info,
                                                                               size: 26.0,
                                                                             ),
-                                                                            bg: Color(0x3300CFE8),
+                                                                            bg: const Color(0x3300CFE8),
                                                                             title:
                                                                                 'Coupons',
                                                                             value:
@@ -5843,11 +5841,11 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                 FlutterFlowTheme.of(context).info,
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 28.0)),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         28.0)),
                                                               ),
@@ -5868,7 +5866,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: [
+                                                                    boxShadow: const [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             12.0,
@@ -5889,7 +5887,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             16.0,
@@ -5903,7 +5901,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               20.0,
                                                                               0.0,
                                                                               20.0,
@@ -5929,7 +5927,13 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                    child: Container(
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered7 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered7 = false);
+                                                                                    }),
+                                                                                    child: SizedBox(
                                                                                       width: 250.0,
                                                                                       child: TextFormField(
                                                                                         controller: _model.textController3,
@@ -5952,7 +5956,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           enabledBorder: OutlineInputBorder(
                                                                                             borderSide: BorderSide(
                                                                                               color: valueOrDefault<Color>(
-                                                                                                _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                                               ),
                                                                                               width: 1.0,
@@ -5980,7 +5984,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             ),
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                           ),
-                                                                                          contentPadding: EdgeInsets.all(16.0),
+                                                                                          contentPadding: const EdgeInsets.all(16.0),
                                                                                         ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Public Sans',
@@ -5989,14 +5993,8 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         validator: _model.textController3Validator.asValidator(context),
                                                                                       ),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered7 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered7 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 14.0)),
+                                                                                ].divide(const SizedBox(width: 14.0)),
                                                                               ),
                                                                             ],
                                                                           ),
@@ -6014,7 +6012,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                   color: FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(14.0, 8.0, 20.0, 8.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(14.0, 8.0, 20.0, 8.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -6046,7 +6044,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         flex: 3,
                                                                                         child: Container(
                                                                                           width: 190.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -6074,7 +6072,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     size: 18.0,
                                                                                                   ),
-                                                                                                ].divide(SizedBox(height: 4.0)),
+                                                                                                ].divide(const SizedBox(height: 4.0)),
                                                                                               ),
                                                                                             ],
                                                                                           ),
@@ -6084,7 +6082,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         flex: 4,
                                                                                         child: Container(
                                                                                           width: 100.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -6112,7 +6110,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     color: FlutterFlowTheme.of(context).textFiled,
                                                                                                     size: 18.0,
                                                                                                   ),
-                                                                                                ].divide(SizedBox(height: 4.0)),
+                                                                                                ].divide(const SizedBox(height: 4.0)),
                                                                                               ),
                                                                                             ],
                                                                                           ),
@@ -6122,7 +6120,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         flex: 5,
                                                                                         child: Container(
                                                                                           width: 120.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -6150,7 +6148,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     size: 18.0,
                                                                                                   ),
-                                                                                                ].divide(SizedBox(height: 4.0)),
+                                                                                                ].divide(const SizedBox(height: 4.0)),
                                                                                               ),
                                                                                             ],
                                                                                           ),
@@ -6160,7 +6158,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         flex: 3,
                                                                                         child: Container(
                                                                                           width: 120.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -6188,7 +6186,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                                     color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     size: 18.0,
                                                                                                   ),
-                                                                                                ].divide(SizedBox(height: 4.0)),
+                                                                                                ].divide(const SizedBox(height: 4.0)),
                                                                                               ),
                                                                                             ],
                                                                                           ),
@@ -6198,7 +6196,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                         flex: 2,
                                                                                         child: Container(
                                                                                           width: 120.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -6217,7 +6215,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 24.0)),
+                                                                                    ].divide(const SizedBox(width: 24.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Divider(
@@ -6240,7 +6238,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     date: 'Nov 29, 2022',
                                                                                     status: 'Out for delivery',
                                                                                     statusColor: FlutterFlowTheme.of(context).primary,
-                                                                                    statusBG: Color(0x337367F0),
+                                                                                    statusBG: const Color(0x337367F0),
                                                                                     spent: '\$59.28',
                                                                                   ),
                                                                                 ),
@@ -6252,7 +6250,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     date: 'Jun 20, 2022',
                                                                                     status: 'Ready to Pickup',
                                                                                     statusColor: FlutterFlowTheme.of(context).info,
-                                                                                    statusBG: Color(0x3400CFE8),
+                                                                                    statusBG: const Color(0x3400CFE8),
                                                                                     spent: '\$333.83',
                                                                                   ),
                                                                                 ),
@@ -6264,7 +6262,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     date: '\tSep 11, 2022',
                                                                                     status: 'Delivered',
                                                                                     statusColor: FlutterFlowTheme.of(context).success,
-                                                                                    statusBG: Color(0x3328C76F),
+                                                                                    statusBG: const Color(0x3328C76F),
                                                                                     spent: '\$62.71',
                                                                                   ),
                                                                                 ),
@@ -6276,7 +6274,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     date: '\tDec 23, 2022',
                                                                                     status: 'Dispatched',
                                                                                     statusColor: FlutterFlowTheme.of(context).warning,
-                                                                                    statusBG: Color(0x34FF9F43),
+                                                                                    statusBG: const Color(0x34FF9F43),
                                                                                     spent: '\t\$100.18',
                                                                                   ),
                                                                                 ),
@@ -6288,7 +6286,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     date: '\tNov 1, 2022',
                                                                                     status: 'Delivered',
                                                                                     statusColor: FlutterFlowTheme.of(context).success,
-                                                                                    statusBG: Color(0x3328C76F),
+                                                                                    statusBG: const Color(0x3328C76F),
                                                                                     spent: '\$67.26',
                                                                                   ),
                                                                                 ),
@@ -6300,7 +6298,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     date: '\tJan 23, 2023',
                                                                                     status: 'Delivered',
                                                                                     statusColor: FlutterFlowTheme.of(context).success,
-                                                                                    statusBG: Color(0x3328C76F),
+                                                                                    statusBG: const Color(0x3328C76F),
                                                                                     spent: '\$856.58',
                                                                                   ),
                                                                                 ),
@@ -6309,7 +6307,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                           ],
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               20.0,
                                                                               0.0,
                                                                               20.0,
@@ -6339,9 +6337,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     text: 'Previous',
                                                                                     options: FFButtonOptions(
                                                                                       height: 40.0,
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                      color: Color(0x347983BB),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                      color: const Color(0x347983BB),
                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                             fontFamily: 'Public Sans',
                                                                                             color: FlutterFlowTheme.of(context).unselectHeader,
@@ -6349,7 +6347,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             fontWeight: FontWeight.normal,
                                                                                           ),
                                                                                       elevation: 0.0,
-                                                                                      borderSide: BorderSide(
+                                                                                      borderSide: const BorderSide(
                                                                                         color: Colors.transparent,
                                                                                         width: 0.0,
                                                                                       ),
@@ -6363,7 +6361,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       '1',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6378,10 +6376,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     width: 40.0,
                                                                                     height: 40.0,
                                                                                     decoration: BoxDecoration(
-                                                                                      color: Color(0x337983BB),
+                                                                                      color: const Color(0x337983BB),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       '2',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6396,10 +6394,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     width: 40.0,
                                                                                     height: 40.0,
                                                                                     decoration: BoxDecoration(
-                                                                                      color: Color(0x337983BB),
+                                                                                      color: const Color(0x337983BB),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       '3',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6414,10 +6412,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     width: 40.0,
                                                                                     height: 40.0,
                                                                                     decoration: BoxDecoration(
-                                                                                      color: Color(0x337983BB),
+                                                                                      color: const Color(0x337983BB),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       '4',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6432,10 +6430,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     width: 40.0,
                                                                                     height: 40.0,
                                                                                     decoration: BoxDecoration(
-                                                                                      color: Color(0x337983BB),
+                                                                                      color: const Color(0x337983BB),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       '...',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6450,10 +6448,10 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     width: 40.0,
                                                                                     height: 40.0,
                                                                                     decoration: BoxDecoration(
-                                                                                      color: Color(0x337983BB),
+                                                                                      color: const Color(0x337983BB),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       '17',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6471,9 +6469,9 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                     text: 'Next',
                                                                                     options: FFButtonOptions(
                                                                                       height: 40.0,
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                      color: Color(0x347983BB),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                      color: const Color(0x347983BB),
                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                             fontFamily: 'Public Sans',
                                                                                             color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -6481,19 +6479,19 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                                                             fontWeight: FontWeight.normal,
                                                                                           ),
                                                                                       elevation: 0.0,
-                                                                                      borderSide: BorderSide(
+                                                                                      borderSide: const BorderSide(
                                                                                         color: Colors.transparent,
                                                                                         width: 0.0,
                                                                                       ),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 4.0)),
+                                                                                ].divide(const SizedBox(width: 4.0)),
                                                                               ),
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                   ),
@@ -6501,7 +6499,7 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 28.0)),
                                                       ),
                                                     );
@@ -6511,32 +6509,32 @@ class _CustomerDetailsWidgetState extends State<CustomerDetailsWidget> {
                                             ],
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

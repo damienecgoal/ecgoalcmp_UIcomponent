@@ -2,12 +2,9 @@ import '/components/nodal/teams_action/teams_action_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'project_model.dart';
 export 'project_model.dart';
@@ -89,11 +86,17 @@ class _ProjectWidgetState extends State<ProjectWidget> {
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
+      onEnter: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = false);
+      }),
       child: Container(
         width: 400.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 12.0,
               color: Color(0x14000000),
@@ -111,7 +114,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -123,11 +126,11 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                         width: 40.0,
                         height: 40.0,
                         clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                         ),
                         child: Image.network(
-                          widget!.logo!,
+                          widget.logo!,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -137,7 +140,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              widget!.title,
+                              widget.title,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -145,7 +148,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 .override(
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered!
+                                    _model.mouseRegionHovered
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .primaryText,
@@ -174,7 +177,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                               ),
                               Text(
                                 valueOrDefault<String>(
-                                  widget!.client,
+                                  widget.client,
                                   'na',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -188,11 +191,11 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 6.0)),
+                            ].divide(const SizedBox(width: 6.0)),
                           ),
-                        ].divide(SizedBox(height: 6.0)),
+                        ].divide(const SizedBox(height: 6.0)),
                       ),
-                    ].divide(SizedBox(width: 6.0)),
+                    ].divide(const SizedBox(width: 6.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -209,12 +212,12 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                               context: context,
                               isGlobal: false,
                               avoidOverflow: false,
-                              targetAnchor: AlignmentDirectional(-1.0, 6.0)
+                              targetAnchor: const AlignmentDirectional(-1.0, 6.0)
                                   .resolve(Directionality.of(context)),
-                              followerAnchor: AlignmentDirectional(0.0, 0.0)
+                              followerAnchor: const AlignmentDirectional(0.0, 0.0)
                                   .resolve(Directionality.of(context)),
                               builder: (dialogContext) {
-                                return Material(
+                                return const Material(
                                   color: Colors.transparent,
                                   child: WebViewAware(
                                     child: TeamsActionWidget(),
@@ -230,13 +233,13 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 8.0)),
+                    ].divide(const SizedBox(width: 8.0)),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,7 +254,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(12.0),
+                          padding: const EdgeInsets.all(12.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -261,7 +264,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 children: [
                                   Text(
                                     valueOrDefault<String>(
-                                      widget!.totalBudget,
+                                      widget.totalBudget,
                                       'na',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -275,7 +278,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                   ),
                                   Text(
                                     valueOrDefault<String>(
-                                      widget!.budget,
+                                      widget.budget,
                                       'na',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -288,7 +291,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                   ),
-                                ].divide(SizedBox(width: 6.0)),
+                                ].divide(const SizedBox(width: 6.0)),
                               ),
                               Text(
                                 'Total Budget',
@@ -302,12 +305,12 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                            ].divide(SizedBox(height: 6.0)),
+                            ].divide(const SizedBox(height: 6.0)),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.all(12.0),
+                        padding: const EdgeInsets.all(12.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -328,7 +331,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 ),
                                 Text(
                                   valueOrDefault<String>(
-                                    widget!.startDate,
+                                    widget.startDate,
                                     'na',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -341,7 +344,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 6.0)),
+                              ].divide(const SizedBox(width: 6.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -359,7 +362,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 ),
                                 Text(
                                   valueOrDefault<String>(
-                                    widget!.deadline,
+                                    widget.deadline,
                                     'na',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -372,16 +375,16 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 6.0)),
+                              ].divide(const SizedBox(width: 6.0)),
                             ),
-                          ].divide(SizedBox(height: 6.0)),
+                          ].divide(const SizedBox(height: 6.0)),
                         ),
                       ),
                     ],
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.description,
+                      widget.description,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -392,7 +395,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                           lineHeight: 1.5,
                         ),
                   ),
-                ].divide(SizedBox(height: 20.0)),
+                ].divide(const SizedBox(height: 20.0)),
               ),
             ),
             Divider(
@@ -401,7 +404,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
               color: FlutterFlowTheme.of(context).lineColor,
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -430,7 +433,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                               ),
                               Text(
                                 valueOrDefault<String>(
-                                  widget!.allHourse,
+                                  widget.allHourse,
                                   'na',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -443,17 +446,17 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 6.0)),
+                            ].divide(const SizedBox(width: 6.0)),
                           ),
-                        ].divide(SizedBox(height: 6.0)),
+                        ].divide(const SizedBox(height: 6.0)),
                       ),
                       wrapWithModel(
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.status!,
-                          titleColor: widget!.color!,
-                          bgColor: widget!.bg!,
+                          title: widget.status!,
+                          titleColor: widget.color!,
+                          bgColor: widget.bg!,
                         ),
                       ),
                     ],
@@ -464,7 +467,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.task,
+                          widget.task,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -477,7 +480,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.completed,
+                          widget.completed,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -497,7 +500,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                     animateFromLastPercent: true,
                     progressColor: FlutterFlowTheme.of(context).primary,
                     backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                    barRadius: Radius.circular(50.0),
+                    barRadius: const Radius.circular(50.0),
                     padding: EdgeInsets.zero,
                   ),
                   Row(
@@ -505,9 +508,9 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Stack(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           children: [
                             Container(
                               width: 34.0,
@@ -524,17 +527,17 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 width: 32.0,
                                 height: 32.0,
                                 clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.network(
-                                  widget!.avatar1!,
+                                  widget.avatar1!,
                                   fit: BoxFit.cover,
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   22.0, 0.0, 0.0, 0.0),
                               child: Container(
                                 width: 34.0,
@@ -551,18 +554,18 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                   width: 32.0,
                                   height: 32.0,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
                                   child: Image.network(
-                                    widget!.avatar2!,
+                                    widget.avatar2!,
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   44.0, 0.0, 0.0, 0.0),
                               child: Container(
                                 width: 34.0,
@@ -579,24 +582,24 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                   width: 32.0,
                                   height: 32.0,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
                                   child: Image.network(
-                                    widget!.avatar3!,
+                                    widget.avatar3!,
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     86.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   valueOrDefault<String>(
-                                    widget!.members,
+                                    widget.members,
                                     'na',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -624,7 +627,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                           ),
                           Text(
                             valueOrDefault<String>(
-                              widget!.comment,
+                              widget.comment,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -634,22 +637,16 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 6.0)),
+                        ].divide(const SizedBox(width: 6.0)),
                       ),
                     ],
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                ].divide(const SizedBox(height: 16.0)),
               ),
             ),
-          ].divide(SizedBox(height: 20.0)),
+          ].divide(const SizedBox(height: 20.0)),
         ),
       ),
-      onEnter: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = false);
-      }),
     );
   }
 }

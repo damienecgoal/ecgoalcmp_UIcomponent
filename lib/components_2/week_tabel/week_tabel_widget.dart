@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'week_tabel_model.dart';
 export 'week_tabel_model.dart';
 
@@ -48,7 +45,7 @@ class _WeekTabelWidgetState extends State<WeekTabelWidget> {
   Widget build(BuildContext context) {
     return Container(
       height: 46.0,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -74,13 +71,13 @@ class _WeekTabelWidgetState extends State<WeekTabelWidget> {
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 4.0, 0.0),
                                     child: Text(
                                       valueOrDefault<String>(
-                                        widget!.time,
+                                        widget.time,
                                         'na',
                                       ),
                                       style: FlutterFlowTheme.of(context)

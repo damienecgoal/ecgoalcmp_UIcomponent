@@ -3,11 +3,8 @@ import '/components_2/pluse3_avatar/pluse3_avatar_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'teams_card2_model.dart';
 export 'teams_card2_model.dart';
@@ -77,7 +74,7 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
     return Container(
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 12.0,
             color: Color(0x14000000),
@@ -91,7 +88,7 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,17 +104,17 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
                       width: 38.0,
                       height: 38.0,
                       clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                       ),
                       child: Image.network(
-                        widget!.logo!,
+                        widget.logo!,
                         fit: BoxFit.cover,
                       ),
                     ),
                     Text(
                       valueOrDefault<String>(
-                        widget!.title,
+                        widget.title,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -127,7 +124,7 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
                             fontWeight: FontWeight.w500,
                           ),
                     ),
-                  ].divide(SizedBox(width: 6.0)),
+                  ].divide(const SizedBox(width: 6.0)),
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -149,12 +146,12 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
                             context: context,
                             isGlobal: false,
                             avoidOverflow: false,
-                            targetAnchor: AlignmentDirectional(-1.0, 6.0)
+                            targetAnchor: const AlignmentDirectional(-1.0, 6.0)
                                 .resolve(Directionality.of(context)),
-                            followerAnchor: AlignmentDirectional(0.0, 0.0)
+                            followerAnchor: const AlignmentDirectional(0.0, 0.0)
                                 .resolve(Directionality.of(context)),
                             builder: (dialogContext) {
-                              return Material(
+                              return const Material(
                                 color: Colors.transparent,
                                 child: WebViewAware(
                                   child: TeamsActionWidget(),
@@ -170,13 +167,13 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
                         ),
                       ),
                     ),
-                  ].divide(SizedBox(width: 8.0)),
+                  ].divide(const SizedBox(width: 8.0)),
                 ),
               ],
             ),
             Text(
               valueOrDefault<String>(
-                widget!.description,
+                widget.description,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -195,10 +192,10 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
                   model: _model.pluse3AvatarModel,
                   updateCallback: () => safeSetState(() {}),
                   child: Pluse3AvatarWidget(
-                    number: widget!.number!,
-                    avatar1: widget!.avatar1!,
-                    avatar2: widget!.avatar2!,
-                    avatar3: widget!.avatar3!,
+                    number: widget.number!,
+                    avatar1: widget.avatar1!,
+                    avatar2: widget.avatar2!,
+                    avatar3: widget.avatar3!,
                   ),
                 ),
                 Row(
@@ -208,25 +205,25 @@ class _TeamsCard2WidgetState extends State<TeamsCard2Widget> {
                       model: _model.statusCardModel1,
                       updateCallback: () => safeSetState(() {}),
                       child: StatusCardWidget(
-                        title: widget!.status!,
-                        titleColor: widget!.color!,
-                        bgColor: widget!.bg!,
+                        title: widget.status!,
+                        titleColor: widget.color!,
+                        bgColor: widget.bg!,
                       ),
                     ),
                     wrapWithModel(
                       model: _model.statusCardModel2,
                       updateCallback: () => safeSetState(() {}),
                       child: StatusCardWidget(
-                        title: widget!.status2!,
-                        titleColor: widget!.color2!,
-                        bgColor: widget!.bg2!,
+                        title: widget.status2!,
+                        titleColor: widget.color2!,
+                        bgColor: widget.bg2!,
                       ),
                     ),
-                  ].divide(SizedBox(width: 12.0)),
+                  ].divide(const SizedBox(width: 12.0)),
                 ),
               ],
             ),
-          ].divide(SizedBox(height: 20.0)),
+          ].divide(const SizedBox(height: 20.0)),
         ),
       ),
     );

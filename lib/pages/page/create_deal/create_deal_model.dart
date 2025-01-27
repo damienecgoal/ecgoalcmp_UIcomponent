@@ -1,4 +1,3 @@
-import '/auth/base_auth_user_provider.dart';
 import '/components_2/custom_switch/custom_switch_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/icon_box/icon_box_widget.dart';
@@ -6,17 +5,10 @@ import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/select/select_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'create_deal_widget.dart' show CreateDealWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CreateDealModel extends FlutterFlowModel<CreateDealWidget> {
   ///  Local state fields for this page.

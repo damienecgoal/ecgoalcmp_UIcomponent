@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
-import '../schema/structs/index.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -19,9 +17,9 @@ class UpdateViewsCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "template_id": "${templateId}",
-  "template_name": "${templateName}",
-  "app_type": "${appType}"
+  "template_id": "$templateId",
+  "template_name": "$templateName",
+  "app_type": "$appType"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'updateViews',

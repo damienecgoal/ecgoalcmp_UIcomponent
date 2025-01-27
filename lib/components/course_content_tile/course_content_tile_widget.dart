@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'course_content_tile_model.dart';
 export 'course_content_tile_model.dart';
 
@@ -54,16 +51,16 @@ class _CourseContentTileWidgetState extends State<CourseContentTileWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               valueOrDefault<String>(
-                widget!.chapterTitle,
+                widget.chapterTitle,
                 'NA',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -74,7 +71,7 @@ class _CourseContentTileWidgetState extends State<CourseContentTileWidget> {
                   ),
             ),
             Text(
-              '${widget!.currentChapter?.toString()} / ${widget!.totalChapters?.toString()} | ${widget!.duration}',
+              '${widget.currentChapter?.toString()} / ${widget.totalChapters?.toString()} | ${widget.duration}',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Public Sans',
                     color: FlutterFlowTheme.of(context).secondaryTitle,
@@ -82,7 +79,7 @@ class _CourseContentTileWidgetState extends State<CourseContentTileWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-          ].divide(SizedBox(height: 6.0)),
+          ].divide(const SizedBox(height: 6.0)),
         ),
       ),
     );

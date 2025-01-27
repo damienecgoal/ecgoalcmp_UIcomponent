@@ -15,13 +15,10 @@ import '/flutter_flow/flutter_flow_charts.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'academy_model.dart';
@@ -67,11 +64,11 @@ class _AcademyWidgetState extends State<AcademyWidget> {
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
     final chartPieChartColorsList = [
-      Color(0xFF14763F),
-      Color(0xFF28C76F),
-      Color(0xFF45CC81),
-      Color(0xFF71C998),
-      Color(0xFFB1F6CF)
+      const Color(0xFF14763F),
+      const Color(0xFF28C76F),
+      const Color(0xFF45CC81),
+      const Color(0xFF71C998),
+      const Color(0xFFB1F6CF)
     ];
     return GestureDetector(
       onTap: () {
@@ -90,19 +87,19 @@ class _AcademyWidgetState extends State<AcademyWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -116,9 +113,9 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                 children: [
                                   Container(
                                     height: 200.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -126,7 +123,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 24.0, 0.0),
                                               child: Column(
@@ -148,7 +145,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -192,7 +189,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   .primary,
                                                               size: 36.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x337367F0),
                                                             size: 54.0,
                                                             title:
@@ -217,7 +214,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   .info,
                                                               size: 36.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x3400CFE8),
                                                             size: 54.0,
                                                             title:
@@ -243,7 +240,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   .warning,
                                                               size: 36.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x33FF9F43),
                                                             size: 54.0,
                                                             title:
@@ -258,7 +255,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 20.0)),
+                                                    const SizedBox(height: 20.0)),
                                               ),
                                             ),
                                           ),
@@ -331,7 +328,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 12.0)),
                                                       ),
                                                       Column(
@@ -423,18 +420,18 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .success,
-                                                              bgColor: Color(
+                                                              bgColor: const Color(
                                                                   0x3428C76F),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ],
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Column(
@@ -443,7 +440,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     40.0,
@@ -451,7 +448,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     0.0),
                                                         child: Stack(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           children: [
                                                             Column(
@@ -492,10 +489,10 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 5.0)),
                                                             ),
-                                                            Container(
+                                                            SizedBox(
                                                               width: 120.0,
                                                               height: 120.0,
                                                               child:
@@ -540,7 +537,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                               ],
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 24.0)),
+                                        ].divide(const SizedBox(width: 24.0)),
                                       ),
                                     ),
                                   ),
@@ -554,13 +551,13 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                         child: Container(
                                           width: 100.0,
                                           height: 400.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             maxWidth: 600.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -575,7 +572,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -620,14 +617,14 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                             avoidOverflow:
                                                                 false,
                                                             targetAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         -7.0,
                                                                         6.2)
                                                                     .resolve(
                                                                         Directionality.of(
                                                                             context)),
                                                             followerAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -652,7 +649,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           ?.unfocus();
                                                                     },
                                                                     child:
-                                                                        SeeAllWidget(),
+                                                                        const SeeAllWidget(),
                                                                   ),
                                                                 ),
                                                               );
@@ -683,7 +680,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           13.0,
                                                                           0.0,
@@ -733,7 +730,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -774,7 +771,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -815,7 +812,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -856,7 +853,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -897,7 +894,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -938,7 +935,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -947,7 +944,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           2.0,
@@ -964,7 +961,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             14.0,
@@ -992,7 +989,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primary,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -1001,7 +998,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           ),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -1031,7 +1028,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                         height:
                                                                             10.0,
                                                                         decoration:
-                                                                            BoxDecoration(),
+                                                                            const BoxDecoration(),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1041,7 +1038,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             14.0,
@@ -1071,7 +1068,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -1080,7 +1077,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           ),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -1113,7 +1110,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           height:
                                                                               10.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                         ),
                                                                       ),
                                                                     ],
@@ -1124,7 +1121,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             14.0,
@@ -1156,7 +1153,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).success,
-                                                                              borderRadius: BorderRadius.only(
+                                                                              borderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(8.0),
                                                                                 topLeft: Radius.circular(0.0),
@@ -1165,7 +1162,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1195,7 +1192,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           height:
                                                                               10.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                         ),
                                                                       ),
                                                                     ],
@@ -1206,7 +1203,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             14.0,
@@ -1235,7 +1232,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondary,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -1244,7 +1241,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           ),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -1278,7 +1275,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           height:
                                                                               10.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                         ),
                                                                       ),
                                                                     ],
@@ -1289,7 +1286,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             14.0,
@@ -1318,7 +1315,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).error,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -1327,7 +1324,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           ),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -1361,7 +1358,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           height:
                                                                               10.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                         ),
                                                                       ),
                                                                     ],
@@ -1372,7 +1369,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             17.0,
@@ -1401,7 +1398,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).warning,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -1410,7 +1407,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           ),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -1444,12 +1441,12 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           height:
                                                                               10.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                         ),
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         14.0)),
                                                               ),
@@ -1460,7 +1457,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   40.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -1605,7 +1602,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 22.0)),
+                                              ].divide(const SizedBox(height: 22.0)),
                                             ),
                                           ),
                                         ),
@@ -1615,13 +1612,13 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                         child: Container(
                                           width: 100.0,
                                           height: 400.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             maxWidth: 600.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1643,7 +1640,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1689,13 +1686,13 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -1719,7 +1716,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -1753,7 +1750,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     16.0,
@@ -1816,7 +1813,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 ],
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -1826,7 +1823,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                           .instructorsModel1,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InstructorsWidget(
+                                                      child: const InstructorsWidget(
                                                         avatar:
                                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/x4gkpaxl5mr7/1.png',
                                                         name: 'Maven Analytics',
@@ -1840,7 +1837,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                           .instructorsModel2,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InstructorsWidget(
+                                                      child: const InstructorsWidget(
                                                         avatar:
                                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/mteufgo4w1e1/2.png',
                                                         name:
@@ -1855,7 +1852,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                           .instructorsModel3,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InstructorsWidget(
+                                                      child: const InstructorsWidget(
                                                         avatar:
                                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/3zy49ozc45km/3.png',
                                                         name: 'Nathan Wagner',
@@ -1869,7 +1866,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                           .instructorsModel4,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InstructorsWidget(
+                                                      child: const InstructorsWidget(
                                                         avatar:
                                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/jkj07rl56yax/4.png',
                                                         name: 'Emma Bowen',
@@ -1879,14 +1876,14 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 24.0)),
+                                                      const SizedBox(height: 24.0)),
                                                 ),
                                               ),
                                             ],
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1899,7 +1896,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1914,7 +1911,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -1969,13 +1966,13 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -1999,7 +1996,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2019,12 +2016,12 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                       ],
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 0.0),
                                                     child:
@@ -2048,7 +2045,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .primary,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x347367F0),
                                                               title:
                                                                   'Videography Basic',
@@ -2073,7 +2070,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .info,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x3300CFE8),
                                                               title:
                                                                   'Basic Front-end',
@@ -2098,7 +2095,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .success,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x3328C76F),
                                                               title:
                                                                   'Basic Fundamentals of',
@@ -2124,7 +2121,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .warning,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x34FF9F43),
                                                               title:
                                                                   'Advance Dribble Base',
@@ -2150,7 +2147,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .error,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x34EA5455),
                                                               title:
                                                                   'Your First Singing Lesson',
@@ -2160,13 +2157,13 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   '948 Views',
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 30.0)),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 22.0)),
+                                              ].divide(const SizedBox(height: 22.0)),
                                             ),
                                           ),
                                         ),
@@ -2179,7 +2176,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2194,7 +2191,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -2202,7 +2199,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                   width: double.infinity,
                                                   height: 180.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x257367F0),
+                                                    color: const Color(0x257367F0),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             12.0),
@@ -2294,7 +2291,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .primary,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                               size: 40.0,
                                                               title:
@@ -2317,7 +2314,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .primary,
                                                                 size: 26.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                               size: 40.0,
                                                               title:
@@ -2326,7 +2323,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   'Duration',
                                                             ),
                                                           ),
-                                                        ].addToEnd(SizedBox(
+                                                        ].addToEnd(const SizedBox(
                                                             width: 1.0)),
                                                       ),
                                                       FFButtonWidget(
@@ -2341,14 +2338,14 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                               double.infinity,
                                                           height: 40.0,
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -2376,7 +2373,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -2388,10 +2385,10 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 20.0)),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
                                           ),
                                         ),
@@ -2404,7 +2401,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2419,7 +2416,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -2455,7 +2452,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                       ],
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -2526,17 +2523,17 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 32.0)),
+                                                      const SizedBox(height: 32.0)),
                                                 ),
-                                              ].divide(SizedBox(height: 32.0)),
+                                              ].divide(const SizedBox(height: 32.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -2551,7 +2548,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -2566,7 +2563,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 16.0, 0.0, 20.0),
                                               child: Column(
@@ -2574,7 +2571,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 20.0,
                                                                 12.0,
@@ -2603,7 +2600,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                         .w500,
                                                               ),
                                                         ),
-                                                        Container(
+                                                        SizedBox(
                                                           width: 250.0,
                                                           child: TextFormField(
                                                             controller: _model
@@ -2730,7 +2727,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -2795,7 +2792,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2830,7 +2827,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -2843,7 +2840,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2878,7 +2875,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -2891,7 +2888,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2926,7 +2923,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -2936,7 +2933,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                   flex: 5,
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             0.0,
@@ -2947,7 +2944,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child:
                                                                           Row(
                                                                         mainAxisSize:
@@ -2979,14 +2976,14 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                                 color: FlutterFlowTheme.of(context).textFiled,
                                                                                 size: 18.0,
                                                                               ),
-                                                                            ].divide(SizedBox(height: 2.0)),
+                                                                            ].divide(const SizedBox(height: 2.0)),
                                                                           ),
                                                                         ],
                                                                       ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 26.0)),
                                                             ),
                                                           ),
@@ -3018,7 +3015,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .error,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x33EA5455),
                                                               title:
                                                                   'Advanced Angular',
@@ -3049,7 +3046,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .primary,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x347367F0),
                                                               title:
                                                                   'Advanced Problem Solving Techniques',
@@ -3087,7 +3084,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .info,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x3400CFE8),
                                                               title:
                                                                   'Advanced React Native',
@@ -3119,7 +3116,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .error,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x33EA5455),
                                                               title:
                                                                   'Angular Routing and Navigation',
@@ -3151,7 +3148,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                     .error,
                                                                 size: 24.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x33EA5455),
                                                               title:
                                                                   'Angular Testing',
@@ -3174,7 +3171,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -3184,7 +3181,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                         Expanded(
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             children: [
                                                               Text(
@@ -3204,7 +3201,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
                                                                 child: Row(
@@ -3227,12 +3224,12 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -3250,7 +3247,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -3281,7 +3278,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -3303,11 +3300,11 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           decoration:
                                                                               BoxDecoration(
                                                                             color:
-                                                                                Color(0x337983BB),
+                                                                                const Color(0x337983BB),
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -3329,11 +3326,11 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           decoration:
                                                                               BoxDecoration(
                                                                             color:
-                                                                                Color(0x337983BB),
+                                                                                const Color(0x337983BB),
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -3355,11 +3352,11 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           decoration:
                                                                               BoxDecoration(
                                                                             color:
-                                                                                Color(0x337983BB),
+                                                                                const Color(0x337983BB),
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -3381,11 +3378,11 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           decoration:
                                                                               BoxDecoration(
                                                                             color:
-                                                                                Color(0x337983BB),
+                                                                                const Color(0x337983BB),
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -3399,7 +3396,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                                 ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 4.0)),
                                                                     ),
                                                                     FFButtonWidget(
@@ -3414,17 +3411,17 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x347983BB),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -3437,7 +3434,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -3447,7 +3444,7 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           4.0)),
                                                                 ),
@@ -3459,37 +3456,37 @@ class _AcademyWidgetState extends State<AcademyWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 18.0)),
+                                                    const SizedBox(height: 18.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

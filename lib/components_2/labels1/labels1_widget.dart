@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'labels1_model.dart';
 export 'labels1_model.dart';
 
@@ -52,22 +49,22 @@ class _Labels1WidgetState extends State<Labels1Widget> {
     return Container(
       height: 28.0,
       decoration: BoxDecoration(
-        color: widget!.bg,
+        color: widget.bg,
         borderRadius: BorderRadius.circular(25.0),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
               valueOrDefault<String>(
-                widget!.title,
+                widget.title,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Public Sans',
-                    color: widget!.color,
+                    color: widget.color,
                     letterSpacing: 0.0,
                   ),
             ),

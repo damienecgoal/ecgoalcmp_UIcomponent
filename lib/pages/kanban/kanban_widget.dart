@@ -1,5 +1,3 @@
-import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/drawer/edit_task/edit_task_widget.dart';
 import '/components/nodal/kanban_action/kanban_action_widget.dart';
 import '/components/nodal/kanban_edit/kanban_edit_widget.dart';
@@ -9,12 +7,9 @@ import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'kanban_model.dart';
@@ -74,13 +69,13 @@ class _KanbanWidgetState extends State<KanbanWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -88,7 +83,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                             child: DragTarget<String>(
                               builder: (context, _, __) {
                                 return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       28.0, 0.0, 28.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -102,12 +97,12 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                           child: Container(
                                             width: 280.0,
                                             height: double.infinity,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   child: Row(
@@ -153,14 +148,14 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               avoidOverflow:
                                                                   false,
                                                               targetAnchor:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                           -1.0,
                                                                           6.0)
                                                                       .resolve(
                                                                           Directionality.of(
                                                                               context)),
                                                               followerAnchor:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -185,7 +180,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          KanbanActionWidget(),
+                                                                          const KanbanActionWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -226,7 +221,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           12.0,
@@ -256,10 +251,51 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered1 =
+                                                                              true);
+                                                                      showDialog(
+                                                                        barrierColor:
+                                                                            const Color(0x34000000),
+                                                                        context:
+                                                                            context,
+                                                                        builder:
+                                                                            (dialogContext) {
+                                                                          return Dialog(
+                                                                            elevation:
+                                                                                0,
+                                                                            insetPadding:
+                                                                                EdgeInsets.zero,
+                                                                            backgroundColor:
+                                                                                Colors.transparent,
+                                                                            alignment:
+                                                                                const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                            child:
+                                                                                WebViewAware(
+                                                                              child: GestureDetector(
+                                                                                onTap: () {
+                                                                                  FocusScope.of(dialogContext).unfocus();
+                                                                                  FocusManager.instance.primaryFocus?.unfocus();
+                                                                                },
+                                                                                child: const EditTaskWidget(),
+                                                                              ),
+                                                                            ),
+                                                                          );
+                                                                        },
+                                                                      );
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered1 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          EdgeInsets.all(
+                                                                          const EdgeInsets.all(
                                                                               20.0),
                                                                       child:
                                                                           Column(
@@ -282,7 +318,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 child: LableWidget(
                                                                                   lable: 'UX',
                                                                                   color: FlutterFlowTheme.of(context).success,
-                                                                                  bg: Color(0x3328C76F),
+                                                                                  bg: const Color(0x3328C76F),
                                                                                 ),
                                                                               ),
                                                                               if (_model.mouseRegionHovered1 == true)
@@ -298,8 +334,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         context: context,
                                                                                         isGlobal: false,
                                                                                         avoidOverflow: false,
-                                                                                        targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                        followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                        targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                        followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                         builder: (dialogContext) {
                                                                                           return Material(
                                                                                             color: Colors.transparent,
@@ -309,7 +345,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                   FocusScope.of(dialogContext).unfocus();
                                                                                                   FocusManager.instance.primaryFocus?.unfocus();
                                                                                                 },
-                                                                                                child: KanbanEditWidget(),
+                                                                                                child: const KanbanEditWidget(),
                                                                                               ),
                                                                                             ),
                                                                                           );
@@ -360,7 +396,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 8.0)),
+                                                                                    ].divide(const SizedBox(width: 8.0)),
                                                                                   ),
                                                                                   Row(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -379,15 +415,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 8.0)),
+                                                                                    ].divide(const SizedBox(width: 8.0)),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 14.0)),
+                                                                                ].divide(const SizedBox(width: 14.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Container(
-                                                                                    decoration: BoxDecoration(),
+                                                                                    decoration: const BoxDecoration(),
                                                                                     child: Stack(
                                                                                       children: [
                                                                                         Container(
@@ -404,7 +440,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -414,7 +450,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                           child: Container(
                                                                                             width: 30.0,
                                                                                             height: 30.0,
@@ -429,7 +465,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               width: 32.0,
                                                                                               height: 32.0,
                                                                                               clipBehavior: Clip.antiAlias,
-                                                                                              decoration: BoxDecoration(
+                                                                                              decoration: const BoxDecoration(
                                                                                                 shape: BoxShape.circle,
                                                                                               ),
                                                                                               child: Image.network(
@@ -449,47 +485,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         ],
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered1 =
-                                                                              true);
-                                                                      showDialog(
-                                                                        barrierColor:
-                                                                            Color(0x34000000),
-                                                                        context:
-                                                                            context,
-                                                                        builder:
-                                                                            (dialogContext) {
-                                                                          return Dialog(
-                                                                            elevation:
-                                                                                0,
-                                                                            insetPadding:
-                                                                                EdgeInsets.zero,
-                                                                            backgroundColor:
-                                                                                Colors.transparent,
-                                                                            alignment:
-                                                                                AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
-                                                                            child:
-                                                                                WebViewAware(
-                                                                              child: GestureDetector(
-                                                                                onTap: () {
-                                                                                  FocusScope.of(dialogContext).unfocus();
-                                                                                  FocusManager.instance.primaryFocus?.unfocus();
-                                                                                },
-                                                                                child: EditTaskWidget(),
-                                                                              ),
-                                                                            ),
-                                                                          );
-                                                                        },
-                                                                      );
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered1 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ),
                                                               ),
@@ -503,7 +498,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -532,10 +527,53 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            true);
+                                                                    showDialog(
+                                                                      barrierColor:
+                                                                          const Color(
+                                                                              0x34000000),
+                                                                      context:
+                                                                          context,
+                                                                      builder:
+                                                                          (dialogContext) {
+                                                                        return Dialog(
+                                                                          elevation:
+                                                                              0,
+                                                                          insetPadding:
+                                                                              EdgeInsets.zero,
+                                                                          backgroundColor:
+                                                                              Colors.transparent,
+                                                                          alignment:
+                                                                              const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                          child:
+                                                                              WebViewAware(
+                                                                            child:
+                                                                                GestureDetector(
+                                                                              onTap: () {
+                                                                                FocusScope.of(dialogContext).unfocus();
+                                                                                FocusManager.instance.primaryFocus?.unfocus();
+                                                                              },
+                                                                              child: const EditTaskWidget(),
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      },
+                                                                    );
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -561,7 +599,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'UX',
                                                                                 color: FlutterFlowTheme.of(context).success,
-                                                                                bg: Color(0x3328C76F),
+                                                                                bg: const Color(0x3328C76F),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered1 ==
@@ -578,8 +616,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -589,7 +627,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -642,7 +680,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -661,15 +699,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Container(
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Container(
@@ -686,7 +724,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -696,7 +734,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                         child: Container(
                                                                                           width: 30.0,
                                                                                           height: 30.0,
@@ -711,7 +749,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -731,49 +769,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            true);
-                                                                    showDialog(
-                                                                      barrierColor:
-                                                                          Color(
-                                                                              0x34000000),
-                                                                      context:
-                                                                          context,
-                                                                      builder:
-                                                                          (dialogContext) {
-                                                                        return Dialog(
-                                                                          elevation:
-                                                                              0,
-                                                                          insetPadding:
-                                                                              EdgeInsets.zero,
-                                                                          backgroundColor:
-                                                                              Colors.transparent,
-                                                                          alignment:
-                                                                              AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
-                                                                          child:
-                                                                              WebViewAware(
-                                                                            child:
-                                                                                GestureDetector(
-                                                                              onTap: () {
-                                                                                FocusScope.of(dialogContext).unfocus();
-                                                                                FocusManager.instance.primaryFocus?.unfocus();
-                                                                              },
-                                                                              child: EditTaskWidget(),
-                                                                            ),
-                                                                          ),
-                                                                        );
-                                                                      },
-                                                                    );
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -792,7 +787,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           12.0,
@@ -819,10 +814,22 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered2 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered2 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -848,7 +855,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'Code Review',
                                                                                 color: FlutterFlowTheme.of(context).error,
-                                                                                bg: Color(0x34EA5455),
+                                                                                bg: const Color(0x34EA5455),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered2 ==
@@ -865,8 +872,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -876,7 +883,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -929,7 +936,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -948,15 +955,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Container(
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Container(
@@ -973,7 +980,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -983,7 +990,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                         child: Container(
                                                                                           width: 30.0,
                                                                                           height: 30.0,
@@ -998,7 +1005,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -1018,18 +1025,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered2 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered2 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -1042,7 +1037,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -1069,9 +1064,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -1100,7 +1107,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Code Review',
                                                                               color: FlutterFlowTheme.of(context).error,
-                                                                              bg: Color(0x34EA5455),
+                                                                              bg: const Color(0x34EA5455),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered2 ==
@@ -1117,8 +1124,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -1128,7 +1135,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -1183,7 +1190,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -1202,16 +1209,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -1228,7 +1235,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -1238,7 +1245,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -1253,7 +1260,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -1273,18 +1280,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -1294,6 +1289,18 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     .defer ??
                                                                 MouseCursor
                                                                     .defer,
+                                                            onEnter:
+                                                                ((event) async {
+                                                              safeSetState(() =>
+                                                                  _model.mouseRegionHovered3 =
+                                                                      true);
+                                                            }),
+                                                            onExit:
+                                                                ((event) async {
+                                                              safeSetState(() =>
+                                                                  _model.mouseRegionHovered3 =
+                                                                      false);
+                                                            }),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -1304,7 +1311,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered3!
+                                                                    _model.mouseRegionHovered3
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .primaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -1325,7 +1332,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             'Public Sans',
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered3!
+                                                                          _model.mouseRegionHovered3
                                                                               ? FlutterFlowTheme.of(context).primaryText
                                                                               : FlutterFlowTheme.of(context).secondaryTitle,
                                                                           FlutterFlowTheme.of(context)
@@ -1337,41 +1344,29 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 8.0)),
                                                             ),
-                                                            onEnter:
-                                                                ((event) async {
-                                                              safeSetState(() =>
-                                                                  _model.mouseRegionHovered3 =
-                                                                      true);
-                                                            }),
-                                                            onExit:
-                                                                ((event) async {
-                                                              safeSetState(() =>
-                                                                  _model.mouseRegionHovered3 =
-                                                                      false);
-                                                            }),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       );
                                                     },
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 20.0)),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
                                           ),
                                         ),
                                         child: Container(
                                           width: 280.0,
                                           height: double.infinity,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 0.0, 12.0, 0.0),
                                                 child: Row(
@@ -1415,14 +1410,14 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                             avoidOverflow:
                                                                 false,
                                                             targetAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         -1.0,
                                                                         6.0)
                                                                     .resolve(
                                                                         Directionality.of(
                                                                             context)),
                                                             followerAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -1447,7 +1442,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           ?.unfocus();
                                                                     },
                                                                     child:
-                                                                        KanbanActionWidget(),
+                                                                        const KanbanActionWidget(),
                                                                   ),
                                                                 ),
                                                               );
@@ -1487,7 +1482,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -1516,10 +1511,53 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            true);
+                                                                    showDialog(
+                                                                      barrierColor:
+                                                                          const Color(
+                                                                              0x34000000),
+                                                                      context:
+                                                                          context,
+                                                                      builder:
+                                                                          (dialogContext) {
+                                                                        return Dialog(
+                                                                          elevation:
+                                                                              0,
+                                                                          insetPadding:
+                                                                              EdgeInsets.zero,
+                                                                          backgroundColor:
+                                                                              Colors.transparent,
+                                                                          alignment:
+                                                                              const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                          child:
+                                                                              WebViewAware(
+                                                                            child:
+                                                                                GestureDetector(
+                                                                              onTap: () {
+                                                                                FocusScope.of(dialogContext).unfocus();
+                                                                                FocusManager.instance.primaryFocus?.unfocus();
+                                                                              },
+                                                                              child: const EditTaskWidget(),
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      },
+                                                                    );
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -1545,7 +1583,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'UX',
                                                                                 color: FlutterFlowTheme.of(context).success,
-                                                                                bg: Color(0x3328C76F),
+                                                                                bg: const Color(0x3328C76F),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered1 ==
@@ -1562,8 +1600,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -1573,7 +1611,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -1626,7 +1664,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -1645,15 +1683,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Container(
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Container(
@@ -1670,7 +1708,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -1680,7 +1718,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                         child: Container(
                                                                                           width: 30.0,
                                                                                           height: 30.0,
@@ -1695,7 +1733,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -1715,49 +1753,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            true);
-                                                                    showDialog(
-                                                                      barrierColor:
-                                                                          Color(
-                                                                              0x34000000),
-                                                                      context:
-                                                                          context,
-                                                                      builder:
-                                                                          (dialogContext) {
-                                                                        return Dialog(
-                                                                          elevation:
-                                                                              0,
-                                                                          insetPadding:
-                                                                              EdgeInsets.zero,
-                                                                          backgroundColor:
-                                                                              Colors.transparent,
-                                                                          alignment:
-                                                                              AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
-                                                                          child:
-                                                                              WebViewAware(
-                                                                            child:
-                                                                                GestureDetector(
-                                                                              onTap: () {
-                                                                                FocusScope.of(dialogContext).unfocus();
-                                                                                FocusManager.instance.primaryFocus?.unfocus();
-                                                                              },
-                                                                              child: EditTaskWidget(),
-                                                                            ),
-                                                                          ),
-                                                                        );
-                                                                      },
-                                                                    );
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -1771,7 +1766,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -1800,9 +1795,54 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered1 =
+                                                                          true);
+                                                                  showDialog(
+                                                                    barrierColor:
+                                                                        const Color(
+                                                                            0x34000000),
+                                                                    context:
+                                                                        context,
+                                                                    builder:
+                                                                        (dialogContext) {
+                                                                      return Dialog(
+                                                                        elevation:
+                                                                            0,
+                                                                        insetPadding:
+                                                                            EdgeInsets.zero,
+                                                                        backgroundColor:
+                                                                            Colors.transparent,
+                                                                        alignment:
+                                                                            const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                        child:
+                                                                            WebViewAware(
+                                                                          child:
+                                                                              GestureDetector(
+                                                                            onTap:
+                                                                                () {
+                                                                              FocusScope.of(dialogContext).unfocus();
+                                                                              FocusManager.instance.primaryFocus?.unfocus();
+                                                                            },
+                                                                            child:
+                                                                                const EditTaskWidget(),
+                                                                          ),
+                                                                        ),
+                                                                      );
+                                                                    },
+                                                                  );
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered1 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -1831,7 +1871,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'UX',
                                                                               color: FlutterFlowTheme.of(context).success,
-                                                                              bg: Color(0x3328C76F),
+                                                                              bg: const Color(0x3328C76F),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered1 ==
@@ -1848,8 +1888,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -1859,7 +1899,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -1914,7 +1954,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -1933,16 +1973,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -1959,7 +1999,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -1969,7 +2009,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -1984,7 +2024,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -2004,51 +2044,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered1 =
-                                                                          true);
-                                                                  showDialog(
-                                                                    barrierColor:
-                                                                        Color(
-                                                                            0x34000000),
-                                                                    context:
-                                                                        context,
-                                                                    builder:
-                                                                        (dialogContext) {
-                                                                      return Dialog(
-                                                                        elevation:
-                                                                            0,
-                                                                        insetPadding:
-                                                                            EdgeInsets.zero,
-                                                                        backgroundColor:
-                                                                            Colors.transparent,
-                                                                        alignment:
-                                                                            AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
-                                                                        child:
-                                                                            WebViewAware(
-                                                                          child:
-                                                                              GestureDetector(
-                                                                            onTap:
-                                                                                () {
-                                                                              FocusScope.of(dialogContext).unfocus();
-                                                                              FocusManager.instance.primaryFocus?.unfocus();
-                                                                            },
-                                                                            child:
-                                                                                EditTaskWidget(),
-                                                                          ),
-                                                                        ),
-                                                                      );
-                                                                    },
-                                                                  );
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered1 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -2067,7 +2062,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -2094,9 +2089,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -2125,7 +2132,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Code Review',
                                                                               color: FlutterFlowTheme.of(context).error,
-                                                                              bg: Color(0x34EA5455),
+                                                                              bg: const Color(0x34EA5455),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered2 ==
@@ -2142,8 +2149,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -2153,7 +2160,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -2208,7 +2215,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -2227,16 +2234,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -2253,7 +2260,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -2263,7 +2270,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -2278,7 +2285,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -2298,18 +2305,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -2322,7 +2317,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -2348,9 +2343,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered2 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered2 =
+                                                                        false);
+                                                              }),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -2383,7 +2390,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 'Code Review',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).error,
-                                                                            bg: Color(0x34EA5455),
+                                                                            bg: const Color(0x34EA5455),
                                                                           ),
                                                                         ),
                                                                         if (_model.mouseRegionHovered2 ==
@@ -2401,8 +2408,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                   context: context,
                                                                                   isGlobal: false,
                                                                                   avoidOverflow: false,
-                                                                                  targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                  followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                  followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   builder: (dialogContext) {
                                                                                     return Material(
                                                                                       color: Colors.transparent,
@@ -2412,7 +2419,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             FocusScope.of(dialogContext).unfocus();
                                                                                             FocusManager.instance.primaryFocus?.unfocus();
                                                                                           },
-                                                                                          child: KanbanEditWidget(),
+                                                                                          child: const KanbanEditWidget(),
                                                                                         ),
                                                                                       ),
                                                                                     );
@@ -2474,7 +2481,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -2493,16 +2500,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 14.0)),
+                                                                          ].divide(const SizedBox(width: 14.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Container(
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Stack(
                                                                                 children: [
                                                                                   Container(
@@ -2519,7 +2526,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       width: 32.0,
                                                                                       height: 32.0,
                                                                                       clipBehavior: Clip.antiAlias,
-                                                                                      decoration: BoxDecoration(
+                                                                                      decoration: const BoxDecoration(
                                                                                         shape: BoxShape.circle,
                                                                                       ),
                                                                                       child: Image.network(
@@ -2529,7 +2536,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 30.0,
                                                                                       height: 30.0,
@@ -2544,7 +2551,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -2564,18 +2571,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   ],
                                                                 ),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered2 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered2 =
-                                                                        false);
-                                                              }),
                                                             ),
                                                           ),
                                                         ),
@@ -2584,6 +2579,18 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                           cursor: MouseCursor
                                                                   .defer ??
                                                               MouseCursor.defer,
+                                                          onEnter:
+                                                              ((event) async {
+                                                            safeSetState(() =>
+                                                                _model.mouseRegionHovered3 =
+                                                                    true);
+                                                          }),
+                                                          onExit:
+                                                              ((event) async {
+                                                            safeSetState(() =>
+                                                                _model.mouseRegionHovered3 =
+                                                                    false);
+                                                          }),
                                                           child: Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
@@ -2594,7 +2601,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered3!
+                                                                  _model.mouseRegionHovered3
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primaryText
@@ -2617,7 +2624,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered3!
+                                                                        _model.mouseRegionHovered3
                                                                             ? FlutterFlowTheme.of(context).primaryText
                                                                             : FlutterFlowTheme.of(context).secondaryTitle,
                                                                         FlutterFlowTheme.of(context)
@@ -2629,29 +2636,17 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
-                                                          onEnter:
-                                                              ((event) async {
-                                                            safeSetState(() =>
-                                                                _model.mouseRegionHovered3 =
-                                                                    true);
-                                                          }),
-                                                          onExit:
-                                                              ((event) async {
-                                                            safeSetState(() =>
-                                                                _model.mouseRegionHovered3 =
-                                                                    false);
-                                                          }),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 16.0)),
                                                     );
                                                   },
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 20.0)),
+                                            ].divide(const SizedBox(height: 20.0)),
                                           ),
                                         ),
                                       ),
@@ -2662,12 +2657,12 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                           child: Container(
                                             width: 280.0,
                                             height: double.infinity,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   child: Row(
@@ -2713,14 +2708,14 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               avoidOverflow:
                                                                   false,
                                                               targetAnchor:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                           -1.0,
                                                                           6.0)
                                                                       .resolve(
                                                                           Directionality.of(
                                                                               context)),
                                                               followerAnchor:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -2745,7 +2740,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          KanbanActionWidget(),
+                                                                          const KanbanActionWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -2786,7 +2781,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           12.0,
@@ -2813,10 +2808,22 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered4 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered4 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -2842,7 +2849,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'Info',
                                                                                 color: FlutterFlowTheme.of(context).info,
-                                                                                bg: Color(0x3300CFE8),
+                                                                                bg: const Color(0x3300CFE8),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered4 ==
@@ -2859,8 +2866,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -2870,7 +2877,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -2923,7 +2930,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -2942,15 +2949,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Container(
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Container(
@@ -2967,7 +2974,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -2977,7 +2984,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                         child: Container(
                                                                                           width: 30.0,
                                                                                           height: 30.0,
@@ -2992,7 +2999,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -3012,18 +3019,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered4 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered4 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -3036,7 +3031,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -3063,9 +3058,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered4 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered4 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -3094,7 +3101,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Info',
                                                                               color: FlutterFlowTheme.of(context).info,
-                                                                              bg: Color(0x3300CFE8),
+                                                                              bg: const Color(0x3300CFE8),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered4 ==
@@ -3111,8 +3118,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -3122,7 +3129,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -3177,7 +3184,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -3196,16 +3203,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -3222,7 +3229,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -3232,7 +3239,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -3247,7 +3254,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -3267,18 +3274,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered4 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered4 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -3295,7 +3290,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           12.0,
@@ -3322,10 +3317,22 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered5 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered5 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -3352,7 +3359,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'Images',
                                                                                 color: FlutterFlowTheme.of(context).warning,
-                                                                                bg: Color(0x34FF9F43),
+                                                                                bg: const Color(0x34FF9F43),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered5 ==
@@ -3369,8 +3376,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -3380,7 +3387,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -3410,22 +3417,10 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 BoxFit.cover,
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 12.0)),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered5 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered5 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -3437,7 +3432,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -3464,9 +3459,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered5 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered5 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -3495,7 +3502,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Images',
                                                                               color: FlutterFlowTheme.of(context).warning,
-                                                                              bg: Color(0x34FF9F43),
+                                                                              bg: const Color(0x34FF9F43),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered5 ==
@@ -3512,8 +3519,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -3523,7 +3530,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -3553,23 +3560,11 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               .cover,
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             12.0)),
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered5 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered5 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -3579,6 +3574,18 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     .defer ??
                                                                 MouseCursor
                                                                     .defer,
+                                                            onEnter:
+                                                                ((event) async {
+                                                              safeSetState(() =>
+                                                                  _model.mouseRegionHovered6 =
+                                                                      true);
+                                                            }),
+                                                            onExit:
+                                                                ((event) async {
+                                                              safeSetState(() =>
+                                                                  _model.mouseRegionHovered6 =
+                                                                      false);
+                                                            }),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -3589,7 +3596,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered6!
+                                                                    _model.mouseRegionHovered6
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .primaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -3610,7 +3617,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             'Public Sans',
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered6!
+                                                                          _model.mouseRegionHovered6
                                                                               ? FlutterFlowTheme.of(context).primaryText
                                                                               : FlutterFlowTheme.of(context).secondaryTitle,
                                                                           FlutterFlowTheme.of(context)
@@ -3622,41 +3629,29 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 8.0)),
                                                             ),
-                                                            onEnter:
-                                                                ((event) async {
-                                                              safeSetState(() =>
-                                                                  _model.mouseRegionHovered6 =
-                                                                      true);
-                                                            }),
-                                                            onExit:
-                                                                ((event) async {
-                                                              safeSetState(() =>
-                                                                  _model.mouseRegionHovered6 =
-                                                                      false);
-                                                            }),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       );
                                                     },
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 20.0)),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
                                           ),
                                         ),
                                         child: Container(
                                           width: 280.0,
                                           height: double.infinity,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 0.0, 12.0, 0.0),
                                                 child: Row(
@@ -3700,14 +3695,14 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                             avoidOverflow:
                                                                 false,
                                                             targetAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         -1.0,
                                                                         6.0)
                                                                     .resolve(
                                                                         Directionality.of(
                                                                             context)),
                                                             followerAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -3732,7 +3727,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           ?.unfocus();
                                                                     },
                                                                     child:
-                                                                        KanbanActionWidget(),
+                                                                        const KanbanActionWidget(),
                                                                   ),
                                                                 ),
                                                               );
@@ -3772,7 +3767,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -3799,9 +3794,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered4 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered4 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -3830,7 +3837,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Info',
                                                                               color: FlutterFlowTheme.of(context).info,
-                                                                              bg: Color(0x3300CFE8),
+                                                                              bg: const Color(0x3300CFE8),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered4 ==
@@ -3847,8 +3854,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -3858,7 +3865,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -3913,7 +3920,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -3932,16 +3939,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -3958,7 +3965,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -3968,7 +3975,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -3983,7 +3990,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -4003,18 +4010,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered4 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered4 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -4027,7 +4022,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -4053,9 +4048,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered4 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered4 =
+                                                                        false);
+                                                              }),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -4088,7 +4095,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 'Info',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).info,
-                                                                            bg: Color(0x3300CFE8),
+                                                                            bg: const Color(0x3300CFE8),
                                                                           ),
                                                                         ),
                                                                         if (_model.mouseRegionHovered4 ==
@@ -4106,8 +4113,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                   context: context,
                                                                                   isGlobal: false,
                                                                                   avoidOverflow: false,
-                                                                                  targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                  followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                  followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   builder: (dialogContext) {
                                                                                     return Material(
                                                                                       color: Colors.transparent,
@@ -4117,7 +4124,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             FocusScope.of(dialogContext).unfocus();
                                                                                             FocusManager.instance.primaryFocus?.unfocus();
                                                                                           },
-                                                                                          child: KanbanEditWidget(),
+                                                                                          child: const KanbanEditWidget(),
                                                                                         ),
                                                                                       ),
                                                                                     );
@@ -4179,7 +4186,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -4198,16 +4205,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 14.0)),
+                                                                          ].divide(const SizedBox(width: 14.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Container(
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Stack(
                                                                                 children: [
                                                                                   Container(
@@ -4224,7 +4231,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       width: 32.0,
                                                                                       height: 32.0,
                                                                                       clipBehavior: Clip.antiAlias,
-                                                                                      decoration: BoxDecoration(
+                                                                                      decoration: const BoxDecoration(
                                                                                         shape: BoxShape.circle,
                                                                                       ),
                                                                                       child: Image.network(
@@ -4234,7 +4241,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 30.0,
                                                                                       height: 30.0,
@@ -4249,7 +4256,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -4269,18 +4276,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   ],
                                                                 ),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered4 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered4 =
-                                                                        false);
-                                                              }),
                                                             ),
                                                           ),
                                                         ),
@@ -4297,7 +4292,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -4324,9 +4319,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered5 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered5 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -4355,7 +4362,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Images',
                                                                               color: FlutterFlowTheme.of(context).warning,
-                                                                              bg: Color(0x34FF9F43),
+                                                                              bg: const Color(0x34FF9F43),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered5 ==
@@ -4372,8 +4379,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -4383,7 +4390,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -4413,23 +4420,11 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               .cover,
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             12.0)),
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered5 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered5 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -4441,7 +4436,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -4467,9 +4462,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered5 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered5 =
+                                                                        false);
+                                                              }),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -4502,7 +4509,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 'Images',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).warning,
-                                                                            bg: Color(0x34FF9F43),
+                                                                            bg: const Color(0x34FF9F43),
                                                                           ),
                                                                         ),
                                                                         if (_model.mouseRegionHovered5 ==
@@ -4520,8 +4527,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                   context: context,
                                                                                   isGlobal: false,
                                                                                   avoidOverflow: false,
-                                                                                  targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                  followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                  followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   builder: (dialogContext) {
                                                                                     return Material(
                                                                                       color: Colors.transparent,
@@ -4531,7 +4538,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             FocusScope.of(dialogContext).unfocus();
                                                                                             FocusManager.instance.primaryFocus?.unfocus();
                                                                                           },
-                                                                                          child: KanbanEditWidget(),
+                                                                                          child: const KanbanEditWidget(),
                                                                                         ),
                                                                                       ),
                                                                                     );
@@ -4562,23 +4569,11 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             .cover,
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           12.0)),
                                                                 ),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered5 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered5 =
-                                                                        false);
-                                                              }),
                                                             ),
                                                           ),
                                                         ),
@@ -4587,6 +4582,18 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                           cursor: MouseCursor
                                                                   .defer ??
                                                               MouseCursor.defer,
+                                                          onEnter:
+                                                              ((event) async {
+                                                            safeSetState(() =>
+                                                                _model.mouseRegionHovered6 =
+                                                                    true);
+                                                          }),
+                                                          onExit:
+                                                              ((event) async {
+                                                            safeSetState(() =>
+                                                                _model.mouseRegionHovered6 =
+                                                                    false);
+                                                          }),
                                                           child: Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
@@ -4597,7 +4604,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered6!
+                                                                  _model.mouseRegionHovered6
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primaryText
@@ -4620,7 +4627,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered6!
+                                                                        _model.mouseRegionHovered6
                                                                             ? FlutterFlowTheme.of(context).primaryText
                                                                             : FlutterFlowTheme.of(context).secondaryTitle,
                                                                         FlutterFlowTheme.of(context)
@@ -4632,29 +4639,17 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
-                                                          onEnter:
-                                                              ((event) async {
-                                                            safeSetState(() =>
-                                                                _model.mouseRegionHovered6 =
-                                                                    true);
-                                                          }),
-                                                          onExit:
-                                                              ((event) async {
-                                                            safeSetState(() =>
-                                                                _model.mouseRegionHovered6 =
-                                                                    false);
-                                                          }),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 16.0)),
                                                     );
                                                   },
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 20.0)),
+                                            ].divide(const SizedBox(height: 20.0)),
                                           ),
                                         ),
                                       ),
@@ -4665,12 +4660,12 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                           child: Container(
                                             width: 280.0,
                                             height: double.infinity,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 12.0, 0.0),
                                                   child: Row(
@@ -4716,14 +4711,14 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               avoidOverflow:
                                                                   false,
                                                               targetAnchor:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                           -1.0,
                                                                           6.0)
                                                                       .resolve(
                                                                           Directionality.of(
                                                                               context)),
                                                               followerAnchor:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -4748,7 +4743,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          KanbanActionWidget(),
+                                                                          const KanbanActionWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -4789,7 +4784,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           12.0,
@@ -4816,10 +4811,22 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered7 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered7 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -4845,7 +4852,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'App',
                                                                                 color: FlutterFlowTheme.of(context).secondary,
-                                                                                bg: Color(0x33A8AAAE),
+                                                                                bg: const Color(0x33A8AAAE),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered7 ==
@@ -4862,8 +4869,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -4873,7 +4880,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -4926,7 +4933,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -4945,15 +4952,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Container(
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Container(
@@ -4970,7 +4977,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -4980,7 +4987,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                         child: Container(
                                                                                           width: 30.0,
                                                                                           height: 30.0,
@@ -4995,7 +5002,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -5006,7 +5013,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
                                                                                         child: Container(
                                                                                           width: 30.0,
                                                                                           height: 30.0,
@@ -5021,7 +5028,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             width: 32.0,
                                                                                             height: 32.0,
                                                                                             clipBehavior: Clip.antiAlias,
-                                                                                            decoration: BoxDecoration(
+                                                                                            decoration: const BoxDecoration(
                                                                                               shape: BoxShape.circle,
                                                                                             ),
                                                                                             child: Image.network(
@@ -5041,18 +5048,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered7 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered7 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -5065,7 +5060,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -5092,9 +5087,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered7 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered7 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -5123,7 +5130,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'App',
                                                                               color: FlutterFlowTheme.of(context).secondary,
-                                                                              bg: Color(0x33A8AAAE),
+                                                                              bg: const Color(0x33A8AAAE),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered7 ==
@@ -5140,8 +5147,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -5151,7 +5158,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -5206,7 +5213,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -5225,16 +5232,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -5251,7 +5258,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -5261,7 +5268,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -5276,7 +5283,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -5287,7 +5294,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -5302,7 +5309,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -5322,18 +5329,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered7 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered7 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -5351,7 +5346,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           12.0,
@@ -5378,10 +5373,22 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered8 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered8 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -5407,7 +5414,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                               child: LableWidget(
                                                                                 lable: 'Charts & Maps',
                                                                                 color: FlutterFlowTheme.of(context).primary,
-                                                                                bg: Color(0x337367F0),
+                                                                                bg: const Color(0x337367F0),
                                                                               ),
                                                                             ),
                                                                             if (_model.mouseRegionHovered8 ==
@@ -5424,8 +5431,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       context: context,
                                                                                       isGlobal: false,
                                                                                       avoidOverflow: false,
-                                                                                      targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                      followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                      targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                      followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                       builder: (dialogContext) {
                                                                                         return Material(
                                                                                           color: Colors.transparent,
@@ -5435,7 +5442,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                                               },
-                                                                                              child: KanbanEditWidget(),
+                                                                                              child: const KanbanEditWidget(),
                                                                                             ),
                                                                                           ),
                                                                                         );
@@ -5488,7 +5495,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -5507,15 +5514,15 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Container(
-                                                                                  decoration: BoxDecoration(),
+                                                                                  decoration: const BoxDecoration(),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Container(
@@ -5532,7 +5539,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -5551,18 +5558,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered8 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered8 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ),
                                                             ),
@@ -5575,7 +5570,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -5602,9 +5597,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered8 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered8 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -5633,7 +5640,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Charts & Maps',
                                                                               color: FlutterFlowTheme.of(context).primary,
-                                                                              bg: Color(0x337367F0),
+                                                                              bg: const Color(0x337367F0),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered8 ==
@@ -5650,8 +5657,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -5661,7 +5668,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -5716,7 +5723,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -5735,16 +5742,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -5761,7 +5768,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -5780,18 +5787,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered8 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered8 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -5801,6 +5796,18 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     .defer ??
                                                                 MouseCursor
                                                                     .defer,
+                                                            onEnter:
+                                                                ((event) async {
+                                                              safeSetState(() =>
+                                                                  _model.mouseRegionHovered9 =
+                                                                      true);
+                                                            }),
+                                                            onExit:
+                                                                ((event) async {
+                                                              safeSetState(() =>
+                                                                  _model.mouseRegionHovered9 =
+                                                                      false);
+                                                            }),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -5811,7 +5818,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   color:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered9!
+                                                                    _model.mouseRegionHovered9
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .primaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -5832,7 +5839,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             'Public Sans',
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered9!
+                                                                          _model.mouseRegionHovered9
                                                                               ? FlutterFlowTheme.of(context).primaryText
                                                                               : FlutterFlowTheme.of(context).secondaryTitle,
                                                                           FlutterFlowTheme.of(context)
@@ -5844,41 +5851,29 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 8.0)),
                                                             ),
-                                                            onEnter:
-                                                                ((event) async {
-                                                              safeSetState(() =>
-                                                                  _model.mouseRegionHovered9 =
-                                                                      true);
-                                                            }),
-                                                            onExit:
-                                                                ((event) async {
-                                                              safeSetState(() =>
-                                                                  _model.mouseRegionHovered9 =
-                                                                      false);
-                                                            }),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       );
                                                     },
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 20.0)),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
                                           ),
                                         ),
                                         child: Container(
                                           width: 280.0,
                                           height: double.infinity,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 0.0, 12.0, 0.0),
                                                 child: Row(
@@ -5922,14 +5917,14 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                             avoidOverflow:
                                                                 false,
                                                             targetAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         -1.0,
                                                                         6.0)
                                                                     .resolve(
                                                                         Directionality.of(
                                                                             context)),
                                                             followerAnchor:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -5954,7 +5949,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           ?.unfocus();
                                                                     },
                                                                     child:
-                                                                        KanbanActionWidget(),
+                                                                        const KanbanActionWidget(),
                                                                   ),
                                                                 ),
                                                               );
@@ -5994,7 +5989,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -6021,9 +6016,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered7 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered7 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -6052,7 +6059,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'App',
                                                                               color: FlutterFlowTheme.of(context).secondary,
-                                                                              bg: Color(0x33A8AAAE),
+                                                                              bg: const Color(0x33A8AAAE),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered7 ==
@@ -6069,8 +6076,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -6080,7 +6087,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -6135,7 +6142,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -6154,16 +6161,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -6180,7 +6187,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -6190,7 +6197,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -6205,7 +6212,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -6216,7 +6223,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 30.0,
                                                                                         height: 30.0,
@@ -6231,7 +6238,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           width: 32.0,
                                                                                           height: 32.0,
                                                                                           clipBehavior: Clip.antiAlias,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Image.network(
@@ -6251,18 +6258,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered7 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered7 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -6275,7 +6270,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -6301,9 +6296,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered7 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered7 =
+                                                                        false);
+                                                              }),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -6336,7 +6343,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 'App',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondary,
-                                                                            bg: Color(0x33A8AAAE),
+                                                                            bg: const Color(0x33A8AAAE),
                                                                           ),
                                                                         ),
                                                                         if (_model.mouseRegionHovered7 ==
@@ -6354,8 +6361,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                   context: context,
                                                                                   isGlobal: false,
                                                                                   avoidOverflow: false,
-                                                                                  targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                  followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                  followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   builder: (dialogContext) {
                                                                                     return Material(
                                                                                       color: Colors.transparent,
@@ -6365,7 +6372,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             FocusScope.of(dialogContext).unfocus();
                                                                                             FocusManager.instance.primaryFocus?.unfocus();
                                                                                           },
-                                                                                          child: KanbanEditWidget(),
+                                                                                          child: const KanbanEditWidget(),
                                                                                         ),
                                                                                       ),
                                                                                     );
@@ -6427,7 +6434,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -6446,16 +6453,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 14.0)),
+                                                                          ].divide(const SizedBox(width: 14.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Container(
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Stack(
                                                                                 children: [
                                                                                   Container(
@@ -6472,7 +6479,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       width: 32.0,
                                                                                       height: 32.0,
                                                                                       clipBehavior: Clip.antiAlias,
-                                                                                      decoration: BoxDecoration(
+                                                                                      decoration: const BoxDecoration(
                                                                                         shape: BoxShape.circle,
                                                                                       ),
                                                                                       child: Image.network(
@@ -6482,7 +6489,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 30.0,
                                                                                       height: 30.0,
@@ -6497,7 +6504,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -6508,7 +6515,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 30.0,
                                                                                       height: 30.0,
@@ -6523,7 +6530,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -6543,18 +6550,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   ],
                                                                 ),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered7 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered7 =
-                                                                        false);
-                                                              }),
                                                             ),
                                                           ),
                                                         ),
@@ -6572,7 +6567,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         12.0,
@@ -6599,9 +6594,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered8 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered8 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               20.0),
                                                                   child: Column(
@@ -6630,7 +6637,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 LableWidget(
                                                                               lable: 'Charts & Maps',
                                                                               color: FlutterFlowTheme.of(context).primary,
-                                                                              bg: Color(0x337367F0),
+                                                                              bg: const Color(0x337367F0),
                                                                             ),
                                                                           ),
                                                                           if (_model.mouseRegionHovered8 ==
@@ -6647,8 +6654,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -6658,7 +6665,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: KanbanEditWidget(),
+                                                                                            child: const KanbanEditWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -6713,7 +6720,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               Row(
                                                                                 mainAxisSize: MainAxisSize.max,
@@ -6732,16 +6739,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 14.0)),
+                                                                            ].divide(const SizedBox(width: 14.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [
                                                                               Container(
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Container(
@@ -6758,7 +6765,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         width: 32.0,
                                                                                         height: 32.0,
                                                                                         clipBehavior: Clip.antiAlias,
-                                                                                        decoration: BoxDecoration(
+                                                                                        decoration: const BoxDecoration(
                                                                                           shape: BoxShape.circle,
                                                                                         ),
                                                                                         child: Image.network(
@@ -6777,18 +6784,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered8 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered8 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                           ),
@@ -6801,7 +6796,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       12.0,
@@ -6827,9 +6822,21 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered8 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered8 =
+                                                                        false);
+                                                              }),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -6862,7 +6869,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                 'Charts & Maps',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primary,
-                                                                            bg: Color(0x337367F0),
+                                                                            bg: const Color(0x337367F0),
                                                                           ),
                                                                         ),
                                                                         if (_model.mouseRegionHovered8 ==
@@ -6880,8 +6887,8 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                   context: context,
                                                                                   isGlobal: false,
                                                                                   avoidOverflow: false,
-                                                                                  targetAnchor: AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
-                                                                                  followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                  targetAnchor: const AlignmentDirectional(-1.0, 6.0).resolve(Directionality.of(context)),
+                                                                                  followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                   builder: (dialogContext) {
                                                                                     return Material(
                                                                                       color: Colors.transparent,
@@ -6891,7 +6898,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                             FocusScope.of(dialogContext).unfocus();
                                                                                             FocusManager.instance.primaryFocus?.unfocus();
                                                                                           },
-                                                                                          child: KanbanEditWidget(),
+                                                                                          child: const KanbanEditWidget(),
                                                                                         ),
                                                                                       ),
                                                                                     );
@@ -6953,7 +6960,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -6972,16 +6979,16 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 14.0)),
+                                                                          ].divide(const SizedBox(width: 14.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Container(
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Stack(
                                                                                 children: [
                                                                                   Container(
@@ -6998,7 +7005,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                                       width: 32.0,
                                                                                       height: 32.0,
                                                                                       clipBehavior: Clip.antiAlias,
-                                                                                      decoration: BoxDecoration(
+                                                                                      decoration: const BoxDecoration(
                                                                                         shape: BoxShape.circle,
                                                                                       ),
                                                                                       child: Image.network(
@@ -7017,18 +7024,6 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                   ],
                                                                 ),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered8 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered8 =
-                                                                        false);
-                                                              }),
                                                             ),
                                                           ),
                                                         ),
@@ -7037,6 +7032,18 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                           cursor: MouseCursor
                                                                   .defer ??
                                                               MouseCursor.defer,
+                                                          onEnter:
+                                                              ((event) async {
+                                                            safeSetState(() =>
+                                                                _model.mouseRegionHovered9 =
+                                                                    true);
+                                                          }),
+                                                          onExit:
+                                                              ((event) async {
+                                                            safeSetState(() =>
+                                                                _model.mouseRegionHovered9 =
+                                                                    false);
+                                                          }),
                                                           child: Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
@@ -7047,7 +7054,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered9!
+                                                                  _model.mouseRegionHovered9
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primaryText
@@ -7070,7 +7077,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           'Public Sans',
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered9!
+                                                                        _model.mouseRegionHovered9
                                                                             ? FlutterFlowTheme.of(context).primaryText
                                                                             : FlutterFlowTheme.of(context).secondaryTitle,
                                                                         FlutterFlowTheme.of(context)
@@ -7082,29 +7089,17 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
-                                                          onEnter:
-                                                              ((event) async {
-                                                            safeSetState(() =>
-                                                                _model.mouseRegionHovered9 =
-                                                                    true);
-                                                          }),
-                                                          onExit:
-                                                              ((event) async {
-                                                            safeSetState(() =>
-                                                                _model.mouseRegionHovered9 =
-                                                                    false);
-                                                          }),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 16.0)),
                                                     );
                                                   },
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 20.0)),
+                                            ].divide(const SizedBox(height: 20.0)),
                                           ),
                                         ),
                                       ),
@@ -7114,7 +7109,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                           Icon(
                                             Icons.add,
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered3!
+                                              _model.mouseRegionHovered3
                                                   ? FlutterFlowTheme.of(context)
                                                       .primaryText
                                                   : FlutterFlowTheme.of(context)
@@ -7131,7 +7126,7 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                 .override(
                                                   fontFamily: 'Public Sans',
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered3!
+                                                    _model.mouseRegionHovered3
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .primaryText
@@ -7145,33 +7140,33 @@ class _KanbanWidgetState extends State<KanbanWidget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(width: 8.0)),
+                                        ].divide(const SizedBox(width: 8.0)),
                                       ),
-                                    ].divide(SizedBox(width: 32.0)),
+                                    ].divide(const SizedBox(width: 32.0)),
                                   ),
                                 );
                               },
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             child: wrapWithModel(
                               model: _model.footerModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: FooterWidget(),
+                              child: const FooterWidget(),
                             ),
                           ),
                         ]
-                            .divide(SizedBox(height: 28.0))
-                            .addToStart(SizedBox(height: 110.0))
-                            .addToEnd(SizedBox(height: 28.0)),
+                            .divide(const SizedBox(height: 28.0))
+                            .addToStart(const SizedBox(height: 110.0))
+                            .addToEnd(const SizedBox(height: 28.0)),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

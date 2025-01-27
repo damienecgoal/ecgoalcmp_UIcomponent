@@ -3,11 +3,8 @@ import '/components/cutom_option_1/cutom_option1_widget.dart';
 import '/components_2/avatar/avatar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_nodal_model.dart';
 export 'profile_nodal_model.dart';
 
@@ -45,12 +42,12 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
       child: Container(
         width: 260.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -66,8 +63,14 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
+              onEnter: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered = true);
+              }),
+              onExit: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered = false);
+              }),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 12.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 12.0, 8.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -77,7 +80,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                     context.pushNamed(
                       'Account',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                         ),
@@ -87,8 +90,8 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
-                        _model.mouseRegionHovered!
-                            ? Color(0x327367F0)
+                        _model.mouseRegionHovered
+                            ? const Color(0x327367F0)
                             : Colors.transparent,
                         Colors.transparent,
                       ),
@@ -96,7 +99,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -125,7 +128,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                                       .override(
                                         fontFamily: 'Public Sans',
                                         color: valueOrDefault<Color>(
-                                          _model.mouseRegionHovered!
+                                          _model.mouseRegionHovered
                                               ? FlutterFlowTheme.of(context)
                                                   .primary
                                               : FlutterFlowTheme.of(context)
@@ -154,20 +157,14 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                                       ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 6.0)),
+                            ].divide(const SizedBox(height: 6.0)),
                           ),
-                        ].divide(SizedBox(width: 14.0)),
+                        ].divide(const SizedBox(width: 14.0)),
                       ),
                     ),
                   ),
                 ),
               ),
-              onEnter: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered = true);
-              }),
-              onExit: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered = false);
-              }),
             ),
             Divider(
               height: 12.0,
@@ -183,7 +180,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                 context.pushNamed(
                   'Profile',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: TransitionInfo(
+                    kTransitionInfoKey: const TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                     ),
@@ -218,7 +215,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                 context.pushNamed(
                   'Account',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: TransitionInfo(
+                    kTransitionInfoKey: const TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                     ),
@@ -253,7 +250,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                 context.pushNamed(
                   'Account',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: TransitionInfo(
+                    kTransitionInfoKey: const TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                     ),
@@ -293,7 +290,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                 context.pushNamed(
                   'FAQ',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: TransitionInfo(
+                    kTransitionInfoKey: const TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                     ),
@@ -328,7 +325,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                 context.pushNamed(
                   'Pricing',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: TransitionInfo(
+                    kTransitionInfoKey: const TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                     ),
@@ -390,7 +387,7 @@ class _ProfileNodalWidgetState extends State<ProfileNodalWidget> {
                 ),
               ),
             ),
-          ].divide(SizedBox(height: 1.0)),
+          ].divide(const SizedBox(height: 1.0)),
         ),
       ),
     );

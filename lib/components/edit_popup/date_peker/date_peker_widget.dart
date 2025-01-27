@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'date_peker_model.dart';
 export 'date_peker_model.dart';
 
@@ -41,13 +39,13 @@ class _DatePekerWidgetState extends State<DatePekerWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 300.0,
         height: 360.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -58,7 +56,7 @@ class _DatePekerWidgetState extends State<DatePekerWidget> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(12.0),
           child: FlutterFlowCalendar(
             color: FlutterFlowTheme.of(context).primary,
             iconColor: FlutterFlowTheme.of(context).secondaryText,

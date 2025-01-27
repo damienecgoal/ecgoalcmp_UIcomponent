@@ -2,10 +2,7 @@ import '/components/avatar_2/avatar2_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'referred_users_model.dart';
 export 'referred_users_model.dart';
 
@@ -64,12 +61,12 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -109,7 +106,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                       context.pushNamed(
                         'Customer_Details',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.leftToRight,
                           ),
@@ -124,8 +121,8 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: Avatar2Widget(
                             diameter: 40.0,
-                            image: widget!.avatar!,
-                            name: widget!.name!,
+                            image: widget.avatar!,
+                            name: widget.name!,
                           ),
                         ),
                         Column(
@@ -135,6 +132,14 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                             MouseRegion(
                               opaque: false,
                               cursor: MouseCursor.defer ?? MouseCursor.defer,
+                              onEnter: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered = true);
+                              }),
+                              onExit: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered = false);
+                              }),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -144,7 +149,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                                   context.pushNamed(
                                     'Customer_Details',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.leftToRight,
@@ -154,7 +159,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                                 },
                                 child: Text(
                                   valueOrDefault<String>(
-                                    widget!.name,
+                                    widget.name,
                                     'na',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -168,18 +173,10 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                                       ),
                                 ),
                               ),
-                              onEnter: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered = true);
-                              }),
-                              onExit: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered = false);
-                              }),
                             ),
                             Text(
                               valueOrDefault<String>(
-                                widget!.email,
+                                widget.email,
                                 'na',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -192,9 +189,9 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                          ].divide(SizedBox(height: 4.0)),
+                          ].divide(const SizedBox(height: 4.0)),
                         ),
-                      ].divide(SizedBox(width: 12.0)),
+                      ].divide(const SizedBox(width: 12.0)),
                     ),
                   ),
                 ),
@@ -207,7 +204,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.id,
+                          widget.id,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -231,12 +228,12 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.status!,
-                          titleColor: widget!.statusColor!,
-                          bgColor: widget!.statusBG!,
+                          title: widget.status!,
+                          titleColor: widget.statusColor!,
+                          bgColor: widget.statusBG!,
                         ),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
                 ),
                 Expanded(
@@ -248,7 +245,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.value,
+                          widget.value,
                           'an',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -272,7 +269,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.earnings,
+                          widget.earnings,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -287,7 +284,7 @@ class _ReferredUsersWidgetState extends State<ReferredUsersWidget> {
                     ],
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

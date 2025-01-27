@@ -1,10 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'mail_labels_widget.dart' show MailLabelsWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class MailLabelsModel extends FlutterFlowModel<MailLabelsWidget> {
   ///  State fields for stateful widgets in this component.

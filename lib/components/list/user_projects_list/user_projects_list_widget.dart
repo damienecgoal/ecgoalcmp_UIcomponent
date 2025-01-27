@@ -1,11 +1,8 @@
 import '/components/avatar_name/avatar_name_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'user_projects_list_model.dart';
 export 'user_projects_list_model.dart';
 
@@ -62,12 +59,12 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 20.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(14.0, 10.0, 20.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -77,9 +74,9 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
                     model: _model.avatarNameModel,
                     updateCallback: () => safeSetState(() {}),
                     child: AvatarNameWidget(
-                      avatar: widget!.avatar!,
-                      name: widget!.name!,
-                      title: widget!.title!,
+                      avatar: widget.avatar!,
+                      name: widget.name!,
+                      title: widget.title!,
                       size: 34.0,
                     ),
                   ),
@@ -93,7 +90,7 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.task,
+                          widget.task,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -117,7 +114,7 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.persen,
+                          widget.persen,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -130,16 +127,16 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
                             ),
                       ),
                       LinearPercentIndicator(
-                        percent: widget!.progress!,
+                        percent: widget.progress!,
                         lineHeight: 6.0,
                         animation: true,
                         animateFromLastPercent: true,
-                        progressColor: widget!.progressColor,
+                        progressColor: widget.progressColor,
                         backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                        barRadius: Radius.circular(50.0),
+                        barRadius: const Radius.circular(50.0),
                         padding: EdgeInsets.zero,
                       ),
-                    ].divide(SizedBox(height: 8.0)),
+                    ].divide(const SizedBox(height: 8.0)),
                   ),
                 ),
                 Expanded(
@@ -151,7 +148,7 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.hour,
+                          widget.hour,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -166,7 +163,7 @@ class _UserProjectsListWidgetState extends State<UserProjectsListWidget> {
                     ],
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

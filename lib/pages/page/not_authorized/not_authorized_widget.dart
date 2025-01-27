@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'not_authorized_model.dart';
 export 'not_authorized_model.dart';
 
@@ -60,7 +57,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                 tabletLandscape: false,
               ))
                 Padding(
-                  padding: EdgeInsets.all(60.0),
+                  padding: const EdgeInsets.all(60.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -87,8 +84,14 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                       MouseRegion(
                         opaque: false,
                         cursor: MouseCursor.defer ?? MouseCursor.defer,
+                        onEnter: ((event) async {
+                          safeSetState(() => _model.mouseRegionHovered = true);
+                        }),
+                        onExit: ((event) async {
+                          safeSetState(() => _model.mouseRegionHovered = false);
+                        }),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(0.0),
@@ -107,7 +110,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                       context.pushNamed(
                                         'Analytics',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
+                                          kTransitionInfoKey: const TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.fade,
@@ -118,10 +121,10 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                     text: 'Back to home',
                                     options: FFButtonOptions(
                                       height: 60.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -142,14 +145,8 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                             ),
                           ),
                         ),
-                        onEnter: ((event) async {
-                          safeSetState(() => _model.mouseRegionHovered = true);
-                        }),
-                        onExit: ((event) async {
-                          safeSetState(() => _model.mouseRegionHovered = false);
-                        }),
                       ),
-                    ].divide(SizedBox(height: 14.0)),
+                    ].divide(const SizedBox(height: 14.0)),
                   ),
                 ),
               if (responsiveVisibility(
@@ -160,7 +157,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
               ))
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -183,7 +180,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
                           child: Container(
@@ -221,7 +218,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                               .lineColor,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -234,7 +231,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                               .primary,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -247,7 +244,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                               .error,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -260,7 +257,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                               .error,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -271,7 +268,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                       fillColor: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               16.0, 0.0, 16.0, 0.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -291,9 +288,9 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                   text: 'Notify',
                                   options: FFButtonOptions(
                                     height: 60.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -305,7 +302,7 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 0.0,
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(12.0),
                                       topLeft: Radius.circular(0.0),
@@ -318,14 +315,14 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 14.0)),
+                    ].divide(const SizedBox(height: 14.0)),
                   ),
                 ),
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: Stack(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
@@ -343,9 +340,9 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                         tabletLandscape: false,
                       ))
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 80.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
@@ -364,9 +361,9 @@ class _NotAuthorizedWidgetState extends State<NotAuthorizedWidget> {
                         desktop: false,
                       ))
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 40.0, 0.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),

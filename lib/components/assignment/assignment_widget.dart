@@ -1,11 +1,8 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'assignment_model.dart';
 export 'assignment_model.dart';
 
@@ -54,7 +51,7 @@ class _AssignmentWidgetState extends State<AssignmentWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -64,10 +61,10 @@ class _AssignmentWidgetState extends State<AssignmentWidget> {
             lineWidth: 5.0,
             animation: true,
             animateFromLastPercent: true,
-            progressColor: widget!.color,
+            progressColor: widget.color,
             backgroundColor: FlutterFlowTheme.of(context).accent4,
             center: Text(
-              widget!.progress!,
+              widget.progress!,
               style: FlutterFlowTheme.of(context).headlineSmall.override(
                     fontFamily: 'Public Sans',
                     fontSize: 15.0,
@@ -82,7 +79,7 @@ class _AssignmentWidgetState extends State<AssignmentWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.name,
+                    widget.name,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,7 +91,7 @@ class _AssignmentWidgetState extends State<AssignmentWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.task,
+                    widget.task,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -103,14 +100,14 @@ class _AssignmentWidgetState extends State<AssignmentWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 12.0)),
+              ].divide(const SizedBox(height: 12.0)),
             ),
           ),
           FlutterFlowIconButton(
             borderRadius: 6.0,
             borderWidth: 1.0,
             buttonSize: 34.0,
-            fillColor: Color(0x33A8AAAE),
+            fillColor: const Color(0x33A8AAAE),
             icon: Icon(
               FFIcons.kchevronRight,
               color: FlutterFlowTheme.of(context).secondary,
@@ -120,7 +117,7 @@ class _AssignmentWidgetState extends State<AssignmentWidget> {
               print('IconButton pressed ...');
             },
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

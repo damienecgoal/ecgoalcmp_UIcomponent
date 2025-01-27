@@ -1,7 +1,5 @@
 import '/components/chart_name/chart_name_widget.dart';
 import '/components/list/invoice_list/invoice_list_widget.dart';
-import '/components/nodal/popular/popular_widget.dart';
-import '/components/nodal/refresh_share/refresh_share_widget.dart';
 import '/components_2/earning_reports/earning_reports_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
@@ -9,24 +7,10 @@ import '/components_2/popular_products/popular_products_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/statistics/statistics_widget.dart';
 import '/components_2/transactions/transactions_widget.dart';
-import '/flutter_flow/flutter_flow_charts.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
-import '/flutter_flow/random_data_util.dart' as random_data;
-import 'dart:math' as math;
 import 'e_commerce_widget.dart' show ECommerceWidget;
-import 'package:styled_divider/styled_divider.dart';
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class ECommerceModel extends FlutterFlowModel<ECommerceWidget> {
   ///  Local state fields for this page.

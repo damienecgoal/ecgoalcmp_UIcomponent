@@ -1,11 +1,7 @@
 import '/components_2/avatar_title/avatar_title_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'teams_card_model.dart';
 export 'teams_card_model.dart';
 
@@ -58,7 +54,7 @@ class _TeamsCardWidgetState extends State<TeamsCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,19 +63,19 @@ class _TeamsCardWidgetState extends State<TeamsCardWidget> {
             model: _model.avatarTitleModel,
             updateCallback: () => safeSetState(() {}),
             child: AvatarTitleWidget(
-              avatar: widget!.avatar!,
-              name: widget!.name!,
+              avatar: widget.avatar!,
+              name: widget.name!,
               size: 36.0,
-              description: widget!.description!,
+              description: widget.description!,
             ),
           ),
           wrapWithModel(
             model: _model.statusCardModel,
             updateCallback: () => safeSetState(() {}),
             child: StatusCardWidget(
-              title: widget!.status!,
-              titleColor: widget!.color!,
-              bgColor: widget!.bg!,
+              title: widget.status!,
+              titleColor: widget.color!,
+              bgColor: widget.bg!,
             ),
           ),
         ],

@@ -1,23 +1,12 @@
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
-import '/components/drawer/edit_task/edit_task_widget.dart';
-import '/components/nodal/kanban_action/kanban_action_widget.dart';
-import '/components/nodal/kanban_edit/kanban_edit_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/lable/lable_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'kanban_widget.dart' show KanbanWidget;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class KanbanModel extends FlutterFlowModel<KanbanWidget> {
   ///  Local state fields for this page.

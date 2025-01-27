@@ -11,11 +11,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'order_list_model.dart';
@@ -46,7 +44,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -89,7 +87,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
@@ -99,7 +97,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             child: Wrap(
                               spacing: 28.0,
@@ -112,7 +110,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                               clipBehavior: Clip.none,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -152,14 +150,14 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                             BorderRadius.circular(8.0),
                                         child: Container(
                                           height: 100.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             minWidth: 240.0,
                                             maxWidth: 360.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -174,7 +172,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -298,10 +296,10 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 28.0)),
+                                  ].divide(const SizedBox(width: 28.0)),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 34.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -315,7 +313,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -331,7 +329,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -342,7 +340,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   0.0,
@@ -359,7 +357,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                             flex: 5,
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -379,8 +377,20 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered =
+                                                                                false);
+                                                                      }),
                                                                       child:
-                                                                          Container(
+                                                                          SizedBox(
                                                                         width:
                                                                             300.0,
                                                                         child:
@@ -412,7 +422,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -444,7 +454,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                             contentPadding:
-                                                                                EdgeInsets.all(16.0),
+                                                                                const EdgeInsets.all(16.0),
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
@@ -458,18 +468,6 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                               .asValidator(context),
                                                                         ),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered =
-                                                                                false);
-                                                                      }),
                                                                     ),
                                                                   ),
                                                                   Expanded(
@@ -487,7 +485,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             String>(
                                                                           controller: _model.dropDownValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: [
+                                                                          options: const [
                                                                             '10',
                                                                             '25',
                                                                             '50',
@@ -527,7 +525,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                               1.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               12.0,
                                                                               0.0,
                                                                               12.0,
@@ -550,8 +548,8 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                                 context: context,
                                                                                 isGlobal: false,
                                                                                 avoidOverflow: false,
-                                                                                targetAnchor: AlignmentDirectional(0.0, 6.5).resolve(Directionality.of(context)),
-                                                                                followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                targetAnchor: const AlignmentDirectional(0.0, 6.5).resolve(Directionality.of(context)),
+                                                                                followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 builder: (dialogContext) {
                                                                                   return Material(
                                                                                     color: Colors.transparent,
@@ -561,7 +559,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: Container(
+                                                                                        child: const SizedBox(
                                                                                           height: 204.0,
                                                                                           width: 150.0,
                                                                                           child: ExportNodalWidget(),
@@ -583,9 +581,9 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x33A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x33A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
@@ -594,7 +592,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -608,21 +606,21 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             onPressed:
                                                                                 () async {
                                                                               showDialog(
-                                                                                barrierColor: Color(0x34000000),
+                                                                                barrierColor: const Color(0x34000000),
                                                                                 context: context,
                                                                                 builder: (dialogContext) {
                                                                                   return Dialog(
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: WebViewAware(
                                                                                       child: GestureDetector(
                                                                                         onTap: () {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: Container(
+                                                                                        child: const SizedBox(
                                                                                           height: double.infinity,
                                                                                           width: 420.0,
                                                                                           child: AddCategoryWidget(),
@@ -644,8 +642,8 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
@@ -655,7 +653,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                               elevation: 2.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -663,11 +661,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 14.0)),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         14.0)),
                                                               ),
@@ -677,7 +675,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 20.0)),
+                                                      const SizedBox(height: 20.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -696,7 +694,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       8.0,
@@ -761,7 +759,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -800,7 +798,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -812,7 +810,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -851,7 +849,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -863,7 +861,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -902,7 +900,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -914,7 +912,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -953,7 +951,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -965,7 +963,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1004,7 +1002,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1016,7 +1014,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1055,7 +1053,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1067,7 +1065,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                     Container(
                                                                   width: 100.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1091,7 +1089,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 24.0)),
                                                           ),
                                                         ),
@@ -1138,7 +1136,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .success,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x3328C76F),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/7mg6suhsyd79/mastercard.png',
@@ -1171,7 +1169,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .success,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x3328C76F),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/7mg6suhsyd79/mastercard.png',
@@ -1205,7 +1203,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x347367F0),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/kapsgsg29bac/paypal_logo.png',
@@ -1242,7 +1240,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .warning,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34FF9F43),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/7mg6suhsyd79/mastercard.png',
@@ -1276,7 +1274,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x337367F0),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/kapsgsg29bac/paypal_logo.png',
@@ -1313,7 +1311,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x347367F0),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/7mg6suhsyd79/mastercard.png',
@@ -1349,7 +1347,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .info,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x3300CFE8),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/7mg6suhsyd79/mastercard.png',
@@ -1382,7 +1380,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .success,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x3328C76F),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/kapsgsg29bac/paypal_logo.png',
@@ -1419,7 +1417,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .warning,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x33FF9F43),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/7mg6suhsyd79/mastercard.png',
@@ -1455,7 +1453,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x347367F0),
                                                             methodImage:
                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/kapsgsg29bac/paypal_logo.png',
@@ -1468,7 +1466,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                   ],
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 20.0, 0.0),
                                                   child: Row(
@@ -1478,7 +1476,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                       Expanded(
                                                         child: Stack(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           children: [
                                                             Text(
@@ -1498,7 +1496,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Row(
                                                                 mainAxisSize:
@@ -1520,12 +1518,12 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           44.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -1549,7 +1547,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -1580,7 +1578,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1604,11 +1602,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1632,11 +1630,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1660,11 +1658,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1688,11 +1686,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1716,11 +1714,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1744,11 +1742,11 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1764,7 +1762,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                               ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             4.0)),
                                                                   ),
@@ -1780,17 +1778,17 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           44.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x347983BB),
                                                                       textStyle: FlutterFlowTheme.of(
                                                                               context)
@@ -1808,7 +1806,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -1819,7 +1817,7 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                                               8.0),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         4.0)),
                                                               ),
@@ -1830,36 +1828,36 @@ class _OrderListWidgetState extends State<OrderListWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 18.0)),
+                                              ].divide(const SizedBox(height: 18.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             child: wrapWithModel(
                               model: _model.footerModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: FooterWidget(),
+                              child: const FooterWidget(),
                             ),
                           ),
                         ]
-                            .divide(SizedBox(height: 28.0))
-                            .addToStart(SizedBox(height: 110.0))
-                            .addToEnd(SizedBox(height: 28.0)),
+                            .divide(const SizedBox(height: 28.0))
+                            .addToStart(const SizedBox(height: 110.0))
+                            .addToEnd(const SizedBox(height: 28.0)),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

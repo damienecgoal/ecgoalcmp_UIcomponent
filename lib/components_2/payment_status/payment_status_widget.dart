@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'payment_status_model.dart';
 export 'payment_status_model.dart';
 
@@ -48,7 +45,7 @@ class _PaymentStatusWidgetState extends State<PaymentStatusWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -56,24 +53,24 @@ class _PaymentStatusWidgetState extends State<PaymentStatusWidget> {
             width: 12.0,
             height: 12.0,
             decoration: BoxDecoration(
-              color: widget!.color,
+              color: widget.color,
               shape: BoxShape.circle,
             ),
           ),
           Text(
             valueOrDefault<String>(
-              widget!.status,
+              widget.status,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Public Sans',
-                  color: widget!.color,
+                  color: widget.color,
                   fontSize: 15.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(SizedBox(width: 10.0)),
+        ].divide(const SizedBox(width: 10.0)),
       ),
     );
   }

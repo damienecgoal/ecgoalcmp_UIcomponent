@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'invoice_bill_model.dart';
 export 'invoice_bill_model.dart';
 
@@ -54,12 +51,12 @@ class _InvoiceBillWidgetState extends State<InvoiceBillWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -67,7 +64,7 @@ class _InvoiceBillWidgetState extends State<InvoiceBillWidget> {
                   flex: 5,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.item,
+                      widget.item,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -83,7 +80,7 @@ class _InvoiceBillWidgetState extends State<InvoiceBillWidget> {
                   flex: 5,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.description,
+                      widget.description,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,7 +96,7 @@ class _InvoiceBillWidgetState extends State<InvoiceBillWidget> {
                   flex: 2,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.cost,
+                      widget.cost,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -115,7 +112,7 @@ class _InvoiceBillWidgetState extends State<InvoiceBillWidget> {
                   flex: 2,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.qty,
+                      widget.qty,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -131,7 +128,7 @@ class _InvoiceBillWidgetState extends State<InvoiceBillWidget> {
                   flex: 2,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.price,
+                      widget.price,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(

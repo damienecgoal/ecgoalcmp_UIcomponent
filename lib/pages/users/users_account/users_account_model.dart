@@ -1,17 +1,9 @@
-import '/auth/base_auth_user_provider.dart';
 import '/components/accounts/accounts_widget.dart';
 import '/components/avatar_name/avatar_name_widget.dart';
-import '/components/edit_popup/add_new_address/add_new_address_widget.dart';
-import '/components/edit_popup/add_new_card/add_new_card_widget.dart';
-import '/components/edit_popup/edit_user_information/edit_user_information_widget.dart';
-import '/components/edit_popup/one_time_password/one_time_password_widget.dart';
-import '/components/edit_popup/upgrade_plan/upgrade_plan_widget.dart';
 import '/components/list/payment_card/payment_card_widget.dart';
 import '/components/list/recent_devices/recent_devices_widget.dart';
 import '/components/list/user_issued_card/user_issued_card_widget.dart';
 import '/components/list/user_projects_list/user_projects_list_widget.dart';
-import '/components/nodal/export_nodal/export_nodal_widget.dart';
-import '/components/popup/warning_popup/warning_popup_widget.dart';
 import '/components_2/customer_status/customer_status_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/list_header/list_header_widget.dart';
@@ -21,20 +13,10 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/social_account/social_account_widget.dart';
 import '/components_2/stake_images/stake_images_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'users_account_widget.dart' show UsersAccountWidget;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class UsersAccountModel extends FlutterFlowModel<UsersAccountWidget> {
   ///  Local state fields for this page.

@@ -5,13 +5,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'add_user_model.dart';
 export 'add_user_model.dart';
 
@@ -59,8 +54,8 @@ class _AddUserWidgetState extends State<AddUserWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(200.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(200.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -86,7 +81,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(1.0, 0.0),
+      alignment: const AlignmentDirectional(1.0, 0.0),
       child: Container(
         width: 380.0,
         height: 900.0,
@@ -97,7 +92,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -127,7 +122,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                           color: FlutterFlowTheme.of(context).secondary,
                           size: 22.0,
                         ),
-                        bg: Color(0x1FA8AAAE),
+                        bg: const Color(0x1FA8AAAE),
                         size: 34.0,
                       ),
                     ),
@@ -141,7 +136,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
               color: FlutterFlowTheme.of(context).lineColor,
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -162,6 +157,14 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered1 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered1 = false);
+                          }),
                           child: TextFormField(
                             controller: _model.textController1,
                             focusNode: _model.textFieldFocusNode1,
@@ -190,7 +193,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered1!
+                                    _model.mouseRegionHovered1
                                         ? FlutterFlowTheme.of(context)
                                             .secondaryText
                                         : FlutterFlowTheme.of(context)
@@ -222,7 +225,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 16.0),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -235,16 +238,8 @@ class _AddUserWidgetState extends State<AddUserWidget>
                             validator: _model.textController1Validator
                                 .asValidator(context),
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered1 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered1 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -262,6 +257,14 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered2 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered2 = false);
+                          }),
                           child: TextFormField(
                             controller: _model.textController2,
                             focusNode: _model.textFieldFocusNode2,
@@ -290,7 +293,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered2!
+                                    _model.mouseRegionHovered2
                                         ? FlutterFlowTheme.of(context)
                                             .secondaryText
                                         : FlutterFlowTheme.of(context)
@@ -322,7 +325,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 16.0),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -335,16 +338,8 @@ class _AddUserWidgetState extends State<AddUserWidget>
                             validator: _model.textController2Validator
                                 .asValidator(context),
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered2 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered2 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -362,6 +357,14 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered3 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered3 = false);
+                          }),
                           child: TextFormField(
                             controller: _model.textController3,
                             focusNode: _model.textFieldFocusNode3,
@@ -390,7 +393,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered3!
+                                    _model.mouseRegionHovered3
                                         ? FlutterFlowTheme.of(context)
                                             .secondaryText
                                         : FlutterFlowTheme.of(context)
@@ -422,7 +425,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 16.0),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -435,16 +438,8 @@ class _AddUserWidgetState extends State<AddUserWidget>
                             validator: _model.textController3Validator
                                 .asValidator(context),
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered3 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered3 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -462,6 +457,14 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered4 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered4 = false);
+                          }),
                           child: TextFormField(
                             controller: _model.textController4,
                             focusNode: _model.textFieldFocusNode4,
@@ -490,7 +493,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered4!
+                                    _model.mouseRegionHovered4
                                         ? FlutterFlowTheme.of(context)
                                             .secondaryText
                                         : FlutterFlowTheme.of(context)
@@ -522,7 +525,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 16.0),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -535,16 +538,8 @@ class _AddUserWidgetState extends State<AddUserWidget>
                             validator: _model.textController4Validator
                                 .asValidator(context),
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered4 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered4 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -562,10 +557,18 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered5 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered5 = false);
+                          }),
                           child: FlutterFlowDropDown<String>(
                             controller: _model.dropDownValueController1 ??=
                                 FormFieldController<String>(null),
-                            options: [
+                            options: const [
                               'Australi',
                               'Bangladeng',
                               'Belarus',
@@ -616,30 +619,22 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 .secondaryBackground,
                             elevation: 3.0,
                             borderColor: valueOrDefault<Color>(
-                              _model.mouseRegionHovered5!
+                              _model.mouseRegionHovered5
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
                             ),
                             borderWidth: 1.0,
                             borderRadius: 8.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isOverButton: false,
                             isSearchable: true,
                             isMultiSelect: false,
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered5 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered5 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -657,10 +652,18 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered6 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered6 = false);
+                          }),
                           child: FlutterFlowDropDown<String>(
                             controller: _model.dropDownValueController2 ??=
                                 FormFieldController<String>(null),
-                            options: [
+                            options: const [
                               'Admin',
                               'Author',
                               'Editor',
@@ -691,30 +694,22 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 .secondaryBackground,
                             elevation: 0.0,
                             borderColor: valueOrDefault<Color>(
-                              _model.mouseRegionHovered6!
+                              _model.mouseRegionHovered6
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
                             ),
                             borderWidth: 1.0,
                             borderRadius: 8.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isOverButton: false,
                             isSearchable: false,
                             isMultiSelect: false,
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered6 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered6 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -732,10 +727,18 @@ class _AddUserWidgetState extends State<AddUserWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered7 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered7 = false);
+                          }),
                           child: FlutterFlowDropDown<String>(
                             controller: _model.dropDownValueController3 ??=
                                 FormFieldController<String>(null),
-                            options: [
+                            options: const [
                               'Admin',
                               'Author',
                               'Editor',
@@ -766,34 +769,26 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                 .secondaryBackground,
                             elevation: 0.0,
                             borderColor: valueOrDefault<Color>(
-                              _model.mouseRegionHovered7!
+                              _model.mouseRegionHovered7
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
                             ),
                             borderWidth: 1.0,
                             borderRadius: 8.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isOverButton: false,
                             isSearchable: false,
                             isMultiSelect: false,
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered7 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered7 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -804,9 +799,9 @@ class _AddUserWidgetState extends State<AddUserWidget>
                             text: 'Submit',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -817,7 +812,7 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),
@@ -831,11 +826,11 @@ class _AddUserWidgetState extends State<AddUserWidget>
                             text: 'Cancel',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0x34A8AAAE),
+                              color: const Color(0x34A8AAAE),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -845,19 +840,19 @@ class _AddUserWidgetState extends State<AddUserWidget>
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                     ),
                   ]
-                      .divide(SizedBox(height: 20.0))
-                      .addToStart(SizedBox(height: 16.0)),
+                      .divide(const SizedBox(height: 20.0))
+                      .addToStart(const SizedBox(height: 16.0)),
                 ),
               ),
             ),

@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'list_header_model.dart';
 export 'list_header_model.dart';
 
@@ -47,14 +44,14 @@ class _ListHeaderWidgetState extends State<ListHeaderWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: 190.0,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             valueOrDefault<String>(
-              widget!.title,
+              widget.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -77,7 +74,7 @@ class _ListHeaderWidgetState extends State<ListHeaderWidget> {
                 color: FlutterFlowTheme.of(context).textFiled,
                 size: 18.0,
               ),
-            ].divide(SizedBox(height: 2.0)),
+            ].divide(const SizedBox(height: 2.0)),
           ),
         ],
       ),

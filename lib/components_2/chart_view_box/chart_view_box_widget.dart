@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'chart_view_box_model.dart';
 export 'chart_view_box_model.dart';
 
@@ -59,21 +56,21 @@ class _ChartViewBoxWidgetState extends State<ChartViewBoxWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              width: widget!.daimiter,
-              height: widget!.daimiter,
+              width: widget.daimiter,
+              height: widget.daimiter,
               decoration: BoxDecoration(
-                color: widget!.color,
+                color: widget.color,
                 shape: BoxShape.circle,
               ),
             ),
             Text(
               valueOrDefault<String>(
-                widget!.name,
+                widget.name,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -83,7 +80,7 @@ class _ChartViewBoxWidgetState extends State<ChartViewBoxWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-          ].divide(SizedBox(width: 6.0)),
+          ].divide(const SizedBox(width: 6.0)),
         ),
       ),
     );

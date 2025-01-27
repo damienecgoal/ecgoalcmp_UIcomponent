@@ -1,11 +1,8 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'course_model.dart';
 export 'course_model.dart';
 
@@ -68,12 +65,12 @@ class _CourseWidgetState extends State<CourseWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -111,8 +108,8 @@ class _CourseWidgetState extends State<CourseWidget> {
                         model: _model.iconBoxModel,
                         updateCallback: () => safeSetState(() {}),
                         child: IconBoxWidget(
-                          icon: widget!.icon!,
-                          bg: widget!.bg!,
+                          icon: widget.icon!,
+                          bg: widget.bg!,
                           size: 44.0,
                         ),
                       ),
@@ -124,6 +121,14 @@ class _CourseWidgetState extends State<CourseWidget> {
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered = false);
+                            }),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -133,7 +138,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                                 context.pushNamed(
                                   'Course_Details',
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
+                                    kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                     ),
@@ -142,7 +147,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                               },
                               child: Text(
                                 valueOrDefault<String>(
-                                  widget!.title,
+                                  widget.title,
                                   'na',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -150,7 +155,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                                     .override(
                                       fontFamily: 'Public Sans',
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered!
+                                        _model.mouseRegionHovered
                                             ? FlutterFlowTheme.of(context)
                                                 .primary
                                             : FlutterFlowTheme.of(context)
@@ -164,14 +169,6 @@ class _CourseWidgetState extends State<CourseWidget> {
                                     ),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = false);
-                            }),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -180,17 +177,17 @@ class _CourseWidgetState extends State<CourseWidget> {
                                 width: 28.0,
                                 height: 28.0,
                                 clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.network(
-                                  widget!.avavtar!,
+                                  widget.avavtar!,
                                   fit: BoxFit.cover,
                                 ),
                               ),
                               Text(
                                 valueOrDefault<String>(
-                                  widget!.name,
+                                  widget.name,
                                   'na',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -201,11 +198,11 @@ class _CourseWidgetState extends State<CourseWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
-                        ].divide(SizedBox(height: 6.0)),
+                        ].divide(const SizedBox(height: 6.0)),
                       ),
-                    ].divide(SizedBox(width: 14.0)),
+                    ].divide(const SizedBox(width: 14.0)),
                   ),
                 ),
                 Expanded(
@@ -215,7 +212,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.time,
+                          widget.time,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -225,7 +222,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                               fontWeight: FontWeight.w500,
                             ),
                       ),
-                    ].divide(SizedBox(width: 14.0)),
+                    ].divide(const SizedBox(width: 14.0)),
                   ),
                 ),
                 Expanded(
@@ -235,7 +232,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.progress,
+                          widget.progress,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -253,13 +250,13 @@ class _CourseWidgetState extends State<CourseWidget> {
                           animateFromLastPercent: true,
                           progressColor: FlutterFlowTheme.of(context).primary,
                           backgroundColor: FlutterFlowTheme.of(context).accent4,
-                          barRadius: Radius.circular(50.0),
+                          barRadius: const Radius.circular(50.0),
                           padding: EdgeInsets.zero,
                         ),
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.persentage,
+                          widget.persentage,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -268,14 +265,14 @@ class _CourseWidgetState extends State<CourseWidget> {
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 14.0)),
+                    ].divide(const SizedBox(width: 14.0)),
                   ),
                 ),
                 Expanded(
                   flex: 5,
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -291,7 +288,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                               ),
                               Text(
                                 valueOrDefault<String>(
-                                  widget!.status1,
+                                  widget.status1,
                                   'na',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -305,7 +302,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                         Expanded(
@@ -319,7 +316,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                               ),
                               Text(
                                 valueOrDefault<String>(
-                                  widget!.status2,
+                                  widget.status2,
                                   'an',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -333,7 +330,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                         Expanded(
@@ -347,7 +344,7 @@ class _CourseWidgetState extends State<CourseWidget> {
                               ),
                               Text(
                                 valueOrDefault<String>(
-                                  widget!.status3,
+                                  widget.status3,
                                   'na',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -361,14 +358,14 @@ class _CourseWidgetState extends State<CourseWidget> {
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
-                      ].divide(SizedBox(width: 14.0)),
+                      ].divide(const SizedBox(width: 14.0)),
                     ),
                   ),
                 ),
-              ].divide(SizedBox(width: 26.0)),
+              ].divide(const SizedBox(width: 26.0)),
             ),
           ),
           Divider(

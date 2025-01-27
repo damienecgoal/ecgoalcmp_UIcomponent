@@ -1,10 +1,7 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'reward_model.dart';
 export 'reward_model.dart';
 
@@ -57,7 +54,7 @@ class _RewardWidgetState extends State<RewardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -65,9 +62,9 @@ class _RewardWidgetState extends State<RewardWidget> {
             model: _model.iconBoxModel,
             updateCallback: () => safeSetState(() {}),
             child: IconBoxWidget(
-              icon: widget!.icon!,
-              bg: widget!.bg!,
-              size: widget!.size!,
+              icon: widget.icon!,
+              bg: widget.bg!,
+              size: widget.size!,
             ),
           ),
           Column(
@@ -76,7 +73,7 @@ class _RewardWidgetState extends State<RewardWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.title,
+                  widget.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -88,20 +85,20 @@ class _RewardWidgetState extends State<RewardWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.reward,
+                  widget.reward,
                   'nanananan',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Public Sans',
-                      color: widget!.color,
+                      color: widget.color,
                       fontSize: 24.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
-            ].divide(SizedBox(height: 8.0)),
+            ].divide(const SizedBox(height: 8.0)),
           ),
-        ].divide(SizedBox(width: 16.0)),
+        ].divide(const SizedBox(width: 16.0)),
       ),
     );
   }

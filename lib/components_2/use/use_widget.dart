@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'use_model.dart';
 export 'use_model.dart';
 
@@ -50,7 +47,7 @@ class _UseWidgetState extends State<UseWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -64,11 +61,11 @@ class _UseWidgetState extends State<UseWidget> {
                 color: FlutterFlowTheme.of(context).primary,
               ),
             ),
-            child: widget!.icon!,
+            child: widget.icon!,
           ),
           Text(
             valueOrDefault<String>(
-              widget!.description,
+              widget.description,
               'na',
             ),
             textAlign: TextAlign.center,
@@ -82,7 +79,7 @@ class _UseWidgetState extends State<UseWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.value,
+              widget.value,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -93,7 +90,7 @@ class _UseWidgetState extends State<UseWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(SizedBox(height: 12.0)),
+        ].divide(const SizedBox(height: 12.0)),
       ),
     );
   }

@@ -1,10 +1,7 @@
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'transaction_model.dart';
 export 'transaction_model.dart';
 
@@ -63,7 +60,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -75,7 +72,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(6.0),
                   child: Image.network(
-                    widget!.image!,
+                    widget.image!,
                     width: 62.0,
                     height: 34.0,
                     fit: BoxFit.cover,
@@ -87,7 +84,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                   children: [
                     Text(
                       valueOrDefault<String>(
-                        widget!.cardnumber,
+                        widget.cardnumber,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,7 +96,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                     ),
                     Text(
                       valueOrDefault<String>(
-                        widget!.pymentType,
+                        widget.pymentType,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -108,9 +105,9 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                             letterSpacing: 0.0,
                           ),
                     ),
-                  ].divide(SizedBox(height: 8.0)),
+                  ].divide(const SizedBox(height: 8.0)),
                 ),
-              ].divide(SizedBox(width: 14.0)),
+              ].divide(const SizedBox(width: 14.0)),
             ),
           ),
           Expanded(
@@ -121,7 +118,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.sent,
+                    widget.sent,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -133,7 +130,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.date,
+                    widget.date,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -142,7 +139,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 6.0)),
+              ].divide(const SizedBox(height: 6.0)),
             ),
           ),
           Expanded(
@@ -156,9 +153,9 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                   model: _model.statusCardModel,
                   updateCallback: () => safeSetState(() {}),
                   child: StatusCardWidget(
-                    title: widget!.statusName!,
-                    titleColor: widget!.statusNColor!,
-                    bgColor: widget!.statusBGColor!,
+                    title: widget.statusName!,
+                    titleColor: widget.statusNColor!,
+                    bgColor: widget.statusBGColor!,
                   ),
                 ),
               ],
@@ -173,7 +170,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.amount,
+                    widget.amount,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(

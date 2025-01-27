@@ -4,11 +4,8 @@ import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'user_list_card_model.dart';
 export 'user_list_card_model.dart';
@@ -72,12 +69,12 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -91,8 +88,8 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                         updateCallback: () => safeSetState(() {}),
                         child: Avatar2Widget(
                           diameter: 40.0,
-                          image: widget!.avatar!,
-                          name: widget!.name!,
+                          image: widget.avatar!,
+                          name: widget.name!,
                         ),
                       ),
                       Column(
@@ -102,9 +99,17 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered = false);
+                            }),
                             child: Text(
                               valueOrDefault<String>(
-                                widget!.name,
+                                widget.name,
                                 'na',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -118,18 +123,10 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = false);
-                            }),
                           ),
                           Text(
                             valueOrDefault<String>(
-                              widget!.mail,
+                              widget.mail,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -142,9 +139,9 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(height: 4.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -156,14 +153,14 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                         model: _model.iconContainerCircleModel,
                         updateCallback: () => safeSetState(() {}),
                         child: IconContainerCircleWidget(
-                          icon: widget!.roleIcon!,
-                          bgcolor: widget!.roleBG!,
+                          icon: widget.roleIcon!,
+                          bgcolor: widget.roleBG!,
                           daimiter: 34.0,
                         ),
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.role,
+                          widget.role,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -175,7 +172,7 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                               fontWeight: FontWeight.w500,
                             ),
                       ),
-                    ].divide(SizedBox(width: 8.0)),
+                    ].divide(const SizedBox(width: 8.0)),
                   ),
                 ),
                 Expanded(
@@ -187,7 +184,7 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.plan,
+                          widget.plan,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -211,7 +208,7 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.billing,
+                          widget.billing,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -235,12 +232,12 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.status!,
-                          titleColor: widget!.color!,
-                          bgColor: widget!.bg!,
+                          title: widget.status!,
+                          titleColor: widget.color!,
+                          bgColor: widget.bg!,
                         ),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
                 ),
                 Expanded(
@@ -257,7 +254,7 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                           context.pushNamed(
                             'Users_Account',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                               ),
@@ -287,12 +284,12 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                               context: context,
                               isGlobal: false,
                               avoidOverflow: false,
-                              targetAnchor: AlignmentDirectional(-1.0, 1.0)
+                              targetAnchor: const AlignmentDirectional(-1.0, 1.0)
                                   .resolve(Directionality.of(context)),
-                              followerAnchor: AlignmentDirectional(0.0, 0.0)
+                              followerAnchor: const AlignmentDirectional(0.0, 0.0)
                                   .resolve(Directionality.of(context)),
                               builder: (dialogContext) {
-                                return Material(
+                                return const Material(
                                   color: Colors.transparent,
                                   child: WebViewAware(
                                     child: UsersActionWidget(),
@@ -308,10 +305,10 @@ class _UserListCardWidgetState extends State<UserListCardWidget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 14.0)),
+                    ].divide(const SizedBox(width: 14.0)),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

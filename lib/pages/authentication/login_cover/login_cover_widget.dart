@@ -2,12 +2,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'login_cover_model.dart';
 export 'login_cover_model.dart';
 
@@ -67,7 +63,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
               ))
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(48.0, 48.0, 0.0, 48.0),
+                      const EdgeInsetsDirectional.fromSTEB(48.0, 48.0, 0.0, 48.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(24.0),
                     child: Container(
@@ -78,7 +74,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                         borderRadius: BorderRadius.circular(24.0),
                       ),
                       child: Stack(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -87,11 +83,11 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                               width: double.infinity,
                               height: 240.0,
                               fit: BoxFit.cover,
-                              alignment: Alignment(-1.0, 0.0),
+                              alignment: const Alignment(-1.0, 0.0),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 128.0, 0.0, 128.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
@@ -110,17 +106,17 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     child: Container(
                       width: 460.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(40.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -169,7 +165,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                         fontWeight: FontWeight.normal,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
                             Form(
                               key: _model.formKey,
@@ -195,6 +191,14 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered1 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered1 = false);
+                                        }),
                                         child: TextFormField(
                                           controller:
                                               _model.usernameTextController,
@@ -225,7 +229,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                 color: valueOrDefault<Color>(
-                                                  _model.mouseRegionHovered1!
+                                                  _model.mouseRegionHovered1
                                                       ? FlutterFlowTheme.of(
                                                               context)
                                                           .secondaryText
@@ -282,19 +286,11 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                               .usernameTextControllerValidator
                                               .asValidator(context),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered1 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered1 = false);
-                                        }),
                                       ),
-                                    ].divide(SizedBox(height: 6.0)),
+                                    ].divide(const SizedBox(height: 6.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 6.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -338,6 +334,14 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered2 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered2 = false);
+                                          }),
                                           child: TextFormField(
                                             controller:
                                                 _model.passwordTextController,
@@ -368,7 +372,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered2!
+                                                    _model.mouseRegionHovered2
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -446,16 +450,8 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                                 .passwordTextControllerValidator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered2 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered2 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 6.0)),
+                                      ].divide(const SizedBox(height: 6.0)),
                                     ),
                                   ),
                                   Row(
@@ -518,10 +514,10 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                     options: FFButtonOptions(
                                       width: double.infinity,
                                       height: 44.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -533,7 +529,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -541,7 +537,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -554,7 +550,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                                 .textScaler,
                                             text: TextSpan(
                                               children: [
-                                                TextSpan(
+                                                const TextSpan(
                                                   text: 'New on our platform? ',
                                                   style: TextStyle(
                                                     fontSize: 15.0,
@@ -584,7 +580,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                       ],
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 16.0)),
+                                ].divide(const SizedBox(height: 16.0)),
                               ),
                             ),
                             Row(
@@ -617,7 +613,7 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(width: 12.0)),
+                              ].divide(const SizedBox(width: 12.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -627,8 +623,8 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                   borderColor: Colors.transparent,
                                   borderRadius: 8.0,
                                   buttonSize: 44.0,
-                                  fillColor: Color(0x343D87FF),
-                                  icon: Icon(
+                                  fillColor: const Color(0x343D87FF),
+                                  icon: const Icon(
                                     FFIcons.kbrandFacebook,
                                     color: Color(0xC93D87FF),
                                     size: 22.0,
@@ -641,8 +637,8 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                   borderColor: Colors.transparent,
                                   borderRadius: 8.0,
                                   buttonSize: 44.0,
-                                  fillColor: Color(0x29EA5455),
-                                  icon: Icon(
+                                  fillColor: const Color(0x29EA5455),
+                                  icon: const Icon(
                                     FFIcons.kbrandGoogle,
                                     color: Color(0xCDEA5455),
                                     size: 22.0,
@@ -655,8 +651,8 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                   borderColor: Colors.transparent,
                                   borderRadius: 8.0,
                                   buttonSize: 44.0,
-                                  fillColor: Color(0x33009AE8),
-                                  icon: Icon(
+                                  fillColor: const Color(0x33009AE8),
+                                  icon: const Icon(
                                     FFIcons.kbrandTwitter,
                                     color: Color(0xFF009AE8),
                                     size: 22.0,
@@ -665,9 +661,9 @@ class _LoginCoverWidgetState extends State<LoginCoverWidget> {
                                     print('IconButton pressed ...');
                                   },
                                 ),
-                              ].divide(SizedBox(width: 18.0)),
+                              ].divide(const SizedBox(width: 18.0)),
                             ),
-                          ].divide(SizedBox(height: 28.0)),
+                          ].divide(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),

@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:expandable/expandable.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'help_contant_model.dart';
 export 'help_contant_model.dart';
 
@@ -62,7 +59,7 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
         width: double.infinity,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 12.0,
               color: Color(0x14000000),
@@ -77,15 +74,15 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
         ),
         child: Container(
           width: double.infinity,
-          color: Color(0x00000000),
+          color: const Color(0x00000000),
           child: ExpandableNotifier(
             controller: _model.expandableExpandableController,
             child: ExpandablePanel(
               header: Padding(
-                padding: EdgeInsets.all(18.0),
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
                   valueOrDefault<String>(
-                    widget!.title,
+                    widget.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,17 +96,17 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
               collapsed: Container(
                 width: 0.0,
                 height: 0.0,
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
               ),
               expanded: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 18.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(18.0, 0.0, 18.0, 18.0),
                 child: RichText(
                   textScaler: MediaQuery.of(context).textScaler,
                   text: TextSpan(
                     children: [
                       TextSpan(
                         text: valueOrDefault<String>(
-                          widget!.comment1,
+                          widget.comment1,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -123,7 +120,7 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
                       ),
                       TextSpan(
                         text: valueOrDefault<String>(
-                          widget!.comment2,
+                          widget.comment2,
                           'na',
                         ),
                         style: TextStyle(
@@ -133,7 +130,7 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
                       ),
                       TextSpan(
                         text: valueOrDefault<String>(
-                          widget!.comment3,
+                          widget.comment3,
                           'na',
                         ),
                         style: TextStyle(
@@ -143,7 +140,7 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
                       ),
                       TextSpan(
                         text: valueOrDefault<String>(
-                          widget!.comment4,
+                          widget.comment4,
                           'na',
                         ),
                         style: TextStyle(
@@ -172,7 +169,7 @@ class _HelpContantWidgetState extends State<HelpContantWidget> {
                 collapseIcon: FFIcons.kchevronDown,
                 iconSize: 24.0,
                 iconColor: FlutterFlowTheme.of(context).secondaryTitle,
-                iconPadding: EdgeInsets.fromLTRB(0.0, 0.0, 20.0, 0.0),
+                iconPadding: const EdgeInsets.fromLTRB(0.0, 0.0, 20.0, 0.0),
               ),
             ),
           ),

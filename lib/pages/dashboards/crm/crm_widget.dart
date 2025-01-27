@@ -14,8 +14,6 @@ import '/components_2/transaction/transaction_widget.dart';
 import '/flutter_flow/flutter_flow_charts.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'dart:math' as math;
 import 'package:aligned_dialog/aligned_dialog.dart';
@@ -82,19 +80,19 @@ class _CrmWidgetState extends State<CrmWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -116,7 +114,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                               BorderRadius.circular(8.0),
                                           child: Container(
                                             height: 220.0,
-                                            constraints: BoxConstraints(
+                                            constraints: const BoxConstraints(
                                               minWidth: 240.0,
                                               maxWidth: 360.0,
                                             ),
@@ -124,7 +122,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -146,7 +144,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0,
                                                                 20.0, 0.0, 0.0),
                                                     child: Column(
@@ -187,13 +185,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                     0.0,
                                                               ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
                                                 ),
                                                 Expanded(
-                                                  child: Container(
+                                                  child: SizedBox(
                                                     width: double.infinity,
                                                     height: 72.0,
                                                     child: FlutterFlowLineChart(
@@ -210,12 +208,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 .success,
                                                             barWidth: 2.0,
                                                             isCurved: true,
-                                                            dotData: FlDotData(
+                                                            dotData: const FlDotData(
                                                                 show: false),
                                                             belowBarData:
                                                                 BarAreaData(
                                                               show: true,
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x1428C76F),
                                                             ),
                                                           ),
@@ -229,13 +227,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 .secondaryBackground,
                                                         showBorder: false,
                                                       ),
-                                                      axisBounds: AxisBounds(),
+                                                      axisBounds: const AxisBounds(),
                                                       xAxisLabelInfo:
-                                                          AxisLabelInfo(
+                                                          const AxisLabelInfo(
                                                         reservedSize: 32.0,
                                                       ),
                                                       yAxisLabelInfo:
-                                                          AxisLabelInfo(
+                                                          const AxisLabelInfo(
                                                         reservedSize: 40.0,
                                                       ),
                                                     ),
@@ -251,7 +249,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -302,14 +300,14 @@ class _CrmWidgetState extends State<CrmWidget> {
                                         flex: 4,
                                         child: Container(
                                           height: 220.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             minWidth: 240.0,
                                             maxWidth: 360.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -330,7 +328,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                             children: [
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 20.0, 0.0, 0.0),
                                                   child: Column(
@@ -373,20 +371,20 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 6.0)),
+                                                        const SizedBox(height: 6.0)),
                                                   ),
                                                 ),
                                               ),
                                               Expanded(
                                                 child: Stack(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 1.0),
                                                   children: [
                                                     Transform.rotate(
                                                       angle: 180.0 *
                                                           (math.pi / 180),
-                                                      child: Container(
+                                                      child: SizedBox(
                                                         width: double.infinity,
                                                         height: 30.0,
                                                         child:
@@ -438,13 +436,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             showBorder: false,
                                                           ),
                                                           axisBounds:
-                                                              AxisBounds(),
+                                                              const AxisBounds(),
                                                           xAxisLabelInfo:
-                                                              AxisLabelInfo(
+                                                              const AxisLabelInfo(
                                                             reservedSize: 28.0,
                                                           ),
                                                           yAxisLabelInfo:
-                                                              AxisLabelInfo(
+                                                              const AxisLabelInfo(
                                                             reservedSize: 42.0,
                                                           ),
                                                         ),
@@ -452,9 +450,9 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, -1.0),
-                                                      child: Container(
+                                                      child: SizedBox(
                                                         width: double.infinity,
                                                         height: 38.0,
                                                         child:
@@ -506,13 +504,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             showBorder: false,
                                                           ),
                                                           axisBounds:
-                                                              AxisBounds(),
+                                                              const AxisBounds(),
                                                           xAxisLabelInfo:
-                                                              AxisLabelInfo(
+                                                              const AxisLabelInfo(
                                                             reservedSize: 28.0,
                                                           ),
                                                           yAxisLabelInfo:
-                                                              AxisLabelInfo(
+                                                              const AxisLabelInfo(
                                                             reservedSize: 42.0,
                                                           ),
                                                         ),
@@ -530,7 +528,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                       .secondaryBackground,
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 20.0, 0.0),
                                                   child: Row(
@@ -581,14 +579,14 @@ class _CrmWidgetState extends State<CrmWidget> {
                                         flex: 4,
                                         child: Container(
                                           height: 220.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             minWidth: 240.0,
                                             maxWidth: 360.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -603,7 +601,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -623,11 +621,11 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               .error,
                                                       size: 26.0,
                                                     ),
-                                                    bgcolor: Color(0x33EA5455),
+                                                    bgcolor: const Color(0x33EA5455),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -687,10 +685,10 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .secondary,
-                                                    bgColor: Color(0x34A8AAAE),
+                                                    bgColor: const Color(0x34A8AAAE),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 10.0)),
+                                              ].divide(const SizedBox(height: 10.0)),
                                             ),
                                           ),
                                         ),
@@ -699,14 +697,14 @@ class _CrmWidgetState extends State<CrmWidget> {
                                         flex: 4,
                                         child: Container(
                                           height: 220.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             minWidth: 240.0,
                                             maxWidth: 360.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -721,7 +719,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -741,11 +739,11 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               .info,
                                                       size: 26.0,
                                                     ),
-                                                    bgcolor: Color(0x3300CFE8),
+                                                    bgcolor: const Color(0x3300CFE8),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -805,10 +803,10 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .secondary,
-                                                    bgColor: Color(0x34A8AAAE),
+                                                    bgColor: const Color(0x34A8AAAE),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 10.0)),
+                                              ].divide(const SizedBox(height: 10.0)),
                                             ),
                                           ),
                                         ),
@@ -820,7 +818,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                               BorderRadius.circular(8.0),
                                           child: Container(
                                             height: 220.0,
-                                            constraints: BoxConstraints(
+                                            constraints: const BoxConstraints(
                                               minWidth: 240.0,
                                               maxWidth: 360.0,
                                             ),
@@ -828,7 +826,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -843,7 +841,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(20.0),
+                                              padding: const EdgeInsets.all(20.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -898,7 +896,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                       Column(
@@ -938,17 +936,17 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .success,
-                                                              bgColor: Color(
+                                                              bgColor: const Color(
                                                                   0x3428C76F),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ],
                                                   ),
                                                   Expanded(
-                                                    child: Container(
+                                                    child: SizedBox(
                                                       width: 370.0,
                                                       height: 130.0,
                                                       child:
@@ -981,7 +979,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                           showBorder: false,
                                                         ),
                                                         axisBounds:
-                                                            AxisBounds(),
+                                                            const AxisBounds(),
                                                         xAxisLabelInfo:
                                                             AxisLabelInfo(
                                                           showLabels: true,
@@ -998,7 +996,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                           reservedSize: 28.0,
                                                         ),
                                                         yAxisLabelInfo:
-                                                            AxisLabelInfo(
+                                                            const AxisLabelInfo(
                                                           reservedSize: 42.0,
                                                         ),
                                                       ),
@@ -1010,7 +1008,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1023,7 +1021,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1038,7 +1036,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -1092,13 +1090,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             6.2)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -1122,7 +1120,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            ViewMoreDeleteWidget(),
+                                                                            const ViewMoreDeleteWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -1159,7 +1157,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 8.0)),
+                                                      const SizedBox(height: 8.0)),
                                                 ),
                                                 SingleChildScrollView(
                                                   scrollDirection:
@@ -1218,7 +1216,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           14.0,
@@ -1242,9 +1240,9 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           Color>(
                                                                         _model.earningReport ==
                                                                                 'Orders'
-                                                                            ? Color(0x337367F0)
-                                                                            : Color(0x4C7D818A),
-                                                                        Color(
+                                                                            ? const Color(0x337367F0)
+                                                                            : const Color(0x4C7D818A),
+                                                                        const Color(
                                                                             0x4C7D818A),
                                                                       ),
                                                                       borderRadius:
@@ -1337,7 +1335,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           14.0,
@@ -1361,9 +1359,9 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           Color>(
                                                                         _model.earningReport ==
                                                                                 'Sales'
-                                                                            ? Color(0x337367F0)
-                                                                            : Color(0x4C7D818A),
-                                                                        Color(
+                                                                            ? const Color(0x337367F0)
+                                                                            : const Color(0x4C7D818A),
+                                                                        const Color(
                                                                             0x4C7D818A),
                                                                       ),
                                                                       borderRadius:
@@ -1456,7 +1454,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           14.0,
@@ -1480,9 +1478,9 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           Color>(
                                                                         _model.earningReport ==
                                                                                 'Profit'
-                                                                            ? Color(0x337367F0)
-                                                                            : Color(0x4C7D818A),
-                                                                        Color(
+                                                                            ? const Color(0x337367F0)
+                                                                            : const Color(0x4C7D818A),
+                                                                        const Color(
                                                                             0x4C7D818A),
                                                                       ),
                                                                       borderRadius:
@@ -1575,7 +1573,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           14.0,
@@ -1599,9 +1597,9 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           Color>(
                                                                         _model.earningReport ==
                                                                                 'Income'
-                                                                            ? Color(0x337367F0)
-                                                                            : Color(0x4C7D818A),
-                                                                        Color(
+                                                                            ? const Color(0x337367F0)
+                                                                            : const Color(0x4C7D818A),
+                                                                        const Color(
                                                                             0x4C7D818A),
                                                                       ),
                                                                       borderRadius:
@@ -1674,14 +1672,14 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           8.0),
                                                               border:
                                                                   Border.all(
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x347D818A),
                                                                 width: 0.5,
                                                               ),
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           14.0,
@@ -1701,13 +1699,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         40.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x3F7D818A),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
                                                                               6.0),
                                                                     ),
-                                                                    child: Icon(
+                                                                    child: const Icon(
                                                                       FFIcons
                                                                           .kplus,
                                                                       color: Color(
@@ -1723,11 +1721,11 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 24.0)),
+                                                        const SizedBox(width: 24.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Column(
@@ -1848,7 +1846,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 22.0)),
                                                           ),
                                                           Expanded(
@@ -1857,7 +1855,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                   MainAxisSize
                                                                       .max,
                                                               children: [
-                                                                Container(
+                                                                SizedBox(
                                                                   width: double
                                                                       .infinity,
                                                                   height: 210.0,
@@ -1886,7 +1884,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                     barWidth:
                                                                         26.0,
                                                                     barBorderRadius:
-                                                                        BorderRadius
+                                                                        const BorderRadius
                                                                             .only(
                                                                       bottomLeft:
                                                                           Radius.circular(
@@ -1915,14 +1913,14 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                           false,
                                                                     ),
                                                                     axisBounds:
-                                                                        AxisBounds(),
+                                                                        const AxisBounds(),
                                                                     xAxisLabelInfo:
-                                                                        AxisLabelInfo(
+                                                                        const AxisLabelInfo(
                                                                       reservedSize:
                                                                           12.0,
                                                                     ),
                                                                     yAxisLabelInfo:
-                                                                        AxisLabelInfo(
+                                                                        const AxisLabelInfo(
                                                                       reservedSize:
                                                                           42.0,
                                                                     ),
@@ -1939,12 +1937,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].addToEnd(SizedBox(
+                                                        ].addToEnd(const SizedBox(
                                                             width: 12.0)),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     22.0,
                                                                     0.0,
@@ -2114,10 +2112,10 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 16.0)),
+                                                        const SizedBox(height: 16.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 24.0)),
+                                              ].divide(const SizedBox(height: 24.0)),
                                             ),
                                           ),
                                         ),
@@ -2130,7 +2128,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2145,7 +2143,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -2199,13 +2197,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             6.2)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2229,7 +2227,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            ViewMoreDeleteWidget(),
+                                                                            const ViewMoreDeleteWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2266,7 +2264,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Expanded(
                                                   child: Row(
@@ -2279,7 +2277,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                       Expanded(
                                                         child: Stack(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           children: [
                                                             CircularPercentIndicator(
@@ -2337,16 +2335,16 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 6.0)),
                                                             ),
                                                           ],
                                                         ),
                                                       ),
                                                     ]
-                                                        .divide(SizedBox(
+                                                        .divide(const SizedBox(
                                                             width: 24.0))
-                                                        .addToEnd(SizedBox(
+                                                        .addToEnd(const SizedBox(
                                                             width: 12.0)),
                                                   ),
                                                 ),
@@ -2386,7 +2384,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ),
                                                         ),
                                                       ].divide(
-                                                          SizedBox(width: 6.0)),
+                                                          const SizedBox(width: 6.0)),
                                                     ),
                                                     Row(
                                                       mainAxisSize:
@@ -2418,18 +2416,18 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ),
                                                         ),
                                                       ].divide(
-                                                          SizedBox(width: 6.0)),
+                                                          const SizedBox(width: 6.0)),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 16.0)),
+                                                      const SizedBox(width: 16.0)),
                                                 ),
                                               ].addToEnd(
-                                                  SizedBox(height: 12.0)),
+                                                  const SizedBox(height: 12.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2441,7 +2439,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2456,7 +2454,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -2511,13 +2509,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2541,7 +2539,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2578,7 +2576,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Expanded(
                                                   child: Column(
@@ -2698,10 +2696,10 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 32.0)),
+                                                        const SizedBox(height: 32.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 22.0)),
+                                              ].divide(const SizedBox(height: 22.0)),
                                             ),
                                           ),
                                         ),
@@ -2713,7 +2711,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2728,7 +2726,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -2786,13 +2784,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             6.2)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2816,7 +2814,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            ViewMoreDeleteWidget(),
+                                                                            const ViewMoreDeleteWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2849,7 +2847,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               .warning,
                                                           size: 24.0,
                                                         ),
-                                                        bg: Color(0x34FF9F43),
+                                                        bg: const Color(0x34FF9F43),
                                                         title: '\$4,3742',
                                                         details:
                                                             'Your Earnings',
@@ -2861,9 +2859,9 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 24.0)),
+                                                      const SizedBox(height: 24.0)),
                                                 ),
-                                                Container(
+                                                SizedBox(
                                                   width: double.infinity,
                                                   height: 240.0,
                                                   child: FlutterFlowLineChart(
@@ -2879,12 +2877,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                   .of(context)
                                                               .warning,
                                                           barWidth: 2.0,
-                                                          dotData: FlDotData(
+                                                          dotData: const FlDotData(
                                                               show: false),
                                                           belowBarData:
                                                               BarAreaData(
                                                             show: true,
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x27FF9F43),
                                                           ),
                                                         ),
@@ -2898,17 +2896,17 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               .secondaryBackground,
                                                       showBorder: false,
                                                     ),
-                                                    axisBounds: AxisBounds(
+                                                    axisBounds: const AxisBounds(
                                                       minY: 0.0,
                                                       maxX: 1.0,
                                                       maxY: 1.0,
                                                     ),
                                                     xAxisLabelInfo:
-                                                        AxisLabelInfo(
+                                                        const AxisLabelInfo(
                                                       reservedSize: 32.0,
                                                     ),
                                                     yAxisLabelInfo:
-                                                        AxisLabelInfo(
+                                                        const AxisLabelInfo(
                                                       reservedSize: 40.0,
                                                     ),
                                                   ),
@@ -2978,7 +2976,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 16.0)),
                                                         ),
                                                       ],
@@ -3044,18 +3042,18 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 16.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ]
-                                                      .divide(SizedBox(
+                                                      .divide(const SizedBox(
                                                           height: 22.0))
-                                                      .addToEnd(SizedBox(
+                                                      .addToEnd(const SizedBox(
                                                           height: 12.0)),
                                                 ),
-                                              ].divide(SizedBox(height: 16.0)),
+                                              ].divide(const SizedBox(height: 16.0)),
                                             ),
                                           ),
                                         ),
@@ -3067,7 +3065,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -3082,7 +3080,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -3137,13 +3135,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -3167,7 +3165,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            AnalyticsSourceVisitsWidget(),
+                                                                            const AnalyticsSourceVisitsWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -3204,7 +3202,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Expanded(
                                                   child: Column(
@@ -3328,18 +3326,18 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 25.0)),
+                                                        const SizedBox(height: 25.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 24.0)),
+                                              ].divide(const SizedBox(height: 24.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -3354,7 +3352,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -3369,7 +3367,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 20.0),
                                               child: Column(
@@ -3384,7 +3382,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -3436,12 +3434,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         false,
                                                                     avoidOverflow:
                                                                         false,
-                                                                    targetAnchor: AlignmentDirectional(
+                                                                    targetAnchor: const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
-                                                                    followerAnchor: AlignmentDirectional(
+                                                                    followerAnchor: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -3461,7 +3459,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                RefreshShareWidget(),
+                                                                                const RefreshShareWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -3482,7 +3480,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 6.0)),
+                                                        const SizedBox(height: 6.0)),
                                                   ),
                                                   Expanded(
                                                     child: Column(
@@ -3505,7 +3503,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           16.0,
@@ -3635,7 +3633,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3670,7 +3668,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         FlutterFlowTheme.of(context)
                                                                             .success,
                                                                     statusBGColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x3328C76F),
                                                                     amount:
                                                                         '+\$1,678',
@@ -3700,7 +3698,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         FlutterFlowTheme.of(context)
                                                                             .error,
                                                                     statusBGColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x34EA5455),
                                                                     amount:
                                                                         '-\$839',
@@ -3730,7 +3728,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         FlutterFlowTheme.of(context)
                                                                             .success,
                                                                     statusBGColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x3328C76F),
                                                                     amount:
                                                                         '+\$435',
@@ -3760,7 +3758,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         FlutterFlowTheme.of(context)
                                                                             .warning,
                                                                     statusBGColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x33FF9F43),
                                                                     amount:
                                                                         '+\$2,345',
@@ -3790,24 +3788,24 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         FlutterFlowTheme.of(context)
                                                                             .error,
                                                                     statusBGColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x33EA5455),
                                                                     amount:
                                                                         '-\$234',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       26.0)),
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 12.0)),
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 22.0)),
+                                                    const SizedBox(height: 22.0)),
                                               ),
                                             ),
                                           ),
@@ -3820,7 +3818,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -3835,7 +3833,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(20.0),
+                                              padding: const EdgeInsets.all(20.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -3848,7 +3846,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -3888,7 +3886,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 12.0)),
                                                             ),
                                                             Builder(
@@ -3916,12 +3914,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         false,
                                                                     avoidOverflow:
                                                                         false,
-                                                                    targetAnchor: AlignmentDirectional(
+                                                                    targetAnchor: const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
-                                                                    followerAnchor: AlignmentDirectional(
+                                                                    followerAnchor: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -3941,7 +3939,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                RefreshShareWidget(),
+                                                                                const RefreshShareWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -3962,13 +3960,13 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 6.0)),
+                                                        const SizedBox(height: 6.0)),
                                                   ),
                                                   Stack(
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     12.0,
@@ -3994,7 +3992,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -4016,7 +4014,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4033,7 +4031,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         height:
                                                                             20.0,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           color:
                                                                               Color(0x33FF9F43),
                                                                           shape:
@@ -4042,7 +4040,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              EdgeInsets.all(4.0),
+                                                                              const EdgeInsets.all(4.0),
                                                                           child:
                                                                               Container(
                                                                             width:
@@ -4107,7 +4105,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             8.0,
                                                                             0.0,
@@ -4121,7 +4119,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                             wrapWithModel(
                                                                               model: _model.avatar2Model,
                                                                               updateCallback: () => safeSetState(() {}),
-                                                                              child: Avatar2Widget(
+                                                                              child: const Avatar2Widget(
                                                                                 diameter: 40.0,
                                                                                 image: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/iaaszpz5jz7j/3.png',
                                                                                 name: 'MC',
@@ -4150,12 +4148,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                                         fontWeight: FontWeight.normal,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             6.0)),
                                                                   ),
@@ -4171,7 +4169,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4188,7 +4186,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         height:
                                                                             20.0,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           color:
                                                                               Color(0x337367F0),
                                                                           shape:
@@ -4197,7 +4195,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              EdgeInsets.all(4.0),
+                                                                              const EdgeInsets.all(4.0),
                                                                           child:
                                                                               Container(
                                                                             width:
@@ -4261,7 +4259,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             6.0)),
                                                                   ),
@@ -4277,7 +4275,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4294,7 +4292,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         height:
                                                                             20.0,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           color:
                                                                               Color(0x3400CFE8),
                                                                           shape:
@@ -4303,7 +4301,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              EdgeInsets.all(4.0),
+                                                                              const EdgeInsets.all(4.0),
                                                                           child:
                                                                               Container(
                                                                             width:
@@ -4368,7 +4366,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             12.0,
                                                                             0.0,
@@ -4395,7 +4393,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -4413,12 +4411,12 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 24.0)),
+                                                                          ].divide(const SizedBox(width: 24.0)),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             6.0)),
                                                                   ),
@@ -4434,7 +4432,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4451,7 +4449,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         height:
                                                                             20.0,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           color:
                                                                               Color(0x34A8AAAE),
                                                                           shape:
@@ -4460,7 +4458,7 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              EdgeInsets.all(4.0),
+                                                                              const EdgeInsets.all(4.0),
                                                                           child:
                                                                               Container(
                                                                             width:
@@ -4524,51 +4522,51 @@ class _CrmWidgetState extends State<CrmWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             6.0)),
                                                                   ),
                                                                 ),
                                                               ],
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 34.0)),
                                                         ),
                                                       ),
                                                     ],
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 22.0)),
+                                                    const SizedBox(height: 22.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

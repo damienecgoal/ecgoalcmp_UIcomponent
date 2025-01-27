@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'pluse3_avatar_model.dart';
 export 'pluse3_avatar_model.dart';
 
@@ -51,7 +49,7 @@ class _Pluse3AvatarWidgetState extends State<Pluse3AvatarWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Stack(
         children: [
           Container(
@@ -68,17 +66,17 @@ class _Pluse3AvatarWidgetState extends State<Pluse3AvatarWidget> {
               width: 32.0,
               height: 32.0,
               clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
               ),
               child: Image.network(
-                widget!.avatar1!,
+                widget.avatar1!,
                 fit: BoxFit.cover,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 34.0,
               height: 34.0,
@@ -93,18 +91,18 @@ class _Pluse3AvatarWidgetState extends State<Pluse3AvatarWidget> {
                 width: 32.0,
                 height: 32.0,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
-                  widget!.avatar2!,
+                  widget.avatar2!,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(44.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(44.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 34.0,
               height: 34.0,
@@ -119,18 +117,18 @@ class _Pluse3AvatarWidgetState extends State<Pluse3AvatarWidget> {
                 width: 32.0,
                 height: 32.0,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
-                  widget!.avatar3!,
+                  widget.avatar3!,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(66.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(66.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 34.0,
               height: 34.0,
@@ -143,10 +141,10 @@ class _Pluse3AvatarWidgetState extends State<Pluse3AvatarWidget> {
                 ),
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Text(
                   valueOrDefault<String>(
-                    widget!.number,
+                    widget.number,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(

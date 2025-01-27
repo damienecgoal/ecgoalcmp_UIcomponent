@@ -1,10 +1,7 @@
 import '/components/edit_popup/edit_role/edit_role_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'role_card_model.dart';
 export 'role_card_model.dart';
@@ -63,7 +60,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
       height: 134.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 12.0,
             color: Color(0x14000000),
@@ -77,7 +74,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,7 +87,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.total,
+                    widget.total,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -103,7 +100,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                 Container(
                   width: 120.0,
                   height: 32.0,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       Container(
@@ -121,18 +118,18 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                           width: 120.0,
                           height: 120.0,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
                           child: Image.network(
-                            widget!.image1!,
+                            widget.image1!,
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(22.0, 0.0, 0.0, 0.0),
                         child: Container(
                           width: 32.0,
                           height: 32.0,
@@ -148,11 +145,11 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                             width: 120.0,
                             height: 120.0,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-                              widget!.image2!,
+                              widget.image2!,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -160,7 +157,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(44.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(44.0, 0.0, 0.0, 0.0),
                         child: Container(
                           width: 32.0,
                           height: 32.0,
@@ -176,11 +173,11 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                             width: 120.0,
                             height: 120.0,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-                              widget!.image3!,
+                              widget.image3!,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -188,7 +185,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(66.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(66.0, 0.0, 0.0, 0.0),
                         child: Container(
                           width: 32.0,
                           height: 32.0,
@@ -204,11 +201,11 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                             width: 120.0,
                             height: 120.0,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-                              widget!.image4!,
+                              widget.image4!,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -216,7 +213,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(88.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(88.0, 0.0, 0.0, 0.0),
                         child: Container(
                           width: 32.0,
                           height: 32.0,
@@ -232,11 +229,11 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                             width: 120.0,
                             height: 120.0,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-                              widget!.image5!,
+                              widget.image5!,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -249,7 +246,7 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
             ),
             Text(
               valueOrDefault<String>(
-                widget!.title,
+                widget.title,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -270,16 +267,16 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       showDialog(
-                        barrierColor: Color(0x34000000),
+                        barrierColor: const Color(0x34000000),
                         context: context,
                         builder: (dialogContext) {
                           return Dialog(
                             elevation: 0,
                             insetPadding: EdgeInsets.zero,
                             backgroundColor: Colors.transparent,
-                            alignment: AlignmentDirectional(0.0, 0.0)
+                            alignment: const AlignmentDirectional(0.0, 0.0)
                                 .resolve(Directionality.of(context)),
-                            child: WebViewAware(
+                            child: const WebViewAware(
                               child: EditRoleWidget(),
                             ),
                           );
@@ -300,22 +297,22 @@ class _RoleCardWidgetState extends State<RoleCardWidget> {
                 MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
-                  child: Icon(
-                    FFIcons.kcopy,
-                    color: valueOrDefault<Color>(
-                      _model.mouseRegionHovered!
-                          ? FlutterFlowTheme.of(context).primaryText
-                          : FlutterFlowTheme.of(context).secondaryText,
-                      FlutterFlowTheme.of(context).secondaryText,
-                    ),
-                    size: 24.0,
-                  ),
                   onEnter: ((event) async {
                     safeSetState(() => _model.mouseRegionHovered = true);
                   }),
                   onExit: ((event) async {
                     safeSetState(() => _model.mouseRegionHovered = false);
                   }),
+                  child: Icon(
+                    FFIcons.kcopy,
+                    color: valueOrDefault<Color>(
+                      _model.mouseRegionHovered
+                          ? FlutterFlowTheme.of(context).primaryText
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      FlutterFlowTheme.of(context).secondaryText,
+                    ),
+                    size: 24.0,
+                  ),
                 ),
               ],
             ),

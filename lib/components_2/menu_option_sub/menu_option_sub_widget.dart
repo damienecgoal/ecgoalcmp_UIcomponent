@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'menu_option_sub_model.dart';
 export 'menu_option_sub_model.dart';
 
@@ -52,6 +49,12 @@ class _MenuOptionSubWidgetState extends State<MenuOptionSubWidget> {
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
+      onEnter: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = false);
+      }),
       child: InkWell(
         splashColor: Colors.transparent,
         focusColor: Colors.transparent,
@@ -61,17 +64,17 @@ class _MenuOptionSubWidgetState extends State<MenuOptionSubWidget> {
           await widget.navigateAction?.call();
         },
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 100),
+          duration: const Duration(milliseconds: 100),
           curve: Curves.easeInOut,
           width: double.infinity,
           height: 48.0,
           decoration: BoxDecoration(
             color: valueOrDefault<Color>(
               () {
-                if (widget!.active!) {
+                if (widget.active!) {
                   return FlutterFlowTheme.of(context).primary;
-                } else if (_model.mouseRegionHovered!) {
-                  return Color(0xFF343951);
+                } else if (_model.mouseRegionHovered) {
+                  return const Color(0xFF343951);
                 } else {
                   return FlutterFlowTheme.of(context).secondaryBackground;
                 }
@@ -79,16 +82,16 @@ class _MenuOptionSubWidgetState extends State<MenuOptionSubWidget> {
               FlutterFlowTheme.of(context).secondaryBackground,
             ),
           ),
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 0.0, 0.0),
                 child: Icon(
                   FFIcons.kcircle,
                   color: valueOrDefault<Color>(
-                    widget!.active!
+                    widget.active!
                         ? Colors.white
                         : FlutterFlowTheme.of(context).secondaryText,
                     FlutterFlowTheme.of(context).secondaryText,
@@ -97,11 +100,11 @@ class _MenuOptionSubWidgetState extends State<MenuOptionSubWidget> {
                 ),
               ),
               Text(
-                widget!.title!,
+                widget.title!,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Noto Sans HK',
                       color: valueOrDefault<Color>(
-                        widget!.active!
+                        widget.active!
                             ? Colors.white
                             : FlutterFlowTheme.of(context).secondaryText,
                         FlutterFlowTheme.of(context).secondaryText,
@@ -111,18 +114,12 @@ class _MenuOptionSubWidgetState extends State<MenuOptionSubWidget> {
                     ),
               ),
             ]
-                .divide(SizedBox(width: 12.0))
-                .addToStart(SizedBox(width: 24.0))
-                .addToEnd(SizedBox(width: 24.0)),
+                .divide(const SizedBox(width: 12.0))
+                .addToStart(const SizedBox(width: 24.0))
+                .addToEnd(const SizedBox(width: 24.0)),
           ),
         ),
       ),
-      onEnter: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = false);
-      }),
     );
   }
 }

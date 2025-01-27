@@ -2,11 +2,8 @@ import '/components/nodal/project_action/project_action_widget.dart';
 import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'invoice_list_model.dart';
 export 'invoice_list_model.dart';
@@ -58,12 +55,12 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -80,7 +77,7 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.id,
+                            widget.id,
                             'na',
                           ),
                           style:
@@ -110,8 +107,8 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                           model: _model.iconContainerCircleModel,
                           updateCallback: () => safeSetState(() {}),
                           child: IconContainerCircleWidget(
-                            icon: widget!.icon!,
-                            bgcolor: widget!.bgcolor!,
+                            icon: widget.icon!,
+                            bgcolor: widget.bgcolor!,
                             daimiter: 32.0,
                           ),
                         ),
@@ -132,7 +129,7 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.total,
+                            widget.total,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -162,7 +159,7 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.issueddate,
+                            widget.issueddate,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -192,16 +189,6 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
-                          child: Icon(
-                            FFIcons.kmail,
-                            color: valueOrDefault<Color>(
-                              _model.mouseRegionHovered1!
-                                  ? FlutterFlowTheme.of(context).primary
-                                  : FlutterFlowTheme.of(context).secondaryTitle,
-                              FlutterFlowTheme.of(context).secondaryTitle,
-                            ),
-                            size: 22.0,
-                          ),
                           onEnter: ((event) async {
                             safeSetState(
                                 () => _model.mouseRegionHovered1 = true);
@@ -210,20 +197,20 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                             safeSetState(
                                 () => _model.mouseRegionHovered1 = false);
                           }),
-                        ),
-                        MouseRegion(
-                          opaque: false,
-                          cursor: MouseCursor.defer ?? MouseCursor.defer,
                           child: Icon(
-                            FFIcons.keye,
+                            FFIcons.kmail,
                             color: valueOrDefault<Color>(
-                              _model.mouseRegionHovered2!
+                              _model.mouseRegionHovered1
                                   ? FlutterFlowTheme.of(context).primary
                                   : FlutterFlowTheme.of(context).secondaryTitle,
                               FlutterFlowTheme.of(context).secondaryTitle,
                             ),
                             size: 22.0,
                           ),
+                        ),
+                        MouseRegion(
+                          opaque: false,
+                          cursor: MouseCursor.defer ?? MouseCursor.defer,
                           onEnter: ((event) async {
                             safeSetState(
                                 () => _model.mouseRegionHovered2 = true);
@@ -232,6 +219,16 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                             safeSetState(
                                 () => _model.mouseRegionHovered2 = false);
                           }),
+                          child: Icon(
+                            FFIcons.keye,
+                            color: valueOrDefault<Color>(
+                              _model.mouseRegionHovered2
+                                  ? FlutterFlowTheme.of(context).primary
+                                  : FlutterFlowTheme.of(context).secondaryTitle,
+                              FlutterFlowTheme.of(context).secondaryTitle,
+                            ),
+                            size: 22.0,
+                          ),
                         ),
                         Builder(
                           builder: (context) => InkWell(
@@ -245,12 +242,12 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                                 context: context,
                                 isGlobal: false,
                                 avoidOverflow: false,
-                                targetAnchor: AlignmentDirectional(-7.0, 8.5)
+                                targetAnchor: const AlignmentDirectional(-7.0, 8.5)
                                     .resolve(Directionality.of(context)),
-                                followerAnchor: AlignmentDirectional(0.0, 0.0)
+                                followerAnchor: const AlignmentDirectional(0.0, 0.0)
                                     .resolve(Directionality.of(context)),
                                 builder: (dialogContext) {
-                                  return Material(
+                                  return const Material(
                                     color: Colors.transparent,
                                     child: WebViewAware(
                                       child: ProjectActionWidget(),
@@ -267,11 +264,11 @@ class _InvoiceListWidgetState extends State<InvoiceListWidget> {
                             ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 16.0)),
+                      ].divide(const SizedBox(width: 16.0)),
                     ),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

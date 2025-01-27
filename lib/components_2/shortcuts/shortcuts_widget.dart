@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'shortcuts_model.dart';
 export 'shortcuts_model.dart';
 
@@ -52,13 +49,19 @@ class _ShortcutsWidgetState extends State<ShortcutsWidget> {
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
+      onEnter: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = false);
+      }),
       child: Container(
         width: double.infinity,
         height: 134.0,
         decoration: BoxDecoration(
           color: valueOrDefault<Color>(
-            _model.mouseRegionHovered!
-                ? Color(0x15A8AAAE)
+            _model.mouseRegionHovered
+                ? const Color(0x15A8AAAE)
                 : FlutterFlowTheme.of(context).secondaryBackground,
             FlutterFlowTheme.of(context).secondaryBackground,
           ),
@@ -68,7 +71,7 @@ class _ShortcutsWidgetState extends State<ShortcutsWidget> {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,18 +79,18 @@ class _ShortcutsWidgetState extends State<ShortcutsWidget> {
                     Container(
                       width: 46.0,
                       height: 46.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x337983BB),
                         shape: BoxShape.circle,
                       ),
-                      child: widget!.icon!,
+                      child: widget.icon!,
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
-                          widget!.title,
+                          widget.title,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,7 +102,7 @@ class _ShortcutsWidgetState extends State<ShortcutsWidget> {
                     ),
                     Text(
                       valueOrDefault<String>(
-                        widget!.subtitle,
+                        widget.subtitle,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -120,12 +123,6 @@ class _ShortcutsWidgetState extends State<ShortcutsWidget> {
           ],
         ),
       ),
-      onEnter: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = false);
-      }),
     );
   }
 }

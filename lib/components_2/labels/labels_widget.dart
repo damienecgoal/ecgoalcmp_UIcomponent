@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'labels_model.dart';
 export 'labels_model.dart';
 
@@ -48,7 +45,7 @@ class _LabelsWidgetState extends State<LabelsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -56,19 +53,19 @@ class _LabelsWidgetState extends State<LabelsWidget> {
             width: 10.0,
             height: 10.0,
             decoration: BoxDecoration(
-              color: widget!.color,
+              color: widget.color,
               shape: BoxShape.circle,
             ),
           ),
           Text(
             valueOrDefault<String>(
-              widget!.title,
+              widget.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Public Sans',
                   color: valueOrDefault<Color>(
-                    widget!.color == Color(0x00000000)
+                    widget.color == const Color(0x00000000)
                         ? FlutterFlowTheme.of(context).primary
                         : FlutterFlowTheme.of(context).secondaryTitle,
                     FlutterFlowTheme.of(context).secondaryTitle,
@@ -78,7 +75,7 @@ class _LabelsWidgetState extends State<LabelsWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(SizedBox(width: 12.0)),
+        ].divide(const SizedBox(width: 12.0)),
       ),
     );
   }

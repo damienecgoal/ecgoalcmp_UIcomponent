@@ -8,6 +8,7 @@ export '../base_auth_user_provider.dart';
 class UIComponentFirebaseUser extends BaseAuthUser {
   UIComponentFirebaseUser(this.user);
   User? user;
+  @override
   bool get loggedIn => user != null;
 
   @override

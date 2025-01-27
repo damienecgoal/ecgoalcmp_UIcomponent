@@ -8,14 +8,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'add_event_model.dart';
 export 'add_event_model.dart';
@@ -64,8 +59,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(200.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(200.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -91,7 +86,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(1.0, 0.0),
+      alignment: const AlignmentDirectional(1.0, 0.0),
       child: Container(
         width: 380.0,
         height: 900.0,
@@ -102,7 +97,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,7 +127,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           color: FlutterFlowTheme.of(context).secondary,
                           size: 22.0,
                         ),
-                        bg: Color(0x1FA8AAAE),
+                        bg: const Color(0x1FA8AAAE),
                         size: 34.0,
                       ),
                     ),
@@ -147,7 +142,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -169,6 +164,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered1 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered1 = false);
+                            }),
                             child: TextFormField(
                               controller: _model.textController1,
                               focusNode: _model.textFieldFocusNode1,
@@ -197,7 +200,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered1!
+                                      _model.mouseRegionHovered1
                                           ? FlutterFlowTheme.of(context)
                                               .secondaryText
                                           : FlutterFlowTheme.of(context)
@@ -229,7 +232,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -242,16 +245,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
                               validator: _model.textController1Validator
                                   .asValidator(context),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered1 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered1 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -270,6 +265,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered2 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered2 = false);
+                            }),
                             child: Builder(
                               builder: (context) => InkWell(
                                 splashColor: Colors.transparent,
@@ -282,13 +285,13 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     context: context,
                                     isGlobal: false,
                                     avoidOverflow: true,
-                                    targetAnchor: AlignmentDirectional(0.0, 6.0)
+                                    targetAnchor: const AlignmentDirectional(0.0, 6.0)
                                         .resolve(Directionality.of(context)),
-                                    followerAnchor: AlignmentDirectional(
+                                    followerAnchor: const AlignmentDirectional(
                                             0.0, 0.0)
                                         .resolve(Directionality.of(context)),
                                     builder: (dialogContext) {
-                                      return Material(
+                                      return const Material(
                                         color: Colors.transparent,
                                         child: WebViewAware(
                                           child: CalenderLabelWidget(),
@@ -306,7 +309,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     borderRadius: BorderRadius.circular(8.0),
                                     border: Border.all(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered2!
+                                        _model.mouseRegionHovered2
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -317,7 +320,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -349,7 +352,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
-                                          ].divide(SizedBox(width: 10.0)),
+                                          ].divide(const SizedBox(width: 10.0)),
                                         ),
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -363,22 +366,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                             ),
                                           ],
                                         ),
-                                      ].divide(SizedBox(width: 8.0)),
+                                      ].divide(const SizedBox(width: 8.0)),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered2 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered2 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -397,6 +392,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered3 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered3 = false);
+                            }),
                             child: Builder(
                               builder: (context) => InkWell(
                                 splashColor: Colors.transparent,
@@ -409,13 +412,13 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     context: context,
                                     isGlobal: false,
                                     avoidOverflow: false,
-                                    targetAnchor: AlignmentDirectional(0.0, 8.0)
+                                    targetAnchor: const AlignmentDirectional(0.0, 8.0)
                                         .resolve(Directionality.of(context)),
-                                    followerAnchor: AlignmentDirectional(
+                                    followerAnchor: const AlignmentDirectional(
                                             0.0, 0.0)
                                         .resolve(Directionality.of(context)),
                                     builder: (dialogContext) {
-                                      return Material(
+                                      return const Material(
                                         color: Colors.transparent,
                                         child: WebViewAware(
                                           child: DatePekerWidget(),
@@ -433,7 +436,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     borderRadius: BorderRadius.circular(8.0),
                                     border: Border.all(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered3!
+                                        _model.mouseRegionHovered3
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -444,7 +447,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -465,16 +468,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                 ),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered3 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered3 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -493,6 +488,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered4 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered4 = false);
+                            }),
                             child: Builder(
                               builder: (context) => InkWell(
                                 splashColor: Colors.transparent,
@@ -505,13 +508,13 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     context: context,
                                     isGlobal: false,
                                     avoidOverflow: false,
-                                    targetAnchor: AlignmentDirectional(0.0, 8.0)
+                                    targetAnchor: const AlignmentDirectional(0.0, 8.0)
                                         .resolve(Directionality.of(context)),
-                                    followerAnchor: AlignmentDirectional(
+                                    followerAnchor: const AlignmentDirectional(
                                             0.0, 0.0)
                                         .resolve(Directionality.of(context)),
                                     builder: (dialogContext) {
-                                      return Material(
+                                      return const Material(
                                         color: Colors.transparent,
                                         child: WebViewAware(
                                           child: DatePekerWidget(),
@@ -529,7 +532,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     borderRadius: BorderRadius.circular(8.0),
                                     border: Border.all(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered4!
+                                        _model.mouseRegionHovered4
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -540,7 +543,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -561,16 +564,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                 ),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered4 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered4 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -593,7 +588,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 8.0)),
+                        ].divide(const SizedBox(width: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -612,6 +607,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered5 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered5 = false);
+                            }),
                             child: TextFormField(
                               controller: _model.textController2,
                               focusNode: _model.textFieldFocusNode2,
@@ -640,7 +643,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered5!
+                                      _model.mouseRegionHovered5
                                           ? FlutterFlowTheme.of(context)
                                               .secondaryText
                                           : FlutterFlowTheme.of(context)
@@ -672,7 +675,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -685,16 +688,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
                               validator: _model.textController2Validator
                                   .asValidator(context),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered5 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered5 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -713,6 +708,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered6 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered6 = false);
+                            }),
                             child: Builder(
                               builder: (context) => InkWell(
                                 splashColor: Colors.transparent,
@@ -725,14 +728,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     context: context,
                                     isGlobal: false,
                                     avoidOverflow: false,
-                                    targetAnchor: AlignmentDirectional(
+                                    targetAnchor: const AlignmentDirectional(
                                             -1.0, 8.0)
                                         .resolve(Directionality.of(context)),
-                                    followerAnchor: AlignmentDirectional(
+                                    followerAnchor: const AlignmentDirectional(
                                             0.0, 0.0)
                                         .resolve(Directionality.of(context)),
                                     builder: (dialogContext) {
-                                      return Material(
+                                      return const Material(
                                         color: Colors.transparent,
                                         child: WebViewAware(
                                           child: CalenderGuestsWidget(),
@@ -750,7 +753,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     borderRadius: BorderRadius.circular(8.0),
                                     border: Border.all(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered6!
+                                        _model.mouseRegionHovered6
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -761,7 +764,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -785,16 +788,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                 ),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered6 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered6 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -813,6 +808,14 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered7 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered7 = false);
+                            }),
                             child: TextFormField(
                               controller: _model.textController3,
                               focusNode: _model.textFieldFocusNode3,
@@ -841,7 +844,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered7!
+                                      _model.mouseRegionHovered7
                                           ? FlutterFlowTheme.of(context)
                                               .secondaryText
                                           : FlutterFlowTheme.of(context)
@@ -873,7 +876,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -886,16 +889,8 @@ class _AddEventWidgetState extends State<AddEventWidget>
                               validator: _model.textController3Validator
                                   .asValidator(context),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered7 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered7 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -914,12 +909,20 @@ class _AddEventWidgetState extends State<AddEventWidget>
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered8 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered8 = false);
+                            }),
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
                                 border: Border.all(
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered8!
+                                    _model.mouseRegionHovered8
                                         ? FlutterFlowTheme.of(context)
                                             .secondaryText
                                         : FlutterFlowTheme.of(context)
@@ -962,7 +965,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                       errorBorder: InputBorder.none,
                                       focusedErrorBorder: InputBorder.none,
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               16.0, 20.0, 16.0, 16.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -977,7 +980,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                         .asValidator(context),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 16.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -987,27 +990,19 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                           model: _model.textStyleModel,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: TextStyleWidget(),
+                                          child: const TextStyleWidget(),
                                         ),
                                       ],
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 12.0)),
+                                ].divide(const SizedBox(height: 12.0)),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered8 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered8 = false);
-                            }),
                           ),
-                        ].divide(SizedBox(height: 8.0)),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 0.0, 0.0, 100.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -1019,9 +1014,9 @@ class _AddEventWidgetState extends State<AddEventWidget>
                               text: 'Add',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -1032,7 +1027,7 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
@@ -1046,11 +1041,11 @@ class _AddEventWidgetState extends State<AddEventWidget>
                               text: 'Cancel',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0x34A8AAAE),
+                                color: const Color(0x34A8AAAE),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -1060,19 +1055,19 @@ class _AddEventWidgetState extends State<AddEventWidget>
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                       ),
                     ]
-                        .divide(SizedBox(height: 20.0))
-                        .addToStart(SizedBox(height: 16.0)),
+                        .divide(const SizedBox(height: 20.0))
+                        .addToStart(const SizedBox(height: 16.0)),
                   ),
                 ),
               ),

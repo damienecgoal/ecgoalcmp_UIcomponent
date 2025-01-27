@@ -2,10 +2,7 @@ import '/components_2/icon_box/icon_box_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'list_info_model.dart';
 export 'list_info_model.dart';
 
@@ -60,7 +57,7 @@ class _ListInfoWidgetState extends State<ListInfoWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,7 +69,7 @@ class _ListInfoWidgetState extends State<ListInfoWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.title,
+                  widget.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -83,10 +80,10 @@ class _ListInfoWidgetState extends State<ListInfoWidget> {
                     ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                 child: Text(
                   valueOrDefault<String>(
-                    widget!.amount,
+                    widget.amount,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -98,13 +95,13 @@ class _ListInfoWidgetState extends State<ListInfoWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
                       valueOrDefault<String>(
-                        widget!.info,
+                        widget.info,
                         'nan',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -119,12 +116,12 @@ class _ListInfoWidgetState extends State<ListInfoWidget> {
                       model: _model.statusCardModel,
                       updateCallback: () => safeSetState(() {}),
                       child: StatusCardWidget(
-                        title: widget!.persentage!,
-                        titleColor: widget!.color!,
-                        bgColor: widget!.bg!,
+                        title: widget.persentage!,
+                        titleColor: widget.color!,
+                        bgColor: widget.bg!,
                       ),
                     ),
-                  ].divide(SizedBox(width: 10.0)),
+                  ].divide(const SizedBox(width: 10.0)),
                 ),
               ),
             ],
@@ -136,8 +133,8 @@ class _ListInfoWidgetState extends State<ListInfoWidget> {
                 model: _model.iconBoxModel,
                 updateCallback: () => safeSetState(() {}),
                 child: IconBoxWidget(
-                  icon: widget!.icon!,
-                  bg: Color(0x33A8AAAE),
+                  icon: widget.icon!,
+                  bg: const Color(0x33A8AAAE),
                   size: 40.0,
                 ),
               ),

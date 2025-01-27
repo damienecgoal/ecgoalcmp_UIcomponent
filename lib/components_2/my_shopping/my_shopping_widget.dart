@@ -2,11 +2,8 @@ import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'my_shopping_model.dart';
 export 'my_shopping_model.dart';
 
@@ -54,16 +51,16 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
-                widget!.product!,
+                widget.product!,
                 width: 80.0,
                 height: 100.0,
                 fit: BoxFit.cover,
@@ -71,21 +68,21 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 6.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 6.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              widget!.name,
+                              widget.name,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -99,18 +96,6 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
-                            child: Icon(
-                              FFIcons.kx,
-                              color: valueOrDefault<Color>(
-                                _model.mouseRegionHovered1!
-                                    ? FlutterFlowTheme.of(context)
-                                        .secondaryTitle
-                                    : FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                FlutterFlowTheme.of(context).secondaryText,
-                              ),
-                              size: 20.0,
-                            ),
                             onEnter: ((event) async {
                               safeSetState(
                                   () => _model.mouseRegionHovered1 = true);
@@ -119,6 +104,18 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                               safeSetState(
                                   () => _model.mouseRegionHovered1 = false);
                             }),
+                            child: Icon(
+                              FFIcons.kx,
+                              color: valueOrDefault<Color>(
+                                _model.mouseRegionHovered1
+                                    ? FlutterFlowTheme.of(context)
+                                        .secondaryTitle
+                                    : FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                FlutterFlowTheme.of(context).secondaryText,
+                              ),
+                              size: 20.0,
+                            ),
                           ),
                         ],
                       ),
@@ -160,10 +157,10 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                                 title: 'In Stock',
                                 titleColor:
                                     FlutterFlowTheme.of(context).success,
-                                bgColor: Color(0x3428C76F),
+                                bgColor: const Color(0x3428C76F),
                               ),
                             ),
-                          ].divide(SizedBox(width: 8.0)),
+                          ].divide(const SizedBox(width: 8.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -191,7 +188,7 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 2.0)),
+                          ].divide(const SizedBox(width: 2.0)),
                         ),
                       ],
                     ),
@@ -211,7 +208,7 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -219,7 +216,15 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
-                            child: Container(
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered2 = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered2 = false);
+                            }),
+                            child: SizedBox(
                               width: 100.0,
                               child: TextFormField(
                                 controller: _model.textController,
@@ -245,7 +250,7 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered2!
+                                        _model.mouseRegionHovered2
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -279,7 +284,7 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                                     borderRadius: BorderRadius.circular(6.0),
                                   ),
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -293,14 +298,6 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                                     .asValidator(context),
                               ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered2 = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered2 = false);
-                            }),
                           ),
                           FFButtonWidget(
                             onPressed: () {
@@ -309,11 +306,11 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                             text: 'move to wishlist',
                             options: FFButtonOptions(
                               height: 34.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0x337367F0),
+                              color: const Color(0x337367F0),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -323,7 +320,7 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),
@@ -333,11 +330,11 @@ class _MyShoppingWidgetState extends State<MyShoppingWidget> {
                         ],
                       ),
                     ),
-                  ].divide(SizedBox(height: 8.0)),
+                  ].divide(const SizedBox(height: 8.0)),
                 ),
               ),
             ),
-          ].divide(SizedBox(width: 24.0)).addToStart(SizedBox(width: 20.0)),
+          ].divide(const SizedBox(width: 24.0)).addToStart(const SizedBox(width: 20.0)),
         ),
       ),
     );

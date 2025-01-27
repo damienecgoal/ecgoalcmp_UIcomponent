@@ -5,12 +5,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_new_address_model.dart';
 export 'add_new_address_model.dart';
@@ -71,8 +67,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -85,8 +81,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, -300.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -300.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -111,22 +107,22 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
         mainAxisSize: MainAxisSize.min,
         children: [
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
-            child: Container(
+            alignment: const AlignmentDirectional(0.0, 0.0),
+            child: SizedBox(
               width: 808.0,
               child: Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 10.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 10.0, 0.0),
                       child: Container(
                         width: 800.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 20.0,
                               color: Color(0x29000000),
@@ -137,7 +133,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               50.0, 70.0, 50.0, 70.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -168,7 +164,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           letterSpacing: 0.0,
                                         ),
                                   ),
-                                ].divide(SizedBox(height: 12.0)),
+                                ].divide(const SizedBox(height: 12.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -178,6 +174,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                       opaque: false,
                                       cursor: MouseCursor.defer ??
                                           MouseCursor.defer,
+                                      onEnter: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered1 = true);
+                                      }),
+                                      onExit: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered1 = false);
+                                      }),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,
@@ -203,7 +207,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                             context)
                                                         .primary;
                                                   } else if (_model
-                                                      .mouseRegionHovered1!) {
+                                                      .mouseRegionHovered1) {
                                                     return FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText;
@@ -220,7 +224,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -292,7 +296,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(4.0),
+                                                        const EdgeInsets.all(4.0),
                                                     child: Container(
                                                       width: 100.0,
                                                       height: 100.0,
@@ -316,14 +320,6 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           ),
                                         ),
                                       ),
-                                      onEnter: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered1 = true);
-                                      }),
-                                      onExit: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered1 = false);
-                                      }),
                                     ),
                                   ),
                                   Expanded(
@@ -331,6 +327,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                       opaque: false,
                                       cursor: MouseCursor.defer ??
                                           MouseCursor.defer,
+                                      onEnter: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered2 = true);
+                                      }),
+                                      onExit: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered2 = false);
+                                      }),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,
@@ -357,7 +361,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                             context)
                                                         .primary;
                                                   } else if (_model
-                                                      .mouseRegionHovered2!) {
+                                                      .mouseRegionHovered2) {
                                                     return FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText;
@@ -374,7 +378,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -447,7 +451,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(4.0),
+                                                        const EdgeInsets.all(4.0),
                                                     child: Container(
                                                       width: 100.0,
                                                       height: 100.0,
@@ -471,17 +475,9 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           ),
                                         ),
                                       ),
-                                      onEnter: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered2 = true);
-                                      }),
-                                      onExit: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered2 = false);
-                                      }),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 28.0)),
+                                ].divide(const SizedBox(width: 28.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -506,6 +502,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered3 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered3 = false);
+                                          }),
                                           child: TextFormField(
                                             controller: _model.textController1,
                                             focusNode:
@@ -538,7 +542,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered3!
+                                                    _model.mouseRegionHovered3
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -585,7 +589,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.all(16.0),
+                                                  const EdgeInsets.all(16.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -598,16 +602,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                 .textController1Validator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered3 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered3 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 8.0)),
+                                      ].divide(const SizedBox(height: 8.0)),
                                     ),
                                   ),
                                   Expanded(
@@ -630,6 +626,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered4 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered4 = false);
+                                          }),
                                           child: TextFormField(
                                             controller: _model.textController2,
                                             focusNode:
@@ -662,7 +666,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered4!
+                                                    _model.mouseRegionHovered4
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -709,7 +713,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               contentPadding:
-                                                  EdgeInsetsDirectional
+                                                  const EdgeInsetsDirectional
                                                       .fromSTEB(16.0, 16.0,
                                                           16.0, 16.0),
                                             ),
@@ -724,19 +728,11 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                 .textController2Validator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered4 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered4 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 8.0)),
+                                      ].divide(const SizedBox(height: 8.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 28.0)),
+                                ].divide(const SizedBox(width: 28.0)),
                               ),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -756,11 +752,19 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered5 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered5 = false);
+                                    }),
                                     child: FlutterFlowDropDown<String>(
                                       controller:
                                           _model.dropDownValueController ??=
                                               FormFieldController<String>(null),
-                                      options: [
+                                      options: const [
                                         'Australi',
                                         'Bangladeng',
                                         'Belarus',
@@ -815,7 +819,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           .secondaryBackground,
                                       elevation: 3.0,
                                       borderColor: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered5!
+                                        _model.mouseRegionHovered5
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -824,23 +828,15 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                       ),
                                       borderWidth: 1.0,
                                       borderRadius: 8.0,
-                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: false,
                                       isSearchable: true,
                                       isMultiSelect: false,
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered5 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered5 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -860,6 +856,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered6 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered6 = false);
+                                    }),
                                     child: TextFormField(
                                       controller: _model.textController3,
                                       focusNode: _model.textFieldFocusNode3,
@@ -888,7 +892,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered6!
+                                              _model.mouseRegionHovered6
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -929,7 +933,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               BorderRadius.circular(8.0),
                                         ),
                                         contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 16.0, 16.0, 16.0, 16.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -942,16 +946,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                       validator: _model.textController3Validator
                                           .asValidator(context),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered6 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered6 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -971,6 +967,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered7 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered7 = false);
+                                    }),
                                     child: TextFormField(
                                       controller: _model.textController4,
                                       focusNode: _model.textFieldFocusNode4,
@@ -999,7 +1003,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered7!
+                                              _model.mouseRegionHovered7
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -1040,7 +1044,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               BorderRadius.circular(8.0),
                                         ),
                                         contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 16.0, 16.0, 16.0, 16.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -1053,16 +1057,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                       validator: _model.textController4Validator
                                           .asValidator(context),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered7 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered7 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1087,6 +1083,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered8 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered8 = false);
+                                          }),
                                           child: TextFormField(
                                             controller: _model.textController5,
                                             focusNode:
@@ -1119,7 +1123,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered8!
+                                                    _model.mouseRegionHovered8
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -1166,7 +1170,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.all(16.0),
+                                                  const EdgeInsets.all(16.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1179,16 +1183,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                 .textController5Validator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered8 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered8 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 8.0)),
+                                      ].divide(const SizedBox(height: 8.0)),
                                     ),
                                   ),
                                   Expanded(
@@ -1211,6 +1207,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered9 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered9 = false);
+                                          }),
                                           child: TextFormField(
                                             controller: _model.textController6,
                                             focusNode:
@@ -1243,7 +1247,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered9!
+                                                    _model.mouseRegionHovered9
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -1290,7 +1294,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.all(16.0),
+                                                  const EdgeInsets.all(16.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1303,19 +1307,11 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                 .textController6Validator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered9 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered9 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 8.0)),
+                                      ].divide(const SizedBox(height: 8.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 28.0)),
+                                ].divide(const SizedBox(width: 28.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1340,6 +1336,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered10 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered10 = false);
+                                          }),
                                           child: TextFormField(
                                             controller: _model.textController7,
                                             focusNode:
@@ -1372,7 +1376,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered10!
+                                                    _model.mouseRegionHovered10
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -1419,7 +1423,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.all(16.0),
+                                                  const EdgeInsets.all(16.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1432,16 +1436,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                 .textController7Validator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered10 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered10 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 8.0)),
+                                      ].divide(const SizedBox(height: 8.0)),
                                     ),
                                   ),
                                   Expanded(
@@ -1464,6 +1460,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered11 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered11 = false);
+                                          }),
                                           child: TextFormField(
                                             controller: _model.textController8,
                                             focusNode:
@@ -1496,7 +1500,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered11!
+                                                    _model.mouseRegionHovered11
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -1543,7 +1547,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.all(16.0),
+                                                  const EdgeInsets.all(16.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1556,22 +1560,14 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                                 .textController8Validator
                                                 .asValidator(context),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered11 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered11 = false);
-                                          }),
                                         ),
-                                      ].divide(SizedBox(height: 8.0)),
+                                      ].divide(const SizedBox(height: 8.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 28.0)),
+                                ].divide(const SizedBox(width: 28.0)),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1596,7 +1592,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 8.0)),
+                                  ].divide(const SizedBox(width: 8.0)),
                                 ),
                               ),
                               Row(
@@ -1610,10 +1606,10 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                     text: 'Submit',
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -1625,7 +1621,7 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 0.0,
                                       ),
@@ -1639,12 +1635,12 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                     text: 'Cancel',
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0x34A8AAAE),
+                                      color: const Color(0x34A8AAAE),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -1654,35 +1650,41 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 0.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
-                            ].divide(SizedBox(height: 24.0)),
+                            ].divide(const SizedBox(height: 24.0)),
                           ),
                         ),
                       ),
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(1.0, -1.0),
+                    alignment: const AlignmentDirectional(1.0, -1.0),
                     child: MouseRegion(
                       opaque: false,
                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                      onEnter: ((event) async {
+                        safeSetState(() => _model.mouseRegionHovered12 = true);
+                      }),
+                      onExit: ((event) async {
+                        safeSetState(() => _model.mouseRegionHovered12 = false);
+                      }),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0,
                             valueOrDefault<double>(
-                              _model.mouseRegionHovered12! ? 5.0 : 0.0,
+                              _model.mouseRegionHovered12 ? 5.0 : 0.0,
                               0.0,
                             ),
                             valueOrDefault<double>(
-                              _model.mouseRegionHovered12! ? 5.0 : 0.0,
+                              _model.mouseRegionHovered12 ? 5.0 : 0.0,
                               0.0,
                             ),
                             0.0),
@@ -1705,8 +1707,8 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                               height: 36.0,
                               decoration: BoxDecoration(
                                 color: valueOrDefault<Color>(
-                                  _model.mouseRegionHovered12!
-                                      ? Color(0xFF383C54)
+                                  _model.mouseRegionHovered12
+                                      ? const Color(0xFF383C54)
                                       : FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                   FlutterFlowTheme.of(context)
@@ -1724,19 +1726,13 @@ class _AddNewAddressWidgetState extends State<AddNewAddressWidget>
                           ),
                         ),
                       ),
-                      onEnter: ((event) async {
-                        safeSetState(() => _model.mouseRegionHovered12 = true);
-                      }),
-                      onExit: ((event) async {
-                        safeSetState(() => _model.mouseRegionHovered12 = false);
-                      }),
                     ),
                   ),
                 ],
               ),
             ).animateOnPageLoad(animationsMap['stackOnPageLoadAnimation']!),
           ),
-        ].addToStart(SizedBox(height: 40.0)).addToEnd(SizedBox(height: 40.0)),
+        ].addToStart(const SizedBox(height: 40.0)).addToEnd(const SizedBox(height: 40.0)),
       ),
     );
   }

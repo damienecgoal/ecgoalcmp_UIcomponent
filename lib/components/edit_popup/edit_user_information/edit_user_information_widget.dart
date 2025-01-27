@@ -69,8 +69,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -83,8 +83,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, -300.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -300.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -105,22 +105,22 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
-      child: Container(
+      alignment: const AlignmentDirectional(0.0, 0.0),
+      child: SizedBox(
         width: 800.0,
         height: 790.0,
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
                 child: Container(
                   width: 800.0,
                   height: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 20.0,
                         color: Color(0x29000000),
@@ -132,7 +132,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 70.0),
+                        const EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 70.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -162,7 +162,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                          ].divide(SizedBox(height: 12.0)),
+                          ].divide(const SizedBox(height: 12.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -186,6 +186,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered1 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered1 = false);
+                                    }),
                                     child: TextFormField(
                                       controller: _model.textController1,
                                       focusNode: _model.textFieldFocusNode1,
@@ -214,7 +222,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered1!
+                                              _model.mouseRegionHovered1
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -254,7 +262,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
-                                        contentPadding: EdgeInsets.all(16.0),
+                                        contentPadding: const EdgeInsets.all(16.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -266,16 +274,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       validator: _model.textController1Validator
                                           .asValidator(context),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered1 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered1 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
                             Expanded(
@@ -297,6 +297,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered2 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered2 = false);
+                                    }),
                                     child: TextFormField(
                                       controller: _model.textController2,
                                       focusNode: _model.textFieldFocusNode2,
@@ -325,7 +333,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered2!
+                                              _model.mouseRegionHovered2
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -366,7 +374,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                               BorderRadius.circular(8.0),
                                         ),
                                         contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 16.0, 16.0, 16.0, 16.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -379,19 +387,11 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       validator: _model.textController2Validator
                                           .asValidator(context),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered2 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered2 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
-                          ].divide(SizedBox(width: 28.0)),
+                          ].divide(const SizedBox(width: 28.0)),
                         ),
                         Column(
                           mainAxisSize: MainAxisSize.max,
@@ -410,6 +410,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                             MouseRegion(
                               opaque: false,
                               cursor: MouseCursor.defer ?? MouseCursor.defer,
+                              onEnter: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered3 = true);
+                              }),
+                              onExit: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered3 = false);
+                              }),
                               child: TextFormField(
                                 controller: _model.textController3,
                                 focusNode: _model.textFieldFocusNode3,
@@ -437,7 +445,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered3!
+                                        _model.mouseRegionHovered3
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -471,7 +479,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -484,16 +492,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                 validator: _model.textController3Validator
                                     .asValidator(context),
                               ),
-                              onEnter: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered3 = true);
-                              }),
-                              onExit: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered3 = false);
-                              }),
                             ),
-                          ].divide(SizedBox(height: 8.0)),
+                          ].divide(const SizedBox(height: 8.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -517,6 +517,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered4 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered4 = false);
+                                    }),
                                     child: TextFormField(
                                       controller: _model.textController4,
                                       focusNode: _model.textFieldFocusNode4,
@@ -545,7 +553,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered4!
+                                              _model.mouseRegionHovered4
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -585,7 +593,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
-                                        contentPadding: EdgeInsets.all(16.0),
+                                        contentPadding: const EdgeInsets.all(16.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -597,16 +605,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       validator: _model.textController4Validator
                                           .asValidator(context),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered4 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered4 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
                             Expanded(
@@ -628,11 +628,19 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered5 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered5 = false);
+                                    }),
                                     child: FlutterFlowDropDown<String>(
                                       controller:
                                           _model.dropDownValueController1 ??=
                                               FormFieldController<String>(null),
-                                      options: [
+                                      options: const [
                                         'Status',
                                         'Active',
                                         'inactive',
@@ -681,7 +689,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           .secondaryBackground,
                                       elevation: 3.0,
                                       borderColor: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered5!
+                                        _model.mouseRegionHovered5
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -690,26 +698,18 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       ),
                                       borderWidth: 1.0,
                                       borderRadius: 8.0,
-                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: false,
                                       isSearchable: true,
                                       isMultiSelect: false,
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered5 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered5 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
-                          ].divide(SizedBox(width: 28.0)),
+                          ].divide(const SizedBox(width: 28.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -733,6 +733,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered6 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered6 = false);
+                                    }),
                                     child: TextFormField(
                                       controller: _model.textController5,
                                       focusNode: _model.textFieldFocusNode5,
@@ -760,7 +768,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered6!
+                                              _model.mouseRegionHovered6
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -800,7 +808,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
-                                        contentPadding: EdgeInsets.all(16.0),
+                                        contentPadding: const EdgeInsets.all(16.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -812,16 +820,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       validator: _model.textController5Validator
                                           .asValidator(context),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered6 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered6 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
                             Expanded(
@@ -843,6 +843,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered7 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered7 = false);
+                                    }),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -851,7 +859,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(8.0),
                                               bottomRight: Radius.circular(0.0),
                                               topLeft: Radius.circular(8.0),
@@ -868,7 +876,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                             context)
                                                         .primary;
                                                   } else if (_model
-                                                      .mouseRegionHovered7!) {
+                                                      .mouseRegionHovered7) {
                                                     return FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText;
@@ -886,7 +894,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 12.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -944,7 +952,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                               enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                   color: valueOrDefault<Color>(
-                                                    _model.mouseRegionHovered7!
+                                                    _model.mouseRegionHovered7
                                                         ? FlutterFlowTheme.of(
                                                                 context)
                                                             .secondaryText
@@ -956,7 +964,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                   ),
                                                   width: 1.0,
                                                 ),
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(0.0),
                                                   bottomRight:
@@ -973,7 +981,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                       .primary,
                                                   width: 1.0,
                                                 ),
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(0.0),
                                                   bottomRight:
@@ -990,7 +998,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                       .error,
                                                   width: 1.0,
                                                 ),
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(0.0),
                                                   bottomRight:
@@ -1008,7 +1016,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                       .error,
                                                   width: 1.0,
                                                 ),
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(0.0),
                                                   bottomRight:
@@ -1019,7 +1027,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                 ),
                                               ),
                                               contentPadding:
-                                                  EdgeInsets.all(16.0),
+                                                  const EdgeInsets.all(16.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -1035,19 +1043,11 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                         ),
                                       ],
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered7 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered7 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
-                          ].divide(SizedBox(width: 28.0)),
+                          ].divide(const SizedBox(width: 28.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -1071,6 +1071,14 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered8 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered8 = false);
+                                    }),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Container(
@@ -1079,7 +1087,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                               BorderRadius.circular(8.0),
                                           border: Border.all(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered8!
+                                              _model.mouseRegionHovered8
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -1092,7 +1100,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 0.0, 8.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -1104,6 +1112,16 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered9 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered9 =
+                                                          false);
+                                                    }),
                                                     child: Container(
                                                       height: 24.0,
                                                       decoration: BoxDecoration(
@@ -1111,20 +1129,20 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                             Color>(
                                                           () {
                                                             if (_model
-                                                                .mouseRegionHovered9!) {
+                                                                .mouseRegionHovered9) {
                                                               return FlutterFlowTheme
                                                                       .of(context)
                                                                   .primaryBackground;
                                                             } else if (_model
-                                                                .mouseRegionHovered10!) {
-                                                              return Color(
+                                                                .mouseRegionHovered10) {
+                                                              return const Color(
                                                                   0x34EA5455);
                                                             } else {
-                                                              return Color(
+                                                              return const Color(
                                                                   0x34A8AAAE);
                                                             }
                                                           }(),
-                                                          Color(0x34A8AAAE),
+                                                          const Color(0x34A8AAAE),
                                                         ),
                                                         borderRadius:
                                                             BorderRadius
@@ -1132,7 +1150,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -1163,6 +1181,18 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered10 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered10 =
+                                                                        false);
+                                                              }),
                                                               child: Container(
                                                                 width: 16.0,
                                                                 height: 16.0,
@@ -1171,8 +1201,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                                   color:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered10!
-                                                                        ? Color(
+                                                                    _model.mouseRegionHovered10
+                                                                        ? const Color(
                                                                             0xFFEA5455)
                                                                         : Colors
                                                                             .transparent,
@@ -1190,37 +1220,15 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                                   size: 12.0,
                                                                 ),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered10 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered10 =
-                                                                        false);
-                                                              }),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 4.0)),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered9 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered9 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   Expanded(
-                                                    child: Container(
+                                                    child: SizedBox(
                                                       width: 123.0,
                                                       child: TextFormField(
                                                         controller: _model
@@ -1263,7 +1271,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                           focusedErrorBorder:
                                                               InputBorder.none,
                                                           contentPadding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   16.0),
                                                         ),
                                                         style: FlutterFlowTheme
@@ -1283,23 +1291,15 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 8.0)),
+                                                ].divide(const SizedBox(width: 8.0)),
                                               ),
-                                            ].divide(SizedBox(height: 4.0)),
+                                            ].divide(const SizedBox(height: 4.0)),
                                           ),
                                         ),
                                       ),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered8 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered8 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
                             Expanded(
@@ -1321,11 +1321,19 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered11 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered11 = false);
+                                    }),
                                     child: FlutterFlowDropDown<String>(
                                       controller:
                                           _model.dropDownValueController2 ??=
                                               FormFieldController<String>(null),
-                                      options: [
+                                      options: const [
                                         'Australi',
                                         'Bangladeng',
                                         'Belarus',
@@ -1380,7 +1388,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                           .secondaryBackground,
                                       elevation: 3.0,
                                       borderColor: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered11!
+                                        _model.mouseRegionHovered11
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -1389,29 +1397,21 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       ),
                                       borderWidth: 1.0,
                                       borderRadius: 8.0,
-                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: false,
                                       isSearchable: true,
                                       isMultiSelect: false,
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered11 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered11 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(height: 8.0)),
+                                ].divide(const SizedBox(height: 8.0)),
                               ),
                             ),
-                          ].divide(SizedBox(width: 28.0)),
+                          ].divide(const SizedBox(width: 28.0)),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -1436,7 +1436,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 8.0)),
+                            ].divide(const SizedBox(width: 8.0)),
                           ),
                         ),
                         Row(
@@ -1450,9 +1450,9 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                               text: 'Submit',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -1463,7 +1463,7 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
@@ -1477,11 +1477,11 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                               text: 'Cancel',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0x34A8AAAE),
+                                color: const Color(0x34A8AAAE),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -1491,35 +1491,41 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
-                      ].divide(SizedBox(height: 24.0)),
+                      ].divide(const SizedBox(height: 24.0)),
                     ),
                   ),
                 ),
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(1.0, -1.0),
+              alignment: const AlignmentDirectional(1.0, -1.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered12 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered12 = false);
+                }),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(
                       0.0,
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered12! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered12 ? 5.0 : 0.0,
                         0.0,
                       ),
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered12! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered12 ? 5.0 : 0.0,
                         0.0,
                       ),
                       0.0),
@@ -1542,8 +1548,8 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                         height: 36.0,
                         decoration: BoxDecoration(
                           color: valueOrDefault<Color>(
-                            _model.mouseRegionHovered12!
-                                ? Color(0xFF383C54)
+                            _model.mouseRegionHovered12
+                                ? const Color(0xFF383C54)
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                             FlutterFlowTheme.of(context).secondaryBackground,
@@ -1559,12 +1565,6 @@ class _EditUserInformationWidgetState extends State<EditUserInformationWidget>
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered12 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered12 = false);
-                }),
               ),
             ),
           ],

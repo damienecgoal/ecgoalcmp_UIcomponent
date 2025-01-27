@@ -2,11 +2,8 @@ import '/components_2/message/message_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'notification_nodal_model.dart';
 export 'notification_nodal_model.dart';
 
@@ -45,13 +42,13 @@ class _NotificationNodalWidgetState extends State<NotificationNodalWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
       child: Container(
         width: 370.0,
         height: 500.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -76,7 +73,7 @@ class _NotificationNodalWidgetState extends State<NotificationNodalWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(18.0, 20.0, 18.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(18.0, 20.0, 18.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -183,7 +180,7 @@ class _NotificationNodalWidgetState extends State<NotificationNodalWidget> {
                         seen: false,
                       ),
                     ),
-                  ].addToEnd(SizedBox(height: 20.0)),
+                  ].addToEnd(const SizedBox(height: 20.0)),
                 ),
               ),
             ),
@@ -198,7 +195,7 @@ class _NotificationNodalWidgetState extends State<NotificationNodalWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 3.0, 6.0, 3.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 3.0, 6.0, 3.0),
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
@@ -208,9 +205,9 @@ class _NotificationNodalWidgetState extends State<NotificationNodalWidget> {
                       width: double.infinity,
                       height: 42.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -220,7 +217,7 @@ class _NotificationNodalWidgetState extends State<NotificationNodalWidget> {
                                 fontWeight: FontWeight.w500,
                               ),
                       elevation: 0.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 0.0,
                       ),

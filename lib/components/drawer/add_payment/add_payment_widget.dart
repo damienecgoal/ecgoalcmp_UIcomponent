@@ -5,13 +5,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'add_payment_model.dart';
 export 'add_payment_model.dart';
 
@@ -56,8 +51,8 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(200.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(200.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -83,7 +78,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(1.0, 0.0),
+      alignment: const AlignmentDirectional(1.0, 0.0),
       child: Container(
         width: 380.0,
         height: 900.0,
@@ -94,7 +89,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,7 +119,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                           color: FlutterFlowTheme.of(context).secondary,
                           size: 22.0,
                         ),
-                        bg: Color(0x1FA8AAAE),
+                        bg: const Color(0x1FA8AAAE),
                         size: 34.0,
                       ),
                     ),
@@ -138,7 +133,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
               color: FlutterFlowTheme.of(context).lineColor,
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -147,11 +142,11 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                       width: double.infinity,
                       height: 40.0,
                       decoration: BoxDecoration(
-                        color: Color(0x25A8AAAE),
+                        color: const Color(0x25A8AAAE),
                         borderRadius: BorderRadius.circular(4.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -208,6 +203,14 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                               MouseRegion(
                                 opaque: false,
                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                onEnter: ((event) async {
+                                  safeSetState(
+                                      () => _model.mouseRegionHovered1 = true);
+                                }),
+                                onExit: ((event) async {
+                                  safeSetState(
+                                      () => _model.mouseRegionHovered1 = false);
+                                }),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -216,7 +219,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(8.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(8.0),
@@ -232,7 +235,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                                         context)
                                                     .primary;
                                               } else if (_model
-                                                  .mouseRegionHovered1!) {
+                                                  .mouseRegionHovered1) {
                                                 return FlutterFlowTheme.of(
                                                         context)
                                                     .secondaryText;
@@ -249,7 +252,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -303,7 +306,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: valueOrDefault<Color>(
-                                                _model.mouseRegionHovered1!
+                                                _model.mouseRegionHovered1
                                                     ? FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText
@@ -315,7 +318,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                               ),
                                               width: 1.0,
                                             ),
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(8.0),
                                               topLeft: Radius.circular(0.0),
@@ -329,7 +332,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                                       .primary,
                                               width: 1.0,
                                             ),
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(8.0),
                                               topLeft: Radius.circular(0.0),
@@ -343,7 +346,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                                       .error,
                                               width: 1.0,
                                             ),
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(8.0),
                                               topLeft: Radius.circular(0.0),
@@ -358,14 +361,14 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                                       .error,
                                               width: 1.0,
                                             ),
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(0.0),
                                               bottomRight: Radius.circular(8.0),
                                               topLeft: Radius.circular(0.0),
                                               topRight: Radius.circular(8.0),
                                             ),
                                           ),
-                                          contentPadding: EdgeInsets.all(16.0),
+                                          contentPadding: const EdgeInsets.all(16.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -381,16 +384,8 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                     ),
                                   ],
                                 ),
-                                onEnter: ((event) async {
-                                  safeSetState(
-                                      () => _model.mouseRegionHovered1 = true);
-                                }),
-                                onExit: ((event) async {
-                                  safeSetState(
-                                      () => _model.mouseRegionHovered1 = false);
-                                }),
                               ),
-                            ].divide(SizedBox(height: 8.0)),
+                            ].divide(const SizedBox(height: 8.0)),
                           ),
                         ),
                       ],
@@ -412,6 +407,14 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered2 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered2 = false);
+                          }),
                           child: TextFormField(
                             controller: _model.textController2,
                             focusNode: _model.textFieldFocusNode2,
@@ -440,7 +443,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered2!
+                                    _model.mouseRegionHovered2
                                         ? FlutterFlowTheme.of(context)
                                             .secondaryText
                                         : FlutterFlowTheme.of(context)
@@ -472,7 +475,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 16.0),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -485,16 +488,8 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                             validator: _model.textController2Validator
                                 .asValidator(context),
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered2 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered2 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -513,10 +508,18 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered3 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered3 = false);
+                          }),
                           child: FlutterFlowDropDown<String>(
                             controller: _model.dropDownValueController ??=
                                 FormFieldController<String>(null),
-                            options: [
+                            options: const [
                               'Household',
                               'Managment',
                               'Electrinics',
@@ -561,30 +564,22 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                 .secondaryBackground,
                             elevation: 3.0,
                             borderColor: valueOrDefault<Color>(
-                              _model.mouseRegionHovered3!
+                              _model.mouseRegionHovered3
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
                             ),
                             borderWidth: 1.0,
                             borderRadius: 8.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isOverButton: false,
                             isSearchable: true,
                             isMultiSelect: false,
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered3 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered3 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -603,12 +598,20 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered4 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered4 = false);
+                          }),
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               border: Border.all(
                                 color: valueOrDefault<Color>(
-                                  _model.mouseRegionHovered4!
+                                  _model.mouseRegionHovered4
                                       ? FlutterFlowTheme.of(context)
                                           .secondaryText
                                       : FlutterFlowTheme.of(context).lineColor,
@@ -650,7 +653,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                     errorBorder: InputBorder.none,
                                     focusedErrorBorder: InputBorder.none,
                                     contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 20.0, 16.0, 16.0),
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -664,23 +667,15 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                   validator: _model.textController3Validator
                                       .asValidator(context),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered4 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered4 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -691,9 +686,9 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                             text: 'Add',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -704,7 +699,7 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),
@@ -718,11 +713,11 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                             text: 'Discard',
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0x34EA5455),
+                              color: const Color(0x34EA5455),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -731,19 +726,19 @@ class _AddPaymentWidgetState extends State<AddPaymentWidget>
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 0.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                     ),
                   ]
-                      .divide(SizedBox(height: 20.0))
-                      .addToStart(SizedBox(height: 32.0)),
+                      .divide(const SizedBox(height: 20.0))
+                      .addToStart(const SizedBox(height: 32.0)),
                 ),
               ),
             ),

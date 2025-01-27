@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'category_list1_model.dart';
 export 'category_list1_model.dart';
 
@@ -54,12 +51,12 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -97,13 +94,13 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                         borderRadius: BorderRadius.circular(6.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0x34A8AAAE),
+                            color: const Color(0x34A8AAAE),
                             borderRadius: BorderRadius.circular(6.0),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.network(
-                              widget!.banner!,
+                              widget.banner!,
                               width: 40.0,
                               height: 40.0,
                               fit: BoxFit.cover,
@@ -117,7 +114,7 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              widget!.title,
+                              widget.title,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -132,7 +129,7 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                           ),
                           Text(
                             valueOrDefault<String>(
-                              widget!.description,
+                              widget.description,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -145,9 +142,9 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(height: 4.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -159,7 +156,7 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.product,
+                          widget.product,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -183,7 +180,7 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.earning,
+                          widget.earning,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -213,10 +210,10 @@ class _CategoryList1WidgetState extends State<CategoryList1Widget> {
                         color: FlutterFlowTheme.of(context).secondaryText,
                         size: 24.0,
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

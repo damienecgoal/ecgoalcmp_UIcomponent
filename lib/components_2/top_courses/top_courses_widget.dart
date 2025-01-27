@@ -2,10 +2,7 @@ import '/components_2/icon_box/icon_box_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'top_courses_model.dart';
 export 'top_courses_model.dart';
 
@@ -56,7 +53,7 @@ class _TopCoursesWidgetState extends State<TopCoursesWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -64,8 +61,8 @@ class _TopCoursesWidgetState extends State<TopCoursesWidget> {
             model: _model.iconBoxModel,
             updateCallback: () => safeSetState(() {}),
             child: IconBoxWidget(
-              icon: widget!.icon!,
-              bg: widget!.bg!,
+              icon: widget.icon!,
+              bg: widget.bg!,
               size: 42.0,
             ),
           ),
@@ -76,7 +73,7 @@ class _TopCoursesWidgetState extends State<TopCoursesWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.title,
+                    widget.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -88,7 +85,7 @@ class _TopCoursesWidgetState extends State<TopCoursesWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.subtitle,
+                    widget.subtitle,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -98,19 +95,19 @@ class _TopCoursesWidgetState extends State<TopCoursesWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 6.0)),
+              ].divide(const SizedBox(height: 6.0)),
             ),
           ),
           wrapWithModel(
             model: _model.statusCardModel,
             updateCallback: () => safeSetState(() {}),
             child: StatusCardWidget(
-              title: widget!.views!,
+              title: widget.views!,
               titleColor: FlutterFlowTheme.of(context).secondary,
-              bgColor: Color(0x33A8AAAE),
+              bgColor: const Color(0x33A8AAAE),
             ),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'campaing_state_model.dart';
 export 'campaing_state_model.dart';
 
@@ -56,7 +53,7 @@ class _CampaingStateWidgetState extends State<CampaingStateWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -64,15 +61,15 @@ class _CampaingStateWidgetState extends State<CampaingStateWidget> {
             width: 42.0,
             height: 42.0,
             decoration: BoxDecoration(
-              color: widget!.bg,
+              color: widget.bg,
               borderRadius: BorderRadius.circular(8.0),
             ),
-            child: widget!.icon!,
+            child: widget.icon!,
           ),
           Expanded(
             child: Text(
               valueOrDefault<String>(
-                widget!.title,
+                widget.title,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -85,7 +82,7 @@ class _CampaingStateWidgetState extends State<CampaingStateWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.contity,
+              widget.contity,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -97,17 +94,17 @@ class _CampaingStateWidgetState extends State<CampaingStateWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.total,
+              widget.total,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Public Sans',
-                  color: widget!.totalcolor,
+                  color: widget.totalcolor,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                 ),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

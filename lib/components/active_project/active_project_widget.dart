@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'active_project_model.dart';
 export 'active_project_model.dart';
 
@@ -57,14 +54,14 @@ class _ActiveProjectWidgetState extends State<ActiveProjectWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
             child: Image.network(
-              widget!.logo!,
+              widget.logo!,
               width: 38.0,
               height: 38.0,
               fit: BoxFit.contain,
@@ -77,7 +74,7 @@ class _ActiveProjectWidgetState extends State<ActiveProjectWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.title,
+                    widget.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -89,7 +86,7 @@ class _ActiveProjectWidgetState extends State<ActiveProjectWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.subTitle,
+                    widget.subTitle,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -98,7 +95,7 @@ class _ActiveProjectWidgetState extends State<ActiveProjectWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 8.0)),
+              ].divide(const SizedBox(height: 8.0)),
             ),
           ),
           Expanded(
@@ -107,19 +104,19 @@ class _ActiveProjectWidgetState extends State<ActiveProjectWidget> {
               children: [
                 Expanded(
                   child: LinearPercentIndicator(
-                    percent: widget!.progress!,
+                    percent: widget.progress!,
                     lineHeight: 10.0,
                     animation: true,
                     animateFromLastPercent: true,
-                    progressColor: widget!.color,
+                    progressColor: widget.color,
                     backgroundColor: FlutterFlowTheme.of(context).lineColor,
-                    barRadius: Radius.circular(50.0),
+                    barRadius: const Radius.circular(50.0),
                     padding: EdgeInsets.zero,
                   ),
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.persentage,
+                    widget.persentage,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -129,10 +126,10 @@ class _ActiveProjectWidgetState extends State<ActiveProjectWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(width: 16.0)),
+              ].divide(const SizedBox(width: 16.0)),
             ),
           ),
-        ].divide(SizedBox(width: 20.0)),
+        ].divide(const SizedBox(width: 20.0)),
       ),
     );
   }

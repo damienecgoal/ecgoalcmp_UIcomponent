@@ -49,7 +49,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -125,19 +125,19 @@ class _AddProductWidgetState extends State<AddProductWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -150,7 +150,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                 clipBehavior: Clip.none,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -216,7 +216,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 8.0)),
+                                        ].divide(const SizedBox(height: 8.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -228,12 +228,12 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                             text: 'Discard',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: Color(0x34A8AAAE),
+                                              color: const Color(0x34A8AAAE),
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .titleSmall
@@ -245,7 +245,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 0.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 0.0,
                                               ),
@@ -260,12 +260,12 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                             text: 'Save draft',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: Color(0x347367F0),
+                                              color: const Color(0x347367F0),
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .titleSmall
@@ -277,7 +277,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 0.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 0.0,
                                               ),
@@ -303,10 +303,10 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                             text: 'Publish product',
                                             options: FFButtonOptions(
                                               height: 40.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -321,7 +321,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               elevation: 0.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 0.0,
                                               ),
@@ -329,12 +329,12 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 16.0)),
+                                        ].divide(const SizedBox(width: 16.0)),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -352,7 +352,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -368,7 +368,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(20.0, 24.0,
                                                           20.0, 24.0),
                                                   child: Column(
@@ -434,6 +434,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       TextFormField(
                                                                     controller:
@@ -484,7 +496,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             BorderSide(
                                                                           color:
                                                                               valueOrDefault<Color>(
-                                                                            _model.mouseRegionHovered1!
+                                                                            _model.mouseRegionHovered1
                                                                                 ? FlutterFlowTheme.of(context).secondaryText
                                                                                 : FlutterFlowTheme.of(context).lineColor,
                                                                             FlutterFlowTheme.of(context).lineColor,
@@ -531,7 +543,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
                                                                       ),
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           16.0,
                                                                           16.0,
@@ -553,20 +565,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         .asValidator(
                                                                             context),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Row(
@@ -598,6 +598,16 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered2 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered2 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -629,7 +639,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered2! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered2 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -661,7 +671,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                             contentPadding:
-                                                                                EdgeInsets.all(16.0),
+                                                                                const EdgeInsets.all(16.0),
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
@@ -674,18 +684,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               .textController2Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered2 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered2 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -714,6 +714,16 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered3 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered3 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -745,7 +755,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered3! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered3 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -776,7 +786,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 16.0,
                                                                                 16.0,
@@ -793,23 +803,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               .textController3Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered3 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered3 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 28.0)),
                                                             ),
                                                             Column(
@@ -840,6 +840,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered4 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered4 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Container(
                                                                     decoration:
@@ -852,7 +864,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               .all(
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered4!
+                                                                          _model.mouseRegionHovered4
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -870,7 +882,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               20.0,
                                                                               12.0,
                                                                               20.0,
@@ -883,7 +895,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               wrapWithModel(
                                                                                 model: _model.textStyleModel,
                                                                                 updateCallback: () => safeSetState(() {}),
-                                                                                child: TextStyleWidget(),
+                                                                                child: const TextStyleWidget(),
                                                                               ),
                                                                             ],
                                                                           ),
@@ -933,7 +945,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 InputBorder.none,
                                                                             focusedErrorBorder:
                                                                                 InputBorder.none,
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 16.0,
                                                                                 16.0,
@@ -952,32 +964,20 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               .textController4Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 12.0)),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered4 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered4 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 24.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 28.0)),
+                                                        const SizedBox(height: 28.0)),
                                                   ),
                                                 ),
                                               ),
@@ -987,7 +987,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -1003,7 +1003,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(20.0, 24.0,
                                                           20.0, 24.0),
                                                   child: Column(
@@ -1137,13 +1137,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               color: FlutterFlowTheme.of(context).secondaryTitle,
                                                                               size: 26.0,
                                                                             ),
-                                                                            bg: Color(0x1AA8AAAE),
+                                                                            bg: const Color(0x1AA8AAAE),
                                                                             size:
                                                                                 50.0,
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               16.0,
                                                                               0.0,
@@ -1180,18 +1180,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 40.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x357367F0),
+                                                                                const Color(0x357367F0),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).primary,
@@ -1200,7 +1200,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1208,7 +1208,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                   ),
@@ -1246,7 +1246,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 28.0)),
+                                                        const SizedBox(height: 28.0)),
                                                   ),
                                                 ),
                                               ),
@@ -1256,7 +1256,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -1272,7 +1272,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1343,11 +1343,21 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered5 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered5 = false);
+                                                                        }),
                                                                         child: FlutterFlowDropDown<
                                                                             String>(
                                                                           controller: _model.dropDownValueController1 ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: [
+                                                                          options: const [
                                                                             'Size',
                                                                             'Color',
                                                                             'Weight',
@@ -1407,7 +1417,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           borderColor:
                                                                               valueOrDefault<Color>(
                                                                             () {
-                                                                              if (_model.mouseRegionHovered5!) {
+                                                                              if (_model.mouseRegionHovered5) {
                                                                                 return FlutterFlowTheme.of(context).secondaryText;
                                                                               } else if (_model.organize == 'Vendor') {
                                                                                 return FlutterFlowTheme.of(context).primary;
@@ -1421,7 +1431,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               1.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -1435,16 +1445,6 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           isMultiSelect:
                                                                               false,
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered5 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered5 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
                                                                     Expanded(
@@ -1455,8 +1455,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered6 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered6 = false);
+                                                                        }),
                                                                         child:
-                                                                            Container(
+                                                                            SizedBox(
                                                                           width:
                                                                               233.0,
                                                                           child:
@@ -1487,7 +1497,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               enabledBorder: OutlineInputBorder(
                                                                                 borderSide: BorderSide(
                                                                                   color: valueOrDefault<Color>(
-                                                                                    _model.mouseRegionHovered6! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                    _model.mouseRegionHovered6 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                   ),
                                                                                   width: 1.0,
@@ -1515,7 +1525,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 ),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Public Sans',
@@ -1526,26 +1536,16 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 _model.textController5Validator.asValidator(context),
                                                                           ),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered6 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered6 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           24.0)),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 24.0)),
                                                         ),
                                                       ),
@@ -1559,14 +1559,14 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                             FFButtonOptions(
                                                           height: 40.0,
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1589,7 +1589,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                   ),
                                                           elevation: 0.0,
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 0.0,
@@ -1601,7 +1601,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                 ),
                                               ),
@@ -1611,7 +1611,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -1627,7 +1627,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1671,6 +1671,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered7 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered7 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       InkWell(
                                                                     splashColor:
@@ -1713,7 +1725,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -1727,7 +1739,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Icon(
                                                                               FFIcons.kcube,
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 FlutterFlowTheme.of(context).secondaryTitle,
                                                                               ),
                                                                               size: 22.0,
@@ -1737,7 +1749,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                      _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                       FlutterFlowTheme.of(context).secondaryTitle,
                                                                                     ),
                                                                                     fontSize: 16.0,
@@ -1745,23 +1757,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     fontWeight: FontWeight.w500,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered7 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered7 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                                 MouseRegion(
                                                                   opaque: false,
@@ -1769,6 +1769,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered8 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered8 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       InkWell(
                                                                     splashColor:
@@ -1811,7 +1823,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -1825,7 +1837,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Icon(
                                                                               FFIcons.kcar,
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered8! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                _model.mouseRegionHovered8 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 FlutterFlowTheme.of(context).secondaryTitle,
                                                                               ),
                                                                               size: 22.0,
@@ -1835,7 +1847,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered8! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                      _model.mouseRegionHovered8 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                       FlutterFlowTheme.of(context).secondaryTitle,
                                                                                     ),
                                                                                     fontSize: 16.0,
@@ -1843,23 +1855,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     fontWeight: FontWeight.w500,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered8 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered8 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                                 MouseRegion(
                                                                   opaque: false,
@@ -1867,6 +1867,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered9 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered9 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       InkWell(
                                                                     splashColor:
@@ -1909,7 +1921,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -1923,7 +1935,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Icon(
                                                                               FFIcons.kworld,
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 FlutterFlowTheme.of(context).secondaryTitle,
                                                                               ),
                                                                               size: 22.0,
@@ -1933,7 +1945,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                      _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                       FlutterFlowTheme.of(context).secondaryTitle,
                                                                                     ),
                                                                                     fontSize: 16.0,
@@ -1941,23 +1953,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     fontWeight: FontWeight.w500,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered9 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered9 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                                 MouseRegion(
                                                                   opaque: false,
@@ -1965,6 +1965,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered10 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered10 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       InkWell(
                                                                     splashColor:
@@ -2007,7 +2019,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -2021,7 +2033,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Icon(
                                                                               FFIcons.klink,
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered10! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                _model.mouseRegionHovered10 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 FlutterFlowTheme.of(context).secondaryTitle,
                                                                               ),
                                                                               size: 22.0,
@@ -2031,7 +2043,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered10! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                      _model.mouseRegionHovered10 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                       FlutterFlowTheme.of(context).secondaryTitle,
                                                                                     ),
                                                                                     fontSize: 16.0,
@@ -2039,23 +2051,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     fontWeight: FontWeight.w500,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered10 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered10 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                                 MouseRegion(
                                                                   opaque: false,
@@ -2063,6 +2063,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered11 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered11 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       InkWell(
                                                                     splashColor:
@@ -2105,7 +2117,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -2119,7 +2131,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Icon(
                                                                               FFIcons.klock,
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered11! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                _model.mouseRegionHovered11 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 FlutterFlowTheme.of(context).secondaryTitle,
                                                                               ),
                                                                               size: 22.0,
@@ -2129,7 +2141,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered11! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                      _model.mouseRegionHovered11 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                       FlutterFlowTheme.of(context).secondaryTitle,
                                                                                     ),
                                                                                     fontSize: 16.0,
@@ -2137,23 +2149,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     fontWeight: FontWeight.w500,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered11 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered11 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                               ],
                                                             ),
@@ -2188,7 +2188,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                   Expanded(
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -2233,7 +2233,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     child: MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                      child: Container(
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered12 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered12 = false);
+                                                                                      }),
+                                                                                      child: SizedBox(
                                                                                         width: 233.0,
                                                                                         child: TextFormField(
                                                                                           controller: _model.textController6,
@@ -2257,7 +2263,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             enabledBorder: OutlineInputBorder(
                                                                                               borderSide: BorderSide(
                                                                                                 color: valueOrDefault<Color>(
-                                                                                                  _model.mouseRegionHovered12! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                  _model.mouseRegionHovered12 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                                 ),
                                                                                                 width: 1.0,
@@ -2285,7 +2291,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               ),
                                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                                             ),
-                                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Public Sans',
@@ -2295,12 +2301,6 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                           validator: _model.textController6Validator.asValidator(context),
                                                                                         ),
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered12 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered12 = false);
-                                                                                      }),
                                                                                     ),
                                                                                   ),
                                                                                   FFButtonWidget(
@@ -2315,8 +2315,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                     options: FFButtonOptions(
                                                                                       height: 40.0,
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                             fontFamily: 'Public Sans',
@@ -2324,16 +2324,16 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                       elevation: 0.0,
-                                                                                      borderSide: BorderSide(
+                                                                                      borderSide: const BorderSide(
                                                                                         color: Colors.transparent,
                                                                                         width: 0.0,
                                                                                       ),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 24.0)),
+                                                                                ].divide(const SizedBox(width: 24.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                           ),
                                                                           Column(
                                                                             mainAxisSize:
@@ -2458,9 +2458,9 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                       ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 10.0)),
+                                                                            ].divide(const SizedBox(height: 10.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 24.0)),
+                                                                        ].divide(const SizedBox(height: 24.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -2497,7 +2497,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                   Expanded(
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -2556,7 +2556,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsets.all(5.0),
+                                                                                    padding: const EdgeInsets.all(5.0),
                                                                                     child: Container(
                                                                                       width: 100.0,
                                                                                       height: 100.0,
@@ -2594,10 +2594,10 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               lineHeight: 1.4,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 8.0)),
+                                                                                    ].divide(const SizedBox(height: 8.0)),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                           ),
                                                                           InkWell(
@@ -2637,7 +2637,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsets.all(5.0),
+                                                                                    padding: const EdgeInsets.all(5.0),
                                                                                     child: Container(
                                                                                       width: 100.0,
                                                                                       height: 100.0,
@@ -2672,7 +2672,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                           Container(
                                                                                             height: 22.0,
                                                                                             decoration: BoxDecoration(
-                                                                                              color: Color(0x33FF9F43),
+                                                                                              color: const Color(0x33FF9F43),
                                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                                               border: Border.all(
                                                                                                 color: FlutterFlowTheme.of(context).warning,
@@ -2680,7 +2680,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               ),
                                                                                             ),
                                                                                             child: Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                                               child: Row(
                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                 children: [
@@ -2697,7 +2697,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               ),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 8.0)),
+                                                                                        ].divide(const SizedBox(width: 8.0)),
                                                                                       ),
                                                                                       Text(
                                                                                         'Your product, Our responsibility.\nFor a measly fee, we will handle the delivery process for you.',
@@ -2708,14 +2708,14 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               lineHeight: 1.4,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 8.0)),
+                                                                                    ].divide(const SizedBox(height: 8.0)),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0,
@@ -2742,7 +2742,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                       fontSize: 16.0,
                                                                                     ),
                                                                                   ),
-                                                                                  TextSpan(
+                                                                                  const TextSpan(
                                                                                     text: 'for details',
                                                                                     style: TextStyle(),
                                                                                   )
@@ -2755,7 +2755,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 24.0)),
+                                                                        ].divide(const SizedBox(height: 24.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -2792,7 +2792,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                   Expanded(
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -2851,7 +2851,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsets.all(5.0),
+                                                                                    padding: const EdgeInsets.all(5.0),
                                                                                     child: Container(
                                                                                       width: 100.0,
                                                                                       height: 100.0,
@@ -2909,10 +2909,10 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 8.0)),
+                                                                                    ].divide(const SizedBox(height: 8.0)),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                           ),
                                                                           InkWell(
@@ -2952,7 +2952,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsets.all(5.0),
+                                                                                    padding: const EdgeInsets.all(5.0),
                                                                                     child: Container(
                                                                                       width: 100.0,
                                                                                       height: 100.0,
@@ -2984,7 +2984,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                       MouseRegion(
                                                                                         opaque: false,
                                                                                         cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                        child: Container(
+                                                                                        onEnter: ((event) async {
+                                                                                          safeSetState(() => _model.mouseRegionHovered13 = true);
+                                                                                        }),
+                                                                                        onExit: ((event) async {
+                                                                                          safeSetState(() => _model.mouseRegionHovered13 = false);
+                                                                                        }),
+                                                                                        child: SizedBox(
                                                                                           width: 320.0,
                                                                                           child: TextFormField(
                                                                                             controller: _model.textController7,
@@ -3008,7 +3014,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered13! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered13 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -3036,7 +3042,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -3046,17 +3052,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             validator: _model.textController7Validator.asValidator(context),
                                                                                           ),
                                                                                         ),
-                                                                                        onEnter: ((event) async {
-                                                                                          safeSetState(() => _model.mouseRegionHovered13 = true);
-                                                                                        }),
-                                                                                        onExit: ((event) async {
-                                                                                          safeSetState(() => _model.mouseRegionHovered13 = false);
-                                                                                        }),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 10.0)),
+                                                                                    ].divide(const SizedBox(height: 10.0)),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                           ),
                                                                           InkWell(
@@ -3096,7 +3096,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                   ),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsets.all(5.0),
+                                                                                    padding: const EdgeInsets.all(5.0),
                                                                                     child: Container(
                                                                                       width: 100.0,
                                                                                       height: 100.0,
@@ -3154,13 +3154,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 8.0)),
+                                                                                    ].divide(const SizedBox(height: 8.0)),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 8.0)),
+                                                                              ].divide(const SizedBox(width: 8.0)),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 24.0)),
+                                                                        ].divide(const SizedBox(height: 24.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -3197,7 +3197,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                   Expanded(
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -3211,7 +3211,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         children:
                                                                             [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 7.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -3259,7 +3259,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Fragile Product',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3271,7 +3271,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                       ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
@@ -3305,7 +3305,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Biodegradable',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3317,7 +3317,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                       ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
@@ -3356,7 +3356,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                                                   children: [
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         'Frozen Product',
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3371,7 +3371,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                      child: Container(
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered14 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered14 = false);
+                                                                                      }),
+                                                                                      child: SizedBox(
                                                                                         width: 320.0,
                                                                                         child: TextFormField(
                                                                                           controller: _model.textController8,
@@ -3395,7 +3401,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             enabledBorder: OutlineInputBorder(
                                                                                               borderSide: BorderSide(
                                                                                                 color: valueOrDefault<Color>(
-                                                                                                  _model.mouseRegionHovered14! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                  _model.mouseRegionHovered14 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                                 ),
                                                                                                 width: 1.0,
@@ -3423,7 +3429,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               ),
                                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                                             ),
-                                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Public Sans',
@@ -3433,17 +3439,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                           validator: _model.textController8Validator.asValidator(context),
                                                                                         ),
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered14 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered14 = false);
-                                                                                      }),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 10.0)),
+                                                                                  ].divide(const SizedBox(height: 10.0)),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
@@ -3482,7 +3482,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                                                   children: [
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         'Frozen Product',
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3497,13 +3497,19 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered15 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered15 = false);
+                                                                                      }),
                                                                                       child: InkWell(
                                                                                         splashColor: Colors.transparent,
                                                                                         focusColor: Colors.transparent,
                                                                                         hoverColor: Colors.transparent,
                                                                                         highlightColor: Colors.transparent,
                                                                                         onTap: () async {
-                                                                                          final _datePickedDate = await showDatePicker(
+                                                                                          final datePickedDate = await showDatePicker(
                                                                                             context: context,
                                                                                             initialDate: getCurrentTimestamp,
                                                                                             firstDate: getCurrentTimestamp,
@@ -3530,12 +3536,12 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             },
                                                                                           );
 
-                                                                                          if (_datePickedDate != null) {
+                                                                                          if (datePickedDate != null) {
                                                                                             safeSetState(() {
                                                                                               _model.datePicked = DateTime(
-                                                                                                _datePickedDate.year,
-                                                                                                _datePickedDate.month,
-                                                                                                _datePickedDate.day,
+                                                                                                datePickedDate.year,
+                                                                                                datePickedDate.month,
+                                                                                                datePickedDate.day,
                                                                                               );
                                                                                             });
                                                                                           }
@@ -3547,13 +3553,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                             border: Border.all(
                                                                                               color: valueOrDefault<Color>(
-                                                                                                _model.mouseRegionHovered15! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                _model.mouseRegionHovered15 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                                               ),
                                                                                             ),
                                                                                           ),
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               children: [
@@ -3571,19 +3577,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered15 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered15 = false);
-                                                                                      }),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 10.0)),
+                                                                                  ].divide(const SizedBox(height: 10.0)),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 8.0)),
+                                                                            ].divide(const SizedBox(width: 8.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 16.0)),
+                                                                        ].divide(const SizedBox(height: 16.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -3671,9 +3671,15 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                         MouseRegion(
                                                                                           opaque: false,
                                                                                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                          onEnter: ((event) async {
+                                                                                            safeSetState(() => _model.mouseRegionHovered16 = true);
+                                                                                          }),
+                                                                                          onExit: ((event) async {
+                                                                                            safeSetState(() => _model.mouseRegionHovered16 = false);
+                                                                                          }),
                                                                                           child: FlutterFlowDropDown<String>(
                                                                                             controller: _model.dropDownValueController2 ??= FormFieldController<String>(null),
-                                                                                            options: [
+                                                                                            options: const [
                                                                                               'ISBN',
                                                                                               'UPC',
                                                                                               'EAN',
@@ -3713,7 +3719,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             elevation: 3.0,
                                                                                             borderColor: valueOrDefault<Color>(
                                                                                               () {
-                                                                                                if (_model.mouseRegionHovered16!) {
+                                                                                                if (_model.mouseRegionHovered16) {
                                                                                                   return FlutterFlowTheme.of(context).secondaryText;
                                                                                                 } else if (_model.organize == 'Vendor') {
                                                                                                   return FlutterFlowTheme.of(context).primary;
@@ -3725,20 +3731,14 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                             ),
                                                                                             borderWidth: 1.0,
                                                                                             borderRadius: 8.0,
-                                                                                            margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                            margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                             hidesUnderline: true,
                                                                                             isOverButton: false,
                                                                                             isSearchable: true,
                                                                                             isMultiSelect: false,
                                                                                           ),
-                                                                                          onEnter: ((event) async {
-                                                                                            safeSetState(() => _model.mouseRegionHovered16 = true);
-                                                                                          }),
-                                                                                          onExit: ((event) async {
-                                                                                            safeSetState(() => _model.mouseRegionHovered16 = false);
-                                                                                          }),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 8.0)),
+                                                                                      ].divide(const SizedBox(height: 8.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Expanded(
@@ -3757,7 +3757,13 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                         MouseRegion(
                                                                                           opaque: false,
                                                                                           cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                          child: Container(
+                                                                                          onEnter: ((event) async {
+                                                                                            safeSetState(() => _model.mouseRegionHovered17 = true);
+                                                                                          }),
+                                                                                          onExit: ((event) async {
+                                                                                            safeSetState(() => _model.mouseRegionHovered17 = false);
+                                                                                          }),
+                                                                                          child: SizedBox(
                                                                                             width: double.infinity,
                                                                                             child: TextFormField(
                                                                                               controller: _model.textController9,
@@ -3781,7 +3787,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                                 enabledBorder: OutlineInputBorder(
                                                                                                   borderSide: BorderSide(
                                                                                                     color: valueOrDefault<Color>(
-                                                                                                      _model.mouseRegionHovered17! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                      _model.mouseRegionHovered17 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                       FlutterFlowTheme.of(context).lineColor,
                                                                                                     ),
                                                                                                     width: 1.0,
@@ -3809,7 +3815,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                                   ),
                                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                                 ),
-                                                                                                contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                                                                                                contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                                                                                               ),
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                     fontFamily: 'Public Sans',
@@ -3819,22 +3825,16 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               validator: _model.textController9Validator.asValidator(context),
                                                                                             ),
                                                                                           ),
-                                                                                          onEnter: ((event) async {
-                                                                                            safeSetState(() => _model.mouseRegionHovered17 = true);
-                                                                                          }),
-                                                                                          onExit: ((event) async {
-                                                                                            safeSetState(() => _model.mouseRegionHovered17 = false);
-                                                                                          }),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 8.0)),
+                                                                                      ].divide(const SizedBox(height: 8.0)),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 24.0)),
+                                                                                ].divide(const SizedBox(width: 24.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 24.0)),
+                                                                            ].divide(const SizedBox(height: 24.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 36.0)),
                                                                     ),
                                                                   ),
@@ -3844,11 +3844,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 24.0)),
+                                                        const SizedBox(height: 24.0)),
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 28.0)),
+                                            ].divide(const SizedBox(height: 28.0)),
                                           ),
                                         ),
                                         Expanded(
@@ -3862,7 +3862,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -3878,7 +3878,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(14.0, 24.0,
                                                           20.0, 24.0),
                                                   child: Column(
@@ -3890,7 +3890,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     6.0,
                                                                     0.0,
@@ -3915,7 +3915,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     6.0,
                                                                     0.0,
@@ -3963,6 +3963,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered18 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered18 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -4004,7 +4016,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               BorderSide(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered18! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                              _model.mouseRegionHovered18 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                             ),
                                                                             width:
@@ -4049,7 +4061,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             16.0,
                                                                             16.0,
@@ -4071,20 +4083,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .asValidator(
                                                                               context),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered18 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered18 =
-                                                                              false);
-                                                                    }),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         8.0)),
                                                               ),
@@ -4117,6 +4117,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered19 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered19 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -4158,7 +4170,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                               BorderSide(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered19! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                              _model.mouseRegionHovered19 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                             ),
                                                                             width:
@@ -4203,7 +4215,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             16.0,
                                                                             16.0,
@@ -4225,24 +4237,12 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .asValidator(
                                                                               context),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered19 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered19 =
-                                                                              false);
-                                                                    }),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         8.0)),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 24.0)),
                                                           ),
                                                         ),
@@ -4318,7 +4318,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 4.0)),
                                                           ),
                                                           Divider(
@@ -4331,7 +4331,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -4385,11 +4385,11 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                 ),
                                               ),
@@ -4399,7 +4399,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -4415,7 +4415,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4479,6 +4479,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered20 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered20 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -4486,7 +4498,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         .dropDownValueController3 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Men\'s Clothing',
                                                                       'Women\'s Clothing',
                                                                       'Kid\'s Clothing'
@@ -4562,7 +4574,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Color>(
                                                                       () {
                                                                         if (_model
-                                                                            .mouseRegionHovered20!) {
+                                                                            .mouseRegionHovered20) {
                                                                           return FlutterFlowTheme.of(context)
                                                                               .secondaryText;
                                                                         } else if (_model.organize ==
@@ -4582,7 +4594,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         1.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -4597,20 +4609,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                     isMultiSelect:
                                                                         false,
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered20 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered20 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Column(
@@ -4667,6 +4667,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered21 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered21 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -4674,7 +4686,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         .dropDownValueController4 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Household',
                                                                       'Managment',
                                                                       'Electrinics',
@@ -4752,7 +4764,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Color>(
                                                                       () {
                                                                         if (_model
-                                                                            .mouseRegionHovered21!) {
+                                                                            .mouseRegionHovered21) {
                                                                           return FlutterFlowTheme.of(context)
                                                                               .secondaryText;
                                                                         } else if (_model.organize ==
@@ -4772,7 +4784,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         1.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -4787,20 +4799,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                     isMultiSelect:
                                                                         false,
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered21 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered21 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Column(
@@ -4831,6 +4831,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered22 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered22 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -4838,7 +4850,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         .dropDownValueController5 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Men\'s Clothing',
                                                                       'Women\'s Clothing',
                                                                       'Kid\'s Clothing'
@@ -4914,7 +4926,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Color>(
                                                                       () {
                                                                         if (_model
-                                                                            .mouseRegionHovered22!) {
+                                                                            .mouseRegionHovered22) {
                                                                           return FlutterFlowTheme.of(context)
                                                                               .secondaryText;
                                                                         } else if (_model.organize ==
@@ -4934,7 +4946,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         1.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -4949,20 +4961,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                     isMultiSelect:
                                                                         false,
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered22 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered22 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Column(
@@ -4993,6 +4993,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered23 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered23 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -5000,7 +5012,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         .dropDownValueController6 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Published',
                                                                       'Scheduled',
                                                                       'Inactive'
@@ -5076,7 +5088,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             Color>(
                                                                       () {
                                                                         if (_model
-                                                                            .mouseRegionHovered23!) {
+                                                                            .mouseRegionHovered23) {
                                                                           return FlutterFlowTheme.of(context)
                                                                               .secondaryText;
                                                                         } else if (_model.organize ==
@@ -5096,7 +5108,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         1.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -5111,20 +5123,8 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                     isMultiSelect:
                                                                         false,
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered23 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered23 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Column(
@@ -5155,6 +5155,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered24 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered24 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       InkWell(
                                                                     splashColor:
@@ -5194,7 +5206,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                             color:
                                                                                 valueOrDefault<Color>(
                                                                               () {
-                                                                                if (_model.mouseRegionHovered24!) {
+                                                                                if (_model.mouseRegionHovered24) {
                                                                                   return FlutterFlowTheme.of(context).secondaryText;
                                                                                 } else if (_model.organize == 'Tags') {
                                                                                   return FlutterFlowTheme.of(context).primary;
@@ -5210,7 +5222,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               6.0,
                                                                               8.0,
@@ -5227,6 +5239,12 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered25 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered25 = false);
+                                                                                    }),
                                                                                     child: InkWell(
                                                                                       splashColor: Colors.transparent,
                                                                                       focusColor: Colors.transparent,
@@ -5241,22 +5259,22 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
                                                                                             () {
-                                                                                              if (_model.mouseRegionHovered25!) {
+                                                                                              if (_model.mouseRegionHovered25) {
                                                                                                 return FlutterFlowTheme.of(context).primaryBackground;
-                                                                                              } else if (_model.mouseRegionHovered26!) {
-                                                                                                return Color(0x34EA5455);
+                                                                                              } else if (_model.mouseRegionHovered26) {
+                                                                                                return const Color(0x34EA5455);
                                                                                               } else if (_model.tags == 'Normal') {
                                                                                                 return FlutterFlowTheme.of(context).primaryBackground;
                                                                                               } else {
-                                                                                                return Color(0x34A8AAAE);
+                                                                                                return const Color(0x34A8AAAE);
                                                                                               }
                                                                                             }(),
-                                                                                            Color(0x34A8AAAE),
+                                                                                            const Color(0x34A8AAAE),
                                                                                           ),
                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             children: [
@@ -5271,12 +5289,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               MouseRegion(
                                                                                                 opaque: false,
                                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                                onEnter: ((event) async {
+                                                                                                  safeSetState(() => _model.mouseRegionHovered26 = true);
+                                                                                                }),
+                                                                                                onExit: ((event) async {
+                                                                                                  safeSetState(() => _model.mouseRegionHovered26 = false);
+                                                                                                }),
                                                                                                 child: Container(
                                                                                                   width: 16.0,
                                                                                                   height: 16.0,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: valueOrDefault<Color>(
-                                                                                                      _model.mouseRegionHovered26! ? Color(0xFFEA5455) : Colors.transparent,
+                                                                                                      _model.mouseRegionHovered26 ? const Color(0xFFEA5455) : Colors.transparent,
                                                                                                       Colors.transparent,
                                                                                                     ),
                                                                                                     shape: BoxShape.circle,
@@ -5287,28 +5311,22 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                                     size: 12.0,
                                                                                                   ),
                                                                                                 ),
-                                                                                                onEnter: ((event) async {
-                                                                                                  safeSetState(() => _model.mouseRegionHovered26 = true);
-                                                                                                }),
-                                                                                                onExit: ((event) async {
-                                                                                                  safeSetState(() => _model.mouseRegionHovered26 = false);
-                                                                                                }),
                                                                                               ),
-                                                                                            ].divide(SizedBox(width: 4.0)),
+                                                                                            ].divide(const SizedBox(width: 4.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered25 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered25 = false);
-                                                                                    }),
                                                                                   ),
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered27 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered27 = false);
+                                                                                    }),
                                                                                     child: InkWell(
                                                                                       splashColor: Colors.transparent,
                                                                                       focusColor: Colors.transparent,
@@ -5323,22 +5341,22 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
                                                                                             () {
-                                                                                              if (_model.mouseRegionHovered27!) {
+                                                                                              if (_model.mouseRegionHovered27) {
                                                                                                 return FlutterFlowTheme.of(context).primaryBackground;
-                                                                                              } else if (_model.mouseRegionHovered28!) {
-                                                                                                return Color(0x34EA5455);
+                                                                                              } else if (_model.mouseRegionHovered28) {
+                                                                                                return const Color(0x34EA5455);
                                                                                               } else if (_model.tags == 'Standard') {
                                                                                                 return FlutterFlowTheme.of(context).primaryBackground;
                                                                                               } else {
-                                                                                                return Color(0x34A8AAAE);
+                                                                                                return const Color(0x34A8AAAE);
                                                                                               }
                                                                                             }(),
-                                                                                            Color(0x34A8AAAE),
+                                                                                            const Color(0x34A8AAAE),
                                                                                           ),
                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             children: [
@@ -5353,12 +5371,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               MouseRegion(
                                                                                                 opaque: false,
                                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                                onEnter: ((event) async {
+                                                                                                  safeSetState(() => _model.mouseRegionHovered28 = true);
+                                                                                                }),
+                                                                                                onExit: ((event) async {
+                                                                                                  safeSetState(() => _model.mouseRegionHovered28 = false);
+                                                                                                }),
                                                                                                 child: Container(
                                                                                                   width: 16.0,
                                                                                                   height: 16.0,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: valueOrDefault<Color>(
-                                                                                                      _model.mouseRegionHovered28! ? Color(0xFFEA5455) : Colors.transparent,
+                                                                                                      _model.mouseRegionHovered28 ? const Color(0xFFEA5455) : Colors.transparent,
                                                                                                       Colors.transparent,
                                                                                                     ),
                                                                                                     shape: BoxShape.circle,
@@ -5369,28 +5393,22 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                                     size: 12.0,
                                                                                                   ),
                                                                                                 ),
-                                                                                                onEnter: ((event) async {
-                                                                                                  safeSetState(() => _model.mouseRegionHovered28 = true);
-                                                                                                }),
-                                                                                                onExit: ((event) async {
-                                                                                                  safeSetState(() => _model.mouseRegionHovered28 = false);
-                                                                                                }),
                                                                                               ),
-                                                                                            ].divide(SizedBox(width: 4.0)),
+                                                                                            ].divide(const SizedBox(width: 4.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered27 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered27 = false);
-                                                                                    }),
                                                                                   ),
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered29 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered29 = false);
+                                                                                    }),
                                                                                     child: InkWell(
                                                                                       splashColor: Colors.transparent,
                                                                                       focusColor: Colors.transparent,
@@ -5405,22 +5423,22 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
                                                                                             () {
-                                                                                              if (_model.mouseRegionHovered29!) {
+                                                                                              if (_model.mouseRegionHovered29) {
                                                                                                 return FlutterFlowTheme.of(context).primaryBackground;
-                                                                                              } else if (_model.mouseRegionHovered30!) {
-                                                                                                return Color(0x34EA5455);
+                                                                                              } else if (_model.mouseRegionHovered30) {
+                                                                                                return const Color(0x34EA5455);
                                                                                               } else if (_model.tags == 'Premium') {
                                                                                                 return FlutterFlowTheme.of(context).primaryBackground;
                                                                                               } else {
-                                                                                                return Color(0x34A8AAAE);
+                                                                                                return const Color(0x34A8AAAE);
                                                                                               }
                                                                                             }(),
-                                                                                            Color(0x34A8AAAE),
+                                                                                            const Color(0x34A8AAAE),
                                                                                           ),
                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             children: [
@@ -5435,12 +5453,18 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                               MouseRegion(
                                                                                                 opaque: false,
                                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                                onEnter: ((event) async {
+                                                                                                  safeSetState(() => _model.mouseRegionHovered30 = true);
+                                                                                                }),
+                                                                                                onExit: ((event) async {
+                                                                                                  safeSetState(() => _model.mouseRegionHovered30 = false);
+                                                                                                }),
                                                                                                 child: Container(
                                                                                                   width: 16.0,
                                                                                                   height: 16.0,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: valueOrDefault<Color>(
-                                                                                                      _model.mouseRegionHovered30! ? Color(0xFFEA5455) : Colors.transparent,
+                                                                                                      _model.mouseRegionHovered30 ? const Color(0xFFEA5455) : Colors.transparent,
                                                                                                       Colors.transparent,
                                                                                                     ),
                                                                                                     shape: BoxShape.circle,
@@ -5451,26 +5475,14 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                                     size: 12.0,
                                                                                                   ),
                                                                                                 ),
-                                                                                                onEnter: ((event) async {
-                                                                                                  safeSetState(() => _model.mouseRegionHovered30 = true);
-                                                                                                }),
-                                                                                                onExit: ((event) async {
-                                                                                                  safeSetState(() => _model.mouseRegionHovered30 = false);
-                                                                                                }),
                                                                                               ),
-                                                                                            ].divide(SizedBox(width: 4.0)),
+                                                                                            ].divide(const SizedBox(width: 4.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered29 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered29 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                               TextFormField(
                                                                                 controller: _model.textController12,
@@ -5492,7 +5504,7 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                   focusedBorder: InputBorder.none,
                                                                                   errorBorder: InputBorder.none,
                                                                                   focusedErrorBorder: InputBorder.none,
-                                                                                  contentPadding: EdgeInsets.all(16.0),
+                                                                                  contentPadding: const EdgeInsets.all(16.0),
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Public Sans',
@@ -5501,66 +5513,54 @@ class _AddProductWidgetState extends State<AddProductWidget> {
                                                                                     ),
                                                                                 validator: _model.textController12Validator.asValidator(context),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 4.0)),
+                                                                            ].divide(const SizedBox(height: 4.0)),
                                                                           ),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered24 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered24 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 24.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 28.0)),
+                                            ].divide(const SizedBox(height: 28.0)),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

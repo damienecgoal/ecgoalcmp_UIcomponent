@@ -11,11 +11,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'referrals_model.dart';
@@ -46,7 +44,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -92,7 +90,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
@@ -102,7 +100,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             child: Wrap(
                               spacing: 28.0,
@@ -115,7 +113,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                               clipBehavior: Clip.none,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -163,7 +161,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                 .primary,
                                             size: 26.0,
                                           ),
-                                          bg: Color(0x337367F0),
+                                          bg: const Color(0x337367F0),
                                         ),
                                       ),
                                     ),
@@ -181,7 +179,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                 .success,
                                             size: 26.0,
                                           ),
-                                          bg: Color(0x3328C76F),
+                                          bg: const Color(0x3328C76F),
                                         ),
                                       ),
                                     ),
@@ -199,7 +197,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                 .error,
                                             size: 26.0,
                                           ),
-                                          bg: Color(0x33EA5455),
+                                          bg: const Color(0x33EA5455),
                                         ),
                                       ),
                                     ),
@@ -217,11 +215,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                 .info,
                                             size: 26.0,
                                           ),
-                                          bg: Color(0x3300CFE8),
+                                          bg: const Color(0x3300CFE8),
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 28.0)),
+                                  ].divide(const SizedBox(width: 28.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -233,7 +231,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryBackground,
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 12.0,
                                               color: Color(0x14000000),
@@ -248,7 +246,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(20.0),
+                                          padding: const EdgeInsets.all(20.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -284,7 +282,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                     ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 16.0, 0.0, 0.0),
                                                 child: Row(
@@ -348,7 +346,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                   ],
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 12.0)),
+                                            ].divide(const SizedBox(height: 12.0)),
                                           ),
                                         ),
                                       ),
@@ -360,7 +358,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryBackground,
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 12.0,
                                               color: Color(0x14000000),
@@ -375,7 +373,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(20.0),
+                                          padding: const EdgeInsets.all(20.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -423,12 +421,23 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered1 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered1 =
+                                                                  false);
+                                                        }),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
                                                           children: [
                                                             Expanded(
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 width: 123.0,
                                                                 child:
                                                                     TextFormField(
@@ -476,7 +485,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                           BorderSide(
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered1!
+                                                                          _model.mouseRegionHovered1
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -529,7 +538,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                               8.0),
                                                                     ),
                                                                     contentPadding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             16.0),
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
@@ -562,14 +571,14 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 43.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -591,7 +600,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 0.0,
@@ -602,26 +611,15 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             8.0),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered1 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered1 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 6.0)),
+                                                        const SizedBox(height: 6.0)),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 20.0)),
+                                                    const SizedBox(height: 20.0)),
                                               ),
                                               Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -667,12 +665,23 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered2 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered2 =
+                                                                  false);
+                                                        }),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
                                                           children: [
                                                             Expanded(
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 width: 123.0,
                                                                 child:
                                                                     TextFormField(
@@ -720,7 +729,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                           BorderSide(
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered2!
+                                                                          _model.mouseRegionHovered2
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -773,7 +782,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                               8.0),
                                                                     ),
                                                                     contentPadding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             16.0),
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
@@ -806,7 +815,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         'Button pressed ...');
                                                                   },
                                                                   text: '',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     FFIcons
                                                                         .kbrandFacebook,
                                                                     color: Colors
@@ -818,19 +827,19 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     width: 43.0,
                                                                     height:
                                                                         43.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF3B5998),
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
@@ -846,7 +855,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     elevation:
                                                                         2.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -864,7 +873,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         'Button pressed ...');
                                                                   },
                                                                   text: '',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     FFIcons
                                                                         .kbrandTwitter,
                                                                     color: Colors
@@ -876,19 +885,19 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     width: 43.0,
                                                                     height:
                                                                         43.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF1DA1F2),
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
@@ -904,7 +913,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     elevation:
                                                                         2.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -915,39 +924,28 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             8.0),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 16.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered2 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered2 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 6.0)),
+                                                        const SizedBox(height: 6.0)),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 20.0)),
+                                                    const SizedBox(height: 20.0)),
                                               ),
-                                            ].divide(SizedBox(height: 24.0)),
+                                            ].divide(const SizedBox(height: 24.0)),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 28.0)),
+                                  ].divide(const SizedBox(width: 28.0)),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 34.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -961,7 +959,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -977,7 +975,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -988,7 +986,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   0.0,
@@ -1005,7 +1003,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                             flex: 5,
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
@@ -1047,7 +1045,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             String>(
                                                                           controller: _model.dropDownValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: [
+                                                                          options: const [
                                                                             '10',
                                                                             '25',
                                                                             '50',
@@ -1087,7 +1085,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                               1.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               12.0,
                                                                               0.0,
                                                                               12.0,
@@ -1110,8 +1108,8 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                                 context: context,
                                                                                 isGlobal: false,
                                                                                 avoidOverflow: false,
-                                                                                targetAnchor: AlignmentDirectional(0.0, 6.5).resolve(Directionality.of(context)),
-                                                                                followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                targetAnchor: const AlignmentDirectional(0.0, 6.5).resolve(Directionality.of(context)),
+                                                                                followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 builder: (dialogContext) {
                                                                                   return Material(
                                                                                     color: Colors.transparent,
@@ -1121,7 +1119,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: Container(
+                                                                                        child: const SizedBox(
                                                                                           height: 204.0,
                                                                                           width: 150.0,
                                                                                           child: ExportNodalWidget(),
@@ -1143,9 +1141,9 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x33A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x33A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
@@ -1154,7 +1152,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -1162,11 +1160,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 14.0)),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         14.0)),
                                                               ),
@@ -1176,7 +1174,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 20.0)),
+                                                      const SizedBox(height: 20.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -1195,7 +1193,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       8.0,
@@ -1260,7 +1258,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1299,7 +1297,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1311,7 +1309,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1350,7 +1348,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1362,7 +1360,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1401,7 +1399,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1413,7 +1411,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1452,7 +1450,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -1464,7 +1462,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1503,13 +1501,13 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                             size:
                                                                                 18.0,
                                                                           ),
-                                                                        ].divide(SizedBox(height: 2.0)),
+                                                                        ].divide(const SizedBox(height: 2.0)),
                                                                       ),
                                                                     ],
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 24.0)),
                                                           ),
                                                         ),
@@ -1546,7 +1544,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .warning,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34FF9F43),
                                                             value: '\$9106.99',
                                                             earnings:
@@ -1573,7 +1571,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .success,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x3328C76F),
                                                             value:
                                                                 '\t\$6447.15',
@@ -1600,7 +1598,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .error,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34EA5455),
                                                             value:
                                                                 '\t\$8797.12',
@@ -1627,7 +1625,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .warning,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34FF9F43),
                                                             value:
                                                                 '\t\$3104.91',
@@ -1656,7 +1654,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .error,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34EA5455),
                                                             value: '\$6186.51',
                                                             earnings:
@@ -1684,7 +1682,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .error,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34EA5455),
                                                             value:
                                                                 '\t\$6098.09',
@@ -1713,7 +1711,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .error,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34EA5455),
                                                             value: '\$2221.71',
                                                             earnings:
@@ -1740,7 +1738,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .success,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x3328C76F),
                                                             value: '\$7048.75',
                                                             earnings:
@@ -1765,7 +1763,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .warning,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34FF9F43),
                                                             value: '\$2938.87',
                                                             earnings:
@@ -1790,7 +1788,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                 FlutterFlowTheme.of(
                                                                         context)
                                                                     .warning,
-                                                            statusBG: Color(
+                                                            statusBG: const Color(
                                                                 0x34FF9F43),
                                                             value: '\$6774.33',
                                                             earnings:
@@ -1802,7 +1800,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                   ],
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 20.0, 0.0),
                                                   child: Row(
@@ -1812,7 +1810,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                       Expanded(
                                                         child: Stack(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           children: [
                                                             Text(
@@ -1832,7 +1830,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Row(
                                                                 mainAxisSize:
@@ -1854,12 +1852,12 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           44.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -1883,7 +1881,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -1914,7 +1912,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1938,11 +1936,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1966,11 +1964,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -1994,11 +1992,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -2022,11 +2020,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -2050,11 +2048,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -2078,11 +2076,11 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x337983BB),
+                                                                              const Color(0x337983BB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                         ),
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -2098,7 +2096,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                               ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             4.0)),
                                                                   ),
@@ -2114,17 +2112,17 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           44.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x347983BB),
                                                                       textStyle: FlutterFlowTheme.of(
                                                                               context)
@@ -2142,7 +2140,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -2153,7 +2151,7 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                                               8.0),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         4.0)),
                                                               ),
@@ -2164,36 +2162,36 @@ class _ReferralsWidgetState extends State<ReferralsWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 18.0)),
+                                              ].divide(const SizedBox(height: 18.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             child: wrapWithModel(
                               model: _model.footerModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: FooterWidget(),
+                              child: const FooterWidget(),
                             ),
                           ),
                         ]
-                            .divide(SizedBox(height: 28.0))
-                            .addToStart(SizedBox(height: 110.0))
-                            .addToEnd(SizedBox(height: 28.0)),
+                            .divide(const SizedBox(height: 28.0))
+                            .addToStart(const SizedBox(height: 110.0))
+                            .addToEnd(const SizedBox(height: 28.0)),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

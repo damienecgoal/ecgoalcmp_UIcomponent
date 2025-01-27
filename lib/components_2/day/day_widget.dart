@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'day_model.dart';
 export 'day_model.dart';
 
@@ -47,7 +44,7 @@ class _DayWidgetState extends State<DayWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: 120.0,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -56,10 +53,10 @@ class _DayWidgetState extends State<DayWidget> {
             children: [
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.name,
+                      widget.name,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(

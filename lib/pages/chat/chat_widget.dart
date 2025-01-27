@@ -1,8 +1,5 @@
-import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/avatar_2/avatar2_widget.dart';
 import '/components/nodal/profile_nodal/profile_nodal_widget.dart';
 import '/components_2/avatar/avatar_widget.dart';
@@ -12,12 +9,9 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'chat_model.dart';
 export 'chat_model.dart';
@@ -74,19 +68,19 @@ class _ChatWidgetState extends State<ChatWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Container(
                                 width: double.infinity,
@@ -94,7 +88,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 12.0,
                                       color: Color(0x1F000000),
@@ -116,7 +110,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(8.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(8.0),
@@ -133,7 +127,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              borderRadius: BorderRadius.only(
+                                              borderRadius: const BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(0.0),
                                                 bottomRight:
@@ -166,13 +160,13 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                           isGlobal: false,
                                                           avoidOverflow: true,
                                                           targetAnchor:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                       1.0, -1.0)
                                                                   .resolve(
                                                                       Directionality.of(
                                                                           context)),
                                                           followerAnchor:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                       1.0, -1.0)
                                                                   .resolve(
                                                                       Directionality.of(
@@ -196,7 +190,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                         ?.unfocus();
                                                                   },
                                                                   child:
-                                                                      ProfileNodalWidget(),
+                                                                      const ProfileNodalWidget(),
                                                                 ),
                                                               ),
                                                             );
@@ -304,7 +298,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                 .circular(48.0),
                                                       ),
                                                       contentPadding:
-                                                          EdgeInsets.all(16.0),
+                                                          const EdgeInsets.all(16.0),
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -330,9 +324,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                   ),
                                                 ),
                                               ]
-                                                  .divide(SizedBox(width: 12.0))
+                                                  .divide(const SizedBox(width: 12.0))
                                                   .addToStart(
-                                                      SizedBox(width: 16.0)),
+                                                      const SizedBox(width: 16.0)),
                                             ),
                                           ),
                                           Divider(
@@ -355,7 +349,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -371,7 +365,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -435,7 +429,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -515,10 +509,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -565,7 +559,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -645,10 +639,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -695,7 +689,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -775,17 +769,17 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
                                                                 ),
                                                               ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         16.0,
@@ -849,7 +843,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -910,10 +904,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -960,7 +954,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1021,10 +1015,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1071,7 +1065,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1132,10 +1126,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1182,7 +1176,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1243,10 +1237,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1293,7 +1287,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1354,10 +1348,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1404,7 +1398,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1465,10 +1459,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1515,7 +1509,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1576,10 +1570,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1626,7 +1620,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1687,10 +1681,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1737,7 +1731,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1798,10 +1792,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1848,7 +1842,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1909,10 +1903,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -1959,7 +1953,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             12.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -2020,10 +2014,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 12.0)),
                                                                     ),
                                                                   ),
@@ -2033,9 +2027,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                           ),
                                                         ),
                                                       ]
-                                                          .addToStart(SizedBox(
+                                                          .addToStart(const SizedBox(
                                                               height: 20.0))
-                                                          .addToEnd(SizedBox(
+                                                          .addToEnd(const SizedBox(
                                                               height: 20.0)),
                                                     ),
                                                   ),
@@ -2062,7 +2056,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryBackground,
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(0.0),
                                             bottomRight: Radius.circular(8.0),
                                             topLeft: Radius.circular(0.0),
@@ -2079,7 +2073,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(0.0),
                                                   bottomRight:
@@ -2094,7 +2088,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 8.0,
                                                                 16.0, 10.0),
                                                     child: Row(
@@ -2177,10 +2171,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                     ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 6.0)),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           width: 14.0)),
                                                     ),
                                                   ),
@@ -2210,7 +2204,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child:
                                                             SingleChildScrollView(
@@ -2220,7 +2214,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                     .max,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2253,7 +2247,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).primary,
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -2261,7 +2255,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2294,9 +2288,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                         AuthUserStreamWidget(
                                                                           builder: (context) =>
@@ -2313,7 +2307,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2353,7 +2347,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2364,7 +2358,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2372,7 +2366,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2393,7 +2387,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2404,7 +2398,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2412,7 +2406,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2441,11 +2435,11 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2470,7 +2464,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).primary,
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -2478,7 +2472,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2511,9 +2505,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                         AuthUserStreamWidget(
                                                                           builder: (context) =>
@@ -2530,7 +2524,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2570,7 +2564,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2581,7 +2575,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2589,7 +2583,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2610,7 +2604,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2621,7 +2615,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2629,7 +2623,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2650,7 +2644,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2661,7 +2655,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2669,7 +2663,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2698,11 +2692,11 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2727,7 +2721,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).primary,
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -2735,7 +2729,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2768,9 +2762,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                         AuthUserStreamWidget(
                                                                           builder: (context) =>
@@ -2787,7 +2781,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2827,7 +2821,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2838,7 +2832,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2846,7 +2840,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2867,7 +2861,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -2878,7 +2872,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -2886,7 +2880,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2915,11 +2909,11 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2944,7 +2938,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).primary,
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -2952,7 +2946,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2985,9 +2979,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                         AuthUserStreamWidget(
                                                                           builder: (context) =>
@@ -3004,7 +2998,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -3044,7 +3038,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                boxShadow: [
+                                                                                boxShadow: const [
                                                                                   BoxShadow(
                                                                                     blurRadius: 4.0,
                                                                                     color: Color(0x0E000000),
@@ -3055,7 +3049,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                     spreadRadius: 2.0,
                                                                                   )
                                                                                 ],
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(0.0),
@@ -3063,7 +3057,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -3092,11 +3086,11 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                     Row(
@@ -3121,7 +3115,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             Container(
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).primary,
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(8.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -3129,7 +3123,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsets.all(12.0),
+                                                                                padding: const EdgeInsets.all(12.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -3162,9 +3156,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 6.0)),
+                                                                              ].divide(const SizedBox(width: 6.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                         AuthUserStreamWidget(
                                                                           builder: (context) =>
@@ -3181,24 +3175,24 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                   ]
-                                                                      .divide(SizedBox(
+                                                                      .divide(const SizedBox(
                                                                           height:
                                                                               20.0))
-                                                                      .addToEnd(SizedBox(
+                                                                      .addToEnd(const SizedBox(
                                                                           height:
                                                                               100.0)),
                                                                 ),
                                                               ),
                                                             ]
                                                                 .addToStart(
-                                                                    SizedBox(
+                                                                    const SizedBox(
                                                                         height:
                                                                             24.0))
-                                                                .addToEnd(SizedBox(
+                                                                .addToEnd(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                           ),
@@ -3206,11 +3200,11 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 1.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -3285,7 +3279,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             InputBorder.none,
                                                                         focusedErrorBorder:
                                                                             InputBorder.none,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             0.0,
                                                                             16.0,
@@ -3309,7 +3303,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3345,7 +3339,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                           text:
                                                                               'Send',
                                                                           icon:
-                                                                              Icon(
+                                                                              const Icon(
                                                                             FFIcons.ksend2,
                                                                             size:
                                                                                 22.0,
@@ -3354,12 +3348,12 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 38.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -3374,7 +3368,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -3382,7 +3376,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                   ),
@@ -3407,24 +3401,24 @@ class _ChatWidgetState extends State<ChatWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 28.0, 0.0, 28.0, 0.0),
                             child: wrapWithModel(
                               model: _model.footerModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: FooterWidget(),
+                              child: const FooterWidget(),
                             ),
                           ),
                         ]
-                            .divide(SizedBox(height: 28.0))
-                            .addToStart(SizedBox(height: 110.0))
-                            .addToEnd(SizedBox(height: 28.0)),
+                            .divide(const SizedBox(height: 28.0))
+                            .addToStart(const SizedBox(height: 110.0))
+                            .addToEnd(const SizedBox(height: 28.0)),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

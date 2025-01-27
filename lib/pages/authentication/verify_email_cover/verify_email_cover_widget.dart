@@ -1,12 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'verify_email_cover_model.dart';
 export 'verify_email_cover_model.dart';
 
@@ -60,7 +56,7 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
               ))
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(48.0, 48.0, 0.0, 48.0),
+                      const EdgeInsetsDirectional.fromSTEB(48.0, 48.0, 0.0, 48.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(24.0),
                     child: Container(
@@ -71,7 +67,7 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                         borderRadius: BorderRadius.circular(24.0),
                       ),
                       child: Stack(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -80,11 +76,11 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                               width: double.infinity,
                               height: 240.0,
                               fit: BoxFit.cover,
-                              alignment: Alignment(-1.0, 0.0),
+                              alignment: const Alignment(-1.0, 0.0),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 128.0, 0.0, 128.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
@@ -103,17 +99,17 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: 500.0,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 800.0,
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(40.0),
+                      padding: const EdgeInsets.all(40.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -163,7 +159,7 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                                       lineHeight: 1.5,
                                     ),
                               ),
-                            ].divide(SizedBox(height: 12.0)),
+                            ].divide(const SizedBox(height: 12.0)),
                           ),
                           Form(
                             key: _model.formKey,
@@ -183,9 +179,9 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 44.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -196,7 +192,7 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -204,7 +200,7 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -213,13 +209,13 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: RichText(
                                             textScaler: MediaQuery.of(context)
                                                 .textScaler,
                                             text: TextSpan(
                                               children: [
-                                                TextSpan(
+                                                const TextSpan(
                                                   text:
                                                       'Didn\'t get the mail?  ',
                                                   style: TextStyle(
@@ -251,10 +247,10 @@ class _VerifyEmailCoverWidgetState extends State<VerifyEmailCoverWidget> {
                                     ],
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 16.0)),
+                              ].divide(const SizedBox(height: 16.0)),
                             ),
                           ),
-                        ].divide(SizedBox(height: 28.0)),
+                        ].divide(const SizedBox(height: 28.0)),
                       ),
                     ),
                   ),

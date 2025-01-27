@@ -11,10 +11,8 @@ import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'calender_model.dart';
@@ -45,7 +43,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -85,19 +83,19 @@ class _CalenderWidgetState extends State<CalenderWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -108,7 +106,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 12.0,
                                           color: Color(0x14000000),
@@ -126,7 +124,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                       children: [
                                         Container(
                                           width: 300.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -135,14 +133,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: FFButtonWidget(
                                                       onPressed: () {
                                                         print(
                                                             'Button pressed ...');
                                                       },
                                                       text: 'Add Event',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         FFIcons.kplus,
                                                         color: Colors.white,
                                                         size: 24.0,
@@ -151,14 +149,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                         width: double.infinity,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -181,7 +179,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 2.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -202,7 +200,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                 ],
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 20.0, 0.0),
                                                 child: Column(
@@ -299,7 +297,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                               ),
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(20.0, 24.0,
                                                           20.0, 0.0),
                                                   child: Column(
@@ -426,7 +424,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -545,7 +543,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -664,7 +662,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -783,7 +781,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -902,7 +900,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -1020,19 +1018,19 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 26.0)),
+                                                        const SizedBox(height: 26.0)),
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 12.0)),
+                                            ].divide(const SizedBox(height: 12.0)),
                                           ),
                                         ),
                                         Container(
@@ -1061,7 +1059,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Row(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -1084,7 +1082,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1120,7 +1118,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
                                                           Row(
@@ -1134,6 +1132,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered1 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered1 =
+                                                                          false);
+                                                                }),
                                                                 child: InkWell(
                                                                   splashColor:
                                                                       Colors
@@ -1162,20 +1172,20 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           Color>(
                                                                         () {
                                                                           if (_model
-                                                                              .mouseRegionHovered1!) {
-                                                                            return Color(0x807367F0);
+                                                                              .mouseRegionHovered1) {
+                                                                            return const Color(0x807367F0);
                                                                           } else if (_model.calander ==
                                                                               'Month') {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
-                                                                            return Color(0x347367F0);
+                                                                            return const Color(0x347367F0);
                                                                           }
                                                                         }(),
-                                                                        Color(
+                                                                        const Color(
                                                                             0x347367F0),
                                                                       ),
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(6.0),
@@ -1189,7 +1199,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1214,20 +1224,8 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered1 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered1 =
-                                                                          false);
-                                                                }),
                                                               ),
-                                                              SizedBox(
+                                                              const SizedBox(
                                                                 height: 40.0,
                                                                 child:
                                                                     VerticalDivider(
@@ -1244,6 +1242,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          false);
+                                                                }),
                                                                 child: InkWell(
                                                                   splashColor:
                                                                       Colors
@@ -1272,22 +1282,22 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           Color>(
                                                                         () {
                                                                           if (_model
-                                                                              .mouseRegionHovered2!) {
-                                                                            return Color(0x807367F0);
+                                                                              .mouseRegionHovered2) {
+                                                                            return const Color(0x807367F0);
                                                                           } else if (_model.calander ==
                                                                               'Week') {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
-                                                                            return Color(0x347367F0);
+                                                                            return const Color(0x347367F0);
                                                                           }
                                                                         }(),
-                                                                        Color(
+                                                                        const Color(
                                                                             0x347367F0),
                                                                       ),
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1312,20 +1322,8 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          false);
-                                                                }),
                                                               ),
-                                                              SizedBox(
+                                                              const SizedBox(
                                                                 height: 40.0,
                                                                 child:
                                                                     VerticalDivider(
@@ -1342,6 +1340,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered3 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered3 =
+                                                                          false);
+                                                                }),
                                                                 child: InkWell(
                                                                   splashColor:
                                                                       Colors
@@ -1370,22 +1380,22 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           Color>(
                                                                         () {
                                                                           if (_model
-                                                                              .mouseRegionHovered3!) {
-                                                                            return Color(0x807367F0);
+                                                                              .mouseRegionHovered3) {
+                                                                            return const Color(0x807367F0);
                                                                           } else if (_model.calander ==
                                                                               'Day') {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
-                                                                            return Color(0x347367F0);
+                                                                            return const Color(0x347367F0);
                                                                           }
                                                                         }(),
-                                                                        Color(
+                                                                        const Color(
                                                                             0x347367F0),
                                                                       ),
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1410,20 +1420,8 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered3 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered3 =
-                                                                          false);
-                                                                }),
                                                               ),
-                                                              SizedBox(
+                                                              const SizedBox(
                                                                 height: 40.0,
                                                                 child:
                                                                     VerticalDivider(
@@ -1440,6 +1438,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered4 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered4 =
+                                                                          false);
+                                                                }),
                                                                 child: InkWell(
                                                                   splashColor:
                                                                       Colors
@@ -1468,20 +1478,20 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           Color>(
                                                                         () {
                                                                           if (_model
-                                                                              .mouseRegionHovered4!) {
-                                                                            return Color(0x807367F0);
+                                                                              .mouseRegionHovered4) {
+                                                                            return const Color(0x807367F0);
                                                                           } else if (_model.calander ==
                                                                               'List') {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
-                                                                            return Color(0x347367F0);
+                                                                            return const Color(0x347367F0);
                                                                           }
                                                                         }(),
-                                                                        Color(
+                                                                        const Color(
                                                                             0x347367F0),
                                                                       ),
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(0.0),
@@ -1495,7 +1505,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1520,22 +1530,10 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered4 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered4 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 12.0)),
                                                       ),
                                                     ),
@@ -1572,7 +1570,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name: ' ',
                                                                     ),
                                                                   ),
@@ -1608,7 +1606,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Sun 6/9',
                                                                       ),
@@ -1646,7 +1644,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Mon 6/10',
                                                                       ),
@@ -1684,7 +1682,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Tue 6/11',
                                                                       ),
@@ -1722,7 +1720,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Wed 6/12',
                                                                       ),
@@ -1760,7 +1758,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Thu 6/13',
                                                                       ),
@@ -1798,7 +1796,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Fri 6/14',
                                                                       ),
@@ -1836,7 +1834,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Sat 6/15',
                                                                       ),
@@ -1862,7 +1860,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     () async {
                                                                   showDialog(
                                                                     barrierColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x34000000),
                                                                     context:
                                                                         context,
@@ -1876,7 +1874,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         backgroundColor:
                                                                             Colors.transparent,
                                                                         alignment:
-                                                                            AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                            const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                         child:
                                                                             WebViewAware(
                                                                           child:
@@ -1887,7 +1885,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                AddEventWidget(),
+                                                                                const AddEventWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -1898,7 +1896,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     Container(
                                                                   height: 46.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1917,7 +1915,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 children: [
                                                                                   Expanded(
                                                                                     child: Align(
-                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                       child: Text(
                                                                                         'all-day',
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2099,7 +2097,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2108,14 +2106,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2129,7 +2127,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '12am',
                                                                           ),
@@ -2152,7 +2150,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2161,14 +2159,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2182,7 +2180,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '1am',
                                                                           ),
@@ -2205,7 +2203,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2214,14 +2212,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2235,7 +2233,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '2am',
                                                                           ),
@@ -2258,7 +2256,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2267,14 +2265,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2288,7 +2286,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '3am',
                                                                           ),
@@ -2311,7 +2309,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2320,14 +2318,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2341,7 +2339,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '4am',
                                                                           ),
@@ -2364,7 +2362,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2373,14 +2371,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2394,7 +2392,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '5am',
                                                                           ),
@@ -2417,7 +2415,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2426,14 +2424,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2447,7 +2445,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '6am',
                                                                           ),
@@ -2470,7 +2468,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2479,14 +2477,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2500,7 +2498,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '7am',
                                                                           ),
@@ -2523,7 +2521,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2532,14 +2530,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2553,7 +2551,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '8am',
                                                                           ),
@@ -2576,7 +2574,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2585,14 +2583,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2606,7 +2604,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '9am',
                                                                           ),
@@ -2629,7 +2627,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2638,14 +2636,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2659,7 +2657,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '10am',
                                                                           ),
@@ -2682,7 +2680,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2691,14 +2689,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2712,7 +2710,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '11am',
                                                                           ),
@@ -2735,7 +2733,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2744,14 +2742,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2765,7 +2763,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '12pm',
                                                                           ),
@@ -2788,7 +2786,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2797,14 +2795,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2818,7 +2816,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '1pm',
                                                                           ),
@@ -2841,7 +2839,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2850,14 +2848,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2871,7 +2869,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '2pm',
                                                                           ),
@@ -2894,7 +2892,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2903,14 +2901,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2924,7 +2922,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '3pm',
                                                                           ),
@@ -2947,7 +2945,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -2956,14 +2954,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -2977,7 +2975,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '4pm',
                                                                           ),
@@ -3000,7 +2998,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3009,14 +3007,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3030,7 +3028,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '5pm',
                                                                           ),
@@ -3053,7 +3051,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3062,14 +3060,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3083,7 +3081,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '6pm',
                                                                           ),
@@ -3106,7 +3104,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3115,14 +3113,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3136,7 +3134,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '7pm',
                                                                           ),
@@ -3159,7 +3157,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3168,14 +3166,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3189,7 +3187,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '8pm',
                                                                           ),
@@ -3212,7 +3210,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3221,14 +3219,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3242,7 +3240,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '9pm',
                                                                           ),
@@ -3265,7 +3263,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3274,14 +3272,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3295,7 +3293,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '10pm',
                                                                           ),
@@ -3318,7 +3316,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3327,14 +3325,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3348,7 +3346,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '11pm',
                                                                           ),
@@ -3371,7 +3369,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3380,14 +3378,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3401,7 +3399,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              WeekTabelWidget(
+                                                                              const WeekTabelWidget(
                                                                             time:
                                                                                 '12pm',
                                                                           ),
@@ -3435,7 +3433,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name: ' ',
                                                                     ),
                                                                   ),
@@ -3471,7 +3469,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           () =>
                                                                               safeSetState(() {}),
                                                                       child:
-                                                                          DayWidget(
+                                                                          const DayWidget(
                                                                         name:
                                                                             'Sunday',
                                                                       ),
@@ -3497,7 +3495,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     () async {
                                                                   showDialog(
                                                                     barrierColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x34000000),
                                                                     context:
                                                                         context,
@@ -3511,7 +3509,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         backgroundColor:
                                                                             Colors.transparent,
                                                                         alignment:
-                                                                            AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                            const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                         child:
                                                                             WebViewAware(
                                                                           child:
@@ -3522,7 +3520,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                AddEventWidget(),
+                                                                                const AddEventWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -3533,7 +3531,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                     Container(
                                                                   height: 46.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -3552,7 +3550,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 children: [
                                                                                   Expanded(
                                                                                     child: Align(
-                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                       child: Text(
                                                                                         'all-day',
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3632,7 +3630,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3641,14 +3639,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3662,7 +3660,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '12am',
                                                                           ),
@@ -3685,7 +3683,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3694,14 +3692,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3715,7 +3713,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '1am',
                                                                           ),
@@ -3738,7 +3736,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3747,14 +3745,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3768,7 +3766,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '2am',
                                                                           ),
@@ -3791,7 +3789,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3800,14 +3798,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3821,7 +3819,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '3am',
                                                                           ),
@@ -3844,7 +3842,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3853,14 +3851,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3874,7 +3872,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '4am',
                                                                           ),
@@ -3897,7 +3895,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3906,14 +3904,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3927,7 +3925,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '5am',
                                                                           ),
@@ -3950,7 +3948,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -3959,14 +3957,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -3980,7 +3978,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '6am',
                                                                           ),
@@ -4003,7 +4001,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4012,14 +4010,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4033,7 +4031,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '7am',
                                                                           ),
@@ -4056,7 +4054,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4065,14 +4063,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4086,7 +4084,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '8am',
                                                                           ),
@@ -4109,7 +4107,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4118,14 +4116,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4139,7 +4137,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '9am',
                                                                           ),
@@ -4162,7 +4160,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4171,14 +4169,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4192,7 +4190,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '10am',
                                                                           ),
@@ -4215,7 +4213,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4224,14 +4222,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4245,7 +4243,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '11am',
                                                                           ),
@@ -4268,7 +4266,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4277,14 +4275,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4298,7 +4296,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '12am',
                                                                           ),
@@ -4321,7 +4319,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4330,14 +4328,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4351,7 +4349,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '12pm',
                                                                           ),
@@ -4374,7 +4372,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4383,14 +4381,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4404,7 +4402,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '1pm',
                                                                           ),
@@ -4427,7 +4425,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4436,14 +4434,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4457,7 +4455,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '2pm',
                                                                           ),
@@ -4480,7 +4478,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4489,14 +4487,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4510,7 +4508,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '3pm',
                                                                           ),
@@ -4533,7 +4531,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4542,14 +4540,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4563,7 +4561,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '4pm',
                                                                           ),
@@ -4586,7 +4584,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4595,14 +4593,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4616,7 +4614,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '5pm',
                                                                           ),
@@ -4639,7 +4637,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4648,14 +4646,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4669,7 +4667,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '6pm',
                                                                           ),
@@ -4692,7 +4690,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4701,14 +4699,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4722,7 +4720,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '7pm',
                                                                           ),
@@ -4745,7 +4743,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4754,14 +4752,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4775,7 +4773,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '8pm',
                                                                           ),
@@ -4798,7 +4796,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4807,14 +4805,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4828,7 +4826,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '9pm',
                                                                           ),
@@ -4851,7 +4849,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4860,14 +4858,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4881,7 +4879,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '10pm',
                                                                           ),
@@ -4904,7 +4902,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -4913,14 +4911,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -4934,7 +4932,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              DayTableWidget(
+                                                                              const DayTableWidget(
                                                                             name:
                                                                                 '11pm',
                                                                           ),
@@ -4978,7 +4976,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
@@ -5051,6 +5049,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered5 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered5 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -5068,7 +5078,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -5077,14 +5087,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -5101,7 +5111,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered5! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered5 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -5119,13 +5129,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '11:25am - 12:00am',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5165,18 +5175,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered5 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered5 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ],
                                                               ),
@@ -5202,7 +5200,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
@@ -5275,6 +5273,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered6 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered6 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -5292,7 +5302,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -5301,14 +5311,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -5325,7 +5335,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered6! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered6 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -5343,13 +5353,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '12:00am - 11:25am',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5389,18 +5399,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered6 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered6 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ],
                                                               ),
@@ -5426,7 +5424,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
@@ -5499,6 +5497,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered7 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered7 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -5516,7 +5526,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -5525,14 +5535,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -5549,7 +5559,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -5567,13 +5577,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '12:00am',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5613,18 +5623,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered7 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered7 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                   MouseRegion(
                                                                     opaque:
@@ -5633,6 +5631,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered8 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered8 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -5650,7 +5660,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -5659,14 +5669,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -5683,7 +5693,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered8! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered8 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -5701,13 +5711,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   'all - day',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5747,18 +5757,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered8 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered8 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                   MouseRegion(
                                                                     opaque:
@@ -5767,6 +5765,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered9 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered9 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -5784,7 +5794,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -5793,14 +5803,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -5817,7 +5827,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -5835,13 +5845,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   'all - day',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5881,18 +5891,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered9 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered9 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                   MouseRegion(
                                                                     opaque:
@@ -5901,6 +5899,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered10 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered10 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -5918,7 +5928,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -5927,14 +5937,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -5951,7 +5961,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered10! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered10 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -5969,13 +5979,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   'all - day',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6015,18 +6025,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered10 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered10 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ],
                                                               ),
@@ -6052,7 +6050,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
@@ -6125,6 +6123,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered11 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered11 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -6142,7 +6152,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -6151,14 +6161,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -6175,7 +6185,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered11! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered11 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -6193,13 +6203,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '12:00am',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6239,18 +6249,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered11 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered11 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                   MouseRegion(
                                                                     opaque:
@@ -6259,6 +6257,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered12 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered12 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -6276,7 +6286,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -6285,14 +6295,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -6309,7 +6319,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered12! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered12 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -6327,13 +6337,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   'all - day',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6373,18 +6383,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered12 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered12 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ],
                                                               ),
@@ -6410,7 +6408,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
@@ -6483,6 +6481,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered13 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered13 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -6500,7 +6510,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -6509,14 +6519,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -6533,7 +6543,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered13! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered13 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -6551,13 +6561,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   'all - day',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6597,18 +6607,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered13 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered13 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ],
                                                               ),
@@ -6634,7 +6632,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
@@ -6707,6 +6705,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             .defer ??
                                                                         MouseCursor
                                                                             .defer,
+                                                                    onEnter:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered14 =
+                                                                              true);
+                                                                    }),
+                                                                    onExit:
+                                                                        ((event) async {
+                                                                      safeSetState(() =>
+                                                                          _model.mouseRegionHovered14 =
+                                                                              false);
+                                                                    }),
                                                                     child:
                                                                         Builder(
                                                                       builder:
@@ -6724,7 +6734,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                             () async {
                                                                           showDialog(
                                                                             barrierColor:
-                                                                                Color(0x34000000),
+                                                                                const Color(0x34000000),
                                                                             context:
                                                                                 context,
                                                                             builder:
@@ -6733,14 +6743,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: WebViewAware(
                                                                                   child: GestureDetector(
                                                                                     onTap: () {
                                                                                       FocusScope.of(dialogContext).unfocus();
                                                                                       FocusManager.instance.primaryFocus?.unfocus();
                                                                                     },
-                                                                                    child: AddEventWidget(),
+                                                                                    child: const AddEventWidget(),
                                                                                   ),
                                                                                 ),
                                                                               );
@@ -6757,7 +6767,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                               BoxDecoration(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered14! ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
+                                                                              _model.mouseRegionHovered14 ? FlutterFlowTheme.of(context).checkBox : Colors.transparent,
                                                                               Colors.transparent,
                                                                             ),
                                                                           ),
@@ -6775,13 +6785,13 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                     Expanded(
                                                                                       flex: 3,
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           children: [
                                                                                             Expanded(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Text(
                                                                                                   'all - day',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -6821,22 +6831,10 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    onEnter:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered14 =
-                                                                              true);
-                                                                    }),
-                                                                    onExit:
-                                                                        ((event) async {
-                                                                      safeSetState(() =>
-                                                                          _model.mouseRegionHovered14 =
-                                                                              false);
-                                                                    }),
                                                                   ),
                                                                 ],
                                                               ),
-                                                            ].addToEnd(SizedBox(
+                                                            ].addToEnd(const SizedBox(
                                                                 height: 120.0)),
                                                           ),
                                                         );
@@ -6859,7 +6857,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Sun',
                                                                     ),
@@ -6874,7 +6872,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Mon',
                                                                     ),
@@ -6889,7 +6887,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Tue',
                                                                     ),
@@ -6904,7 +6902,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Wed',
                                                                     ),
@@ -6919,7 +6917,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Thu',
                                                                     ),
@@ -6934,7 +6932,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Fri',
                                                                     ),
@@ -6949,7 +6947,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        DayWidget(
+                                                                        const DayWidget(
                                                                       name:
                                                                           'Sat',
                                                                     ),
@@ -6979,6 +6977,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered15 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered15 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -6987,21 +6991,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7011,18 +7015,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered15! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered15 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '26',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7040,12 +7044,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered15 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered15 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7068,6 +7066,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered16 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered16 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7076,21 +7080,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7100,18 +7104,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered16! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered16 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '27',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7129,12 +7133,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered16 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered16 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7157,6 +7155,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered17 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered17 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7165,21 +7169,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7189,18 +7193,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered17! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered17 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '28',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7218,12 +7222,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered17 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered17 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7246,6 +7244,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered18 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered18 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7254,21 +7258,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7278,18 +7282,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered18! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered18 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '29',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7307,12 +7311,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered18 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered18 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7335,6 +7333,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered19 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered19 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7343,21 +7347,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7367,18 +7371,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered19! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered19 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '30',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7396,12 +7400,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered19 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered19 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7424,6 +7422,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered20 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered20 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7432,21 +7436,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7456,18 +7460,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered20! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered20 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '31',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7485,12 +7489,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered20 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered20 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7513,6 +7511,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered21 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered21 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7521,21 +7525,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7545,18 +7549,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered21! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered21 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '1',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7574,12 +7578,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered21 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered21 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7628,6 +7626,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered22 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered22 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7636,21 +7640,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7660,18 +7664,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered22! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered22 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '2',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7689,12 +7693,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered22 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered22 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7717,6 +7715,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered23 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered23 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7725,21 +7729,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7749,18 +7753,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered23! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered23 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '3',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7778,12 +7782,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered23 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered23 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7806,6 +7804,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered24 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered24 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7814,21 +7818,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7838,18 +7842,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered24! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered24 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '4',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7867,12 +7871,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered24 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered24 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7895,6 +7893,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered25 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered25 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7903,21 +7907,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -7927,18 +7931,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered25! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered25 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '5',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -7956,12 +7960,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered25 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered25 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -7984,6 +7982,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered26 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered26 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -7992,21 +7996,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8016,18 +8020,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered26! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered26 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '6',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8045,12 +8049,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered26 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered26 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8073,6 +8071,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered27 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered27 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8081,21 +8085,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8105,18 +8109,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered27! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered27 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '7',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8134,12 +8138,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered27 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered27 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8162,6 +8160,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered28 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered28 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8170,21 +8174,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8194,18 +8198,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered28! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered28 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '8',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8223,12 +8227,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered28 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered28 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8277,6 +8275,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered29 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered29 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8285,21 +8289,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8309,18 +8313,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered29! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered29 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '9',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8338,12 +8342,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered29 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered29 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8366,6 +8364,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered30 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered30 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8374,21 +8378,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8398,18 +8402,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered30! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered30 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '10',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8427,12 +8431,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered30 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered30 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8455,6 +8453,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered31 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered31 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8463,21 +8467,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8487,18 +8491,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered31! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered31 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '11',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8516,12 +8520,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered31 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered31 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8544,6 +8542,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered32 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered32 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8552,21 +8556,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8576,18 +8580,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered32! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered32 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '12',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8605,12 +8609,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered32 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered32 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8633,6 +8631,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered33 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered33 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8641,21 +8645,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8665,18 +8669,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered33! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered33 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '13',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8694,12 +8698,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered33 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered33 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8722,6 +8720,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered34 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered34 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8730,21 +8734,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8754,18 +8758,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered34! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered34 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '14',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8783,12 +8787,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered34 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered34 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8811,6 +8809,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered35 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered35 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -8819,21 +8823,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -8843,18 +8847,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered35! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered35 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).checkBox,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '15',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -8873,16 +8877,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.business,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x337367F0),
+                                                                                                          color: const Color(0x337367F0),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                         child: Padding(
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             children: [
@@ -8906,16 +8910,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.business,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x337367F0),
+                                                                                                        color: const Color(0x337367F0),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -8936,18 +8940,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered35 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered35 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -8997,6 +8995,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered36 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered36 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9005,21 +9009,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9029,18 +9033,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered36! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered36 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '16',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -9059,16 +9063,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.business,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x337367F0),
+                                                                                                          color: const Color(0x337367F0),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                         child: Padding(
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             children: [
@@ -9092,16 +9096,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.business,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x337367F0),
+                                                                                                        color: const Color(0x337367F0),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -9122,18 +9126,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered36 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered36 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -9156,6 +9154,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered37 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered37 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9164,21 +9168,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9188,18 +9192,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered37! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered37 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '17',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -9218,16 +9222,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.family,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x33FF9F43),
+                                                                                                          color: const Color(0x33FF9F43),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                         child: Padding(
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             children: [
@@ -9251,16 +9255,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.family,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x33FF9F43),
+                                                                                                        color: const Color(0x33FF9F43),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -9291,11 +9295,11 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x3400CFE8),
+                                                                                                        color: const Color(0x3400CFE8),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -9321,11 +9325,11 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                     width: double.infinity,
                                                                                                     height: 30.0,
                                                                                                     decoration: BoxDecoration(
-                                                                                                      color: Color(0x3400CFE8),
+                                                                                                      color: const Color(0x3400CFE8),
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                       child: Row(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         children: [
@@ -9359,18 +9363,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   ),
                                                                                                 ],
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered37 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered37 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -9393,6 +9391,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered38 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered38 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9401,21 +9405,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9425,18 +9429,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered38! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered38 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '18',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -9454,12 +9458,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered38 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered38 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -9482,6 +9480,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered39 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered39 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9490,21 +9494,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9514,18 +9518,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered39! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered39 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '19',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -9544,16 +9548,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.personal,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x34EA5455),
+                                                                                                          color: const Color(0x34EA5455),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                         child: Padding(
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             children: [
@@ -9577,16 +9581,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.personal,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x34EA5455),
+                                                                                                        color: const Color(0x34EA5455),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -9617,11 +9621,11 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x337367F0),
+                                                                                                        color: const Color(0x337367F0),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -9647,11 +9651,11 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                     width: double.infinity,
                                                                                                     height: 30.0,
                                                                                                     decoration: BoxDecoration(
-                                                                                                      color: Color(0x337367F0),
+                                                                                                      color: const Color(0x337367F0),
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                       child: Row(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         children: [
@@ -9671,18 +9675,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered39 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered39 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -9705,6 +9703,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered40 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered40 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9713,21 +9717,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9737,18 +9741,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered40! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered40 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '20',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -9766,12 +9770,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered40 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered40 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -9794,6 +9792,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered41 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered41 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9802,21 +9806,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9826,18 +9830,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered41! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered41 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '21',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -9856,16 +9860,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.holiday,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x3328C76F),
+                                                                                                          color: const Color(0x3328C76F),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                         child: Padding(
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             children: [
@@ -9889,16 +9893,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.holiday,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x3328C76F),
+                                                                                                        color: const Color(0x3328C76F),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -9919,18 +9923,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered41 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered41 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -9953,6 +9951,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered42 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered42 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -9961,21 +9965,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -9985,18 +9989,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered42! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered42 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '22',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10015,12 +10019,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.holiday,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x3428C76F),
+                                                                                                          color: const Color(0x3428C76F),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                       ),
@@ -10030,30 +10034,24 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.holiday,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x3428C76F),
+                                                                                                        color: const Color(0x3428C76F),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered42 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered42 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10102,6 +10100,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered43 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered43 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10110,21 +10114,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10134,18 +10138,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered43! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered43 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '23',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10163,12 +10167,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered43 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered43 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10191,6 +10189,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered44 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered44 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10199,21 +10203,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10223,18 +10227,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered44! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered44 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '24',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10252,12 +10256,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered44 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered44 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10280,6 +10278,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered45 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered45 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10288,21 +10292,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10312,18 +10316,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered45! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered45 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '25',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10341,12 +10345,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered45 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered45 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10369,6 +10367,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered46 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered46 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10377,21 +10381,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10401,18 +10405,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered46! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered46 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '26',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10430,12 +10434,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered46 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered46 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10458,6 +10456,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered47 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered47 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10466,21 +10470,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10490,18 +10494,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered47! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered47 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '27',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10519,12 +10523,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered47 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered47 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10547,6 +10545,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered48 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered48 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10555,21 +10559,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10579,18 +10583,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered48! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered48 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '28',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10608,12 +10612,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered48 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered48 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10636,6 +10634,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered49 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered49 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10644,21 +10648,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10668,18 +10672,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered49! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered49 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '29',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10697,12 +10701,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered49 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered49 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10751,6 +10749,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered50 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered50 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10759,21 +10763,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10783,18 +10787,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered50! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered50 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '30',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10812,12 +10816,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered50 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered50 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10840,6 +10838,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered51 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered51 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -10848,21 +10852,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -10872,18 +10876,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered51! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered51 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '1',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -10902,16 +10906,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   child: Visibility(
                                                                                                     visible: _model.business,
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                       child: Container(
                                                                                                         width: double.infinity,
                                                                                                         height: 30.0,
                                                                                                         decoration: BoxDecoration(
-                                                                                                          color: Color(0x337367F0),
+                                                                                                          color: const Color(0x337367F0),
                                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                                         ),
                                                                                                         child: Padding(
-                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             children: [
@@ -10935,16 +10939,16 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                 child: Visibility(
                                                                                                   visible: _model.business,
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                                     child: Container(
                                                                                                       width: double.infinity,
                                                                                                       height: 30.0,
                                                                                                       decoration: BoxDecoration(
-                                                                                                        color: Color(0x337367F0),
+                                                                                                        color: const Color(0x337367F0),
                                                                                                         borderRadius: BorderRadius.circular(4.0),
                                                                                                       ),
                                                                                                       child: Padding(
-                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                         child: Row(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           children: [
@@ -10965,18 +10969,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered51 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered51 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -10999,6 +10997,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered52 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered52 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -11007,21 +11011,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -11031,18 +11035,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered52! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered52 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '2',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -11060,12 +11064,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered52 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered52 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -11088,6 +11086,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered53 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered53 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -11096,21 +11100,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -11120,18 +11124,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered53! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered53 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '3',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -11149,12 +11153,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered53 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered53 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -11177,6 +11175,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered54 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered54 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -11185,21 +11189,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -11209,18 +11213,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered54! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered54 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '4',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -11238,12 +11242,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered54 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered54 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -11266,6 +11264,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered55 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered55 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -11274,21 +11278,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -11298,18 +11302,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered55! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered55 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '5',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -11327,12 +11331,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered55 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered55 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -11355,6 +11353,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered56 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered56 = false);
+                                                                                  }),
                                                                                   child: Builder(
                                                                                     builder: (context) => InkWell(
                                                                                       splashColor: Colors.transparent,
@@ -11363,21 +11367,21 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       highlightColor: Colors.transparent,
                                                                                       onTap: () async {
                                                                                         showDialog(
-                                                                                          barrierColor: Color(0x34000000),
+                                                                                          barrierColor: const Color(0x34000000),
                                                                                           context: context,
                                                                                           builder: (dialogContext) {
                                                                                             return Dialog(
                                                                                               elevation: 0,
                                                                                               insetPadding: EdgeInsets.zero,
                                                                                               backgroundColor: Colors.transparent,
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                               child: WebViewAware(
                                                                                                 child: GestureDetector(
                                                                                                   onTap: () {
                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                   },
-                                                                                                  child: AddEventWidget(),
+                                                                                                  child: const AddEventWidget(),
                                                                                                 ),
                                                                                               ),
                                                                                             );
@@ -11387,18 +11391,18 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       child: Container(
                                                                                         decoration: BoxDecoration(
                                                                                           color: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered56! ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                            _model.mouseRegionHovered56 ? FlutterFlowTheme.of(context).checkBox : FlutterFlowTheme.of(context).secondaryBackground,
                                                                                             FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           ),
                                                                                         ),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsets.all(1.0),
+                                                                                          padding: const EdgeInsets.all(1.0),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
+                                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 0.0),
                                                                                                 child: Text(
                                                                                                   '6',
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -11416,12 +11420,6 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered56 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered56 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               Container(
@@ -11465,25 +11463,25 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 114.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 114.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

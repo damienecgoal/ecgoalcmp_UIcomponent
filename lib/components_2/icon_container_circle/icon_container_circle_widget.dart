@@ -1,8 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'icon_container_circle_model.dart';
 export 'icon_container_circle_model.dart';
 
@@ -50,13 +47,13 @@ class _IconContainerCircleWidgetState extends State<IconContainerCircleWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget!.daimiter,
-      height: widget!.daimiter,
+      width: widget.daimiter,
+      height: widget.daimiter,
       decoration: BoxDecoration(
-        color: widget!.bgcolor,
+        color: widget.bgcolor,
         shape: BoxShape.circle,
       ),
-      child: widget!.icon!,
+      child: widget.icon!,
     );
   }
 }

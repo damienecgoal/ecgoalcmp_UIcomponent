@@ -1,9 +1,6 @@
 import '/components/active_project/active_project_widget.dart';
 import '/components/avatar_2/avatar2_widget.dart';
 import '/components/earning/earning_widget.dart';
-import '/components/nodal/analytics_source_visits/analytics_source_visits_widget.dart';
-import '/components/nodal/refresh_share/refresh_share_widget.dart';
-import '/components/nodal/view_more_delete/view_more_delete_widget.dart';
 import '/components_2/browser_states/browser_states_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/icon_container/icon_container_widget.dart';
@@ -11,21 +8,9 @@ import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/components_2/transaction/transaction_widget.dart';
-import '/flutter_flow/flutter_flow_charts.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
-import '/flutter_flow/random_data_util.dart' as random_data;
 import 'crm_widget.dart' show CrmWidget;
-import 'dart:math' as math;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class CrmModel extends FlutterFlowModel<CrmWidget> {
   ///  Local state fields for this page.

@@ -2,11 +2,8 @@ import '/components/nodal/shipping_action/shipping_action_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'server_key_model.dart';
 export 'server_key_model.dart';
@@ -66,7 +63,7 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +77,7 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
                   children: [
                     Text(
                       valueOrDefault<String>(
-                        widget!.title,
+                        widget.title,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,12 +91,12 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
                       model: _model.statusCardModel,
                       updateCallback: () => safeSetState(() {}),
                       child: StatusCardWidget(
-                        title: widget!.status!,
-                        titleColor: widget!.color!,
-                        bgColor: widget!.bg!,
+                        title: widget.status!,
+                        titleColor: widget.color!,
+                        bgColor: widget.bg!,
                       ),
                     ),
-                  ].divide(SizedBox(width: 16.0)),
+                  ].divide(const SizedBox(width: 16.0)),
                 ),
                 Builder(
                   builder: (context) => InkWell(
@@ -109,16 +106,16 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       showAlignedDialog(
-                        barrierColor: Color(0x34000000),
+                        barrierColor: const Color(0x34000000),
                         context: context,
                         isGlobal: false,
                         avoidOverflow: false,
-                        targetAnchor: AlignmentDirectional(-1.0, 6.0)
+                        targetAnchor: const AlignmentDirectional(-1.0, 6.0)
                             .resolve(Directionality.of(context)),
-                        followerAnchor: AlignmentDirectional(0.0, 0.0)
+                        followerAnchor: const AlignmentDirectional(0.0, 0.0)
                             .resolve(Directionality.of(context)),
                         builder: (dialogContext) {
-                          return Material(
+                          return const Material(
                             color: Colors.transparent,
                             child: WebViewAware(
                               child: ShippingActionWidget(),
@@ -141,7 +138,7 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.url,
+                    widget.url,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -155,28 +152,28 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
                 MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
-                  child: Icon(
-                    FFIcons.kcopy,
-                    color: valueOrDefault<Color>(
-                      _model.mouseRegionHovered!
-                          ? FlutterFlowTheme.of(context).secondaryTitle
-                          : FlutterFlowTheme.of(context).secondaryText,
-                      FlutterFlowTheme.of(context).secondaryText,
-                    ),
-                    size: 24.0,
-                  ),
                   onEnter: ((event) async {
                     safeSetState(() => _model.mouseRegionHovered = true);
                   }),
                   onExit: ((event) async {
                     safeSetState(() => _model.mouseRegionHovered = false);
                   }),
+                  child: Icon(
+                    FFIcons.kcopy,
+                    color: valueOrDefault<Color>(
+                      _model.mouseRegionHovered
+                          ? FlutterFlowTheme.of(context).secondaryTitle
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      FlutterFlowTheme.of(context).secondaryText,
+                    ),
+                    size: 24.0,
+                  ),
                 ),
-              ].divide(SizedBox(width: 12.0)),
+              ].divide(const SizedBox(width: 12.0)),
             ),
             Text(
               valueOrDefault<String>(
-                widget!.create,
+                widget.create,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -186,7 +183,7 @@ class _ServerKeyWidgetState extends State<ServerKeyWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-          ].divide(SizedBox(height: 24.0)),
+          ].divide(const SizedBox(height: 24.0)),
         ),
       ),
     );

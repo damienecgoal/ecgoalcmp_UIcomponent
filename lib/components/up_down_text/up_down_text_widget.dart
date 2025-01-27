@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'up_down_text_model.dart';
 export 'up_down_text_model.dart';
 
@@ -50,23 +47,23 @@ class _UpDownTextWidgetState extends State<UpDownTextWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          widget!.chavron!,
+          widget.chavron!,
           Text(
             valueOrDefault<String>(
-              widget!.text,
+              widget.text,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Public Sans',
-                  color: widget!.color,
+                  color: widget.color,
                   letterSpacing: 0.0,
                 ),
           ),
-        ].divide(SizedBox(width: 6.0)),
+        ].divide(const SizedBox(width: 6.0)),
       ),
     );
   }

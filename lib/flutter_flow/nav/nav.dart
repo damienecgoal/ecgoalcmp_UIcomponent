@@ -1,22 +1,15 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
-import '/backend/schema/enums/enums.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -84,7 +77,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) => RootPageContext.wrap(
-        appStateNotifier.loggedIn ? AnalyticsWidget() : LoginWidget(),
+        appStateNotifier.loggedIn ? const AnalyticsWidget() : const LoginWidget(),
         errorRoute: state.uri.toString(),
       ),
       routes: [
@@ -92,274 +85,274 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: '_initialize',
           path: '/',
           builder: (context, _) => RootPageContext.wrap(
-            appStateNotifier.loggedIn ? AnalyticsWidget() : LoginWidget(),
+            appStateNotifier.loggedIn ? const AnalyticsWidget() : const LoginWidget(),
           ),
         ),
         FFRoute(
           name: 'Chat',
           path: '/chat',
-          builder: (context, params) => ChatWidget(),
+          builder: (context, params) => const ChatWidget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'ComingSoon',
           path: '/comingSoon',
-          builder: (context, params) => ComingSoonWidget(),
+          builder: (context, params) => const ComingSoonWidget(),
         ),
         FFRoute(
           name: 'Register',
           path: '/register',
-          builder: (context, params) => RegisterWidget(),
+          builder: (context, params) => const RegisterWidget(),
         ),
         FFRoute(
           name: 'LoginCover',
           path: '/loginCover',
-          builder: (context, params) => LoginCoverWidget(),
+          builder: (context, params) => const LoginCoverWidget(),
         ),
         FFRoute(
           name: 'Register_MultiStep',
           path: '/registerMultiStep',
-          builder: (context, params) => RegisterMultiStepWidget(),
+          builder: (context, params) => const RegisterMultiStepWidget(),
         ),
         FFRoute(
           name: 'RegisterCover',
           path: '/registerCover',
-          builder: (context, params) => RegisterCoverWidget(),
+          builder: (context, params) => const RegisterCoverWidget(),
         ),
         FFRoute(
           name: 'Verify_Email',
           path: '/verifyEmail',
-          builder: (context, params) => VerifyEmailWidget(),
+          builder: (context, params) => const VerifyEmailWidget(),
         ),
         FFRoute(
           name: 'VerifyEmail_Cover',
           path: '/verifyEmailCover',
-          builder: (context, params) => VerifyEmailCoverWidget(),
+          builder: (context, params) => const VerifyEmailCoverWidget(),
         ),
         FFRoute(
           name: 'ResetPassword',
           path: '/resetPassword',
-          builder: (context, params) => ResetPasswordWidget(),
+          builder: (context, params) => const ResetPasswordWidget(),
         ),
         FFRoute(
           name: 'ResetPassword_Cover',
           path: '/resetPasswordCover',
-          builder: (context, params) => ResetPasswordCoverWidget(),
+          builder: (context, params) => const ResetPasswordCoverWidget(),
         ),
         FFRoute(
           name: 'Analytics',
           path: '/analytics',
           requireAuth: true,
-          builder: (context, params) => AnalyticsWidget(),
+          builder: (context, params) => const AnalyticsWidget(),
         ),
         FFRoute(
           name: 'ForgotPassword',
           path: '/forgotPassword',
-          builder: (context, params) => ForgotPasswordWidget(),
+          builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
           name: 'ForgotPassword_Cover',
           path: '/forgotPasswordCover',
-          builder: (context, params) => ForgotPasswordCoverWidget(),
+          builder: (context, params) => const ForgotPasswordCoverWidget(),
         ),
         FFRoute(
           name: 'TowStepVerification',
           path: '/towStepVerification',
-          builder: (context, params) => TowStepVerificationWidget(),
+          builder: (context, params) => const TowStepVerificationWidget(),
         ),
         FFRoute(
           name: 'TwoStepVerrication_Cover',
           path: '/twoStepVerricationCover',
-          builder: (context, params) => TwoStepVerricationCoverWidget(),
+          builder: (context, params) => const TwoStepVerricationCoverWidget(),
         ),
         FFRoute(
           name: 'CRM',
           path: '/CRM',
-          builder: (context, params) => CrmWidget(),
+          builder: (context, params) => const CrmWidget(),
         ),
         FFRoute(
           name: 'eCommerce',
           path: '/eCommerce',
-          builder: (context, params) => ECommerceWidget(),
+          builder: (context, params) => const ECommerceWidget(),
         ),
         FFRoute(
           name: 'Logistics',
           path: '/Logistics',
-          builder: (context, params) => LogisticsWidget(),
+          builder: (context, params) => const LogisticsWidget(),
         ),
         FFRoute(
           name: 'Academy',
           path: '/Academy',
-          builder: (context, params) => AcademyWidget(),
+          builder: (context, params) => const AcademyWidget(),
         ),
         FFRoute(
           name: 'Email',
           path: '/Email',
-          builder: (context, params) => EmailWidget(),
+          builder: (context, params) => const EmailWidget(),
         ),
         FFRoute(
           name: 'Kanban',
           path: '/kanban',
-          builder: (context, params) => KanbanWidget(),
+          builder: (context, params) => const KanbanWidget(),
         ),
         FFRoute(
           name: 'Calender',
           path: '/Calender',
-          builder: (context, params) => CalenderWidget(),
+          builder: (context, params) => const CalenderWidget(),
         ),
         FFRoute(
           name: 'Product_List',
           path: '/Product_List',
-          builder: (context, params) => ProductListWidget(),
+          builder: (context, params) => const ProductListWidget(),
         ),
         FFRoute(
           name: 'Add_Product',
           path: '/Add_Product',
-          builder: (context, params) => AddProductWidget(),
+          builder: (context, params) => const AddProductWidget(),
         ),
         FFRoute(
           name: 'Categories',
           path: '/categories',
-          builder: (context, params) => CategoriesWidget(),
+          builder: (context, params) => const CategoriesWidget(),
         ),
         FFRoute(
           name: 'Order_List',
           path: '/Order_List',
-          builder: (context, params) => OrderListWidget(),
+          builder: (context, params) => const OrderListWidget(),
         ),
         FFRoute(
           name: 'Order_Details',
           path: '/Order_Details',
-          builder: (context, params) => OrderDetailsWidget(),
+          builder: (context, params) => const OrderDetailsWidget(),
         ),
         FFRoute(
           name: 'All_Customer',
           path: '/All_Customer',
-          builder: (context, params) => AllCustomerWidget(),
+          builder: (context, params) => const AllCustomerWidget(),
         ),
         FFRoute(
           name: 'Customer_Details',
           path: '/Customer_Details',
-          builder: (context, params) => CustomerDetailsWidget(),
+          builder: (context, params) => const CustomerDetailsWidget(),
         ),
         FFRoute(
           name: 'Manage_Reviews',
           path: '/Manage_Reviews',
-          builder: (context, params) => ManageReviewsWidget(),
+          builder: (context, params) => const ManageReviewsWidget(),
         ),
         FFRoute(
           name: 'Referrals',
           path: '/Referrals',
-          builder: (context, params) => ReferralsWidget(),
+          builder: (context, params) => const ReferralsWidget(),
         ),
         FFRoute(
           name: 'Settings',
           path: '/Settings',
-          builder: (context, params) => SettingsWidget(),
+          builder: (context, params) => const SettingsWidget(),
         ),
         FFRoute(
           name: 'MyCourses',
           path: '/MyCourses',
-          builder: (context, params) => MyCoursesWidget(),
+          builder: (context, params) => const MyCoursesWidget(),
         ),
         FFRoute(
           name: 'Course_Details',
           path: '/Course_Details',
-          builder: (context, params) => CourseDetailsWidget(),
+          builder: (context, params) => const CourseDetailsWidget(),
         ),
         FFRoute(
           name: 'Logistics_Fleet',
           path: '/Logistics_Fleet',
-          builder: (context, params) => LogisticsFleetWidget(),
+          builder: (context, params) => const LogisticsFleetWidget(),
         ),
         FFRoute(
           name: 'lnvoice_List',
           path: '/lnvoice_List',
-          builder: (context, params) => LnvoiceListWidget(),
+          builder: (context, params) => const LnvoiceListWidget(),
         ),
         FFRoute(
           name: 'Invoice_Preview',
           path: '/Invoice_Preview',
-          builder: (context, params) => InvoicePreviewWidget(),
+          builder: (context, params) => const InvoicePreviewWidget(),
         ),
         FFRoute(
           name: 'Invoice_Edit',
           path: '/Invoice_Edit',
-          builder: (context, params) => InvoiceEditWidget(),
+          builder: (context, params) => const InvoiceEditWidget(),
         ),
         FFRoute(
           name: 'Invoice_Add',
           path: '/Invoice_Add',
-          builder: (context, params) => InvoiceAddWidget(),
+          builder: (context, params) => const InvoiceAddWidget(),
         ),
         FFRoute(
           name: 'Users',
           path: '/User_List',
-          builder: (context, params) => UsersWidget(),
+          builder: (context, params) => const UsersWidget(),
         ),
         FFRoute(
           name: 'Users_Account',
           path: '/Users_Account',
-          builder: (context, params) => UsersAccountWidget(),
+          builder: (context, params) => const UsersAccountWidget(),
         ),
         FFRoute(
           name: 'Roles',
           path: '/Roles',
-          builder: (context, params) => RolesWidget(),
+          builder: (context, params) => const RolesWidget(),
         ),
         FFRoute(
           name: 'Permissions',
           path: '/Permissions',
-          builder: (context, params) => PermissionsWidget(),
+          builder: (context, params) => const PermissionsWidget(),
         ),
         FFRoute(
           name: 'Profile',
           path: '/Profile',
-          builder: (context, params) => ProfileWidget(),
+          builder: (context, params) => const ProfileWidget(),
         ),
         FFRoute(
           name: 'Account',
           path: '/Account',
-          builder: (context, params) => AccountWidget(),
+          builder: (context, params) => const AccountWidget(),
         ),
         FFRoute(
           name: 'FAQ',
           path: '/FAQ',
-          builder: (context, params) => FaqWidget(),
+          builder: (context, params) => const FaqWidget(),
         ),
         FFRoute(
           name: 'Pricing',
           path: '/Pricing',
-          builder: (context, params) => PricingWidget(),
+          builder: (context, params) => const PricingWidget(),
         ),
         FFRoute(
           name: 'ErrorPage',
           path: '/errorPage',
-          builder: (context, params) => ErrorPageWidget(),
+          builder: (context, params) => const ErrorPageWidget(),
         ),
         FFRoute(
           name: 'Under_Maintenance',
           path: '/Under_Maintenance',
-          builder: (context, params) => UnderMaintenanceWidget(),
+          builder: (context, params) => const UnderMaintenanceWidget(),
         ),
         FFRoute(
           name: 'Not_Authorized',
           path: '/Not_Authorized',
-          builder: (context, params) => NotAuthorizedWidget(),
+          builder: (context, params) => const NotAuthorizedWidget(),
         ),
         FFRoute(
           name: 'Checkout',
           path: '/Checkout',
-          builder: (context, params) => CheckoutWidget(),
+          builder: (context, params) => const CheckoutWidget(),
         ),
         FFRoute(
           name: 'CreateDeal',
           path: '/CreateDeal',
-          builder: (context, params) => CreateDealWidget(),
+          builder: (context, params) => const CreateDealWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -600,7 +593,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

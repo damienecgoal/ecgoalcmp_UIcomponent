@@ -4,14 +4,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'warning_delete_model.dart';
 export 'warning_delete_model.dart';
@@ -48,8 +43,8 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
             curve: Curves.elasticOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.5, 0.5),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.5, 0.5),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -80,7 +75,7 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
             delay: 200.0.ms,
             duration: 400.0.ms,
             hz: 2,
-            offset: Offset(0.0, 0.0),
+            offset: const Offset(0.0, 0.0),
             rotation: 0.349,
           ),
         ],
@@ -100,13 +95,13 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 600.0,
         height: 400.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -117,13 +112,13 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: Container(
                   width: 100.0,
                   height: 100.0,
@@ -136,7 +131,7 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: SvgPicture.asset(
                       'assets/images/Group_1.svg',
                       width: 20.0,
@@ -178,16 +173,16 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                         builder: (context) => FFButtonWidget(
                           onPressed: () async {
                             showDialog(
-                              barrierColor: Color(0x34000000),
+                              barrierColor: const Color(0x34000000),
                               context: context,
                               builder: (dialogContext) {
                                 return Dialog(
                                   elevation: 0,
                                   insetPadding: EdgeInsets.zero,
                                   backgroundColor: Colors.transparent,
-                                  alignment: AlignmentDirectional(0.0, 0.0)
+                                  alignment: const AlignmentDirectional(0.0, 0.0)
                                       .resolve(Directionality.of(context)),
-                                  child: WebViewAware(
+                                  child: const WebViewAware(
                                     child: RemovedWidget(),
                                   ),
                                 );
@@ -197,9 +192,9 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                           text: 'Yes, Delete customer!',
                           options: FFButtonOptions(
                             height: 44.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -210,7 +205,7 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 0.0,
                             ),
@@ -223,16 +218,16 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                           onPressed: () async {
                             context.pop();
                             showDialog(
-                              barrierColor: Color(0x34000000),
+                              barrierColor: const Color(0x34000000),
                               context: context,
                               builder: (dialogContext) {
                                 return Dialog(
                                   elevation: 0,
                                   insetPadding: EdgeInsets.zero,
                                   backgroundColor: Colors.transparent,
-                                  alignment: AlignmentDirectional(0.0, 0.0)
+                                  alignment: const AlignmentDirectional(0.0, 0.0)
                                       .resolve(Directionality.of(context)),
-                                  child: WebViewAware(
+                                  child: const WebViewAware(
                                     child: CancelledWidget(),
                                   ),
                                 );
@@ -242,11 +237,11 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                           text: 'Cancel',
                           options: FFButtonOptions(
                             height: 44.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0x33A8AAAE),
+                            color: const Color(0x33A8AAAE),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -255,7 +250,7 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 0.0,
                             ),
@@ -263,9 +258,9 @@ class _WarningDeleteWidgetState extends State<WarningDeleteWidget>
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 16.0)),
+                    ].divide(const SizedBox(width: 16.0)),
                   ),
-                ].divide(SizedBox(height: 24.0)),
+                ].divide(const SizedBox(height: 24.0)),
               ),
             ],
           ),

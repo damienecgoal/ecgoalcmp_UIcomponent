@@ -2,10 +2,7 @@ import '/components/edit_popup/edit_permission/edit_permission_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'permissions_list_model.dart';
 export 'permissions_list_model.dart';
@@ -57,12 +54,12 @@ class _PermissionsListWidgetState extends State<PermissionsListWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -75,7 +72,7 @@ class _PermissionsListWidgetState extends State<PermissionsListWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.name,
+                          widget.name,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,12 +96,12 @@ class _PermissionsListWidgetState extends State<PermissionsListWidget> {
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.status!,
-                          titleColor: widget!.color!,
-                          bgColor: widget!.bg!,
+                          title: widget.status!,
+                          titleColor: widget.color!,
+                          bgColor: widget.bg!,
                         ),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
                 ),
                 Expanded(
@@ -116,7 +113,7 @@ class _PermissionsListWidgetState extends State<PermissionsListWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.date,
+                          widget.date,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -144,16 +141,16 @@ class _PermissionsListWidgetState extends State<PermissionsListWidget> {
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             showDialog(
-                              barrierColor: Color(0x34000000),
+                              barrierColor: const Color(0x34000000),
                               context: context,
                               builder: (dialogContext) {
                                 return Dialog(
                                   elevation: 0,
                                   insetPadding: EdgeInsets.zero,
                                   backgroundColor: Colors.transparent,
-                                  alignment: AlignmentDirectional(0.0, 0.0)
+                                  alignment: const AlignmentDirectional(0.0, 0.0)
                                       .resolve(Directionality.of(context)),
-                                  child: WebViewAware(
+                                  child: const WebViewAware(
                                     child: EditPermissionWidget(),
                                   ),
                                 );
@@ -172,10 +169,10 @@ class _PermissionsListWidgetState extends State<PermissionsListWidget> {
                         color: FlutterFlowTheme.of(context).secondaryTitle,
                         size: 22.0,
                       ),
-                    ].divide(SizedBox(width: 14.0)),
+                    ].divide(const SizedBox(width: 14.0)),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

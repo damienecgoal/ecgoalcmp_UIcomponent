@@ -12,11 +12,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'invoice_add_model.dart';
@@ -47,7 +45,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -105,19 +103,19 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -130,7 +128,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                 clipBehavior: Clip.none,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -163,7 +161,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -178,7 +176,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -196,7 +194,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(40.0, 40.0,
                                                           40.0, 0.0),
                                                   child: Row(
@@ -284,11 +282,11 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       12.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -359,7 +357,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       20.0)),
                                                             ),
@@ -377,6 +375,18 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered1 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Container(
                                                                     width:
@@ -396,7 +406,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               .all(
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered1!
+                                                                          _model.mouseRegionHovered1
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -407,12 +417,12 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             0.0,
                                                                             12.0,
@@ -431,18 +441,6 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered1 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                                 MouseRegion(
                                                                   opaque: false,
@@ -450,6 +448,18 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered2 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered2 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Builder(
                                                                     builder:
@@ -477,9 +487,9 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                           avoidOverflow:
                                                                               false,
                                                                           targetAnchor:
-                                                                              AlignmentDirectional(0.0, 5.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 5.0).resolve(Directionality.of(context)),
                                                                           followerAnchor:
-                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           builder:
                                                                               (dialogContext) {
                                                                             return Material(
@@ -490,7 +500,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                   },
-                                                                                  child: DatePekerWidget(),
+                                                                                  child: const DatePekerWidget(),
                                                                                 ),
                                                                               ),
                                                                             );
@@ -513,19 +523,19 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               Border.all(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered2! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                              _model.mouseRegionHovered2 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                             ),
                                                                           ),
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -544,18 +554,6 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered2 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered2 =
-                                                                            false);
-                                                                  }),
                                                                 ),
                                                                 MouseRegion(
                                                                   opaque: false,
@@ -563,6 +561,18 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered3 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered3 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       Builder(
                                                                     builder:
@@ -590,9 +600,9 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                           avoidOverflow:
                                                                               false,
                                                                           targetAnchor:
-                                                                              AlignmentDirectional(0.0, 5.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 5.0).resolve(Directionality.of(context)),
                                                                           followerAnchor:
-                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           builder:
                                                                               (dialogContext) {
                                                                             return Material(
@@ -603,7 +613,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                   },
-                                                                                  child: DatePekerWidget(),
+                                                                                  child: const DatePekerWidget(),
                                                                                 ),
                                                                               ),
                                                                             );
@@ -626,19 +636,19 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               Border.all(
                                                                             color:
                                                                                 valueOrDefault<Color>(
-                                                                              _model.mouseRegionHovered3! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                              _model.mouseRegionHovered3 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                             ),
                                                                           ),
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 12.0,
                                                                                 0.0,
                                                                                 12.0,
@@ -657,23 +667,11 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered3 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered3 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 6.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 40.0)),
                                                         ),
                                                       ),
@@ -688,7 +686,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       .lineColor,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           40.0, 0.0, 40.0, 0.0),
                                                   child: Row(
@@ -730,7 +728,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  FiveTextListWidget(
+                                                                  const FiveTextListWidget(
                                                                 details1:
                                                                     'Thomas shelby',
                                                                 details2:
@@ -743,7 +741,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                     'peakyFBlinders@gmail.com',
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -784,7 +782,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      FiveTextListWidget(
+                                                                      const FiveTextListWidget(
                                                                     details1:
                                                                         'Total Due:',
                                                                     details2:
@@ -804,7 +802,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      FiveTextListWidget(
+                                                                      const FiveTextListWidget(
                                                                     details1:
                                                                         '\t\$12,110.55',
                                                                     details2:
@@ -817,10 +815,10 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                         '\tBR91905',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -835,7 +833,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       .lineColor,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           40.0, 0.0, 40.0, 0.0),
                                                   child: Column(
@@ -851,7 +849,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         16.0,
@@ -971,7 +969,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           14.0,
                                                                           0.0,
@@ -985,7 +983,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                   Expanded(
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           14.0,
                                                                           0.0,
@@ -1006,9 +1004,15 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered4 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered4 = false);
+                                                                                }),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.dropDownValueController1 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'App Design',
                                                                                     'App customization',
                                                                                     'ABC Template',
@@ -1042,25 +1046,19 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                   fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                   elevation: 3.0,
                                                                                   borderColor: valueOrDefault<Color>(
-                                                                                    _model.mouseRegionHovered4! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                    _model.mouseRegionHovered4 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                   ),
                                                                                   borderWidth: 1.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: true,
                                                                                   isMultiSelect: false,
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered4 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered4 = false);
-                                                                                }),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                           ),
                                                                           Column(
                                                                             mainAxisSize:
@@ -1072,12 +1070,18 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered5 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered5 = false);
+                                                                                }),
                                                                                 child: Container(
                                                                                   decoration: BoxDecoration(
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                     border: Border.all(
                                                                                       color: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered5! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered5 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       width: 1.0,
@@ -1110,7 +1114,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                           focusedBorder: InputBorder.none,
                                                                                           errorBorder: InputBorder.none,
                                                                                           focusedErrorBorder: InputBorder.none,
-                                                                                          contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
+                                                                                          contentPadding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
                                                                                         ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Public Sans',
@@ -1121,26 +1125,20 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                         maxLines: 2,
                                                                                         validator: _model.textController1Validator.asValidator(context),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 12.0)),
+                                                                                    ].divide(const SizedBox(height: 12.0)),
                                                                                   ),
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered5 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered5 = false);
-                                                                                }),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 14.0)),
+                                                                        ].divide(const SizedBox(height: 14.0)),
                                                                       ),
                                                                     ),
                                                                   ),
                                                                   Expanded(
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           14.0,
                                                                           0.0,
@@ -1168,6 +1166,12 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered6 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered6 = false);
+                                                                                      }),
                                                                                       child: TextFormField(
                                                                                         controller: _model.textController2,
                                                                                         focusNode: _model.textFieldFocusNode2,
@@ -1191,7 +1195,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                           enabledBorder: OutlineInputBorder(
                                                                                             borderSide: BorderSide(
                                                                                               color: valueOrDefault<Color>(
-                                                                                                _model.mouseRegionHovered6! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                _model.mouseRegionHovered6 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                                               ),
                                                                                               width: 1.0,
@@ -1219,7 +1223,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                             ),
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                           ),
-                                                                                          contentPadding: EdgeInsets.all(14.0),
+                                                                                          contentPadding: const EdgeInsets.all(14.0),
                                                                                         ),
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Public Sans',
@@ -1229,14 +1233,8 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                             ),
                                                                                         validator: _model.textController2Validator.asValidator(context),
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered6 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered6 = false);
-                                                                                      }),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 8.0)),
+                                                                                  ].divide(const SizedBox(height: 8.0)),
                                                                                 ),
                                                                                 Text(
                                                                                   'Discount: 0% 0% 0%',
@@ -1247,7 +1245,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 14.0)),
+                                                                              ].divide(const SizedBox(height: 14.0)),
                                                                             ),
                                                                           ),
                                                                           Expanded(
@@ -1270,6 +1268,12 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                           MouseRegion(
                                                                                             opaque: false,
                                                                                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                            onEnter: ((event) async {
+                                                                                              safeSetState(() => _model.mouseRegionHovered7 = true);
+                                                                                            }),
+                                                                                            onExit: ((event) async {
+                                                                                              safeSetState(() => _model.mouseRegionHovered7 = false);
+                                                                                            }),
                                                                                             child: TextFormField(
                                                                                               controller: _model.textController3,
                                                                                               focusNode: _model.textFieldFocusNode3,
@@ -1294,7 +1298,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                                 enabledBorder: OutlineInputBorder(
                                                                                                   borderSide: BorderSide(
                                                                                                     color: valueOrDefault<Color>(
-                                                                                                      _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                      _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                       FlutterFlowTheme.of(context).lineColor,
                                                                                                     ),
                                                                                                     width: 1.0,
@@ -1322,7 +1326,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                                   ),
                                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                                 ),
-                                                                                                contentPadding: EdgeInsets.all(14.0),
+                                                                                                contentPadding: const EdgeInsets.all(14.0),
                                                                                               ),
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                     fontFamily: 'Public Sans',
@@ -1332,14 +1336,8 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                                   ),
                                                                                               validator: _model.textController3Validator.asValidator(context),
                                                                                             ),
-                                                                                            onEnter: ((event) async {
-                                                                                              safeSetState(() => _model.mouseRegionHovered7 = true);
-                                                                                            }),
-                                                                                            onExit: ((event) async {
-                                                                                              safeSetState(() => _model.mouseRegionHovered7 = false);
-                                                                                            }),
                                                                                           ),
-                                                                                        ].divide(SizedBox(height: 8.0)),
+                                                                                        ].divide(const SizedBox(height: 8.0)),
                                                                                       ),
                                                                                     ],
                                                                                   ),
@@ -1356,10 +1354,10 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                         ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 20.0)),
+                                                                              ].divide(const SizedBox(width: 20.0)),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -1383,7 +1381,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       ),
                                                                       Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(8.0),
+                                                                            const EdgeInsets.all(8.0),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -1407,8 +1405,8 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                     context: context,
                                                                                     isGlobal: false,
                                                                                     avoidOverflow: false,
-                                                                                    targetAnchor: AlignmentDirectional(0.0, 5.0).resolve(Directionality.of(context)),
-                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    targetAnchor: const AlignmentDirectional(0.0, 5.0).resolve(Directionality.of(context)),
+                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     builder: (dialogContext) {
                                                                                       return Material(
                                                                                         color: Colors.transparent,
@@ -1418,7 +1416,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                             },
-                                                                                            child: DiscountWidget(),
+                                                                                            child: const DiscountWidget(),
                                                                                           ),
                                                                                         ),
                                                                                       );
@@ -1437,7 +1435,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -1455,14 +1453,14 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                             FFButtonOptions(
                                                           height: 40.0,
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1485,7 +1483,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -1497,7 +1495,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                 ),
                                                 Divider(
@@ -1508,7 +1506,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       .lineColor,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           40.0, 0.0, 40.0, 0.0),
                                                   child: Row(
@@ -1570,6 +1568,14 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                 false,
                                                                             cursor:
                                                                                 MouseCursor.defer ?? MouseCursor.defer,
+                                                                            onEnter:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered8 = true);
+                                                                            }),
+                                                                            onExit:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered8 = false);
+                                                                            }),
                                                                             child:
                                                                                 TextFormField(
                                                                               controller: _model.textController4,
@@ -1594,7 +1600,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                 enabledBorder: OutlineInputBorder(
                                                                                   borderSide: BorderSide(
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered8! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                      _model.mouseRegionHovered8 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                       FlutterFlowTheme.of(context).lineColor,
                                                                                     ),
                                                                                     width: 1.0,
@@ -1622,7 +1628,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                   ),
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                 ),
-                                                                                contentPadding: EdgeInsets.all(14.0),
+                                                                                contentPadding: const EdgeInsets.all(14.0),
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
@@ -1632,21 +1638,13 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                   ),
                                                                               validator: _model.textController4Validator.asValidator(context),
                                                                             ),
-                                                                            onEnter:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered8 = true);
-                                                                            }),
-                                                                            onExit:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered8 = false);
-                                                                            }),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 8.0)),
+                                                                        ].divide(const SizedBox(height: 8.0)),
                                                                       ),
                                                                     ],
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 32.0)),
                                                             ),
                                                             Row(
@@ -1666,6 +1664,16 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered9 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered9 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -1699,7 +1707,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -1731,7 +1739,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                             contentPadding:
-                                                                                EdgeInsets.all(14.0),
+                                                                                const EdgeInsets.all(14.0),
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
@@ -1745,24 +1753,14 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                               .textController5Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered9 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered9 = false);
-                                                                        }),
                                                                       ),
                                                                     ],
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 32.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 10.0)),
                                                         ),
                                                       ),
@@ -1778,7 +1776,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                             Container(
                                                               width: 180.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1920,7 +1918,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         14.0)),
                                                               ),
@@ -1939,7 +1937,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       .lineColor,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(40.0, 0.0, 40.0,
                                                           40.0),
                                                   child: Row(
@@ -1973,6 +1971,18 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                       .defer ??
                                                                   MouseCursor
                                                                       .defer,
+                                                              onEnter:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered10 =
+                                                                        true);
+                                                              }),
+                                                              onExit:
+                                                                  ((event) async {
+                                                                safeSetState(() =>
+                                                                    _model.mouseRegionHovered10 =
+                                                                        false);
+                                                              }),
                                                               child:
                                                                   TextFormField(
                                                                 controller: _model
@@ -2020,7 +2030,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                         BorderSide(
                                                                       color: valueOrDefault<
                                                                           Color>(
-                                                                        _model.mouseRegionHovered10!
+                                                                        _model.mouseRegionHovered10
                                                                             ? FlutterFlowTheme.of(context).secondaryText
                                                                             : FlutterFlowTheme.of(context).lineColor,
                                                                         FlutterFlowTheme.of(context)
@@ -2076,7 +2086,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                             8.0),
                                                                   ),
                                                                   contentPadding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               14.0),
                                                                 ),
@@ -2100,28 +2110,16 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                     .asValidator(
                                                                         context),
                                                               ),
-                                                              onEnter:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered10 =
-                                                                        true);
-                                                              }),
-                                                              onExit:
-                                                                  ((event) async {
-                                                                safeSetState(() =>
-                                                                    _model.mouseRegionHovered10 =
-                                                                        false);
-                                                              }),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 6.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 32.0)),
+                                                        const SizedBox(width: 32.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 40.0)),
+                                              ].divide(const SizedBox(height: 40.0)),
                                             ),
                                           ),
                                         ),
@@ -2136,7 +2134,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -2152,7 +2150,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2162,7 +2160,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                             FFButtonWidget(
                                                           onPressed: () async {
                                                             await showDialog(
-                                                              barrierColor: Color(
+                                                              barrierColor: const Color(
                                                                   0x34000000),
                                                               context: context,
                                                               builder:
@@ -2175,7 +2173,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                   backgroundColor:
                                                                       Colors
                                                                           .transparent,
-                                                                  alignment: AlignmentDirectional(
+                                                                  alignment: const AlignmentDirectional(
                                                                           1.0,
                                                                           0.0)
                                                                       .resolve(
@@ -2195,7 +2193,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          SendInvoiceWidget(),
+                                                                          const SendInvoiceWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -2203,7 +2201,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                             );
                                                           },
                                                           text: 'Send Invoice',
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             FFIcons.ksend2,
                                                             color: Colors.white,
                                                             size: 22.0,
@@ -2214,14 +2212,14 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                 double.infinity,
                                                             height: 40.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -2244,7 +2242,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2263,7 +2261,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:
-                                                                  TransitionInfo(
+                                                                  const TransitionInfo(
                                                                 hasTransition:
                                                                     true,
                                                                 transitionType:
@@ -2280,21 +2278,21 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                               double.infinity,
                                                           height: 40.0,
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
                                                                       4.0,
                                                                       0.0),
                                                           color:
-                                                              Color(0x33A8AAAE),
+                                                              const Color(0x33A8AAAE),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -2310,7 +2308,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                   ),
                                                           elevation: 0.0,
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 0.0,
@@ -2333,21 +2331,21 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                               double.infinity,
                                                           height: 40.0,
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
                                                                       4.0,
                                                                       0.0),
                                                           color:
-                                                              Color(0x33A8AAAE),
+                                                              const Color(0x33A8AAAE),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -2363,7 +2361,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                                   ),
                                                           elevation: 0.0,
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 0.0,
@@ -2375,7 +2373,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                               ),
@@ -2403,13 +2401,23 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered11 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered11 =
+                                                          false);
+                                                    }),
                                                     child: FlutterFlowDropDown<
                                                         String>(
                                                       controller: _model
                                                               .dropDownValueController2 ??=
                                                           FormFieldController<
                                                               String>(null),
-                                                      options: [
+                                                      options: const [
                                                         'Bank Account',
                                                         'Paypal',
                                                         'Credit/Devit Card',
@@ -2476,7 +2484,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       elevation: 3.0,
                                                       borderColor:
                                                           valueOrDefault<Color>(
-                                                        _model.mouseRegionHovered11!
+                                                        _model.mouseRegionHovered11
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .secondaryText
@@ -2490,7 +2498,7 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       borderWidth: 1.0,
                                                       borderRadius: 8.0,
                                                       margin:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   4.0,
@@ -2501,18 +2509,8 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                       isSearchable: true,
                                                       isMultiSelect: false,
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered11 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered11 =
-                                                          false);
-                                                    }),
                                                   ),
-                                                ].divide(SizedBox(height: 8.0)),
+                                                ].divide(const SizedBox(height: 8.0)),
                                               ),
                                               Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -2662,37 +2660,37 @@ class _InvoiceAddWidgetState extends State<InvoiceAddWidget> {
                                                     ],
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 12.0)),
+                                                    const SizedBox(height: 12.0)),
                                               ),
-                                            ].divide(SizedBox(height: 24.0)),
+                                            ].divide(const SizedBox(height: 24.0)),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

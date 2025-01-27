@@ -12,8 +12,6 @@ import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'search_bar_model.dart';
 export 'search_bar_model.dart';
@@ -65,13 +63,13 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(28.0, 18.0, 28.0, 12.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(28.0, 18.0, 28.0, 12.0),
               child: Container(
                 width: double.infinity,
                 height: 66.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 4.0,
                       color: Color(0x19000000),
@@ -87,7 +85,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                   builder: (context) {
                     if (_model.searchActive) {
                       return Stack(
-                        alignment: AlignmentDirectional(1.0, 0.0),
+                        alignment: const AlignmentDirectional(1.0, 0.0),
                         children: [
                           TextFormField(
                             controller: _model.textController,
@@ -113,7 +111,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                               focusedBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               focusedErrorBorder: InputBorder.none,
-                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 24.0, 24.0, 24.0),
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -126,7 +124,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                 .asValidator(context),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderRadius: 20.0,
@@ -147,7 +145,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                       );
                     } else {
                       return Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -180,7 +178,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 12.0)),
+                                  ].divide(const SizedBox(width: 12.0)),
                                 ),
                               ),
                             ),
@@ -206,11 +204,11 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                     },
                                   ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width: 46.0,
                                     height: 46.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Builder(
                                       builder: (context) => InkWell(
                                         splashColor: Colors.transparent,
@@ -223,16 +221,16 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                             context: context,
                                             isGlobal: false,
                                             avoidOverflow: true,
-                                            targetAnchor: AlignmentDirectional(
+                                            targetAnchor: const AlignmentDirectional(
                                                     1.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                             followerAnchor:
-                                                AlignmentDirectional(1.0, -1.0)
+                                                const AlignmentDirectional(1.0, -1.0)
                                                     .resolve(Directionality.of(
                                                         context)),
                                             builder: (dialogContext) {
-                                              return Material(
+                                              return const Material(
                                                 color: Colors.transparent,
                                                 child: WebViewAware(
                                                   child:
@@ -253,11 +251,11 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width: 46.0,
                                     height: 46.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Builder(
                                       builder: (context) => InkWell(
                                         splashColor: Colors.transparent,
@@ -270,16 +268,16 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                             context: context,
                                             isGlobal: false,
                                             avoidOverflow: true,
-                                            targetAnchor: AlignmentDirectional(
+                                            targetAnchor: const AlignmentDirectional(
                                                     1.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                             followerAnchor:
-                                                AlignmentDirectional(1.0, -1.0)
+                                                const AlignmentDirectional(1.0, -1.0)
                                                     .resolve(Directionality.of(
                                                         context)),
                                             builder: (dialogContext) {
-                                              return Material(
+                                              return const Material(
                                                 color: Colors.transparent,
                                                 child: WebViewAware(
                                                   child: DarkModeNodalWidget(),
@@ -299,11 +297,11 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Container(
                                     width: 46.0,
                                     height: 46.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Builder(
                                       builder: (context) => InkWell(
                                         splashColor: Colors.transparent,
@@ -316,16 +314,16 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                             context: context,
                                             isGlobal: false,
                                             avoidOverflow: true,
-                                            targetAnchor: AlignmentDirectional(
+                                            targetAnchor: const AlignmentDirectional(
                                                     1.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                             followerAnchor:
-                                                AlignmentDirectional(1.0, -1.0)
+                                                const AlignmentDirectional(1.0, -1.0)
                                                     .resolve(Directionality.of(
                                                         context)),
                                             builder: (dialogContext) {
-                                              return Material(
+                                              return const Material(
                                                 color: Colors.transparent,
                                                 child: WebViewAware(
                                                   child: ShorcutsNodalWidget(),
@@ -357,15 +355,15 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                         isGlobal: false,
                                         avoidOverflow: true,
                                         targetAnchor:
-                                            AlignmentDirectional(1.0, -1.0)
+                                            const AlignmentDirectional(1.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         followerAnchor:
-                                            AlignmentDirectional(1.0, -1.0)
+                                            const AlignmentDirectional(1.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         builder: (dialogContext) {
-                                          return Material(
+                                          return const Material(
                                             color: Colors.transparent,
                                             child: WebViewAware(
                                               child: NotificationNodalWidget(),
@@ -374,16 +372,16 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                         },
                                       );
                                     },
-                                    child: Container(
+                                    child: SizedBox(
                                       width: 46.0,
                                       height: 46.0,
                                       child: Stack(
                                         alignment:
-                                            AlignmentDirectional(0.9, -0.9),
+                                            const AlignmentDirectional(0.9, -0.9),
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Icon(
                                               FFIcons.kbell,
                                               color:
@@ -402,7 +400,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                               shape: BoxShape.circle,
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
                                               '5',
                                               style:
@@ -435,16 +433,16 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                           context: context,
                                           isGlobal: false,
                                           avoidOverflow: true,
-                                          targetAnchor: AlignmentDirectional(
+                                          targetAnchor: const AlignmentDirectional(
                                                   1.0, -1.0)
                                               .resolve(
                                                   Directionality.of(context)),
-                                          followerAnchor: AlignmentDirectional(
+                                          followerAnchor: const AlignmentDirectional(
                                                   1.0, -1.0)
                                               .resolve(
                                                   Directionality.of(context)),
                                           builder: (dialogContext) {
-                                            return Material(
+                                            return const Material(
                                               color: Colors.transparent,
                                               child: WebViewAware(
                                                 child: ProfileNodalWidget(),
@@ -468,7 +466,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(width: 8.0)),
+                              ].divide(const SizedBox(width: 8.0)),
                             ),
                           ],
                         ),
@@ -478,7 +476,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                 ),
               ),
             ),
-          ].divide(SizedBox(height: 8.0)),
+          ].divide(const SizedBox(height: 8.0)),
         ),
       ),
     );

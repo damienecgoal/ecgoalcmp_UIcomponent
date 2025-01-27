@@ -1,10 +1,7 @@
 import '/components/avatar_2/avatar2_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'avatar_title_model.dart';
 export 'avatar_title_model.dart';
 
@@ -53,7 +50,7 @@ class _AvatarTitleWidgetState extends State<AvatarTitleWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -61,9 +58,9 @@ class _AvatarTitleWidgetState extends State<AvatarTitleWidget> {
             model: _model.avatar2Model,
             updateCallback: () => safeSetState(() {}),
             child: Avatar2Widget(
-              diameter: widget!.size!,
-              image: widget!.avatar!,
-              name: widget!.name!,
+              diameter: widget.size!,
+              image: widget.avatar!,
+              name: widget.name!,
             ),
           ),
           Column(
@@ -72,7 +69,7 @@ class _AvatarTitleWidgetState extends State<AvatarTitleWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.name,
+                  widget.name,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -85,7 +82,7 @@ class _AvatarTitleWidgetState extends State<AvatarTitleWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.description,
+                  widget.description,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -96,9 +93,9 @@ class _AvatarTitleWidgetState extends State<AvatarTitleWidget> {
                       fontWeight: FontWeight.normal,
                     ),
               ),
-            ].divide(SizedBox(height: 4.0)),
+            ].divide(const SizedBox(height: 4.0)),
           ),
-        ].divide(SizedBox(width: 8.0)),
+        ].divide(const SizedBox(width: 8.0)),
       ),
     );
   }

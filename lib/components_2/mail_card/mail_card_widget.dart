@@ -2,10 +2,7 @@ import '/backend/schema/structs/index.dart';
 import '/components_2/user_card/user_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'mail_card_model.dart';
 export 'mail_card_model.dart';
 
@@ -62,13 +59,19 @@ class _MailCardWidgetState extends State<MailCardWidget> {
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
+      onEnter: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = false);
+      }),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Material(
             color: Colors.transparent,
             elevation: valueOrDefault<double>(
-              _model.mouseRegionHovered! ? 3.0 : 0.0,
+              _model.mouseRegionHovered ? 3.0 : 0.0,
               0.0,
             ),
             child: Container(
@@ -76,7 +79,7 @@ class _MailCardWidgetState extends State<MailCardWidget> {
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 14.0, 20.0, 14.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 14.0, 20.0, 14.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -137,15 +140,15 @@ class _MailCardWidgetState extends State<MailCardWidget> {
                       model: _model.userCardModel,
                       updateCallback: () => safeSetState(() {}),
                       child: UserCardWidget(
-                        avatar: widget!.avatar!,
-                        name: widget!.sender!,
-                        color: widget!.color!,
+                        avatar: widget.avatar!,
+                        name: widget.sender!,
+                        color: widget.color!,
                       ),
                     ),
                     Expanded(
                       child: Text(
                         valueOrDefault<String>(
-                          widget!.message,
+                          widget.message,
                           'NA',
                         ),
                         maxLines: 1,
@@ -202,7 +205,7 @@ class _MailCardWidgetState extends State<MailCardWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 22.0,
                               ),
-                            ].divide(SizedBox(width: 14.0)),
+                            ].divide(const SizedBox(width: 14.0)),
                           );
                         } else {
                           return Row(
@@ -213,14 +216,14 @@ class _MailCardWidgetState extends State<MailCardWidget> {
                                 height: 8.0,
                                 decoration: BoxDecoration(
                                   color: valueOrDefault<Color>(
-                                    widget!.label?.color,
+                                    widget.label?.color,
                                     FlutterFlowTheme.of(context).success,
                                   ),
                                   shape: BoxShape.circle,
                                 ),
                               ),
                               Text(
-                                dateTimeFormat("jm", widget!.time),
+                                dateTimeFormat("jm", widget.time),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -228,12 +231,12 @@ class _MailCardWidgetState extends State<MailCardWidget> {
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 12.0)),
+                            ].divide(const SizedBox(width: 12.0)),
                           );
                         }
                       },
                     ),
-                  ].divide(SizedBox(width: 12.0)),
+                  ].divide(const SizedBox(width: 12.0)),
                 ),
               ),
             ),
@@ -245,12 +248,6 @@ class _MailCardWidgetState extends State<MailCardWidget> {
           ),
         ],
       ),
-      onEnter: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = false);
-      }),
     );
   }
 }

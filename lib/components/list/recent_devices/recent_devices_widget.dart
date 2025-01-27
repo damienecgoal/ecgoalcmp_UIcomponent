@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'recent_devices_model.dart';
 export 'recent_devices_model.dart';
 
@@ -54,12 +51,12 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -67,15 +64,15 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
                   flex: 6,
                   child: Container(
                     width: 190.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        widget!.icon!,
+                        widget.icon!,
                         Text(
                           valueOrDefault<String>(
-                            widget!.browser,
+                            widget.browser,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -88,7 +85,7 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
                                 letterSpacing: 0.0,
                               ),
                         ),
-                      ].divide(SizedBox(width: 16.0)),
+                      ].divide(const SizedBox(width: 16.0)),
                     ),
                   ),
                 ),
@@ -96,14 +93,14 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
                   flex: 4,
                   child: Container(
                     width: 190.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.device,
+                            widget.device,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -124,14 +121,14 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
                   flex: 3,
                   child: Container(
                     width: 190.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.location,
+                            widget.location,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -152,14 +149,14 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
                   flex: 4,
                   child: Container(
                     width: 190.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.activitis,
+                            widget.activitis,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -176,7 +173,7 @@ class _RecentDevicesWidgetState extends State<RecentDevicesWidget> {
                     ),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

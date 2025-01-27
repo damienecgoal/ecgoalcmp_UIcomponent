@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'browser_states_model.dart';
 export 'browser_states_model.dart';
 
@@ -16,7 +13,7 @@ class BrowserStatesWidget extends StatefulWidget {
     required this.states,
     double? persentage,
     required this.progrescolor,
-  }) : this.persentage = persentage ?? 0.0;
+  }) : persentage = persentage ?? 0.0;
 
   final String? image;
   final String? name;
@@ -55,7 +52,7 @@ class _BrowserStatesWidgetState extends State<BrowserStatesWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -63,11 +60,11 @@ class _BrowserStatesWidgetState extends State<BrowserStatesWidget> {
             width: 32.0,
             height: 32.0,
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
             child: Image.network(
-              widget!.image!,
+              widget.image!,
               fit: BoxFit.cover,
             ),
           ),
@@ -78,7 +75,7 @@ class _BrowserStatesWidgetState extends State<BrowserStatesWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.name,
+                    widget.name,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -91,7 +88,7 @@ class _BrowserStatesWidgetState extends State<BrowserStatesWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.states,
+                    widget.states,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -105,15 +102,15 @@ class _BrowserStatesWidgetState extends State<BrowserStatesWidget> {
             ),
           ),
           CircularPercentIndicator(
-            percent: widget!.persentage,
+            percent: widget.persentage,
             radius: 17.0,
             lineWidth: 3.0,
             animation: true,
             animateFromLastPercent: true,
-            progressColor: widget!.progrescolor,
+            progressColor: widget.progrescolor,
             backgroundColor: FlutterFlowTheme.of(context).lineColor,
           ),
-        ].divide(SizedBox(width: 16.0)),
+        ].divide(const SizedBox(width: 16.0)),
       ),
     );
   }

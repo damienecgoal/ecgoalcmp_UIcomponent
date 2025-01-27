@@ -1,11 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'reset_password_cover_model.dart';
 export 'reset_password_cover_model.dart';
 
@@ -66,7 +63,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
               ))
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(48.0, 48.0, 0.0, 48.0),
+                      const EdgeInsetsDirectional.fromSTEB(48.0, 48.0, 0.0, 48.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(24.0),
                     child: Container(
@@ -77,7 +74,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                         borderRadius: BorderRadius.circular(24.0),
                       ),
                       child: Stack(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
@@ -86,11 +83,11 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                               width: double.infinity,
                               height: 240.0,
                               fit: BoxFit.cover,
-                              alignment: Alignment(-1.0, 0.0),
+                              alignment: const Alignment(-1.0, 0.0),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 128.0, 0.0, 128.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
@@ -109,17 +106,17 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: 500.0,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 800.0,
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(40.0),
+                      padding: const EdgeInsets.all(40.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -168,7 +165,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
-                            ].divide(SizedBox(height: 12.0)),
+                            ].divide(const SizedBox(height: 12.0)),
                           ),
                           Form(
                             key: _model.formKey,
@@ -177,7 +174,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 6.0, 0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -204,6 +201,14 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered1 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered1 = false);
+                                        }),
                                         child: TextFormField(
                                           controller:
                                               _model.passwordTextController1,
@@ -234,7 +239,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                 color: valueOrDefault<Color>(
-                                                  _model.mouseRegionHovered1!
+                                                  _model.mouseRegionHovered1
                                                       ? FlutterFlowTheme.of(
                                                               context)
                                                           .secondaryText
@@ -310,20 +315,12 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                               .passwordTextController1Validator
                                               .asValidator(context),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered1 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered1 = false);
-                                        }),
                                       ),
-                                    ].divide(SizedBox(height: 6.0)),
+                                    ].divide(const SizedBox(height: 6.0)),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 6.0, 0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -350,6 +347,14 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered2 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered2 = false);
+                                        }),
                                         child: TextFormField(
                                           controller:
                                               _model.passwordTextController2,
@@ -380,7 +385,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                 color: valueOrDefault<Color>(
-                                                  _model.mouseRegionHovered2!
+                                                  _model.mouseRegionHovered2
                                                       ? FlutterFlowTheme.of(
                                                               context)
                                                           .secondaryText
@@ -456,16 +461,8 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                               .passwordTextController2Validator
                                               .asValidator(context),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered2 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered2 = false);
-                                        }),
                                       ),
-                                    ].divide(SizedBox(height: 6.0)),
+                                    ].divide(const SizedBox(height: 6.0)),
                                   ),
                                 ),
                                 FFButtonWidget(
@@ -480,9 +477,9 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 44.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -493,7 +490,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -501,7 +498,7 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -527,13 +524,13 @@ class _ResetPasswordCoverWidgetState extends State<ResetPasswordCoverWidget> {
                                               fontWeight: FontWeight.w500,
                                             ),
                                       ),
-                                    ].divide(SizedBox(width: 6.0)),
+                                    ].divide(const SizedBox(width: 6.0)),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 16.0)),
+                              ].divide(const SizedBox(height: 16.0)),
                             ),
                           ),
-                        ].divide(SizedBox(height: 28.0)),
+                        ].divide(const SizedBox(height: 28.0)),
                       ),
                     ),
                   ),

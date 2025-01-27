@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'vehicles_overview_model.dart';
 export 'vehicles_overview_model.dart';
 
@@ -52,12 +49,12 @@ class _VehiclesOverviewWidgetState extends State<VehiclesOverviewWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,10 +64,10 @@ class _VehiclesOverviewWidgetState extends State<VehiclesOverviewWidget> {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      widget!.icon!,
+                      widget.icon!,
                       Text(
                         valueOrDefault<String>(
-                          widget!.title,
+                          widget.title,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -80,14 +77,14 @@ class _VehiclesOverviewWidgetState extends State<VehiclesOverviewWidget> {
                               fontWeight: FontWeight.w500,
                             ),
                       ),
-                    ].divide(SizedBox(width: 8.0)),
+                    ].divide(const SizedBox(width: 8.0)),
                   ),
                 ),
                 Expanded(
                   flex: 7,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.time,
+                      widget.time,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -99,7 +96,7 @@ class _VehiclesOverviewWidgetState extends State<VehiclesOverviewWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.percen,
+                    widget.percen,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(

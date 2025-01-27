@@ -4,11 +4,8 @@ import '/components_2/payment_status/payment_status_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'order_list2_model.dart';
 export 'order_list2_model.dart';
@@ -74,12 +71,12 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -117,7 +114,7 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.id,
+                          widget.id,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -140,7 +137,7 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.date,
+                          widget.date,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -165,8 +162,8 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                         updateCallback: () => safeSetState(() {}),
                         child: Avatar2Widget(
                           diameter: 40.0,
-                          image: widget!.avatar!,
-                          name: widget!.name!,
+                          image: widget.avatar!,
+                          name: widget.name!,
                         ),
                       ),
                       Column(
@@ -176,9 +173,17 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                           MouseRegion(
                             opaque: false,
                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                            onEnter: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered = true);
+                            }),
+                            onExit: ((event) async {
+                              safeSetState(
+                                  () => _model.mouseRegionHovered = false);
+                            }),
                             child: Text(
                               valueOrDefault<String>(
-                                widget!.name,
+                                widget.name,
                                 'na',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -186,7 +191,7 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                                   .override(
                                     fontFamily: 'Public Sans',
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered!
+                                      _model.mouseRegionHovered
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .primaryText,
@@ -196,18 +201,10 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                            onEnter: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = true);
-                            }),
-                            onExit: ((event) async {
-                              safeSetState(
-                                  () => _model.mouseRegionHovered = false);
-                            }),
                           ),
                           Text(
                             valueOrDefault<String>(
-                              widget!.email,
+                              widget.email,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -220,9 +217,9 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(height: 4.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -234,8 +231,8 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                         model: _model.paymentStatusModel,
                         updateCallback: () => safeSetState(() {}),
                         child: PaymentStatusWidget(
-                          status: widget!.paymentStatus!,
-                          color: widget!.paymentcolor!,
+                          status: widget.paymentStatus!,
+                          color: widget.paymentcolor!,
                         ),
                       ),
                     ],
@@ -252,9 +249,9 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.status!,
-                          titleColor: widget!.statusColor!,
-                          bgColor: widget!.statusBG!,
+                          title: widget.status!,
+                          titleColor: widget.statusColor!,
+                          bgColor: widget.statusBG!,
                         ),
                       ),
                     ],
@@ -268,7 +265,7 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.network(
-                          widget!.methodImage!,
+                          widget.methodImage!,
                           width: 20.0,
                           height: 20.0,
                           fit: BoxFit.contain,
@@ -287,7 +284,7 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.number,
+                          widget.number,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -299,7 +296,7 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                               fontWeight: FontWeight.w500,
                             ),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
                 ),
                 Expanded(
@@ -319,12 +316,12 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                               context: context,
                               isGlobal: false,
                               avoidOverflow: false,
-                              targetAnchor: AlignmentDirectional(-1.0, 1.0)
+                              targetAnchor: const AlignmentDirectional(-1.0, 1.0)
                                   .resolve(Directionality.of(context)),
-                              followerAnchor: AlignmentDirectional(0.0, 0.0)
+                              followerAnchor: const AlignmentDirectional(0.0, 0.0)
                                   .resolve(Directionality.of(context)),
                               builder: (dialogContext) {
-                                return Material(
+                                return const Material(
                                   color: Colors.transparent,
                                   child: WebViewAware(
                                     child: OrderListNodalWidget(),
@@ -340,10 +337,10 @@ class _OrderList2WidgetState extends State<OrderList2Widget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 6.0)),
+                    ].divide(const SizedBox(width: 6.0)),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

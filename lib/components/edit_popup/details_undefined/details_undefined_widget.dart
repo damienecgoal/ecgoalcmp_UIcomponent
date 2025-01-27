@@ -4,15 +4,10 @@ import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'details_undefined_model.dart';
 export 'details_undefined_model.dart';
@@ -49,8 +44,8 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -63,8 +58,8 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, -300.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -300.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -83,21 +78,21 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
-      child: Container(
+      alignment: const AlignmentDirectional(0.0, 0.0),
+      child: SizedBox(
         width: 600.0,
         height: 514.0,
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
                 child: Container(
                   width: 800.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 20.0,
                         color: Color(0x29000000),
@@ -112,7 +107,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
                         child: Text(
                           'Details Undefined',
@@ -127,12 +122,12 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 16.0, 20.0, 16.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -160,7 +155,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                       children: [
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: Color(0x33A8AAAE),
+                                            color: const Color(0x33A8AAAE),
                                             borderRadius:
                                                 BorderRadius.circular(6.0),
                                           ),
@@ -206,9 +201,9 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                                     letterSpacing: 0.0,
                                                   ),
                                             ),
-                                          ].divide(SizedBox(height: 4.0)),
+                                          ].divide(const SizedBox(height: 4.0)),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                   ),
                                 ],
@@ -219,14 +214,14 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                               thickness: 1.0,
                               color: FlutterFlowTheme.of(context).lineColor,
                             ),
-                          ].divide(SizedBox(height: 2.0)),
+                          ].divide(const SizedBox(height: 2.0)),
                         ),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 16.0, 20.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -264,7 +259,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                           model: _model.avatar2Model,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: Avatar2Widget(
+                                          child: const Avatar2Widget(
                                             diameter: 40.0,
                                             image:
                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/zl0fmg8vmvvf/5.png',
@@ -280,6 +275,16 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                               opaque: false,
                                               cursor: MouseCursor.defer ??
                                                   MouseCursor.defer,
+                                              onEnter: ((event) async {
+                                                safeSetState(() =>
+                                                    _model.mouseRegionHovered1 =
+                                                        true);
+                                              }),
+                                              onExit: ((event) async {
+                                                safeSetState(() =>
+                                                    _model.mouseRegionHovered1 =
+                                                        false);
+                                              }),
                                               child: InkWell(
                                                 splashColor: Colors.transparent,
                                                 focusColor: Colors.transparent,
@@ -302,7 +307,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                                             color:
                                                                 valueOrDefault<
                                                                     Color>(
-                                                              _model.mouseRegionHovered1!
+                                                              _model.mouseRegionHovered1
                                                                   ? FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary
@@ -318,16 +323,6 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                                           ),
                                                 ),
                                               ),
-                                              onEnter: ((event) async {
-                                                safeSetState(() =>
-                                                    _model.mouseRegionHovered1 =
-                                                        true);
-                                              }),
-                                              onExit: ((event) async {
-                                                safeSetState(() =>
-                                                    _model.mouseRegionHovered1 =
-                                                        false);
-                                              }),
                                             ),
                                             Text(
                                               'gleppard8@yandex.ru',
@@ -343,9 +338,9 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                                     letterSpacing: 0.0,
                                                   ),
                                             ),
-                                          ].divide(SizedBox(height: 4.0)),
+                                          ].divide(const SizedBox(height: 4.0)),
                                         ),
-                                      ].divide(SizedBox(width: 12.0)),
+                                      ].divide(const SizedBox(width: 12.0)),
                                     ),
                                   ),
                                 ),
@@ -357,13 +352,13 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).lineColor,
                           ),
-                        ].divide(SizedBox(height: 2.0)),
+                        ].divide(const SizedBox(height: 2.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 16.0, 20.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -440,7 +435,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                               fontWeight: FontWeight.normal,
                                             ),
                                       ),
-                                    ].divide(SizedBox(height: 10.0)),
+                                    ].divide(const SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ],
@@ -451,13 +446,13 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).lineColor,
                           ),
-                        ].divide(SizedBox(height: 2.0)),
+                        ].divide(const SizedBox(height: 2.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 16.0, 20.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -511,13 +506,13 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).lineColor,
                           ),
-                        ].divide(SizedBox(height: 2.0)),
+                        ].divide(const SizedBox(height: 2.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 16.0, 20.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -541,7 +536,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                 Expanded(
                                   flex: 8,
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.statusCardModel,
                                       updateCallback: () => safeSetState(() {}),
@@ -549,7 +544,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                         title: 'Published',
                                         titleColor: FlutterFlowTheme.of(context)
                                             .success,
-                                        bgColor: Color(0x3328C76F),
+                                        bgColor: const Color(0x3328C76F),
                                       ),
                                     ),
                                   ),
@@ -562,13 +557,13 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).lineColor,
                           ),
-                        ].divide(SizedBox(height: 2.0)),
+                        ].divide(const SizedBox(height: 2.0)),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 16.0, 20.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -602,16 +597,16 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                                           context: context,
                                           isGlobal: false,
                                           avoidOverflow: false,
-                                          targetAnchor: AlignmentDirectional(
+                                          targetAnchor: const AlignmentDirectional(
                                                   -1.0, 1.0)
                                               .resolve(
                                                   Directionality.of(context)),
-                                          followerAnchor: AlignmentDirectional(
+                                          followerAnchor: const AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
                                           builder: (dialogContext) {
-                                            return Material(
+                                            return const Material(
                                               color: Colors.transparent,
                                               child: WebViewAware(
                                                 child: ReviewActionWidget(),
@@ -632,7 +627,7 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                               ],
                             ),
                           ),
-                        ].divide(SizedBox(height: 2.0)),
+                        ].divide(const SizedBox(height: 2.0)),
                       ),
                     ],
                   ),
@@ -640,19 +635,25 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(1.0, -1.0),
+              alignment: const AlignmentDirectional(1.0, -1.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = false);
+                }),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(
                       0.0,
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered2! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered2 ? 5.0 : 0.0,
                         0.0,
                       ),
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered2! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered2 ? 5.0 : 0.0,
                         0.0,
                       ),
                       0.0),
@@ -675,8 +676,8 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                         height: 36.0,
                         decoration: BoxDecoration(
                           color: valueOrDefault<Color>(
-                            _model.mouseRegionHovered2!
-                                ? Color(0xFF383C54)
+                            _model.mouseRegionHovered2
+                                ? const Color(0xFF383C54)
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                             FlutterFlowTheme.of(context).secondaryBackground,
@@ -692,12 +693,6 @@ class _DetailsUndefinedWidgetState extends State<DetailsUndefinedWidget>
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = false);
-                }),
               ),
             ),
           ],

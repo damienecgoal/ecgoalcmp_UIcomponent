@@ -13,11 +13,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'users_model.dart';
@@ -48,7 +46,7 @@ class _UsersWidgetState extends State<UsersWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -91,19 +89,19 @@ class _UsersWidgetState extends State<UsersWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -138,7 +136,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                       .primary,
                                               size: 24.0,
                                             ),
-                                            bg: Color(0x347367F0),
+                                            bg: const Color(0x347367F0),
                                           ),
                                         ),
                                       ),
@@ -162,7 +160,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                       .error,
                                               size: 24.0,
                                             ),
-                                            bg: Color(0x34EA5455),
+                                            bg: const Color(0x34EA5455),
                                           ),
                                         ),
                                       ),
@@ -186,7 +184,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                       .success,
                                               size: 24.0,
                                             ),
-                                            bg: Color(0x3328C76F),
+                                            bg: const Color(0x3328C76F),
                                           ),
                                         ),
                                       ),
@@ -210,14 +208,14 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                       .warning,
                                               size: 24.0,
                                             ),
-                                            bg: Color(0x34FF9F43),
+                                            bg: const Color(0x34FF9F43),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -232,7 +230,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -247,7 +245,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 20.0),
                                               child: Column(
@@ -259,7 +257,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -294,7 +292,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -312,6 +310,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered1 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered1 =
+                                                                          false);
+                                                                }),
                                                                 child:
                                                                     FlutterFlowDropDown<
                                                                         String>(
@@ -320,7 +330,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'Admin',
                                                                     'Author',
                                                                     'Editor',
@@ -364,7 +374,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                   borderColor:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered1!
+                                                                    _model.mouseRegionHovered1
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .secondaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -377,7 +387,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                       1.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -392,18 +402,6 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                   isMultiSelect:
                                                                       false,
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered1 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered1 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                             Expanded(
@@ -414,6 +412,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered2 =
+                                                                          false);
+                                                                }),
                                                                 child:
                                                                     FlutterFlowDropDown<
                                                                         String>(
@@ -422,7 +432,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'Select Plan',
                                                                     'Basic',
                                                                     'Company',
@@ -466,7 +476,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                   borderColor:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered2!
+                                                                    _model.mouseRegionHovered2
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .secondaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -479,7 +489,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                       1.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -494,18 +504,6 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                   isMultiSelect:
                                                                       false,
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered2 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
                                                             Expanded(
@@ -516,6 +514,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered3 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered3 =
+                                                                          false);
+                                                                }),
                                                                 child:
                                                                     FlutterFlowDropDown<
                                                                         String>(
@@ -524,7 +534,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'Select Status',
                                                                     'Pending',
                                                                     'Active',
@@ -567,7 +577,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                   borderColor:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered3!
+                                                                    _model.mouseRegionHovered3
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .secondaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -580,7 +590,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                       1.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -595,27 +605,15 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                   isMultiSelect:
                                                                       false,
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered3 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered3 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 24.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     12.0,
@@ -635,7 +633,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -676,7 +674,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         .dropDownValueController4 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       '10',
                                                                       '25',
                                                                       '50',
@@ -724,7 +722,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         1.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             0.0,
@@ -750,7 +748,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                               .end,
                                                                       children:
                                                                           [
-                                                                        Container(
+                                                                        SizedBox(
                                                                           width:
                                                                               200.0,
                                                                           child:
@@ -804,7 +802,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 ),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
-                                                                              contentPadding: EdgeInsets.all(14.0),
+                                                                              contentPadding: const EdgeInsets.all(14.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Public Sans',
@@ -824,8 +822,8 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 context: context,
                                                                                 isGlobal: false,
                                                                                 avoidOverflow: false,
-                                                                                targetAnchor: AlignmentDirectional(0.0, 6.5).resolve(Directionality.of(context)),
-                                                                                followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                targetAnchor: const AlignmentDirectional(0.0, 6.5).resolve(Directionality.of(context)),
+                                                                                followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 builder: (dialogContext) {
                                                                                   return Material(
                                                                                     color: Colors.transparent,
@@ -835,7 +833,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: Container(
+                                                                                        child: const SizedBox(
                                                                                           height: 204.0,
                                                                                           width: 150.0,
                                                                                           child: ExportNodalWidget(),
@@ -857,9 +855,9 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x33A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x33A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
@@ -868,7 +866,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -882,21 +880,21 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             onPressed:
                                                                                 () async {
                                                                               showDialog(
-                                                                                barrierColor: Color(0x34000000),
+                                                                                barrierColor: const Color(0x34000000),
                                                                                 context: context,
                                                                                 builder: (dialogContext) {
                                                                                   return Dialog(
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: const AlignmentDirectional(1.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: WebViewAware(
                                                                                       child: GestureDetector(
                                                                                         onTap: () {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: AddUserWidget(),
+                                                                                        child: const AddUserWidget(),
                                                                                       ),
                                                                                     ),
                                                                                   );
@@ -914,8 +912,8 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
@@ -925,7 +923,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                               elevation: 2.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -933,11 +931,11 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 14.0)),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         14.0)),
                                                               ),
@@ -946,7 +944,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                   Column(
                                                     mainAxisSize:
@@ -965,7 +963,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -986,7 +984,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'USER',
                                                                     ),
@@ -1002,7 +1000,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'ROLE',
                                                                     ),
@@ -1018,7 +1016,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'PLAN',
                                                                     ),
@@ -1034,7 +1032,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'BILLING',
                                                                     ),
@@ -1050,7 +1048,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'STATUS',
                                                                     ),
@@ -1066,13 +1064,13 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeader2Widget(
+                                                                        const ListHeader2Widget(
                                                                       title:
                                                                           'ACTION',
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -1107,14 +1105,14 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x347367F0),
+                                                              const Color(0x347367F0),
                                                           plan: 'Enterprise',
                                                           billing: 'Auto Debit',
                                                           status: '\tActive',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .success,
-                                                          bg: Color(0x3328C76F),
+                                                          bg: const Color(0x3328C76F),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1138,7 +1136,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x34FF9F43),
+                                                              const Color(0x34FF9F43),
                                                           plan: '\tBasic',
                                                           billing:
                                                               '\tAuto Debit',
@@ -1146,7 +1144,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondary,
-                                                          bg: Color(0x34A8AAAE),
+                                                          bg: const Color(0x34A8AAAE),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1171,14 +1169,14 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x3300CFE8),
+                                                              const Color(0x3300CFE8),
                                                           plan: 'Team',
                                                           billing: 'Auto Debit',
                                                           status: 'Inactive',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondary,
-                                                          bg: Color(0x34A8AAAE),
+                                                          bg: const Color(0x34A8AAAE),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1202,7 +1200,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x3428C76F),
+                                                              const Color(0x3428C76F),
                                                           plan: 'Team',
                                                           billing:
                                                               'Manual - Paypal',
@@ -1210,7 +1208,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .success,
-                                                          bg: Color(0x3328C76F),
+                                                          bg: const Color(0x3328C76F),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1232,7 +1230,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x33FF9F43),
+                                                              const Color(0x33FF9F43),
                                                           plan: '\tTeam',
                                                           billing:
                                                               '\tManual - Cash',
@@ -1240,7 +1238,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x34FF9F43),
+                                                          bg: const Color(0x34FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1264,7 +1262,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x33A8AAAE),
+                                                              const Color(0x33A8AAAE),
                                                           plan:
                                                               '\tEnterprise\t',
                                                           billing:
@@ -1273,7 +1271,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .success,
-                                                          bg: Color(0x3328C76F),
+                                                          bg: const Color(0x3328C76F),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1298,7 +1296,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x3428C76F),
+                                                              const Color(0x3428C76F),
                                                           plan: 'Basic',
                                                           billing:
                                                               '\tAuto Debit',
@@ -1306,7 +1304,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x34FF9F43),
+                                                          bg: const Color(0x34FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1329,14 +1327,14 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x347367F0),
+                                                              const Color(0x347367F0),
                                                           plan: 'Enterprise',
                                                           billing: 'Auto Debit',
                                                           status: 'Pending',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x33FF9F43),
+                                                          bg: const Color(0x33FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1359,7 +1357,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x347367F0),
+                                                              const Color(0x347367F0),
                                                           plan: 'Company',
                                                           billing:
                                                               'Manual - Paypal',
@@ -1367,7 +1365,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x34FF9F43),
+                                                          bg: const Color(0x34FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1393,7 +1391,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x33A8AAAE),
+                                                              const Color(0x33A8AAAE),
                                                           plan: '\tCompany',
                                                           billing:
                                                               'Manual - Cash',
@@ -1401,7 +1399,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondary,
-                                                          bg: Color(0x34A8AAAE),
+                                                          bg: const Color(0x34A8AAAE),
                                                         ),
                                                       ),
                                                       ListView(
@@ -1413,7 +1411,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                         children: [
                                                           Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                           ),
                                                         ],
                                                       ),
@@ -1426,7 +1424,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                         children: [
                                                           Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                           ),
                                                         ],
                                                       ),
@@ -1434,7 +1432,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -1444,7 +1442,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                         Expanded(
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             children: [
                                                               Text(
@@ -1464,7 +1462,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
                                                                 child: Row(
@@ -1487,12 +1485,12 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1510,7 +1508,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -1542,12 +1540,12 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1563,7 +1561,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1584,18 +1582,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1605,7 +1603,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1626,18 +1624,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1647,7 +1645,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1668,18 +1666,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1689,7 +1687,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1710,18 +1708,18 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1731,7 +1729,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1739,7 +1737,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 4.0)),
                                                                     ),
                                                                     FFButtonWidget(
@@ -1754,17 +1752,17 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x347983BB),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -1777,7 +1775,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -1787,7 +1785,7 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           4.0)),
                                                                 ),
@@ -1799,37 +1797,37 @@ class _UsersWidgetState extends State<UsersWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 18.0)),
+                                                    const SizedBox(height: 18.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

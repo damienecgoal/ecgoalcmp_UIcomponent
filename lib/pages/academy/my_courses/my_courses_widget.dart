@@ -11,11 +11,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/flutter_flow_youtube_player.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'my_courses_model.dart';
@@ -46,7 +43,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -90,19 +87,19 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                 wrapWithModel(
                   model: _model.navMenuModel,
                   updateCallback: () => safeSetState(() {}),
-                  child: NavMenuWidget(),
+                  child: const NavMenuWidget(),
                 ),
                 Expanded(
                   child: Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     28.0, 0.0, 28.0, 50.0),
                                 child: Wrap(
                                   spacing: 28.0,
@@ -115,7 +112,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                   clipBehavior: Clip.none,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -155,7 +152,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 260.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
@@ -163,7 +160,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -183,11 +180,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                   Expanded(
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, -1.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     20.0,
@@ -212,7 +209,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                     flex: 2,
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   20.0,
@@ -224,7 +221,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -290,7 +287,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -326,7 +323,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             children: [
                                                               Expanded(
                                                                 child:
-                                                                    Container(
+                                                                    SizedBox(
                                                                   width: 250.0,
                                                                   child:
                                                                       TextFormField(
@@ -415,7 +412,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                       contentPadding:
-                                                                          EdgeInsets.all(
+                                                                          const EdgeInsets.all(
                                                                               16.0),
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
@@ -442,7 +439,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                       'Button pressed ...');
                                                                 },
                                                                 text: '',
-                                                                icon: Icon(
+                                                                icon: const Icon(
                                                                   FFIcons
                                                                       .ksearch,
                                                                   color: Colors
@@ -453,13 +450,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     FFButtonOptions(
                                                                   width: 44.0,
                                                                   height: 44.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -482,7 +479,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                   elevation:
                                                                       0.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 0.0,
@@ -493,10 +490,10 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               8.0),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 12.0)),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 20.0)),
                                                       ),
                                                     ),
@@ -504,7 +501,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                   Expanded(
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 1.0),
                                                       child: ClipRRect(
                                                         borderRadius:
@@ -524,13 +521,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -545,7 +542,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 20.0, 20.0, 40.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -602,7 +599,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                         .normal,
                                                               ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 8.0)),
                                                     ),
                                                     Expanded(
@@ -621,7 +618,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'UI/UX',
                                                               'SEO',
                                                               'Web',
@@ -701,7 +698,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             borderWidth: 1.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         0.0,
@@ -716,7 +713,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -763,17 +760,17 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             FontWeight.w500,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 12.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 14.0)),
                                                       ),
                                                     ),
                                                   ],
                                                 ),
-                                              ].divide(SizedBox(height: 20.0)),
+                                              ].divide(const SizedBox(height: 20.0)),
                                             ),
                                             Wrap(
                                               spacing: 28.0,
@@ -811,7 +808,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -835,7 +832,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -858,7 +855,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             'Web',
                                                                         statusColor:
                                                                             FlutterFlowTheme.of(context).primary,
-                                                                        bg: Color(
+                                                                        bg: const Color(
                                                                             0x337367F0),
                                                                         ratings:
                                                                             '4.4',
@@ -930,7 +927,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                         ),
                                                                         LinearPercentIndicator(
                                                                           percent:
@@ -946,11 +943,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                           barRadius:
-                                                                              Radius.circular(50.0),
+                                                                              const Radius.circular(50.0),
                                                                           padding:
                                                                               EdgeInsets.zero,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                     Row(
@@ -967,7 +964,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -985,16 +982,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x34A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x34A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -1018,7 +1015,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1030,11 +1027,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               width: 100.0,
                                                                               height: 44.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0x337367F0),
+                                                                                color: const Color(0x337367F0),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1054,16 +1051,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       size: 24.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 12.0)),
+                                                                                  ].divide(const SizedBox(width: 12.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           20.0)),
                                                                 ),
@@ -1093,7 +1090,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -1117,7 +1114,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -1140,7 +1137,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             'UI/UX',
                                                                         statusColor:
                                                                             FlutterFlowTheme.of(context).error,
-                                                                        bg: Color(
+                                                                        bg: const Color(
                                                                             0x34EA5455),
                                                                         ratings:
                                                                             '4.2',
@@ -1212,7 +1209,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                         ),
                                                                         LinearPercentIndicator(
                                                                           percent:
@@ -1228,11 +1225,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                           barRadius:
-                                                                              Radius.circular(50.0),
+                                                                              const Radius.circular(50.0),
                                                                           padding:
                                                                               EdgeInsets.zero,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                     Row(
@@ -1249,7 +1246,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1267,16 +1264,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x34A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x34A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -1300,7 +1297,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1312,11 +1309,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               width: 100.0,
                                                                               height: 44.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0x337367F0),
+                                                                                color: const Color(0x337367F0),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1336,16 +1333,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       size: 24.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 12.0)),
+                                                                                  ].divide(const SizedBox(width: 12.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           20.0)),
                                                                 ),
@@ -1375,7 +1372,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -1399,7 +1396,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -1422,7 +1419,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             'SEO',
                                                                         statusColor:
                                                                             FlutterFlowTheme.of(context).success,
-                                                                        bg: Color(
+                                                                        bg: const Color(
                                                                             0x3428C76F),
                                                                         ratings:
                                                                             '5',
@@ -1494,7 +1491,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                         ),
                                                                         LinearPercentIndicator(
                                                                           percent:
@@ -1510,11 +1507,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                           barRadius:
-                                                                              Radius.circular(50.0),
+                                                                              const Radius.circular(50.0),
                                                                           padding:
                                                                               EdgeInsets.zero,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                     Row(
@@ -1531,7 +1528,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1549,16 +1546,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x34A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x34A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -1582,7 +1579,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1594,11 +1591,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               width: 100.0,
                                                                               height: 44.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0x337367F0),
+                                                                                color: const Color(0x337367F0),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1618,16 +1615,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       size: 24.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 12.0)),
+                                                                                  ].divide(const SizedBox(width: 12.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           20.0)),
                                                                 ),
@@ -1638,7 +1635,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 28.0)),
+                                                      const SizedBox(width: 28.0)),
                                                 ),
                                                 Row(
                                                   mainAxisSize:
@@ -1664,7 +1661,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -1688,7 +1685,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -1711,7 +1708,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             'Music',
                                                                         statusColor:
                                                                             FlutterFlowTheme.of(context).info,
-                                                                        bg: Color(
+                                                                        bg: const Color(
                                                                             0x3400CFE8),
                                                                         ratings:
                                                                             '3.8',
@@ -1783,7 +1780,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                         ),
                                                                         LinearPercentIndicator(
                                                                           percent:
@@ -1799,11 +1796,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                           barRadius:
-                                                                              Radius.circular(50.0),
+                                                                              const Radius.circular(50.0),
                                                                           padding:
                                                                               EdgeInsets.zero,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                     Row(
@@ -1820,7 +1817,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1838,16 +1835,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x34A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x34A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -1871,7 +1868,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -1883,11 +1880,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               width: 100.0,
                                                                               height: 44.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0x337367F0),
+                                                                                color: const Color(0x337367F0),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -1907,16 +1904,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       size: 24.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 12.0)),
+                                                                                  ].divide(const SizedBox(width: 12.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           20.0)),
                                                                 ),
@@ -1946,7 +1943,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -1970,7 +1967,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -1993,7 +1990,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             'Painting',
                                                                         statusColor:
                                                                             FlutterFlowTheme.of(context).warning,
-                                                                        bg: Color(
+                                                                        bg: const Color(
                                                                             0x33FF9F43),
                                                                         ratings:
                                                                             '4.7',
@@ -2065,7 +2062,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                         ),
                                                                         LinearPercentIndicator(
                                                                           percent:
@@ -2081,11 +2078,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                           barRadius:
-                                                                              Radius.circular(50.0),
+                                                                              const Radius.circular(50.0),
                                                                           padding:
                                                                               EdgeInsets.zero,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2102,7 +2099,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -2120,16 +2117,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x337367F0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x337367F0),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -2137,10 +2134,10 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           20.0)),
                                                                 ),
@@ -2170,7 +2167,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -2194,7 +2191,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -2217,7 +2214,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             'UI/UX',
                                                                         statusColor:
                                                                             FlutterFlowTheme.of(context).error,
-                                                                        bg: Color(
+                                                                        bg: const Color(
                                                                             0x34EA5455),
                                                                         ratings:
                                                                             '3.6',
@@ -2289,7 +2286,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                     fontWeight: FontWeight.normal,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                         ),
                                                                         LinearPercentIndicator(
                                                                           percent:
@@ -2305,11 +2302,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                           barRadius:
-                                                                              Radius.circular(50.0),
+                                                                              const Radius.circular(50.0),
                                                                           padding:
                                                                               EdgeInsets.zero,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                     Row(
@@ -2326,7 +2323,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -2344,16 +2341,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 44.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x34A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x34A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -2377,7 +2374,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               context.pushNamed(
                                                                                 'Course_Details',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                   ),
@@ -2389,11 +2386,11 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                               width: 100.0,
                                                                               height: 44.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0x337367F0),
+                                                                                color: const Color(0x337367F0),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -2413,16 +2410,16 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       size: 24.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 12.0)),
+                                                                                  ].divide(const SizedBox(width: 12.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           20.0)),
                                                                 ),
@@ -2433,12 +2430,12 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 28.0)),
+                                                      const SizedBox(width: 28.0)),
                                                 ),
                                               ],
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 20.0, 0.0),
                                               child: Row(
@@ -2448,7 +2445,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: Row(
                                                       mainAxisSize:
@@ -2476,20 +2473,20 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x347983BB),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -2509,7 +2506,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2531,14 +2528,14 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -2565,7 +2562,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2587,20 +2584,20 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x347983BB),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -2620,7 +2617,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2642,20 +2639,20 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x347983BB),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -2675,7 +2672,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2697,20 +2694,20 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x347983BB),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -2730,7 +2727,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2752,20 +2749,20 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x347983BB),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -2785,7 +2782,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2815,20 +2812,20 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                             width: 44.0,
                                                             height: 44.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
                                                                         0.0,
                                                                         0.0),
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x347983BB),
                                                             textStyle:
                                                                 FlutterFlowTheme.of(
@@ -2848,7 +2845,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -2860,13 +2857,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                           ),
                                                         ),
                                                       ].divide(
-                                                          SizedBox(width: 4.0)),
+                                                          const SizedBox(width: 4.0)),
                                                     ),
                                                   ),
                                                 ],
                                               ),
                                             ),
-                                          ].divide(SizedBox(height: 28.0)),
+                                          ].divide(const SizedBox(height: 28.0)),
                                         ),
                                       ),
                                     ),
@@ -2879,13 +2876,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 200.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
                                               decoration: BoxDecoration(
-                                                color: Color(0x337367F0),
-                                                boxShadow: [
+                                                color: const Color(0x337367F0),
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -2900,7 +2897,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -2955,7 +2952,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                           Expanded(
                                                             child: Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       -1.0,
                                                                       1.0),
                                                               child:
@@ -2969,13 +2966,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -2998,7 +2995,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                   elevation:
                                                                       2.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 1.0,
@@ -3011,7 +3008,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       ),
                                                     ),
@@ -3037,13 +3034,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 200.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
                                               decoration: BoxDecoration(
-                                                color: Color(0x34EA5455),
-                                                boxShadow: [
+                                                color: const Color(0x34EA5455),
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -3058,7 +3055,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -3113,7 +3110,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                           Expanded(
                                                             child: Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       -1.0,
                                                                       1.0),
                                                               child:
@@ -3127,13 +3124,13 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -3156,7 +3153,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                   elevation:
                                                                       2.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 1.0,
@@ -3169,7 +3166,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       ),
                                                     ),
@@ -3189,7 +3186,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -3200,7 +3197,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 400.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
@@ -3208,7 +3205,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -3223,7 +3220,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -3251,7 +3248,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                     .primary,
                                                                 size: 28.0,
                                                               ),
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x347367F0),
                                                               size: 50.0,
                                                             ),
@@ -3305,14 +3302,14 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                 FFButtonOptions(
                                                               height: 44.0,
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -3335,7 +3332,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                       ),
                                                               elevation: 2.0,
                                                               borderSide:
-                                                                  BorderSide(
+                                                                  const BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -3346,7 +3343,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                           8.0),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 20.0)),
                                                       ),
                                                     ),
@@ -3366,7 +3363,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -3390,7 +3387,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             6.0),
                                                                   ),
                                                                   child:
-                                                                      FlutterFlowYoutubePlayer(
+                                                                      const FlutterFlowYoutubePlayer(
                                                                     url:
                                                                         'https://www.youtube.com/watch?v=bTqVqk7FSmY&pp=ygUTdmlldyBmcm9tIGJsdWUgbW9vbg%3D%3D',
                                                                     autoPlay:
@@ -3409,7 +3406,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -3454,12 +3451,12 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                 FontWeight.normal,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           16.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 4.0)),
                                                           ),
                                                         ),
@@ -3481,7 +3478,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   8.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -3505,7 +3502,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                             6.0),
                                                                   ),
                                                                   child:
-                                                                      FlutterFlowYoutubePlayer(
+                                                                      const FlutterFlowYoutubePlayer(
                                                                     url:
                                                                         'https://www.youtube.com/watch?v=bTqVqk7FSmY&pp=ygUTdmlldyBmcm9tIGJsdWUgbW9vbg%3D%3D',
                                                                     autoPlay:
@@ -3524,7 +3521,7 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -3569,19 +3566,19 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                                                                 FontWeight.normal,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           16.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 4.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 28.0)),
+                                                      const SizedBox(width: 28.0)),
                                                 ),
                                               ),
                                             ),
@@ -3593,25 +3590,25 @@ class _MyCoursesWidgetState extends State<MyCoursesWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     28.0, 0.0, 28.0, 0.0),
                                 child: wrapWithModel(
                                   model: _model.footerModel,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: FooterWidget(),
+                                  child: const FooterWidget(),
                                 ),
                               ),
                             ]
-                                .divide(SizedBox(height: 28.0))
-                                .addToStart(SizedBox(height: 110.0))
-                                .addToEnd(SizedBox(height: 28.0)),
+                                .divide(const SizedBox(height: 28.0))
+                                .addToStart(const SizedBox(height: 110.0))
+                                .addToEnd(const SizedBox(height: 28.0)),
                           ),
                         ),
                       ),
                       wrapWithModel(
                         model: _model.searchBarModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: SearchBarWidget(),
+                        child: const SearchBarWidget(),
                       ),
                     ],
                   ),

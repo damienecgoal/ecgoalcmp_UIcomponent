@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'estimated_delivery_model.dart';
 export 'estimated_delivery_model.dart';
 
@@ -51,14 +48,14 @@ class _EstimatedDeliveryWidgetState extends State<EstimatedDeliveryWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
             child: Image.network(
-              widget!.product!,
+              widget.product!,
               width: 50.0,
               height: 60.0,
               fit: BoxFit.cover,
@@ -72,15 +69,21 @@ class _EstimatedDeliveryWidgetState extends State<EstimatedDeliveryWidget> {
                 MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered = false);
+                  }),
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.name,
+                      widget.name,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Public Sans',
                           color: valueOrDefault<Color>(
-                            _model.mouseRegionHovered!
+                            _model.mouseRegionHovered
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryTitle,
                             FlutterFlowTheme.of(context).secondaryTitle,
@@ -90,16 +93,10 @@ class _EstimatedDeliveryWidgetState extends State<EstimatedDeliveryWidget> {
                           lineHeight: 1.6,
                         ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered = false);
-                  }),
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.date,
+                    widget.date,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -110,10 +107,10 @@ class _EstimatedDeliveryWidgetState extends State<EstimatedDeliveryWidget> {
                         fontWeight: FontWeight.w500,
                       ),
                 ),
-              ].divide(SizedBox(height: 10.0)),
+              ].divide(const SizedBox(height: 10.0)),
             ),
           ),
-        ].divide(SizedBox(width: 20.0)),
+        ].divide(const SizedBox(width: 20.0)),
       ),
     );
   }

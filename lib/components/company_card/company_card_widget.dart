@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'company_card_model.dart';
 export 'company_card_model.dart';
 
@@ -52,7 +49,7 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -60,11 +57,11 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
             width: 40.0,
             height: 40.0,
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
             child: Image.network(
-              widget!.logo!,
+              widget.logo!,
               fit: BoxFit.cover,
             ),
           ),
@@ -74,7 +71,7 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.name,
+                  widget.name,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -86,18 +83,18 @@ class _CompanyCardWidgetState extends State<CompanyCardWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.description,
+                  widget.description,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Public Sans',
-                      color: widget!.color,
+                      color: widget.color,
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(height: 8.0)),
+            ].divide(const SizedBox(height: 8.0)),
           ),
-        ].divide(SizedBox(width: 20.0)),
+        ].divide(const SizedBox(width: 20.0)),
       ),
     );
   }

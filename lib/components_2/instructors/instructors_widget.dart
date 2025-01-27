@@ -1,10 +1,7 @@
 import '/components_2/title_subtitle/title_subtitle_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'instructors_model.dart';
 export 'instructors_model.dart';
 
@@ -53,7 +50,7 @@ class _InstructorsWidgetState extends State<InstructorsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -61,11 +58,11 @@ class _InstructorsWidgetState extends State<InstructorsWidget> {
             width: 36.0,
             height: 36.0,
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
             child: Image.network(
-              widget!.avatar!,
+              widget.avatar!,
               fit: BoxFit.cover,
             ),
           ),
@@ -74,14 +71,14 @@ class _InstructorsWidgetState extends State<InstructorsWidget> {
               model: _model.titleSubtitleModel,
               updateCallback: () => safeSetState(() {}),
               child: TitleSubtitleWidget(
-                title: widget!.name!,
-                subtitle: widget!.subtitle!,
+                title: widget.name!,
+                subtitle: widget.subtitle!,
               ),
             ),
           ),
           Text(
             valueOrDefault<String>(
-              widget!.view,
+              widget.view,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -91,7 +88,7 @@ class _InstructorsWidgetState extends State<InstructorsWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

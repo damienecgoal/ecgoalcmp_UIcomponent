@@ -14,11 +14,8 @@ import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'checkout_model.dart';
@@ -49,7 +46,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -110,21 +107,21 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(-1.0, -1.0),
+                              alignment: const AlignmentDirectional(-1.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     28.0, 0.0, 28.0, 0.0),
                                 child: Wrap(
                                   spacing: 28.0,
@@ -137,7 +134,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                   clipBehavior: Clip.none,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -174,7 +171,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -192,7 +189,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -218,7 +215,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                           valueOrDefault<Color>(
                                                         _model.activeTab ==
                                                                 'Cart'
-                                                            ? Color(0x327367F0)
+                                                            ? const Color(0x327367F0)
                                                             : Colors
                                                                 .transparent,
                                                         Colors.transparent,
@@ -229,7 +226,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
@@ -286,7 +283,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 12.0)),
                                                       ),
                                                     ),
@@ -320,7 +317,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                           valueOrDefault<Color>(
                                                         _model.activeTab ==
                                                                 'Address'
-                                                            ? Color(0x327367F0)
+                                                            ? const Color(0x327367F0)
                                                             : Colors
                                                                 .transparent,
                                                         Colors.transparent,
@@ -331,7 +328,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
@@ -387,7 +384,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 12.0)),
                                                       ),
                                                     ),
@@ -421,7 +418,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                           valueOrDefault<Color>(
                                                         _model.activeTab ==
                                                                 'Payment'
-                                                            ? Color(0x327367F0)
+                                                            ? const Color(0x327367F0)
                                                             : Colors
                                                                 .transparent,
                                                         Colors.transparent,
@@ -432,7 +429,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
@@ -488,7 +485,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 12.0)),
                                                       ),
                                                     ),
@@ -522,7 +519,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                           valueOrDefault<Color>(
                                                         _model.activeTab ==
                                                                 'Confirmation'
-                                                            ? Color(0x327367F0)
+                                                            ? const Color(0x327367F0)
                                                             : Colors
                                                                 .transparent,
                                                         Colors.transparent,
@@ -533,7 +530,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
@@ -589,13 +586,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 12.0)),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 50.0)),
+                                              ].divide(const SizedBox(width: 50.0)),
                                             ),
                                           ),
                                           Divider(
@@ -608,7 +605,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                               if (_model.activeTab ==
                                                   'Address') {
                                                 return Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -656,6 +653,16 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered1 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered1 = false);
+                                                                        }),
                                                                         child:
                                                                             InkWell(
                                                                           splashColor:
@@ -685,7 +692,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                   () {
                                                                                     if (_model.address == 'John Doe') {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
-                                                                                    } else if (_model.mouseRegionHovered1!) {
+                                                                                    } else if (_model.mouseRegionHovered1) {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
                                                                                     } else {
                                                                                       return FlutterFlowTheme.of(context).lineColor;
@@ -697,7 +704,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(20.0),
+                                                                              padding: const EdgeInsets.all(20.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -719,7 +726,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsets.all(5.0),
+                                                                                      padding: const EdgeInsets.all(5.0),
                                                                                       child: Container(
                                                                                         width: 100.0,
                                                                                         height: 100.0,
@@ -757,7 +764,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                               child: StatusCardWidget(
                                                                                                 title: 'Home',
                                                                                                 titleColor: FlutterFlowTheme.of(context).primary,
-                                                                                                bgColor: Color(0x337367F0),
+                                                                                                bgColor: const Color(0x337367F0),
                                                                                               ),
                                                                                             ),
                                                                                           ],
@@ -784,7 +791,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                     letterSpacing: 0.0,
                                                                                                   ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                                         ),
                                                                                         Divider(
                                                                                           height: 1.0,
@@ -814,26 +821,16 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                     fontWeight: FontWeight.w500,
                                                                                                   ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 16.0)),
+                                                                                      ].divide(const SizedBox(height: 16.0)),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 16.0)),
+                                                                                ].divide(const SizedBox(width: 16.0)),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered1 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered1 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
                                                                     Expanded(
@@ -843,6 +840,16 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered2 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered2 = false);
+                                                                        }),
                                                                         child:
                                                                             InkWell(
                                                                           splashColor:
@@ -872,7 +879,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                   () {
                                                                                     if (_model.address == 'ACME Inc.') {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
-                                                                                    } else if (_model.mouseRegionHovered2!) {
+                                                                                    } else if (_model.mouseRegionHovered2) {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
                                                                                     } else {
                                                                                       return FlutterFlowTheme.of(context).lineColor;
@@ -884,7 +891,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(20.0),
+                                                                              padding: const EdgeInsets.all(20.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -906,7 +913,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsets.all(5.0),
+                                                                                      padding: const EdgeInsets.all(5.0),
                                                                                       child: Container(
                                                                                         width: 100.0,
                                                                                         height: 100.0,
@@ -944,7 +951,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                               child: StatusCardWidget(
                                                                                                 title: 'Office',
                                                                                                 titleColor: FlutterFlowTheme.of(context).success,
-                                                                                                bgColor: Color(0x3428C76F),
+                                                                                                bgColor: const Color(0x3428C76F),
                                                                                               ),
                                                                                             ),
                                                                                           ],
@@ -971,7 +978,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                     letterSpacing: 0.0,
                                                                                                   ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                                         ),
                                                                                         Divider(
                                                                                           height: 1.0,
@@ -1001,29 +1008,19 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                     fontWeight: FontWeight.w500,
                                                                                                   ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 16.0)),
+                                                                                      ].divide(const SizedBox(height: 16.0)),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 16.0)),
+                                                                                ].divide(const SizedBox(width: 16.0)),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered2 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered2 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           20.0)),
                                                                 ),
@@ -1035,7 +1032,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         () async {
                                                                       showDialog(
                                                                         barrierColor:
-                                                                            Color(0x34000000),
+                                                                            const Color(0x34000000),
                                                                         context:
                                                                             context,
                                                                         builder:
@@ -1048,7 +1045,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             backgroundColor:
                                                                                 Colors.transparent,
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                             child:
                                                                                 WebViewAware(
                                                                               child: GestureDetector(
@@ -1056,7 +1053,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                   FocusScope.of(dialogContext).unfocus();
                                                                                   FocusManager.instance.primaryFocus?.unfocus();
                                                                                 },
-                                                                                child: AddNewAddressWidget(),
+                                                                                child: const AddNewAddressWidget(),
                                                                               ),
                                                                             ),
                                                                           );
@@ -1069,17 +1066,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x347367F0),
                                                                       textStyle: FlutterFlowTheme.of(
                                                                               context)
@@ -1095,7 +1092,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -1107,7 +1104,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       20.0)),
                                                             ),
@@ -1145,6 +1142,16 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered3 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered3 = false);
+                                                                        }),
                                                                         child:
                                                                             InkWell(
                                                                           splashColor:
@@ -1174,7 +1181,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                   () {
                                                                                     if (_model.deliverySpeed == 'Standard') {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
-                                                                                    } else if (_model.mouseRegionHovered3!) {
+                                                                                    } else if (_model.mouseRegionHovered3) {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
                                                                                     } else {
                                                                                       return FlutterFlowTheme.of(context).lineColor;
@@ -1186,9 +1193,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                                                                               child: Stack(
-                                                                                alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                 children: [
                                                                                   Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -1239,19 +1246,19 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 14.0)),
+                                                                                    ].divide(const SizedBox(height: 14.0)),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                    alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                                       child: wrapWithModel(
                                                                                         model: _model.statusCardModel3,
                                                                                         updateCallback: () => safeSetState(() {}),
                                                                                         child: StatusCardWidget(
                                                                                           title: 'FREE',
                                                                                           titleColor: FlutterFlowTheme.of(context).success,
-                                                                                          bgColor: Color(0x3428C76F),
+                                                                                          bgColor: const Color(0x3428C76F),
                                                                                         ),
                                                                                       ),
                                                                                     ),
@@ -1261,16 +1268,6 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered3 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered3 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
                                                                     Expanded(
@@ -1280,6 +1277,16 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered4 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered4 = false);
+                                                                        }),
                                                                         child:
                                                                             InkWell(
                                                                           splashColor:
@@ -1309,7 +1316,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                   () {
                                                                                     if (_model.deliverySpeed == 'Express') {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
-                                                                                    } else if (_model.mouseRegionHovered4!) {
+                                                                                    } else if (_model.mouseRegionHovered4) {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
                                                                                     } else {
                                                                                       return FlutterFlowTheme.of(context).lineColor;
@@ -1321,9 +1328,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                                                                               child: Stack(
-                                                                                alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                 children: [
                                                                                   Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -1374,19 +1381,19 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 14.0)),
+                                                                                    ].divide(const SizedBox(height: 14.0)),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                    alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                                       child: wrapWithModel(
                                                                                         model: _model.statusCardModel4,
                                                                                         updateCallback: () => safeSetState(() {}),
                                                                                         child: StatusCardWidget(
                                                                                           title: '\$10',
                                                                                           titleColor: FlutterFlowTheme.of(context).secondary,
-                                                                                          bgColor: Color(0x33A8AAAE),
+                                                                                          bgColor: const Color(0x33A8AAAE),
                                                                                         ),
                                                                                       ),
                                                                                     ),
@@ -1396,16 +1403,6 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered4 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered4 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
                                                                     Expanded(
@@ -1415,6 +1412,16 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered5 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered5 = false);
+                                                                        }),
                                                                         child:
                                                                             InkWell(
                                                                           splashColor:
@@ -1444,7 +1451,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                   () {
                                                                                     if (_model.deliverySpeed == 'Overnight') {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
-                                                                                    } else if (_model.mouseRegionHovered5!) {
+                                                                                    } else if (_model.mouseRegionHovered5) {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
                                                                                     } else {
                                                                                       return FlutterFlowTheme.of(context).lineColor;
@@ -1456,12 +1463,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                                                                               child: Stack(
-                                                                                alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                 children: [
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.start,
@@ -1511,20 +1518,20 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                             ),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 14.0)),
+                                                                                      ].divide(const SizedBox(height: 14.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                    alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                                       child: wrapWithModel(
                                                                                         model: _model.statusCardModel5,
                                                                                         updateCallback: () => safeSetState(() {}),
                                                                                         child: StatusCardWidget(
                                                                                           title: '\$15',
                                                                                           titleColor: FlutterFlowTheme.of(context).secondary,
-                                                                                          bgColor: Color(0x33A8AAAE),
+                                                                                          bgColor: const Color(0x33A8AAAE),
                                                                                         ),
                                                                                       ),
                                                                                     ),
@@ -1534,27 +1541,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered5 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered5 = false);
-                                                                        }),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           20.0)),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       20.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 28.0)),
                                                         ),
                                                       ),
@@ -1593,7 +1590,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                 children: [
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -1621,7 +1618,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              EstimatedDeliveryWidget(
+                                                                              const EstimatedDeliveryWidget(
                                                                             product:
                                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/ueyyuo6z3lkl/1.png',
                                                                             name:
@@ -1636,7 +1633,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              EstimatedDeliveryWidget(
+                                                                              const EstimatedDeliveryWidget(
                                                                             product:
                                                                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/ztm4628nwer5/2.png',
                                                                             name:
@@ -1645,7 +1642,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 '20th Nov 2021',
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                   ),
@@ -1659,7 +1656,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -1672,7 +1669,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -1689,7 +1686,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               8.0,
                                                                               0.0,
@@ -1722,7 +1719,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               2.0,
                                                                               0.0,
@@ -1761,15 +1758,15 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     child: StatusCardWidget(
                                                                                       title: 'Free',
                                                                                       titleColor: FlutterFlowTheme.of(context).success,
-                                                                                      bgColor: Color(0x3328C76F),
+                                                                                      bgColor: const Color(0x3328C76F),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 8.0)),
                                                                     ),
                                                                   ),
@@ -1783,7 +1780,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -1837,14 +1834,14 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 height: 44.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1866,7 +1863,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 0.0,
@@ -1877,18 +1874,18 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             8.0),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 28.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 28.0)),
+                                                        const SizedBox(width: 28.0)),
                                                   ),
                                                 );
                                               } else if (_model.activeTab ==
                                                   'Payment') {
                                                 return Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1910,7 +1907,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   .infinity,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x3328C76F),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -1919,7 +1916,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             16.0),
                                                                 child: Row(
@@ -1988,9 +1985,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 16.0)),
+                                                                        ].divide(const SizedBox(height: 16.0)),
                                                                       ),
                                                                     ),
                                                                     MouseRegion(
@@ -2000,21 +1997,6 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
-                                                                      child:
-                                                                          Icon(
-                                                                        FFIcons
-                                                                            .kx,
-                                                                        color: valueOrDefault<
-                                                                            Color>(
-                                                                          _model.mouseRegionHovered6!
-                                                                              ? FlutterFlowTheme.of(context).success
-                                                                              : Color(0x6728C76F),
-                                                                          Color(
-                                                                              0x6728C76F),
-                                                                        ),
-                                                                        size:
-                                                                            20.0,
-                                                                      ),
                                                                       onEnter:
                                                                           ((event) async {
                                                                         safeSetState(() =>
@@ -2027,8 +2009,23 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             _model.mouseRegionHovered6 =
                                                                                 false);
                                                                       }),
+                                                                      child:
+                                                                          Icon(
+                                                                        FFIcons
+                                                                            .kx,
+                                                                        color: valueOrDefault<
+                                                                            Color>(
+                                                                          _model.mouseRegionHovered6
+                                                                              ? FlutterFlowTheme.of(context).success
+                                                                              : const Color(0x6728C76F),
+                                                                          const Color(
+                                                                              0x6728C76F),
+                                                                        ),
+                                                                        size:
+                                                                            20.0,
+                                                                      ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           20.0)),
                                                                 ),
@@ -2077,12 +2074,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               8.0),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
@@ -2140,12 +2137,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               8.0),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
@@ -2203,12 +2200,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               8.0),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
@@ -2232,7 +2229,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -2250,7 +2247,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           .payment ==
                                                                       'Card')
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           60.0,
@@ -2281,11 +2278,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered7 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered7 = false);
+                                                                                }),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
                                                                                     Expanded(
-                                                                                      child: Container(
+                                                                                      child: SizedBox(
                                                                                         width: 124.0,
                                                                                         child: TextFormField(
                                                                                           controller: _model.textController1,
@@ -2309,7 +2312,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                             enabledBorder: OutlineInputBorder(
                                                                                               borderSide: BorderSide(
                                                                                                 color: valueOrDefault<Color>(
-                                                                                                  _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                  _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                                 ),
                                                                                                 width: 1.0,
@@ -2337,7 +2340,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                               ),
                                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                                             ),
-                                                                                            contentPadding: EdgeInsets.all(16.0),
+                                                                                            contentPadding: const EdgeInsets.all(16.0),
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Public Sans',
@@ -2350,14 +2353,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     ),
                                                                                   ],
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered7 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered7 = false);
-                                                                                }),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
@@ -2381,11 +2378,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered8 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered8 = false);
+                                                                                      }),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
                                                                                           Expanded(
-                                                                                            child: Container(
+                                                                                            child: SizedBox(
                                                                                               width: 123.0,
                                                                                               child: TextFormField(
                                                                                                 controller: _model.textController2,
@@ -2409,7 +2412,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                   enabledBorder: OutlineInputBorder(
                                                                                                     borderSide: BorderSide(
                                                                                                       color: valueOrDefault<Color>(
-                                                                                                        _model.mouseRegionHovered8! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                        _model.mouseRegionHovered8 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                                       ),
                                                                                                       width: 1.0,
@@ -2437,7 +2440,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                     ),
                                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                                   ),
-                                                                                                  contentPadding: EdgeInsets.all(16.0),
+                                                                                                  contentPadding: const EdgeInsets.all(16.0),
                                                                                                 ),
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                       fontFamily: 'Public Sans',
@@ -2450,14 +2453,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                           ),
                                                                                         ],
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered8 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered8 = false);
-                                                                                      }),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 8.0)),
+                                                                                  ].divide(const SizedBox(height: 8.0)),
                                                                                 ),
                                                                               ),
                                                                               Expanded(
@@ -2476,11 +2473,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered9 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered9 = false);
+                                                                                      }),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
                                                                                           Expanded(
-                                                                                            child: Container(
+                                                                                            child: SizedBox(
                                                                                               width: 123.0,
                                                                                               child: TextFormField(
                                                                                                 controller: _model.textController3,
@@ -2504,7 +2507,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                   enabledBorder: OutlineInputBorder(
                                                                                                     borderSide: BorderSide(
                                                                                                       color: valueOrDefault<Color>(
-                                                                                                        _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                        _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                                       ),
                                                                                                       width: 1.0,
@@ -2532,7 +2535,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                     ),
                                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                                   ),
-                                                                                                  contentPadding: EdgeInsets.all(16.0),
+                                                                                                  contentPadding: const EdgeInsets.all(16.0),
                                                                                                 ),
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                       fontFamily: 'Public Sans',
@@ -2545,14 +2548,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                           ),
                                                                                         ],
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered9 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered9 = false);
-                                                                                      }),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 8.0)),
+                                                                                  ].divide(const SizedBox(height: 8.0)),
                                                                                 ),
                                                                               ),
                                                                               Expanded(
@@ -2571,14 +2568,20 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered10 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered10 = false);
+                                                                                      }),
                                                                                       child: Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
                                                                                           Expanded(
                                                                                             child: Stack(
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                               children: [
-                                                                                                Container(
+                                                                                                SizedBox(
                                                                                                   width: double.infinity,
                                                                                                   child: TextFormField(
                                                                                                     controller: _model.textController4,
@@ -2602,7 +2605,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                       enabledBorder: OutlineInputBorder(
                                                                                                         borderSide: BorderSide(
                                                                                                           color: valueOrDefault<Color>(
-                                                                                                            _model.mouseRegionHovered10! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                            _model.mouseRegionHovered10 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                             FlutterFlowTheme.of(context).lineColor,
                                                                                                           ),
                                                                                                           width: 1.0,
@@ -2630,7 +2633,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                         ),
                                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                                       ),
-                                                                                                      contentPadding: EdgeInsets.all(16.0),
+                                                                                                      contentPadding: const EdgeInsets.all(16.0),
                                                                                                     ),
                                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                           fontFamily: 'Public Sans',
@@ -2641,7 +2644,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                                   ),
                                                                                                 ),
                                                                                                 Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                                   child: Icon(
                                                                                                     FFIcons.khelp,
                                                                                                     color: FlutterFlowTheme.of(context).secondaryText,
@@ -2653,20 +2656,14 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                           ),
                                                                                         ],
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered10 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered10 = false);
-                                                                                      }),
                                                                                     ),
-                                                                                  ].divide(SizedBox(height: 8.0)),
+                                                                                  ].divide(const SizedBox(height: 8.0)),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 20.0)),
+                                                                            ].divide(const SizedBox(width: 20.0)),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -2693,7 +2690,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         fontWeight: FontWeight.w500,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                           Row(
@@ -2711,8 +2708,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 text: 'Submit',
                                                                                 options: FFButtonOptions(
                                                                                   height: 42.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: FlutterFlowTheme.of(context).primary,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Public Sans',
@@ -2720,7 +2717,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                   elevation: 0.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Colors.transparent,
                                                                                     width: 0.0,
                                                                                   ),
@@ -2734,25 +2731,25 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 text: 'Cancel',
                                                                                 options: FFButtonOptions(
                                                                                   height: 42.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                  color: Color(0x33A8AAAE),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: const Color(0x33A8AAAE),
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Public Sans',
                                                                                         color: FlutterFlowTheme.of(context).secondary,
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                   elevation: 0.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Colors.transparent,
                                                                                     width: 0.0,
                                                                                   ),
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 20.0)),
+                                                                            ].divide(const SizedBox(width: 20.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 24.0)),
+                                                                        ].divide(const SizedBox(height: 24.0)),
                                                                       ),
                                                                     ),
                                                                   if (_model
@@ -2792,12 +2789,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 40.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -2812,7 +2809,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -2820,14 +2817,14 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                   if (_model
                                                                           .payment ==
                                                                       'Card')
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           60.0,
@@ -2841,7 +2838,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         children:
                                                                             [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -2875,11 +2872,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered11 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered11 = false);
+                                                                                }),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
                                                                                     Expanded(
-                                                                                      child: Container(
+                                                                                      child: SizedBox(
                                                                                         width: 124.0,
                                                                                         child: TextFormField(
                                                                                           controller: _model.textController5,
@@ -2903,7 +2906,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                             enabledBorder: OutlineInputBorder(
                                                                                               borderSide: BorderSide(
                                                                                                 color: valueOrDefault<Color>(
-                                                                                                  _model.mouseRegionHovered11! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                  _model.mouseRegionHovered11 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                                 ),
                                                                                                 width: 1.0,
@@ -2931,7 +2934,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                               ),
                                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                                             ),
-                                                                                            contentPadding: EdgeInsets.all(16.0),
+                                                                                            contentPadding: const EdgeInsets.all(16.0),
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Public Sans',
@@ -2944,14 +2947,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     ),
                                                                                   ],
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered11 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered11 = false);
-                                                                                }),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                           ),
                                                                           Column(
                                                                             mainAxisSize:
@@ -2971,11 +2968,17 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered12 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered12 = false);
+                                                                                }),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
                                                                                     Expanded(
-                                                                                      child: Container(
+                                                                                      child: SizedBox(
                                                                                         width: 124.0,
                                                                                         child: TextFormField(
                                                                                           controller: _model.textController6,
@@ -2999,7 +3002,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                             enabledBorder: OutlineInputBorder(
                                                                                               borderSide: BorderSide(
                                                                                                 color: valueOrDefault<Color>(
-                                                                                                  _model.mouseRegionHovered12! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                  _model.mouseRegionHovered12 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                                 ),
                                                                                                 width: 1.0,
@@ -3027,7 +3030,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                               ),
                                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                                             ),
-                                                                                            contentPadding: EdgeInsets.all(16.0),
+                                                                                            contentPadding: const EdgeInsets.all(16.0),
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Public Sans',
@@ -3040,14 +3043,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     ),
                                                                                   ],
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered12 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered12 = false);
-                                                                                }),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 8.0)),
+                                                                            ].divide(const SizedBox(height: 8.0)),
                                                                           ),
                                                                           Row(
                                                                             mainAxisSize:
@@ -3064,8 +3061,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 text: 'Redeem Gift Card',
                                                                                 options: FFButtonOptions(
                                                                                   height: 42.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: FlutterFlowTheme.of(context).primary,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Public Sans',
@@ -3073,25 +3070,25 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                   elevation: 0.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Colors.transparent,
                                                                                     width: 0.0,
                                                                                   ),
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 20.0)),
+                                                                            ].divide(const SizedBox(width: 20.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 24.0)),
+                                                                        ].divide(const SizedBox(height: 24.0)),
                                                                       ),
                                                                     ),
                                                                 ],
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   height: 20.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   height:
                                                                       48.0)),
                                                         ),
@@ -3139,7 +3136,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -3152,7 +3149,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -3169,7 +3166,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               8.0,
                                                                               0.0,
@@ -3202,7 +3199,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               2.0,
                                                                               0.0,
@@ -3243,15 +3240,15 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     child: StatusCardWidget(
                                                                                       title: 'Free',
                                                                                       titleColor: FlutterFlowTheme.of(context).success,
-                                                                                      bgColor: Color(0x3328C76F),
+                                                                                      bgColor: const Color(0x3328C76F),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 8.0)),
                                                                     ),
                                                                   ),
@@ -3265,7 +3262,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -3305,7 +3302,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ],
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               2.0,
                                                                               0.0,
@@ -3334,10 +3331,10 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     child: StatusCardWidget(
                                                                                       title: 'Home',
                                                                                       titleColor: FlutterFlowTheme.of(context).primary,
-                                                                                      bgColor: Color(0x337367F0),
+                                                                                      bgColor: const Color(0x337367F0),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                             ],
                                                                           ),
@@ -3381,7 +3378,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 8.0)),
+                                                                          ].divide(const SizedBox(height: 8.0)),
                                                                         ),
                                                                         Text(
                                                                           'Change address',
@@ -3395,25 +3392,25 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 fontWeight: FontWeight.w500,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 24.0)),
                                                                     ),
                                                                   ),
                                                                 ],
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 28.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 28.0)),
+                                                        const SizedBox(width: 28.0)),
                                                   ),
                                                 );
                                               } else if (_model.activeTab ==
                                                   'Confirmation') {
                                                 return Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3598,11 +3595,11 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         8.0)),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 20.0)),
                                                           ),
                                                           Container(
@@ -3726,11 +3723,11 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   child:
                                                                       Container(
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          EdgeInsets.all(
+                                                                          const EdgeInsets.all(
                                                                               20.0),
                                                                       child:
                                                                           Column(
@@ -3759,7 +3756,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       fontWeight: FontWeight.w500,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                           Text(
                                                                             'Preferred Method:',
@@ -3794,9 +3791,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)),
                                                                       ),
                                                                     ),
                                                                   ),
@@ -3804,7 +3801,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 24.0)),
                                                       ),
                                                       Row(
@@ -3842,7 +3839,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        PurchaseProductWidget(
+                                                                        const PurchaseProductWidget(
                                                                       product:
                                                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/ueyyuo6z3lkl/1.png',
                                                                       name:
@@ -3864,7 +3861,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        PurchaseProductWidget(
+                                                                        const PurchaseProductWidget(
                                                                       product:
                                                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/ztm4628nwer5/2.png',
                                                                       name:
@@ -3919,7 +3916,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       ),
                                                                       Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(20.0),
+                                                                            const EdgeInsets.all(20.0),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3929,7 +3926,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           children:
                                                                               [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                                                                               child: Text(
                                                                                 'Price Details',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3941,7 +3938,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -3967,7 +3964,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -3999,15 +3996,15 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         child: StatusCardWidget(
                                                                                           title: 'Free',
                                                                                           titleColor: FlutterFlowTheme.of(context).success,
-                                                                                          bgColor: Color(0x3328C76F),
+                                                                                          bgColor: const Color(0x3328C76F),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 8.0)),
+                                                                                    ].divide(const SizedBox(width: 8.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 10.0)),
+                                                                          ].divide(const SizedBox(height: 10.0)),
                                                                         ),
                                                                       ),
                                                                       Divider(
@@ -4020,7 +4017,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       ),
                                                                       Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(20.0),
+                                                                            const EdgeInsets.all(20.0),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -4053,21 +4050,21 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       28.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 28.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 40.0)),
+                                                        const SizedBox(height: 40.0)),
                                                   ),
                                                 );
                                               } else {
                                                 return Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4089,7 +4086,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   .infinity,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x3328C76F),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -4098,7 +4095,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             16.0),
                                                                 child: Row(
@@ -4176,9 +4173,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 16.0)),
+                                                                        ].divide(const SizedBox(height: 16.0)),
                                                                       ),
                                                                     ),
                                                                     MouseRegion(
@@ -4188,21 +4185,6 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
-                                                                      child:
-                                                                          Icon(
-                                                                        FFIcons
-                                                                            .kx,
-                                                                        color: valueOrDefault<
-                                                                            Color>(
-                                                                          _model.mouseRegionHovered13!
-                                                                              ? FlutterFlowTheme.of(context).success
-                                                                              : Color(0x6728C76F),
-                                                                          Color(
-                                                                              0x6728C76F),
-                                                                        ),
-                                                                        size:
-                                                                            20.0,
-                                                                      ),
                                                                       onEnter:
                                                                           ((event) async {
                                                                         safeSetState(() =>
@@ -4215,8 +4197,23 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             _model.mouseRegionHovered13 =
                                                                                 false);
                                                                       }),
+                                                                      child:
+                                                                          Icon(
+                                                                        FFIcons
+                                                                            .kx,
+                                                                        color: valueOrDefault<
+                                                                            Color>(
+                                                                          _model.mouseRegionHovered13
+                                                                              ? FlutterFlowTheme.of(context).success
+                                                                              : const Color(0x6728C76F),
+                                                                          const Color(
+                                                                              0x6728C76F),
+                                                                        ),
+                                                                        size:
+                                                                            20.0,
+                                                                      ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           20.0)),
                                                                 ),
@@ -4270,7 +4267,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        MyShoppingWidget(
+                                                                        const MyShoppingWidget(
                                                                       product:
                                                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/ueyyuo6z3lkl/1.png',
                                                                       name:
@@ -4292,7 +4289,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        MyShoppingWidget(
+                                                                        const MyShoppingWidget(
                                                                       product:
                                                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/ztm4628nwer5/2.png',
                                                                       name:
@@ -4328,8 +4325,20 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                         .defer ??
                                                                     MouseCursor
                                                                         .defer,
+                                                                onEnter:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered14 =
+                                                                          true);
+                                                                }),
+                                                                onExit:
+                                                                    ((event) async {
+                                                                  safeSetState(() =>
+                                                                      _model.mouseRegionHovered14 =
+                                                                          false);
+                                                                }),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           8.0,
@@ -4350,7 +4359,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             .override(
                                                                               fontFamily: 'Public Sans',
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered14! ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
+                                                                                _model.mouseRegionHovered14 ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondaryTitle,
                                                                                 FlutterFlowTheme.of(context).secondaryTitle,
                                                                               ),
                                                                               fontSize: 16.0,
@@ -4362,7 +4371,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             .kchevronRight,
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered14!
+                                                                          _model.mouseRegionHovered14
                                                                               ? FlutterFlowTheme.of(context).primary
                                                                               : FlutterFlowTheme.of(context).secondaryTitle,
                                                                           FlutterFlowTheme.of(context)
@@ -4374,21 +4383,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                     ],
                                                                   ),
                                                                 ),
-                                                                onEnter:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered14 =
-                                                                          true);
-                                                                }),
-                                                                onExit:
-                                                                    ((event) async {
-                                                                  safeSetState(() =>
-                                                                      _model.mouseRegionHovered14 =
-                                                                          false);
-                                                                }),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -4427,7 +4424,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                 children: [
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -4450,7 +4447,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               6.0,
                                                                               0.0,
@@ -4467,7 +4464,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 child: MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                  child: Container(
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered15 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered15 = false);
+                                                                                  }),
+                                                                                  child: SizedBox(
                                                                                     width: 100.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.textController7,
@@ -4491,7 +4494,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         enabledBorder: OutlineInputBorder(
                                                                                           borderSide: BorderSide(
                                                                                             color: valueOrDefault<Color>(
-                                                                                              _model.mouseRegionHovered15! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                              _model.mouseRegionHovered15 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                                             ),
                                                                                             width: 1.0,
@@ -4519,7 +4522,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                           ),
                                                                                           borderRadius: BorderRadius.circular(6.0),
                                                                                         ),
-                                                                                        contentPadding: EdgeInsets.all(16.0),
+                                                                                        contentPadding: const EdgeInsets.all(16.0),
                                                                                       ),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                             fontFamily: 'Public Sans',
@@ -4529,12 +4532,6 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                       validator: _model.textController7Validator.asValidator(context),
                                                                                     ),
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered15 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered15 = false);
-                                                                                  }),
                                                                                 ),
                                                                               ),
                                                                               FFButtonWidget(
@@ -4544,9 +4541,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                 text: 'Apply',
                                                                                 options: FFButtonOptions(
                                                                                   height: 43.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                  color: Color(0x337367F0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: const Color(0x337367F0),
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Public Sans',
                                                                                         color: FlutterFlowTheme.of(context).primary,
@@ -4554,14 +4551,14 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                   elevation: 0.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Colors.transparent,
                                                                                     width: 0.0,
                                                                                   ),
                                                                                   borderRadius: BorderRadius.circular(6.0),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 16.0)),
+                                                                            ].divide(const SizedBox(width: 16.0)),
                                                                           ),
                                                                         ),
                                                                         Container(
@@ -4577,7 +4574,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(16.0),
+                                                                                const EdgeInsets.all(16.0),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -4612,11 +4609,11 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 10.0)),
+                                                                              ].divide(const SizedBox(height: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                   ),
@@ -4630,7 +4627,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -4643,7 +4640,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -4685,7 +4682,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ],
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               8.0,
                                                                               0.0,
@@ -4718,7 +4715,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               8.0,
                                                                               0.0,
@@ -4751,7 +4748,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               2.0,
                                                                               0.0,
@@ -4790,15 +4787,15 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                                     child: StatusCardWidget(
                                                                                       title: 'Free',
                                                                                       titleColor: FlutterFlowTheme.of(context).success,
-                                                                                      bgColor: Color(0x3328C76F),
+                                                                                      bgColor: const Color(0x3328C76F),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 8.0)),
                                                                     ),
                                                                   ),
@@ -4812,7 +4809,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -4863,14 +4860,14 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 height: 44.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -4892,7 +4889,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 0.0,
@@ -4903,12 +4900,12 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                                                             8.0),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 28.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 28.0)),
+                                                        const SizedBox(width: 28.0)),
                                                   ),
                                                 );
                                               }
@@ -4922,25 +4919,25 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

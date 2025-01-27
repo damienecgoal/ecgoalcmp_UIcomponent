@@ -1,11 +1,7 @@
 import '/components_2/avatar_title/avatar_title_widget.dart';
 import '/components_2/icon_box/icon_box_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'connections_card_model.dart';
 export 'connections_card_model.dart';
 
@@ -56,7 +52,7 @@ class _ConnectionsCardWidgetState extends State<ConnectionsCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,18 +61,18 @@ class _ConnectionsCardWidgetState extends State<ConnectionsCardWidget> {
             model: _model.avatarTitleModel,
             updateCallback: () => safeSetState(() {}),
             child: AvatarTitleWidget(
-              avatar: widget!.avatar!,
-              name: widget!.name!,
+              avatar: widget.avatar!,
+              name: widget.name!,
               size: 36.0,
-              description: widget!.description!,
+              description: widget.description!,
             ),
           ),
           wrapWithModel(
             model: _model.iconBoxModel,
             updateCallback: () => safeSetState(() {}),
             child: IconBoxWidget(
-              icon: widget!.icon!,
-              bg: widget!.bg!,
+              icon: widget.icon!,
+              bg: widget.bg!,
               size: 32.0,
             ),
           ),

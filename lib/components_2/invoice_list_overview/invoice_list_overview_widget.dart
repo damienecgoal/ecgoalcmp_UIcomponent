@@ -1,10 +1,7 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'invoice_list_overview_model.dart';
 export 'invoice_list_overview_model.dart';
 
@@ -52,7 +49,7 @@ class _InvoiceListOverviewWidgetState extends State<InvoiceListOverviewWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,7 +61,7 @@ class _InvoiceListOverviewWidgetState extends State<InvoiceListOverviewWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.total,
+                  widget.total,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -76,7 +73,7 @@ class _InvoiceListOverviewWidgetState extends State<InvoiceListOverviewWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.mathod,
+                  widget.mathod,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -86,14 +83,14 @@ class _InvoiceListOverviewWidgetState extends State<InvoiceListOverviewWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(height: 8.0)),
+            ].divide(const SizedBox(height: 8.0)),
           ),
           wrapWithModel(
             model: _model.iconBoxModel,
             updateCallback: () => safeSetState(() {}),
             child: IconBoxWidget(
-              icon: widget!.icon!,
-              bg: Color(0x34A8AAAE),
+              icon: widget.icon!,
+              bg: const Color(0x34A8AAAE),
               size: 42.0,
             ),
           ),

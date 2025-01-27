@@ -1,8 +1,5 @@
-import '/auth/base_auth_user_provider.dart';
 import '/components/about_card/about_card_widget.dart';
 import '/components/avatar_name/avatar_name_widget.dart';
-import '/components/nodal/profile_action/profile_action_widget.dart';
-import '/components/nodal/project_action/project_action_widget.dart';
 import '/components_2/connections/connections_widget.dart';
 import '/components_2/connections_card/connections_card_widget.dart';
 import '/components_2/footer/footer_widget.dart';
@@ -14,18 +11,9 @@ import '/components_2/project/project_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/teams_card/teams_card_widget.dart';
 import '/components_2/teams_card2/teams_card2_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'profile_widget.dart' show ProfileWidget;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class ProfileModel extends FlutterFlowModel<ProfileWidget> {
   ///  Local state fields for this page.

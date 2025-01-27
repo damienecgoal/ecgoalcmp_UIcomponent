@@ -2,10 +2,7 @@ import '/components_2/icon_container/icon_container_widget.dart';
 import '/components_2/title_subtitle/title_subtitle_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'transactions_model.dart';
 export 'transactions_model.dart';
 
@@ -58,7 +55,7 @@ class _TransactionsWidgetState extends State<TransactionsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -66,8 +63,8 @@ class _TransactionsWidgetState extends State<TransactionsWidget> {
             model: _model.iconContainerModel,
             updateCallback: () => safeSetState(() {}),
             child: IconContainerWidget(
-              icon: widget!.icon!,
-              bgcolor: widget!.bg!,
+              icon: widget.icon!,
+              bgcolor: widget.bg!,
             ),
           ),
           Expanded(
@@ -75,25 +72,25 @@ class _TransactionsWidgetState extends State<TransactionsWidget> {
               model: _model.titleSubtitleModel,
               updateCallback: () => safeSetState(() {}),
               child: TitleSubtitleWidget(
-                title: widget!.title!,
-                subtitle: widget!.subtitle!,
+                title: widget.title!,
+                subtitle: widget.subtitle!,
               ),
             ),
           ),
           Text(
             valueOrDefault<String>(
-              widget!.amount,
+              widget.amount,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Public Sans',
-                  color: widget!.color,
+                  color: widget.color,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

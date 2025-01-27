@@ -1,8 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'icon_box_model.dart';
 export 'icon_box_model.dart';
 
@@ -49,14 +46,14 @@ class _IconBoxWidgetState extends State<IconBoxWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget!.size,
-      height: widget!.size,
+      width: widget.size,
+      height: widget.size,
       decoration: BoxDecoration(
-        color: widget!.bg,
+        color: widget.bg,
         borderRadius: BorderRadius.circular(8.0),
         shape: BoxShape.rectangle,
       ),
-      child: widget!.icon!,
+      child: widget.icon!,
     );
   }
 }

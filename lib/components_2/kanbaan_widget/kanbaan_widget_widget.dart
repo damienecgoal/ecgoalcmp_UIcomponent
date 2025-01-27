@@ -1,10 +1,7 @@
 import '/components_2/lable/lable_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'kanbaan_widget_model.dart';
 export 'kanbaan_widget_model.dart';
 
@@ -53,7 +50,7 @@ class _KanbaanWidgetWidgetState extends State<KanbaanWidgetWidget> {
             borderRadius: BorderRadius.circular(6.0),
           ),
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,7 +97,7 @@ class _KanbaanWidgetWidgetState extends State<KanbaanWidgetWidget> {
                                 letterSpacing: 0.0,
                               ),
                         ),
-                      ].divide(SizedBox(width: 8.0)),
+                      ].divide(const SizedBox(width: 8.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -122,9 +119,9 @@ class _KanbaanWidgetWidgetState extends State<KanbaanWidgetWidget> {
                                 letterSpacing: 0.0,
                               ),
                         ),
-                      ].divide(SizedBox(width: 8.0)),
+                      ].divide(const SizedBox(width: 8.0)),
                     ),
-                  ].divide(SizedBox(width: 14.0)),
+                  ].divide(const SizedBox(width: 14.0)),
                 ),
               ],
             ),
@@ -139,7 +136,7 @@ class _KanbaanWidgetWidgetState extends State<KanbaanWidgetWidget> {
           borderRadius: BorderRadius.circular(6.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -184,7 +181,7 @@ class _KanbaanWidgetWidgetState extends State<KanbaanWidgetWidget> {
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 8.0)),
+                    ].divide(const SizedBox(width: 8.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -204,9 +201,9 @@ class _KanbaanWidgetWidgetState extends State<KanbaanWidgetWidget> {
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 8.0)),
+                    ].divide(const SizedBox(width: 8.0)),
                   ),
-                ].divide(SizedBox(width: 14.0)),
+                ].divide(const SizedBox(width: 14.0)),
               ),
             ],
           ),

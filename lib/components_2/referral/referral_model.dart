@@ -1,11 +1,7 @@
 import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'referral_widget.dart' show ReferralWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class ReferralModel extends FlutterFlowModel<ReferralWidget> {
   ///  State fields for stateful widgets in this component.

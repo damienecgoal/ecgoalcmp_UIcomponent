@@ -7,10 +7,8 @@ import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'pricing_model.dart';
 export 'pricing_model.dart';
@@ -40,7 +38,7 @@ class _PricingWidgetState extends State<PricingWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -81,19 +79,19 @@ class _PricingWidgetState extends State<PricingWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -112,7 +110,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -127,7 +125,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(60.0),
+                                        padding: const EdgeInsets.all(60.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -204,11 +202,11 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary,
-                                                              bgColor: Color(
+                                                              bgColor: const Color(
                                                                   0x337367F0),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 8.0)),
                                                       ),
                                                       Row(
@@ -239,7 +237,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                 (newValue) async {
                                                               safeSetState(() =>
                                                                   _model.switchValue =
-                                                                      newValue!);
+                                                                      newValue);
                                                             },
                                                             activeColor:
                                                                 Colors.white,
@@ -272,14 +270,14 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 8.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 2.0)),
+                                                        const SizedBox(height: 2.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 16.0)),
+                                              ].divide(const SizedBox(height: 16.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -327,7 +325,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                         ),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -386,7 +384,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       12.0)),
                                                             ),
@@ -418,7 +416,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 '\$',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -461,7 +459,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 2.0)),
                                                                     ),
                                                                   ),
@@ -486,7 +484,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         12.0)),
                                                               ),
@@ -503,7 +501,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         '100 responses a month',
                                                                   ),
@@ -515,7 +513,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Unlimited forms and surveys',
                                                                   ),
@@ -527,7 +525,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Unlimited fields',
                                                                   ),
@@ -539,7 +537,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Basic form creation tools',
                                                                   ),
@@ -551,12 +549,12 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Up to 2 subdomains',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       16.0)),
                                                             ),
@@ -569,7 +567,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                   extra: <String,
                                                                       dynamic>{
                                                                     kTransitionInfoKey:
-                                                                        TransitionInfo(
+                                                                        const TransitionInfo(
                                                                       hasTransition:
                                                                           true,
                                                                       transitionType:
@@ -586,20 +584,20 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 height: 44.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x3328C76F),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -615,7 +613,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 0.0,
@@ -627,14 +625,14 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   height: 28.0))
                                                               .addToStart(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           8.0))
                                                               .addToEnd(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           4.0)),
                                                         ),
@@ -683,7 +681,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                         ),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -742,7 +740,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       12.0)),
                                                             ),
@@ -774,7 +772,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 '\$',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -817,7 +815,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 2.0)),
                                                                     ),
                                                                   ),
@@ -842,7 +840,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         12.0)),
                                                               ),
@@ -859,7 +857,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Up to 5 users',
                                                                   ),
@@ -871,7 +869,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         '120+ components',
                                                                   ),
@@ -883,7 +881,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Basic support on Github',
                                                                   ),
@@ -895,7 +893,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Monthly updates',
                                                                   ),
@@ -907,12 +905,12 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Integrations',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       16.0)),
                                                             ),
@@ -925,7 +923,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                   extra: <String,
                                                                       dynamic>{
                                                                     kTransitionInfoKey:
-                                                                        TransitionInfo(
+                                                                        const TransitionInfo(
                                                                       hasTransition:
                                                                           true,
                                                                       transitionType:
@@ -941,14 +939,14 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 height: 44.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -970,7 +968,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 0.0,
@@ -982,14 +980,14 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   height: 28.0))
                                                               .addToStart(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           8.0))
                                                               .addToEnd(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           4.0)),
                                                         ),
@@ -1040,7 +1038,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                         ),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -1099,7 +1097,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       12.0)),
                                                             ),
@@ -1131,7 +1129,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 '\$',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1174,7 +1172,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 2.0)),
                                                                     ),
                                                                   ),
@@ -1199,7 +1197,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       ),
                                                                     ],
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         12.0)),
                                                               ),
@@ -1216,7 +1214,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Up to 10 users',
                                                                   ),
@@ -1228,7 +1226,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         '150+ components',
                                                                   ),
@@ -1240,7 +1238,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Basic support on Github',
                                                                   ),
@@ -1252,7 +1250,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Monthly updates',
                                                                   ),
@@ -1264,12 +1262,12 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PointTextWidget(
+                                                                      const PointTextWidget(
                                                                     text:
                                                                         'Speedy build tooling',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       16.0)),
                                                             ),
@@ -1282,7 +1280,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                   extra: <String,
                                                                       dynamic>{
                                                                     kTransitionInfoKey:
-                                                                        TransitionInfo(
+                                                                        const TransitionInfo(
                                                                       hasTransition:
                                                                           true,
                                                                       transitionType:
@@ -1298,20 +1296,20 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 height: 44.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x337367F0),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -1327,7 +1325,7 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 0.0,
@@ -1339,14 +1337,14 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   height: 28.0))
                                                               .addToStart(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           8.0))
                                                               .addToEnd(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           4.0)),
                                                         ),
@@ -1354,9 +1352,9 @@ class _PricingWidgetState extends State<PricingWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
-                                          ].divide(SizedBox(height: 60.0)),
+                                          ].divide(const SizedBox(height: 60.0)),
                                         ),
                                       ),
                                     ),
@@ -1365,25 +1363,25 @@ class _PricingWidgetState extends State<PricingWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

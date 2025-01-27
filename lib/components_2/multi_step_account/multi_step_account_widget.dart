@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'multi_step_account_model.dart';
 export 'multi_step_account_model.dart';
 
@@ -52,7 +49,7 @@ class _MultiStepAccountWidgetState extends State<MultiStepAccountWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -63,7 +60,7 @@ class _MultiStepAccountWidgetState extends State<MultiStepAccountWidget> {
               color: FlutterFlowTheme.of(context).primary,
               borderRadius: BorderRadius.circular(8.0),
             ),
-            child: widget!.icon!,
+            child: widget.icon!,
           ),
           Column(
             mainAxisSize: MainAxisSize.min,
@@ -71,7 +68,7 @@ class _MultiStepAccountWidgetState extends State<MultiStepAccountWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.title,
+                  widget.title,
                   'Account',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -83,7 +80,7 @@ class _MultiStepAccountWidgetState extends State<MultiStepAccountWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.subTitle,
+                  widget.subTitle,
                   'Account Details',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -92,14 +89,14 @@ class _MultiStepAccountWidgetState extends State<MultiStepAccountWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(height: 6.0)),
+            ].divide(const SizedBox(height: 6.0)),
           ),
           Icon(
             FFIcons.kchevronRight,
             color: FlutterFlowTheme.of(context).secondaryText,
             size: 24.0,
           ),
-        ].divide(SizedBox(width: 18.0)),
+        ].divide(const SizedBox(width: 18.0)),
       ),
     );
   }

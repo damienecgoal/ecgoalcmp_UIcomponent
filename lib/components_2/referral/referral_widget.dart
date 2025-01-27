@@ -1,10 +1,7 @@
 import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'referral_model.dart';
 export 'referral_model.dart';
 
@@ -56,7 +53,7 @@ class _ReferralWidgetState extends State<ReferralWidget> {
       height: 100.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 12.0,
             color: Color(0x14000000),
@@ -70,20 +67,20 @@ class _ReferralWidgetState extends State<ReferralWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     valueOrDefault<String>(
-                      widget!.totll,
+                      widget.totll,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -95,7 +92,7 @@ class _ReferralWidgetState extends State<ReferralWidget> {
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.method,
+                      widget.method,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -105,15 +102,15 @@ class _ReferralWidgetState extends State<ReferralWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
-                ].divide(SizedBox(height: 6.0)),
+                ].divide(const SizedBox(height: 6.0)),
               ),
             ),
             wrapWithModel(
               model: _model.iconContainerCircleModel,
               updateCallback: () => safeSetState(() {}),
               child: IconContainerCircleWidget(
-                icon: widget!.icon!,
-                bgcolor: widget!.bg!,
+                icon: widget.icon!,
+                bgcolor: widget.bg!,
                 daimiter: 44.0,
               ),
             ),

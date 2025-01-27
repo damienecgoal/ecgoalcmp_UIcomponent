@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'label_model.dart';
 export 'label_model.dart';
 
@@ -48,7 +45,7 @@ class _LabelWidgetState extends State<LabelWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -56,13 +53,13 @@ class _LabelWidgetState extends State<LabelWidget> {
             width: 10.0,
             height: 10.0,
             decoration: BoxDecoration(
-              color: widget!.color,
+              color: widget.color,
               shape: BoxShape.circle,
             ),
           ),
           Text(
             valueOrDefault<String>(
-              widget!.name,
+              widget.name,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -73,7 +70,7 @@ class _LabelWidgetState extends State<LabelWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(SizedBox(width: 12.0)),
+        ].divide(const SizedBox(width: 12.0)),
       ),
     );
   }

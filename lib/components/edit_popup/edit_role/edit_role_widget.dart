@@ -3,13 +3,8 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'edit_role_model.dart';
 export 'edit_role_model.dart';
 
@@ -48,8 +43,8 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -62,8 +57,8 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, -300.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -300.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -82,22 +77,22 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
-      child: Container(
+      alignment: const AlignmentDirectional(0.0, 0.0),
+      child: SizedBox(
         width: 800.0,
         height: 910.0,
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
                 child: Container(
                   width: 800.0,
                   height: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 20.0,
                         color: Color(0x29000000),
@@ -109,7 +104,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 70.0),
+                        const EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 70.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -140,7 +135,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                          ].divide(SizedBox(height: 12.0)),
+                          ].divide(const SizedBox(height: 12.0)),
                         ),
                         Column(
                           mainAxisSize: MainAxisSize.max,
@@ -159,6 +154,14 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                             MouseRegion(
                               opaque: false,
                               cursor: MouseCursor.defer ?? MouseCursor.defer,
+                              onEnter: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered1 = true);
+                              }),
+                              onExit: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered1 = false);
+                              }),
                               child: TextFormField(
                                 controller: _model.textController,
                                 focusNode: _model.textFieldFocusNode,
@@ -186,7 +189,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered1!
+                                        _model.mouseRegionHovered1
                                             ? FlutterFlowTheme.of(context)
                                                 .secondaryText
                                             : FlutterFlowTheme.of(context)
@@ -220,7 +223,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -233,26 +236,18 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                 validator: _model.textControllerValidator
                                     .asValidator(context),
                               ),
-                              onEnter: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered1 = true);
-                              }),
-                              onExit: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered1 = false);
-                              }),
                             ),
-                          ].divide(SizedBox(height: 8.0)),
+                          ].divide(const SizedBox(height: 8.0)),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 16.0),
                                 child: Text(
                                   'Role Permissions',
@@ -270,7 +265,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 6.0, 0.0, 6.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -304,7 +299,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                                         .secondaryText,
                                                 size: 24.0,
                                               ),
-                                            ].divide(SizedBox(width: 4.0)),
+                                            ].divide(const SizedBox(width: 4.0)),
                                           ),
                                         ),
                                         Expanded(
@@ -377,9 +372,9 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 4.0)),
+                                                ].divide(const SizedBox(width: 4.0)),
                                               ),
-                                            ].divide(SizedBox(width: 40.0)),
+                                            ].divide(const SizedBox(width: 40.0)),
                                           ),
                                         ),
                                       ],
@@ -396,63 +391,63 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                               wrapWithModel(
                                 model: _model.notificationCardModel1,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'User Management',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel2,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Content Management',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel3,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Disputes Management',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel4,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Database Management',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel5,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Financial Management',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel6,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Reporting',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel7,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'API Control',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel8,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Repository Management',
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.notificationCardModel9,
                                 updateCallback: () => safeSetState(() {}),
-                                child: NotificationCardWidget(
+                                child: const NotificationCardWidget(
                                   name: 'Payroll',
                                 ),
                               ),
@@ -470,9 +465,9 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                               text: 'Submit',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -483,7 +478,7 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
@@ -497,11 +492,11 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                               text: 'Cancel',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0x34A8AAAE),
+                                color: const Color(0x34A8AAAE),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -511,35 +506,41 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 0.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
-                      ].divide(SizedBox(height: 24.0)),
+                      ].divide(const SizedBox(height: 24.0)),
                     ),
                   ),
                 ),
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(1.0, -1.0),
+              alignment: const AlignmentDirectional(1.0, -1.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = false);
+                }),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(
                       0.0,
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered2! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered2 ? 5.0 : 0.0,
                         0.0,
                       ),
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered2! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered2 ? 5.0 : 0.0,
                         0.0,
                       ),
                       0.0),
@@ -562,8 +563,8 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                         height: 36.0,
                         decoration: BoxDecoration(
                           color: valueOrDefault<Color>(
-                            _model.mouseRegionHovered2!
-                                ? Color(0xFF383C54)
+                            _model.mouseRegionHovered2
+                                ? const Color(0xFF383C54)
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                             FlutterFlowTheme.of(context).secondaryBackground,
@@ -579,12 +580,6 @@ class _EditRoleWidgetState extends State<EditRoleWidget>
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = false);
-                }),
               ),
             ),
           ],

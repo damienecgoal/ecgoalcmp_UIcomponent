@@ -1,10 +1,7 @@
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'course_status_model.dart';
 export 'course_status_model.dart';
 
@@ -55,7 +52,7 @@ class _CourseStatusWidgetState extends State<CourseStatusWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,9 +61,9 @@ class _CourseStatusWidgetState extends State<CourseStatusWidget> {
             model: _model.statusCardModel,
             updateCallback: () => safeSetState(() {}),
             child: StatusCardWidget(
-              title: widget!.status!,
-              titleColor: widget!.statusColor!,
-              bgColor: widget!.bg!,
+              title: widget.status!,
+              titleColor: widget.statusColor!,
+              bgColor: widget.bg!,
             ),
           ),
           Row(
@@ -74,7 +71,7 @@ class _CourseStatusWidgetState extends State<CourseStatusWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.ratings,
+                  widget.ratings,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -91,7 +88,7 @@ class _CourseStatusWidgetState extends State<CourseStatusWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.count,
+                  widget.count,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -101,7 +98,7 @@ class _CourseStatusWidgetState extends State<CourseStatusWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(width: 8.0)),
+            ].divide(const SizedBox(width: 8.0)),
           ),
         ],
       ),

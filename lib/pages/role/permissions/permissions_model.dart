@@ -1,21 +1,13 @@
-import '/auth/base_auth_user_provider.dart';
 import '/components/list/permissions_list/permissions_list_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/list_header/list_header_widget.dart';
 import '/components_2/list_header2/list_header2_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'permissions_widget.dart' show PermissionsWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class PermissionsModel extends FlutterFlowModel<PermissionsWidget> {
   ///  Local state fields for this page.

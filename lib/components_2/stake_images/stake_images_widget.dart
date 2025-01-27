@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'stake_images_model.dart';
 export 'stake_images_model.dart';
 
@@ -55,7 +53,7 @@ class _StakeImagesWidgetState extends State<StakeImagesWidget> {
     return Container(
       width: 146.0,
       height: 40.0,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Stack(
         children: [
           Container(
@@ -72,17 +70,17 @@ class _StakeImagesWidgetState extends State<StakeImagesWidget> {
               width: 120.0,
               height: 120.0,
               clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
               ),
               child: Image.network(
-                widget!.avatar1!,
+                widget.avatar1!,
                 fit: BoxFit.cover,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(26.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(26.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 38.0,
               height: 38.0,
@@ -97,18 +95,18 @@ class _StakeImagesWidgetState extends State<StakeImagesWidget> {
                 width: 120.0,
                 height: 120.0,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
-                  widget!.avatar2!,
+                  widget.avatar2!,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(52.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(52.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 38.0,
               height: 38.0,
@@ -123,18 +121,18 @@ class _StakeImagesWidgetState extends State<StakeImagesWidget> {
                 width: 120.0,
                 height: 120.0,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
-                  widget!.avatar3!,
+                  widget.avatar3!,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(78.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(78.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 38.0,
               height: 38.0,
@@ -149,18 +147,18 @@ class _StakeImagesWidgetState extends State<StakeImagesWidget> {
                 width: 120.0,
                 height: 120.0,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
-                  widget!.avatar4!,
+                  widget.avatar4!,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(104.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(104.0, 0.0, 0.0, 0.0),
             child: Container(
               width: 38.0,
               height: 38.0,
@@ -175,11 +173,11 @@ class _StakeImagesWidgetState extends State<StakeImagesWidget> {
                 width: 120.0,
                 height: 120.0,
                 clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
-                  widget!.avatar5!,
+                  widget.avatar5!,
                   fit: BoxFit.cover,
                 ),
               ),

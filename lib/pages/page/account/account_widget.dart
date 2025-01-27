@@ -19,11 +19,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
@@ -55,7 +52,7 @@ class _AccountWidgetState extends State<AccountWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -171,19 +168,19 @@ class _AccountWidgetState extends State<AccountWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -196,7 +193,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 clipBehavior: Clip.none,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -284,6 +281,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered1 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered1 = false);
+                                        }),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -308,7 +313,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
                                               child: Row(
@@ -318,7 +323,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FFIcons.kusers,
                                                     color:
                                                         valueOrDefault<Color>(
-                                                      _model.mouseRegionHovered1!
+                                                      _model.mouseRegionHovered1
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
@@ -341,7 +346,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               'Public Sans',
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered1!
+                                                            _model.mouseRegionHovered1
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
@@ -358,24 +363,24 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 8.0)),
+                                                ].divide(const SizedBox(width: 8.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered1 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered1 = false);
-                                        }),
                                       ),
                                       MouseRegion(
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered2 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered2 = false);
+                                        }),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -400,7 +405,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
                                               child: Row(
@@ -410,7 +415,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FFIcons.klock,
                                                     color:
                                                         valueOrDefault<Color>(
-                                                      _model.mouseRegionHovered2!
+                                                      _model.mouseRegionHovered2
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
@@ -433,7 +438,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               'Public Sans',
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered2!
+                                                            _model.mouseRegionHovered2
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
@@ -450,24 +455,24 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 8.0)),
+                                                ].divide(const SizedBox(width: 8.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered2 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered2 = false);
-                                        }),
                                       ),
                                       MouseRegion(
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered3 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered3 = false);
+                                        }),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -492,7 +497,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
                                               child: Row(
@@ -502,7 +507,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FFIcons.kfileDescription,
                                                     color:
                                                         valueOrDefault<Color>(
-                                                      _model.mouseRegionHovered3!
+                                                      _model.mouseRegionHovered3
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
@@ -525,7 +530,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               'Public Sans',
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered3!
+                                                            _model.mouseRegionHovered3
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
@@ -542,24 +547,24 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 8.0)),
+                                                ].divide(const SizedBox(width: 8.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered3 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered3 = false);
-                                        }),
                                       ),
                                       MouseRegion(
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered4 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered4 = false);
+                                        }),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -585,7 +590,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
                                               child: Row(
@@ -595,7 +600,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FFIcons.kbell,
                                                     color:
                                                         valueOrDefault<Color>(
-                                                      _model.mouseRegionHovered4!
+                                                      _model.mouseRegionHovered4
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
@@ -618,7 +623,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               'Public Sans',
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered4!
+                                                            _model.mouseRegionHovered4
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
@@ -635,24 +640,24 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 8.0)),
+                                                ].divide(const SizedBox(width: 8.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered4 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered4 = false);
-                                        }),
                                       ),
                                       MouseRegion(
                                         opaque: false,
                                         cursor: MouseCursor.defer ??
                                             MouseCursor.defer,
+                                        onEnter: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered5 = true);
+                                        }),
+                                        onExit: ((event) async {
+                                          safeSetState(() => _model
+                                              .mouseRegionHovered5 = false);
+                                        }),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -678,7 +683,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 16.0, 0.0),
                                               child: Row(
@@ -688,7 +693,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FFIcons.klink,
                                                     color:
                                                         valueOrDefault<Color>(
-                                                      _model.mouseRegionHovered5!
+                                                      _model.mouseRegionHovered5
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
@@ -711,7 +716,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               'Public Sans',
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered5!
+                                                            _model.mouseRegionHovered5
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
@@ -728,19 +733,11 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               FontWeight.normal,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 8.0)),
+                                                ].divide(const SizedBox(width: 8.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                        onEnter: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered5 = true);
-                                        }),
-                                        onExit: ((event) async {
-                                          safeSetState(() => _model
-                                              .mouseRegionHovered5 = false);
-                                        }),
                                       ),
                                     ],
                                   ),
@@ -756,7 +753,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 20.0,
                                                     color: Color(0x29000000),
@@ -768,7 +765,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -839,6 +836,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered6 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered6 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -875,7 +884,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered6! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered6 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -914,7 +923,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           contentPadding:
-                                                                              EdgeInsets.all(16.0),
+                                                                              const EdgeInsets.all(16.0),
                                                                           suffixIcon:
                                                                               InkWell(
                                                                             onTap: () =>
@@ -942,20 +951,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController1Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered6 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered6 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -988,6 +985,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered7 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered7 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -1024,7 +1033,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -1063,7 +1072,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           contentPadding:
-                                                                              EdgeInsets.all(16.0),
+                                                                              const EdgeInsets.all(16.0),
                                                                           suffixIcon:
                                                                               InkWell(
                                                                             onTap: () =>
@@ -1091,24 +1100,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController2Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered7 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered7 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       24.0)),
                                                             ),
@@ -1142,6 +1139,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           .defer ??
                                                                       MouseCursor
                                                                           .defer,
+                                                                  onEnter:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered8 =
+                                                                            true);
+                                                                  }),
+                                                                  onExit:
+                                                                      ((event) async {
+                                                                    safeSetState(() =>
+                                                                        _model.mouseRegionHovered8 =
+                                                                            false);
+                                                                  }),
                                                                   child:
                                                                       TextFormField(
                                                                     controller:
@@ -1191,7 +1200,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             BorderSide(
                                                                           color:
                                                                               valueOrDefault<Color>(
-                                                                            _model.mouseRegionHovered8!
+                                                                            _model.mouseRegionHovered8
                                                                                 ? FlutterFlowTheme.of(context).secondaryText
                                                                                 : FlutterFlowTheme.of(context).lineColor,
                                                                             FlutterFlowTheme.of(context).lineColor,
@@ -1238,7 +1247,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
                                                                       ),
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           16.0,
                                                                           16.0,
@@ -1280,24 +1289,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         .asValidator(
                                                                             context),
                                                                   ),
-                                                                  onEnter:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered8 =
-                                                                            true);
-                                                                  }),
-                                                                  onExit:
-                                                                      ((event) async {
-                                                                    safeSetState(() =>
-                                                                        _model.mouseRegionHovered8 =
-                                                                            false);
-                                                                  }),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 28.0)),
                                                       ),
                                                     ),
@@ -1341,7 +1338,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  PointTextWidget(
+                                                                  const PointTextWidget(
                                                                 text:
                                                                     'Minimum 8 characters long - the more, the better',
                                                               ),
@@ -1353,7 +1350,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  PointTextWidget(
+                                                                  const PointTextWidget(
                                                                 text:
                                                                     'At least one lowercase character',
                                                               ),
@@ -1365,17 +1362,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  PointTextWidget(
+                                                                  const PointTextWidget(
                                                                 text:
                                                                     'At least one number, symbol, or whitespace character',
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 10.0)),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       4.0,
@@ -1400,13 +1397,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1429,7 +1426,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   elevation:
                                                                       0.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 0.0,
@@ -1450,19 +1447,19 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x34A8AAAE),
                                                                   textStyle: FlutterFlowTheme.of(
                                                                           context)
@@ -1478,7 +1475,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   elevation:
                                                                       0.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 0.0,
@@ -1489,19 +1486,19 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               8.0),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 20.0)),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 20.0)),
                                                     ),
                                                   ]
-                                                      .divide(SizedBox(
+                                                      .divide(const SizedBox(
                                                           height: 28.0))
                                                       .addToStart(
-                                                          SizedBox(height: 4.0))
-                                                      .addToEnd(SizedBox(
+                                                          const SizedBox(height: 4.0))
+                                                      .addToEnd(const SizedBox(
                                                           height: 4.0)),
                                                 ),
                                               ),
@@ -1512,7 +1509,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 20.0,
                                                     color: Color(0x29000000),
@@ -1524,7 +1521,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -1633,12 +1630,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 10.0)),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       4.0,
@@ -1660,7 +1657,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       () async {
                                                                     showDialog(
                                                                       barrierColor:
-                                                                          Color(
+                                                                          const Color(
                                                                               0x34000000),
                                                                       context:
                                                                           context,
@@ -1674,7 +1671,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           backgroundColor:
                                                                               Colors.transparent,
                                                                           alignment:
-                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           child:
                                                                               WebViewAware(
                                                                             child:
@@ -1683,7 +1680,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 FocusScope.of(dialogContext).unfocus();
                                                                                 FocusManager.instance.primaryFocus?.unfocus();
                                                                               },
-                                                                              child: OneTimePasswordWidget(),
+                                                                              child: const OneTimePasswordWidget(),
                                                                             ),
                                                                           ),
                                                                         );
@@ -1696,14 +1693,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1725,7 +1722,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -1737,19 +1734,19 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 20.0)),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 20.0)),
                                                     ),
                                                   ]
-                                                      .divide(SizedBox(
+                                                      .divide(const SizedBox(
                                                           height: 24.0))
                                                       .addToStart(
-                                                          SizedBox(height: 4.0))
-                                                      .addToEnd(SizedBox(
+                                                          const SizedBox(height: 4.0))
+                                                      .addToEnd(const SizedBox(
                                                           height: 4.0)),
                                                 ),
                                               ),
@@ -1760,7 +1757,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 20.0,
                                                     color: Color(0x29000000),
@@ -1772,7 +1769,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 20.0, 20.0, 0.0),
                                                 child: Row(
@@ -1785,7 +1782,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                       flex: 5,
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -1853,10 +1850,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 false,
                                                                             cursor:
                                                                                 MouseCursor.defer ?? MouseCursor.defer,
+                                                                            onEnter:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered9 = true);
+                                                                            }),
+                                                                            onExit:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered9 = false);
+                                                                            }),
                                                                             child:
                                                                                 FlutterFlowDropDown<String>(
                                                                               controller: _model.dropDownValueController1 ??= FormFieldController<String>(null),
-                                                                              options: [
+                                                                              options: const [
                                                                                 'Choose Key Type',
                                                                                 'Full Control',
                                                                                 'Modify',
@@ -1892,27 +1897,19 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                               elevation: 3.0,
                                                                               borderColor: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               borderWidth: 1.0,
                                                                               borderRadius: 8.0,
-                                                                              margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                              margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                               hidesUnderline: true,
                                                                               isOverButton: false,
                                                                               isSearchable: true,
                                                                               isMultiSelect: false,
                                                                             ),
-                                                                            onEnter:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered9 = true);
-                                                                            }),
-                                                                            onExit:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered9 = false);
-                                                                            }),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 8.0)),
+                                                                        ].divide(const SizedBox(height: 8.0)),
                                                                       ),
                                                                     ),
                                                                   ],
@@ -1946,6 +1943,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered10 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered10 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -1982,7 +1991,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered10! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered10 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -2021,7 +2030,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           contentPadding:
-                                                                              EdgeInsets.all(16.0),
+                                                                              const EdgeInsets.all(16.0),
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
@@ -2034,20 +2043,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController4Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered10 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered10 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -2065,14 +2062,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         .infinity,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -2094,7 +2091,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -2105,11 +2102,11 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             8.0),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       20.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 40.0)),
                                                         ),
                                                       ),
@@ -2150,7 +2147,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 20.0,
                                                     color: Color(0x29000000),
@@ -2162,7 +2159,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -2188,7 +2185,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -2239,7 +2236,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .primary,
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                             ),
                                                           ),
@@ -2262,7 +2259,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .primary,
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                             ),
                                                           ),
@@ -2285,20 +2282,20 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .primary,
-                                                              bg: Color(
+                                                              bg: const Color(
                                                                   0x337367F0),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 24.0)),
                                                       ),
                                                     ),
                                                   ]
-                                                      .divide(SizedBox(
+                                                      .divide(const SizedBox(
                                                           height: 24.0))
                                                       .addToStart(
-                                                          SizedBox(height: 4.0))
-                                                      .addToEnd(SizedBox(
+                                                          const SizedBox(height: 4.0))
+                                                      .addToEnd(const SizedBox(
                                                           height: 4.0)),
                                                 ),
                                               ),
@@ -2309,7 +2306,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -2330,14 +2327,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       8.0,
@@ -2378,7 +2375,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         16.0,
@@ -2396,7 +2393,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2428,7 +2425,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2460,7 +2457,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2492,7 +2489,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2517,7 +2514,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -2676,16 +2673,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     ],
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 24.0)),
+                                                    const SizedBox(height: 24.0)),
                                               ),
                                             ),
-                                          ].divide(SizedBox(height: 28.0)),
+                                          ].divide(const SizedBox(height: 28.0)),
                                         );
                                       } else if (_model.activeTab ==
                                           'Projects') {
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -2696,7 +2693,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -2712,7 +2709,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2790,7 +2787,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Column(
@@ -2835,7 +2832,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                             Column(
@@ -2880,10 +2877,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         titleColor:
                                                                             FlutterFlowTheme.of(context).primary,
                                                                         bgColor:
-                                                                            Color(0x337367F0),
+                                                                            const Color(0x337367F0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           12.0)),
                                                                 ),
@@ -2906,7 +2903,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           12.0,
@@ -2925,21 +2922,21 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             onPressed:
                                                                                 () async {
                                                                               showDialog(
-                                                                                barrierColor: Color(0x34000000),
+                                                                                barrierColor: const Color(0x34000000),
                                                                                 context: context,
                                                                                 builder: (dialogContext) {
                                                                                   return Dialog(
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: WebViewAware(
                                                                                       child: GestureDetector(
                                                                                         onTap: () {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: UpgradePlanWidget(),
+                                                                                        child: const UpgradePlanWidget(),
                                                                                       ),
                                                                                     ),
                                                                                   );
@@ -2952,8 +2949,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 FFButtonOptions(
                                                                               width: double.infinity,
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
@@ -2961,7 +2958,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -2978,21 +2975,21 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             onPressed:
                                                                                 () async {
                                                                               showDialog(
-                                                                                barrierColor: Color(0x34000000),
+                                                                                barrierColor: const Color(0x34000000),
                                                                                 context: context,
                                                                                 builder: (dialogContext) {
                                                                                   return Dialog(
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: WebViewAware(
                                                                                       child: GestureDetector(
                                                                                         onTap: () {
                                                                                           FocusScope.of(dialogContext).unfocus();
                                                                                           FocusManager.instance.primaryFocus?.unfocus();
                                                                                         },
-                                                                                        child: WarningPopupWidget(),
+                                                                                        child: const WarningPopupWidget(),
                                                                                       ),
                                                                                     ),
                                                                                   );
@@ -3005,16 +3002,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 FFButtonOptions(
                                                                               width: double.infinity,
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x33EA5455),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x33EA5455),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -3023,15 +3020,15 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             20.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 28.0)),
                                                         ),
                                                       ),
@@ -3045,7 +3042,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   .infinity,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x34FF9F43),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -3054,7 +3051,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             16.0),
                                                                 child: Column(
@@ -3101,7 +3098,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 FontWeight.w500,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -3173,7 +3170,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       FlutterFlowTheme.of(
                                                                               context)
                                                                           .lineColor,
-                                                                  barRadius: Radius
+                                                                  barRadius: const Radius
                                                                       .circular(
                                                                           50.0),
                                                                   padding:
@@ -3196,15 +3193,15 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 32.0)),
+                                                        const SizedBox(width: 32.0)),
                                                   ),
                                                 ),
                                               ),
@@ -3214,7 +3211,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -3230,7 +3227,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3326,7 +3323,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(5.0),
+                                                                              padding: const EdgeInsets.all(5.0),
                                                                               child: Container(
                                                                                 width: 100.0,
                                                                                 height: 100.0,
@@ -3349,7 +3346,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 8.0)),
+                                                                        ].divide(const SizedBox(width: 8.0)),
                                                                       ),
                                                                     ),
                                                                     InkWell(
@@ -3399,7 +3396,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(5.0),
+                                                                              padding: const EdgeInsets.all(5.0),
                                                                               child: Container(
                                                                                 width: 100.0,
                                                                                 height: 100.0,
@@ -3422,10 +3419,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 8.0)),
+                                                                        ].divide(const SizedBox(width: 8.0)),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           20.0)),
                                                                 ),
@@ -3463,12 +3460,20 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 false,
                                                                             cursor:
                                                                                 MouseCursor.defer ?? MouseCursor.defer,
+                                                                            onEnter:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered11 = true);
+                                                                            }),
+                                                                            onExit:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered11 = false);
+                                                                            }),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Expanded(
-                                                                                  child: Container(
+                                                                                  child: SizedBox(
                                                                                     width: 124.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.textController5,
@@ -3492,7 +3497,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                         enabledBorder: OutlineInputBorder(
                                                                                           borderSide: BorderSide(
                                                                                             color: valueOrDefault<Color>(
-                                                                                              _model.mouseRegionHovered11! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                              _model.mouseRegionHovered11 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                               FlutterFlowTheme.of(context).lineColor,
                                                                                             ),
                                                                                             width: 1.0,
@@ -3520,7 +3525,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           ),
                                                                                           borderRadius: BorderRadius.circular(8.0),
                                                                                         ),
-                                                                                        contentPadding: EdgeInsets.all(16.0),
+                                                                                        contentPadding: const EdgeInsets.all(16.0),
                                                                                       ),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                             fontFamily: 'Public Sans',
@@ -3533,16 +3538,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                            onEnter:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered11 = true);
-                                                                            }),
-                                                                            onExit:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered11 = false);
-                                                                            }),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 8.0)),
+                                                                        ].divide(const SizedBox(height: 8.0)),
                                                                       ),
                                                                       Row(
                                                                         mainAxisSize:
@@ -3568,11 +3565,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered12 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered12 = false);
+                                                                                  }),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
                                                                                       Expanded(
-                                                                                        child: Container(
+                                                                                        child: SizedBox(
                                                                                           width: 123.0,
                                                                                           child: TextFormField(
                                                                                             controller: _model.textController6,
@@ -3596,7 +3599,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered12! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered12 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -3624,7 +3627,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -3637,14 +3640,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       ),
                                                                                     ],
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered12 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered12 = false);
-                                                                                  }),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                           ),
                                                                           Expanded(
@@ -3664,11 +3661,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered13 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered13 = false);
+                                                                                  }),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
                                                                                       Expanded(
-                                                                                        child: Container(
+                                                                                        child: SizedBox(
                                                                                           width: 123.0,
                                                                                           child: TextFormField(
                                                                                             controller: _model.textController7,
@@ -3692,7 +3695,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered13! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered13 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -3720,7 +3723,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -3733,14 +3736,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       ),
                                                                                     ],
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered13 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered13 = false);
-                                                                                  }),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                           ),
                                                                           Expanded(
@@ -3760,14 +3757,20 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 MouseRegion(
                                                                                   opaque: false,
                                                                                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                  onEnter: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered14 = true);
+                                                                                  }),
+                                                                                  onExit: ((event) async {
+                                                                                    safeSetState(() => _model.mouseRegionHovered14 = false);
+                                                                                  }),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
                                                                                       Expanded(
                                                                                         child: Stack(
-                                                                                          alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                           children: [
-                                                                                            Container(
+                                                                                            SizedBox(
                                                                                               width: 123.0,
                                                                                               child: TextFormField(
                                                                                                 controller: _model.textController8,
@@ -3791,7 +3794,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                   enabledBorder: OutlineInputBorder(
                                                                                                     borderSide: BorderSide(
                                                                                                       color: valueOrDefault<Color>(
-                                                                                                        _model.mouseRegionHovered14! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                        _model.mouseRegionHovered14 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                                       ),
                                                                                                       width: 1.0,
@@ -3819,7 +3822,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                     ),
                                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                                   ),
-                                                                                                  contentPadding: EdgeInsets.all(16.0),
+                                                                                                  contentPadding: const EdgeInsets.all(16.0),
                                                                                                 ),
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                       fontFamily: 'Public Sans',
@@ -3830,7 +3833,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                               child: Icon(
                                                                                                 FFIcons.khelp,
                                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
@@ -3842,20 +3845,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       ),
                                                                                     ],
                                                                                   ),
-                                                                                  onEnter: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered14 = true);
-                                                                                  }),
-                                                                                  onExit: ((event) async {
-                                                                                    safeSetState(() => _model.mouseRegionHovered14 = false);
-                                                                                  }),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 8.0)),
+                                                                              ].divide(const SizedBox(height: 8.0)),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             8.0,
                                                                             0.0,
                                                                             0.0,
@@ -3885,7 +3882,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     fontWeight: FontWeight.w500,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                       Row(
@@ -3905,8 +3902,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 42.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
@@ -3914,7 +3911,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
@@ -3931,30 +3928,30 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 42.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0x33A8AAAE),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0x33A8AAAE),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Public Sans',
                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 0.0,
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             24.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       28.0)),
                                                             ),
@@ -3993,7 +3990,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PaymentCardWidget(
+                                                                      const PaymentCardWidget(
                                                                     logo:
                                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/xxp8f2azegrx/mastercard.png',
                                                                     name:
@@ -4011,7 +4008,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      PaymentCardWidget(
+                                                                      const PaymentCardWidget(
                                                                     logo:
                                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/bcxky08mm1n0/visa.png',
                                                                     name:
@@ -4022,16 +4019,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         'Card expires at 10/24',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       20.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 24.0)),
+                                                        const SizedBox(height: 24.0)),
                                                   ),
                                                 ),
                                               ),
@@ -4041,7 +4038,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 20.0,
                                                       color: Color(0x29000000),
@@ -4061,7 +4058,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   24.0,
@@ -4094,7 +4091,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           .w500,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 24.0)),
                                                       ),
                                                     ),
@@ -4105,7 +4102,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               .disabled,
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -4147,6 +4144,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered15 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered15 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -4178,7 +4185,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered15! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered15 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -4210,7 +4217,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                             contentPadding:
-                                                                                EdgeInsets.all(16.0),
+                                                                                const EdgeInsets.all(16.0),
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
@@ -4223,18 +4230,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController9Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered15 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered15 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -4263,6 +4260,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered16 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered16 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -4294,7 +4301,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered16! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered16 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -4325,7 +4332,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 16.0,
                                                                                 16.0,
@@ -4342,23 +4349,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController10Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered16 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered16 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 28.0)),
                                                             ),
                                                             Row(
@@ -4390,6 +4387,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered17 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered17 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -4421,7 +4428,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered17! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered17 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -4453,7 +4460,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                             contentPadding:
-                                                                                EdgeInsets.all(16.0),
+                                                                                const EdgeInsets.all(16.0),
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
@@ -4466,18 +4473,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController11Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered17 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered17 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -4506,6 +4503,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered18 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered18 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -4537,7 +4544,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered18! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered18 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -4568,7 +4575,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 16.0,
                                                                                 16.0,
@@ -4585,23 +4592,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController12Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered18 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered18 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 28.0)),
                                                             ),
                                                             Row(
@@ -4633,6 +4630,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered19 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered19 = false);
+                                                                        }),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -4642,7 +4649,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               height: 43.0,
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(8.0),
                                                                                   bottomRight: Radius.circular(0.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -4653,7 +4660,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     () {
                                                                                       if (/* NOT RECOMMENDED */ _model.textController13.text == 'true') {
                                                                                         return FlutterFlowTheme.of(context).primary;
-                                                                                      } else if (_model.mouseRegionHovered19!) {
+                                                                                      } else if (_model.mouseRegionHovered19) {
                                                                                         return FlutterFlowTheme.of(context).secondaryText;
                                                                                       } else {
                                                                                         return FlutterFlowTheme.of(context).lineColor;
@@ -4665,7 +4672,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -4705,12 +4712,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                   enabledBorder: OutlineInputBorder(
                                                                                     borderSide: BorderSide(
                                                                                       color: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered19! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered19 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       width: 1.0,
                                                                                     ),
-                                                                                    borderRadius: BorderRadius.only(
+                                                                                    borderRadius: const BorderRadius.only(
                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                       bottomRight: Radius.circular(8.0),
                                                                                       topLeft: Radius.circular(0.0),
@@ -4722,7 +4729,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       width: 1.0,
                                                                                     ),
-                                                                                    borderRadius: BorderRadius.only(
+                                                                                    borderRadius: const BorderRadius.only(
                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                       bottomRight: Radius.circular(8.0),
                                                                                       topLeft: Radius.circular(0.0),
@@ -4734,7 +4741,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       width: 1.0,
                                                                                     ),
-                                                                                    borderRadius: BorderRadius.only(
+                                                                                    borderRadius: const BorderRadius.only(
                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                       bottomRight: Radius.circular(8.0),
                                                                                       topLeft: Radius.circular(0.0),
@@ -4746,14 +4753,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       width: 1.0,
                                                                                     ),
-                                                                                    borderRadius: BorderRadius.only(
+                                                                                    borderRadius: const BorderRadius.only(
                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                       bottomRight: Radius.circular(8.0),
                                                                                       topLeft: Radius.circular(0.0),
                                                                                       topRight: Radius.circular(8.0),
                                                                                     ),
                                                                                   ),
-                                                                                  contentPadding: EdgeInsets.all(16.0),
+                                                                                  contentPadding: const EdgeInsets.all(16.0),
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Public Sans',
@@ -4765,18 +4772,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered19 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered19 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -4805,11 +4802,21 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered20 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered20 = false);
+                                                                        }),
                                                                         child: FlutterFlowDropDown<
                                                                             String>(
                                                                           controller: _model.dropDownValueController2 ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: [
+                                                                          options: const [
                                                                             'Australi',
                                                                             'Bangladeng',
                                                                             'Belarus',
@@ -4866,7 +4873,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               3.0,
                                                                           borderColor:
                                                                               valueOrDefault<Color>(
-                                                                            _model.mouseRegionHovered20!
+                                                                            _model.mouseRegionHovered20
                                                                                 ? FlutterFlowTheme.of(context).secondaryText
                                                                                 : FlutterFlowTheme.of(context).lineColor,
                                                                             FlutterFlowTheme.of(context).lineColor,
@@ -4875,7 +4882,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               1.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -4889,23 +4896,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           isMultiSelect:
                                                                               false,
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered20 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered20 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 28.0)),
                                                             ),
                                                             Row(
@@ -4937,6 +4934,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered21 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered21 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -4968,7 +4975,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered21! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered21 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -4999,7 +5006,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 16.0,
                                                                                 16.0,
@@ -5016,23 +5023,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController14Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered21 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered21 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 28.0)),
                                                             ),
                                                             Row(
@@ -5064,6 +5061,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered22 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered22 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -5095,7 +5102,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered22! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered22 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -5127,7 +5134,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                             contentPadding:
-                                                                                EdgeInsets.all(16.0),
+                                                                                const EdgeInsets.all(16.0),
                                                                           ),
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
@@ -5140,18 +5147,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController15Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered22 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered22 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -5180,6 +5177,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             false,
                                                                         cursor: MouseCursor.defer ??
                                                                             MouseCursor.defer,
+                                                                        onEnter:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered23 = true);
+                                                                        }),
+                                                                        onExit:
+                                                                            ((event) async {
+                                                                          safeSetState(() =>
+                                                                              _model.mouseRegionHovered23 = false);
+                                                                        }),
                                                                         child:
                                                                             TextFormField(
                                                                           controller:
@@ -5211,7 +5218,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 OutlineInputBorder(
                                                                               borderSide: BorderSide(
                                                                                 color: valueOrDefault<Color>(
-                                                                                  _model.mouseRegionHovered23! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                  _model.mouseRegionHovered23 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                   FlutterFlowTheme.of(context).lineColor,
                                                                                 ),
                                                                                 width: 1.0,
@@ -5242,7 +5249,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 16.0,
                                                                                 16.0,
@@ -5259,28 +5266,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .textController16Validator
                                                                               .asValidator(context),
                                                                         ),
-                                                                        onEnter:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered23 = true);
-                                                                        }),
-                                                                        onExit:
-                                                                            ((event) async {
-                                                                          safeSetState(() =>
-                                                                              _model.mouseRegionHovered23 = false);
-                                                                        }),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 28.0)),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -5306,12 +5303,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -5333,7 +5330,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -5356,17 +5353,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x34A8AAAE),
                                                                       textStyle: FlutterFlowTheme.of(
                                                                               context)
@@ -5382,7 +5379,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       elevation:
                                                                           0.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -5393,22 +5390,22 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               8.0),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 24.0)),
                                                         ),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 28.0)),
+                                                      const SizedBox(height: 28.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 34.0),
                                                 child: Row(
@@ -5426,7 +5423,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryBackground,
-                                                          boxShadow: [
+                                                          boxShadow: const [
                                                             BoxShadow(
                                                               blurRadius: 12.0,
                                                               color: Color(
@@ -5445,7 +5442,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       20.0,
@@ -5462,7 +5459,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             20.0,
                                                                             0.0,
@@ -5498,7 +5495,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -5515,9 +5512,15 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     MouseRegion(
                                                                                       opaque: false,
                                                                                       cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                      onEnter: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered24 = true);
+                                                                                      }),
+                                                                                      onExit: ((event) async {
+                                                                                        safeSetState(() => _model.mouseRegionHovered24 = false);
+                                                                                      }),
                                                                                       child: FlutterFlowDropDown<String>(
                                                                                         controller: _model.dropDownValueController3 ??= FormFieldController<String>(null),
-                                                                                        options: [
+                                                                                        options: const [
                                                                                           '10',
                                                                                           '25',
                                                                                           '50',
@@ -5541,38 +5544,32 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                         fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                         elevation: 6.0,
                                                                                         borderColor: valueOrDefault<Color>(
-                                                                                          _model.mouseRegionHovered24! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                          _model.mouseRegionHovered24 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                           FlutterFlowTheme.of(context).lineColor,
                                                                                         ),
                                                                                         borderWidth: 1.0,
                                                                                         borderRadius: 8.0,
-                                                                                        margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                        margin: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                                         hidesUnderline: true,
                                                                                         isOverButton: false,
                                                                                         isSearchable: false,
                                                                                         isMultiSelect: false,
                                                                                       ),
-                                                                                      onEnter: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered24 = true);
-                                                                                      }),
-                                                                                      onExit: ((event) async {
-                                                                                        safeSetState(() => _model.mouseRegionHovered24 = false);
-                                                                                      }),
                                                                                     ),
                                                                                     FFButtonWidget(
                                                                                       onPressed: () {
                                                                                         print('Button pressed ...');
                                                                                       },
                                                                                       text: 'Create invoice',
-                                                                                      icon: Icon(
+                                                                                      icon: const Icon(
                                                                                         FFIcons.kplus,
                                                                                         color: Colors.white,
                                                                                         size: 24.0,
                                                                                       ),
                                                                                       options: FFButtonOptions(
                                                                                         height: 40.0,
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                         color: FlutterFlowTheme.of(context).primary,
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Public Sans',
@@ -5580,7 +5577,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                         elevation: 3.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 1.0,
                                                                                         ),
@@ -5596,7 +5593,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           MouseRegion(
                                                                                             opaque: false,
                                                                                             cursor: MouseCursor.defer ?? MouseCursor.defer,
-                                                                                            child: Container(
+                                                                                            onEnter: ((event) async {
+                                                                                              safeSetState(() => _model.mouseRegionHovered25 = true);
+                                                                                            }),
+                                                                                            onExit: ((event) async {
+                                                                                              safeSetState(() => _model.mouseRegionHovered25 = false);
+                                                                                            }),
+                                                                                            child: SizedBox(
                                                                                               width: 200.0,
                                                                                               child: TextFormField(
                                                                                                 controller: _model.textController17,
@@ -5620,7 +5623,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                   enabledBorder: OutlineInputBorder(
                                                                                                     borderSide: BorderSide(
                                                                                                       color: valueOrDefault<Color>(
-                                                                                                        _model.mouseRegionHovered25! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                        _model.mouseRegionHovered25 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                                       ),
                                                                                                       width: 1.0,
@@ -5648,7 +5651,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                     ),
                                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                                   ),
-                                                                                                  contentPadding: EdgeInsets.all(14.0),
+                                                                                                  contentPadding: const EdgeInsets.all(14.0),
                                                                                                 ),
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                       fontFamily: 'Public Sans',
@@ -5658,19 +5661,19 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                                 validator: _model.textController17Validator.asValidator(context),
                                                                                               ),
                                                                                             ),
-                                                                                            onEnter: ((event) async {
-                                                                                              safeSetState(() => _model.mouseRegionHovered25 = true);
-                                                                                            }),
-                                                                                            onExit: ((event) async {
-                                                                                              safeSetState(() => _model.mouseRegionHovered25 = false);
-                                                                                            }),
                                                                                           ),
                                                                                           MouseRegion(
                                                                                             opaque: false,
                                                                                             cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                            onEnter: ((event) async {
+                                                                                              safeSetState(() => _model.mouseRegionHovered26 = true);
+                                                                                            }),
+                                                                                            onExit: ((event) async {
+                                                                                              safeSetState(() => _model.mouseRegionHovered26 = false);
+                                                                                            }),
                                                                                             child: FlutterFlowDropDown<String>(
                                                                                               controller: _model.dropDownValueController4 ??= FormFieldController<String>(null),
-                                                                                              options: [
+                                                                                              options: const [
                                                                                                 'Select Status',
                                                                                                 'Downloaded',
                                                                                                 'Draft',
@@ -5696,37 +5699,31 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                               elevation: 6.0,
                                                                                               borderColor: valueOrDefault<Color>(
-                                                                                                _model.mouseRegionHovered26! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                _model.mouseRegionHovered26 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                                               ),
                                                                                               borderWidth: 1.0,
                                                                                               borderRadius: 8.0,
-                                                                                              margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                              margin: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                                               hidesUnderline: true,
                                                                                               isOverButton: false,
                                                                                               isSearchable: false,
                                                                                               isMultiSelect: false,
                                                                                             ),
-                                                                                            onEnter: ((event) async {
-                                                                                              safeSetState(() => _model.mouseRegionHovered26 = true);
-                                                                                            }),
-                                                                                            onExit: ((event) async {
-                                                                                              safeSetState(() => _model.mouseRegionHovered26 = false);
-                                                                                            }),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 14.0)),
+                                                                                        ].divide(const SizedBox(width: 14.0)),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 14.0)),
+                                                                                  ].divide(const SizedBox(width: 14.0)),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 32.0)),
+                                                                            ].divide(const SizedBox(height: 32.0)),
                                                                           ),
                                                                         ),
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         20.0)),
                                                               ),
@@ -5749,7 +5746,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .lineColor,
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             8.0,
                                                                             20.0,
@@ -5764,7 +5761,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 2,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5791,7 +5788,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           color: FlutterFlowTheme.of(context).textFiled,
                                                                                           size: 18.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 2.0)),
+                                                                                      ].divide(const SizedBox(height: 2.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
@@ -5801,7 +5798,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 2,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5824,7 +5821,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           color: FlutterFlowTheme.of(context).textFiled,
                                                                                           size: 18.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 2.0)),
+                                                                                      ].divide(const SizedBox(height: 2.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
@@ -5834,7 +5831,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 7,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5861,7 +5858,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           color: FlutterFlowTheme.of(context).textFiled,
                                                                                           size: 18.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 2.0)),
+                                                                                      ].divide(const SizedBox(height: 2.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
@@ -5871,7 +5868,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 2,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5898,7 +5895,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           color: FlutterFlowTheme.of(context).textFiled,
                                                                                           size: 18.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 2.0)),
+                                                                                      ].divide(const SizedBox(height: 2.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
@@ -5908,7 +5905,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5935,7 +5932,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           color: FlutterFlowTheme.of(context).textFiled,
                                                                                           size: 18.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 2.0)),
+                                                                                      ].divide(const SizedBox(height: 2.0)),
                                                                                     ),
                                                                                   ],
                                                                                 ),
@@ -5945,7 +5942,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 2,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5967,7 +5964,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 190.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -5985,7 +5982,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 24.0)),
+                                                                          ].divide(const SizedBox(width: 24.0)),
                                                                         ),
                                                                       ),
                                                                       Divider(
@@ -6025,7 +6022,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x33A8AAAE),
+                                                                              const Color(0x33A8AAAE),
                                                                           name:
                                                                               'Jamal Kerrod',
                                                                           title:
@@ -6038,7 +6035,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6060,7 +6057,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x33A8AAAE),
+                                                                              const Color(0x33A8AAAE),
                                                                           avatar:
                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/x4gkpaxl5mr7/1.png',
                                                                           name:
@@ -6075,7 +6072,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6097,7 +6094,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3328C76F),
+                                                                              const Color(0x3328C76F),
                                                                           avatar:
                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/11g8cygwk8lk/9.png',
                                                                           name:
@@ -6112,7 +6109,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6134,7 +6131,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3428C76F),
+                                                                              const Color(0x3428C76F),
                                                                           avatar:
                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/mteufgo4w1e1/2.png',
                                                                           name:
@@ -6149,7 +6146,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6171,7 +6168,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3300CFE8),
+                                                                              const Color(0x3300CFE8),
                                                                           avatar:
                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/l893u9yxsc4v/10.png',
                                                                           name:
@@ -6186,7 +6183,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6208,7 +6205,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3328C76F),
+                                                                              const Color(0x3328C76F),
                                                                           avatar:
                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/11g8cygwk8lk/9.png',
                                                                           name:
@@ -6223,7 +6220,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6245,7 +6242,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3328C76F),
+                                                                              const Color(0x3328C76F),
                                                                           name:
                                                                               'Orson Grafton',
                                                                           title:
@@ -6258,7 +6255,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6280,7 +6277,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x33EA5455),
+                                                                              const Color(0x33EA5455),
                                                                           name:
                                                                               'Jamal Kerrod',
                                                                           title:
@@ -6293,7 +6290,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6315,7 +6312,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3400CFE8),
+                                                                              const Color(0x3400CFE8),
                                                                           name:
                                                                               'Lorine Hischke',
                                                                           title:
@@ -6328,7 +6325,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6350,7 +6347,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 24.0,
                                                                           ),
                                                                           iconBG:
-                                                                              Color(0x3328C76F),
+                                                                              const Color(0x3328C76F),
                                                                           avatar:
                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/zl0fmg8vmvvf/5.png',
                                                                           name:
@@ -6365,7 +6362,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               'Paid',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).success,
-                                                                          bg: Color(
+                                                                          bg: const Color(
                                                                               0x3428C76F),
                                                                         ),
                                                                       ),
@@ -6374,7 +6371,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                 ],
                                                               ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6388,7 +6385,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     Expanded(
                                                                       child:
                                                                           Stack(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         children: [
@@ -6402,7 +6399,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(1.0, 0.0),
+                                                                                const AlignmentDirectional(1.0, 0.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -6415,8 +6412,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                   text: 'Previous',
                                                                                   options: FFButtonOptions(
                                                                                     height: 44.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                     color: FlutterFlowTheme.of(context).unselectBox,
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Public Sans',
@@ -6425,7 +6422,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           fontWeight: FontWeight.normal,
                                                                                         ),
                                                                                     elevation: 0.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 0.0,
                                                                                     ),
@@ -6444,8 +6441,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       options: FFButtonOptions(
                                                                                         width: 44.0,
                                                                                         height: 44.0,
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                         color: FlutterFlowTheme.of(context).primary,
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Public Sans',
@@ -6454,7 +6451,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               fontWeight: FontWeight.normal,
                                                                                             ),
                                                                                         elevation: 0.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 0.0,
                                                                                         ),
@@ -6469,9 +6466,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       options: FFButtonOptions(
                                                                                         width: 44.0,
                                                                                         height: 44.0,
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0x347983BB),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        color: const Color(0x347983BB),
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Public Sans',
                                                                                               color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -6479,7 +6476,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               fontWeight: FontWeight.normal,
                                                                                             ),
                                                                                         elevation: 0.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 0.0,
                                                                                         ),
@@ -6494,9 +6491,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       options: FFButtonOptions(
                                                                                         width: 44.0,
                                                                                         height: 44.0,
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0x347983BB),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        color: const Color(0x347983BB),
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Public Sans',
                                                                                               color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -6504,7 +6501,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               fontWeight: FontWeight.normal,
                                                                                             ),
                                                                                         elevation: 0.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 0.0,
                                                                                         ),
@@ -6519,9 +6516,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       options: FFButtonOptions(
                                                                                         width: 44.0,
                                                                                         height: 44.0,
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0x347983BB),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        color: const Color(0x347983BB),
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Public Sans',
                                                                                               color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -6529,7 +6526,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               fontWeight: FontWeight.normal,
                                                                                             ),
                                                                                         elevation: 0.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 0.0,
                                                                                         ),
@@ -6544,9 +6541,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                       options: FFButtonOptions(
                                                                                         width: 44.0,
                                                                                         height: 44.0,
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0x347983BB),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        color: const Color(0x347983BB),
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Public Sans',
                                                                                               color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -6554,14 +6551,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                               fontWeight: FontWeight.normal,
                                                                                             ),
                                                                                         elevation: 0.0,
-                                                                                        borderSide: BorderSide(
+                                                                                        borderSide: const BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 0.0,
                                                                                         ),
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 4.0)),
+                                                                                  ].divide(const SizedBox(width: 4.0)),
                                                                                 ),
                                                                                 FFButtonWidget(
                                                                                   onPressed: () {
@@ -6570,9 +6567,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                   text: 'Next',
                                                                                   options: FFButtonOptions(
                                                                                     height: 44.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                    color: Color(0x347983BB),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    color: const Color(0x347983BB),
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Public Sans',
                                                                                           color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -6580,14 +6577,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                           fontWeight: FontWeight.normal,
                                                                                         ),
                                                                                     elevation: 0.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 0.0,
                                                                                     ),
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 4.0)),
+                                                                              ].divide(const SizedBox(width: 4.0)),
                                                                             ),
                                                                           ),
                                                                         ],
@@ -6596,17 +6593,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   ],
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 18.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 28.0)),
+                                                      const SizedBox(width: 28.0)),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 28.0)),
+                                            ].divide(const SizedBox(height: 28.0)),
                                           ),
                                         );
                                       } else if (_model.activeTab ==
@@ -6616,7 +6613,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -6636,7 +6633,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -6677,14 +6674,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     0.0,
                                                               ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ],
                                                 ),
                                               ),
                                               Container(
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -6702,7 +6699,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       16.0,
@@ -6719,7 +6716,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -6750,7 +6747,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -6781,7 +6778,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -6812,7 +6809,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     Container(
                                                                   width: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -6837,7 +6834,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 24.0)),
                                                           ),
                                                         ),
@@ -6863,7 +6860,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -6897,7 +6894,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -6947,7 +6944,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -6997,7 +6994,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 2,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7043,7 +7040,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -7059,14 +7056,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     ),
                                                     Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -7100,7 +7097,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7150,7 +7147,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7200,7 +7197,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 2,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7246,7 +7243,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -7273,7 +7270,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -7307,7 +7304,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7357,7 +7354,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7407,7 +7404,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 2,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7453,7 +7450,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -7469,14 +7466,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     ),
                                                     Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -7510,7 +7507,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7560,7 +7557,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 4,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7610,7 +7607,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   flex: 2,
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child:
@@ -7656,7 +7653,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -7674,7 +7671,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 0.0, 0.0),
                                                 child: Column(
@@ -7705,6 +7702,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                       cursor:
                                                           MouseCursor.defer ??
                                                               MouseCursor.defer,
+                                                      onEnter: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered27 =
+                                                            true);
+                                                      }),
+                                                      onExit: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered27 =
+                                                            false);
+                                                      }),
                                                       child:
                                                           FlutterFlowDropDown<
                                                               String>(
@@ -7712,7 +7719,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                 .dropDownValueController5 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: [
+                                                        options: const [
                                                           'Only when I\'m online',
                                                           'Anytime'
                                                         ],
@@ -7781,7 +7788,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         borderColor:
                                                             valueOrDefault<
                                                                 Color>(
-                                                          _model.mouseRegionHovered27!
+                                                          _model.mouseRegionHovered27
                                                               ? FlutterFlowTheme
                                                                       .of(
                                                                           context)
@@ -7796,7 +7803,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         borderWidth: 1.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -7807,23 +7814,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         isSearchable: true,
                                                         isMultiSelect: false,
                                                       ),
-                                                      onEnter: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered27 =
-                                                            true);
-                                                      }),
-                                                      onExit: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered27 =
-                                                            false);
-                                                      }),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 16.0)),
+                                                      const SizedBox(height: 16.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 20.0, 24.0),
                                                 child: Row(
@@ -7839,14 +7836,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                       options: FFButtonOptions(
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -7869,7 +7866,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 0.0,
@@ -7888,21 +7885,21 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                       options: FFButtonOptions(
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         color:
-                                                            Color(0x34A8AAAE),
+                                                            const Color(0x34A8AAAE),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -7917,7 +7914,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 0.0,
@@ -7928,17 +7925,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 12.0)),
+                                                      const SizedBox(width: 12.0)),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 24.0)),
+                                            ].divide(const SizedBox(height: 24.0)),
                                           ),
                                         );
                                       } else if (_model.activeTab ==
                                           'Connections') {
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -7950,7 +7947,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryBackground,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 12.0,
                                                         color:
@@ -7968,7 +7965,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -8014,7 +8011,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 8.0)),
                                                         ),
                                                         Column(
@@ -8112,10 +8109,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     .secondaryText,
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 24.0)),
                                                     ),
                                                   ),
@@ -8128,7 +8125,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryBackground,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 12.0,
                                                         color:
@@ -8146,7 +8143,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -8192,7 +8189,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 8.0)),
                                                         ),
                                                         Column(
@@ -8223,7 +8220,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       .secondary,
                                                                   size: 24.0,
                                                                 ),
-                                                                bg: Color(
+                                                                bg: const Color(
                                                                     0x33A8AAAE),
                                                               ),
                                                             ),
@@ -8252,7 +8249,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       .error,
                                                                   size: 24.0,
                                                                 ),
-                                                                bg: Color(
+                                                                bg: const Color(
                                                                     0x34EA5455),
                                                               ),
                                                             ),
@@ -8281,7 +8278,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       .error,
                                                                   size: 24.0,
                                                                 ),
-                                                                bg: Color(
+                                                                bg: const Color(
                                                                     0x34EA5455),
                                                               ),
                                                             ),
@@ -8309,7 +8306,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       .secondary,
                                                                   size: 24.0,
                                                                 ),
-                                                                bg: Color(
+                                                                bg: const Color(
                                                                     0x33A8AAAE),
                                                               ),
                                                             ),
@@ -8337,20 +8334,20 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       .secondary,
                                                                   size: 24.0,
                                                                 ),
-                                                                bg: Color(
+                                                                bg: const Color(
                                                                     0x33A8AAAE),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 24.0)),
                                                     ),
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 28.0)),
+                                            ].divide(const SizedBox(width: 28.0)),
                                           ),
                                         );
                                       } else {
@@ -8363,7 +8360,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 20.0,
                                                     color: Color(0x29000000),
@@ -8381,7 +8378,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 20.0,
                                                                 24.0,
@@ -8456,12 +8453,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -8478,7 +8475,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         elevation:
                                                                             2.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -8500,17 +8497,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x34A8AAAE),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -8522,7 +8519,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -8532,7 +8529,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           12.0)),
                                                                 ),
@@ -8552,14 +8549,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       16.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 24.0)),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 24.0)),
                                                     ),
                                                   ),
@@ -8577,7 +8574,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                             .disabled,
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   0.0,
@@ -8625,6 +8622,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered28 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered28 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -8661,7 +8670,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered28! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered28 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -8700,7 +8709,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           contentPadding:
-                                                                              EdgeInsets.all(16.0),
+                                                                              const EdgeInsets.all(16.0),
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
@@ -8713,20 +8722,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController18Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered28 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered28 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -8761,6 +8758,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered29 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered29 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -8797,7 +8806,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered29! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered29 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -8835,7 +8844,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               16.0,
                                                                               16.0,
@@ -8852,25 +8861,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController19Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered29 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered29 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 28.0)),
                                                           ),
                                                           Row(
@@ -8908,6 +8905,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered30 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered30 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -8944,7 +8953,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered30! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered30 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -8983,7 +8992,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           contentPadding:
-                                                                              EdgeInsets.all(16.0),
+                                                                              const EdgeInsets.all(16.0),
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
@@ -8996,20 +9005,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController20Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered30 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered30 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -9044,6 +9041,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered31 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered31 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -9080,7 +9089,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered31! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered31 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -9118,7 +9127,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               16.0,
                                                                               16.0,
@@ -9135,25 +9144,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController21Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered31 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered31 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 28.0)),
                                                           ),
                                                           Row(
@@ -9191,6 +9188,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered32 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered32 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           Row(
                                                                         mainAxisSize:
@@ -9202,7 +9211,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                              borderRadius: BorderRadius.only(
+                                                                              borderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(8.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(8.0),
@@ -9213,7 +9222,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                   () {
                                                                                     if (/* NOT RECOMMENDED */ _model.textController22.text == 'true') {
                                                                                       return FlutterFlowTheme.of(context).primary;
-                                                                                    } else if (_model.mouseRegionHovered32!) {
+                                                                                    } else if (_model.mouseRegionHovered32) {
                                                                                       return FlutterFlowTheme.of(context).secondaryText;
                                                                                     } else {
                                                                                       return FlutterFlowTheme.of(context).lineColor;
@@ -9226,7 +9235,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -9267,12 +9276,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 enabledBorder: OutlineInputBorder(
                                                                                   borderSide: BorderSide(
                                                                                     color: valueOrDefault<Color>(
-                                                                                      _model.mouseRegionHovered32! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                      _model.mouseRegionHovered32 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                       FlutterFlowTheme.of(context).lineColor,
                                                                                     ),
                                                                                     width: 1.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -9284,7 +9293,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 1.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -9296,7 +9305,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 1.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -9308,14 +9317,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 1.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
                                                                                     topRight: Radius.circular(8.0),
                                                                                   ),
                                                                                 ),
-                                                                                contentPadding: EdgeInsets.all(16.0),
+                                                                                contentPadding: const EdgeInsets.all(16.0),
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
@@ -9327,20 +9336,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           ),
                                                                         ],
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered32 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered32 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -9375,6 +9372,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered33 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered33 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -9411,7 +9420,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered33! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered33 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -9449,7 +9458,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               16.0,
                                                                               16.0,
@@ -9466,25 +9475,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController23Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered33 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered33 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 28.0)),
                                                           ),
                                                           Row(
@@ -9522,6 +9519,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered34 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered34 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -9558,7 +9567,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered34! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered34 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -9597,7 +9606,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           contentPadding:
-                                                                              EdgeInsets.all(16.0),
+                                                                              const EdgeInsets.all(16.0),
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
@@ -9610,20 +9619,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController24Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered34 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered34 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -9658,6 +9655,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered35 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered35 =
+                                                                                false);
+                                                                      }),
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
@@ -9694,7 +9703,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered35! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered35 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               width: 1.0,
@@ -9732,7 +9741,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
-                                                                          contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               16.0,
                                                                               16.0,
@@ -9749,25 +9758,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             .textController25Validator
                                                                             .asValidator(context),
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered35 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered35 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 28.0)),
                                                           ),
                                                           Row(
@@ -9805,13 +9802,25 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered36 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered36 =
+                                                                                false);
+                                                                      }),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .dropDownValueController6 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Australi',
                                                                           'Bangladeng',
                                                                           'Belarus',
@@ -9870,7 +9879,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             3.0,
                                                                         borderColor:
                                                                             valueOrDefault<Color>(
-                                                                          _model.mouseRegionHovered36!
+                                                                          _model.mouseRegionHovered36
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -9880,7 +9889,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             1.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -9894,20 +9903,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         isMultiSelect:
                                                                             false,
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered36 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered36 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -9942,13 +9939,25 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered37 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered37 =
+                                                                                false);
+                                                                      }),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .dropDownValueController7 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Select Language',
                                                                           'English',
                                                                           'French',
@@ -10002,7 +10011,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             3.0,
                                                                         borderColor:
                                                                             valueOrDefault<Color>(
-                                                                          _model.mouseRegionHovered37!
+                                                                          _model.mouseRegionHovered37
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -10012,7 +10021,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             1.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -10026,25 +10035,13 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         isMultiSelect:
                                                                             false,
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered37 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered37 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 28.0)),
                                                           ),
                                                           Row(
@@ -10082,13 +10079,25 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered38 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered38 =
+                                                                                false);
+                                                                      }),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .dropDownValueController8 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Australi',
                                                                           'Bangladeng',
                                                                           'Belarus',
@@ -10147,7 +10156,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             3.0,
                                                                         borderColor:
                                                                             valueOrDefault<Color>(
-                                                                          _model.mouseRegionHovered38!
+                                                                          _model.mouseRegionHovered38
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -10157,7 +10166,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             1.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -10171,20 +10180,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         isMultiSelect:
                                                                             false,
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered38 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered38 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -10219,13 +10216,25 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered39 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered39 =
+                                                                                false);
+                                                                      }),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .dropDownValueController9 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Select Currency',
                                                                           'USD',
                                                                           'Euro',
@@ -10279,7 +10288,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             3.0,
                                                                         borderColor:
                                                                             valueOrDefault<Color>(
-                                                                          _model.mouseRegionHovered39!
+                                                                          _model.mouseRegionHovered39
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -10289,7 +10298,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             1.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -10303,30 +10312,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                         isMultiSelect:
                                                                             false,
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered39 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered39 =
-                                                                                false);
-                                                                      }),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 28.0)),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         4.0,
@@ -10352,14 +10349,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -10381,7 +10378,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -10404,19 +10401,19 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x34A8AAAE),
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
@@ -10432,7 +10429,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -10443,17 +10440,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                             8.0),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 24.0)),
                                                       ),
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 28.0)),
+                                                    const SizedBox(height: 28.0)),
                                               ),
                                             ),
                                             Container(
@@ -10462,7 +10459,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 20.0,
                                                     color: Color(0x29000000),
@@ -10474,7 +10471,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -10483,7 +10480,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -10498,7 +10495,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         4.0,
                                                                         0.0,
@@ -10527,7 +10524,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         4.0,
                                                                         0.0,
@@ -10538,7 +10535,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                   .infinity,
                                                               decoration:
                                                                   BoxDecoration(
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x33FF9F43),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -10547,7 +10544,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             16.0),
                                                                 child: Column(
@@ -10592,7 +10589,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                                 ),
@@ -10669,12 +10666,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 4.0)),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         4.0,
                                                                         0.0,
@@ -10691,14 +10688,14 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 40.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -10720,7 +10717,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                                     ),
                                                                 elevation: 2.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -10732,16 +10729,16 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 24.0)),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 28.0)),
+                                                      const SizedBox(height: 28.0)),
                                                 ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(height: 28.0)),
+                                          ].divide(const SizedBox(height: 28.0)),
                                         );
                                       }
                                     },
@@ -10750,25 +10747,25 @@ class _AccountWidgetState extends State<AccountWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

@@ -1,4 +1,3 @@
-import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/schema/structs/index.dart';
 import '/components/avatar_2/avatar2_widget.dart';
@@ -19,15 +18,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'email_model.dart';
@@ -61,7 +57,7 @@ class _EmailWidgetState extends State<EmailWidget>
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -84,8 +80,8 @@ class _EmailWidgetState extends State<EmailWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: Offset(900.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(900.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -122,19 +118,19 @@ class _EmailWidgetState extends State<EmailWidget>
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 80.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -145,7 +141,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 12.0,
                                           color: Color(0x14000000),
@@ -163,12 +159,12 @@ class _EmailWidgetState extends State<EmailWidget>
                                       children: [
                                         Container(
                                           width: 260.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: FFButtonWidget(
                                                   onPressed: () {
                                                     print('Button pressed ...');
@@ -178,11 +174,11 @@ class _EmailWidgetState extends State<EmailWidget>
                                                     width: double.infinity,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -198,7 +194,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 2.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -251,7 +247,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       .transparent,
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -314,7 +310,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -323,7 +319,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                               width: 26.0,
                                                               height: 26.0,
                                                               decoration:
-                                                                  BoxDecoration(
+                                                                  const BoxDecoration(
                                                                 color: Color(
                                                                     0x347367F0),
                                                                 shape: BoxShape
@@ -331,7 +327,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child: Text(
@@ -353,9 +349,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   width: 18.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   width: 20.0)),
                                                         ),
                                                       ],
@@ -401,7 +397,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       .transparent,
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -464,15 +460,15 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   width: 18.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   width: 20.0)),
                                                         ),
                                                       ],
@@ -518,7 +514,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       .transparent,
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -581,15 +577,15 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   width: 18.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   width: 20.0)),
                                                         ),
                                                       ],
@@ -636,7 +632,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       .transparent,
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -699,7 +695,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -708,7 +704,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                               width: 26.0,
                                                               height: 26.0,
                                                               decoration:
-                                                                  BoxDecoration(
+                                                                  const BoxDecoration(
                                                                 color: Color(
                                                                     0x34FF9F43),
                                                                 shape: BoxShape
@@ -716,7 +712,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child: Text(
@@ -738,9 +734,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   width: 18.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   width: 20.0)),
                                                         ),
                                                       ],
@@ -786,7 +782,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       .transparent,
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -849,15 +845,15 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   width: 18.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   width: 20.0)),
                                                         ),
                                                       ],
@@ -903,7 +899,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       .transparent,
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -966,15 +962,15 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(SizedBox(
+                                                              .divide(const SizedBox(
                                                                   width: 18.0))
-                                                              .addToEnd(SizedBox(
+                                                              .addToEnd(const SizedBox(
                                                                   width: 20.0)),
                                                         ),
                                                       ],
@@ -984,7 +980,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                               ),
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(20.0, 24.0,
                                                           20.0, 0.0),
                                                   child: Column(
@@ -1064,7 +1060,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 26.0)),
+                                                        const SizedBox(height: 26.0)),
                                                   ),
                                                 ),
                                               ),
@@ -1091,7 +1087,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     10.0,
@@ -1216,9 +1212,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                         avoidOverflow:
                                                                             false,
                                                                         targetAnchor:
-                                                                            AlignmentDirectional(-6.0, 10.0).resolve(Directionality.of(context)),
+                                                                            const AlignmentDirectional(-6.0, 10.0).resolve(Directionality.of(context)),
                                                                         followerAnchor:
-                                                                            AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                         builder:
                                                                             (dialogContext) {
                                                                           return Material(
@@ -1231,7 +1227,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                   FocusScope.of(dialogContext).unfocus();
                                                                                   FocusManager.instance.primaryFocus?.unfocus();
                                                                                 },
-                                                                                child: EmailListActionWidget(),
+                                                                                child: const EmailListActionWidget(),
                                                                               ),
                                                                             ),
                                                                           );
@@ -1249,7 +1245,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 14.0)),
                                                             ),
                                                           ],
@@ -1265,7 +1261,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     12.0,
@@ -1363,12 +1359,12 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                         false,
                                                                     avoidOverflow:
                                                                         false,
-                                                                    targetAnchor: AlignmentDirectional(
+                                                                    targetAnchor: const AlignmentDirectional(
                                                                             -6.0,
                                                                             8.0)
                                                                         .resolve(
                                                                             Directionality.of(context)),
-                                                                    followerAnchor: AlignmentDirectional(
+                                                                    followerAnchor: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -1388,7 +1384,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                EmailOptionWidget(),
+                                                                                const EmailOptionWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -1430,12 +1426,12 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                         false,
                                                                     avoidOverflow:
                                                                         false,
-                                                                    targetAnchor: AlignmentDirectional(
+                                                                    targetAnchor: const AlignmentDirectional(
                                                                             -6.0,
                                                                             10.0)
                                                                         .resolve(
                                                                             Directionality.of(context)),
-                                                                    followerAnchor: AlignmentDirectional(
+                                                                    followerAnchor: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -1455,7 +1451,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                EmailLabelsWidget(),
+                                                                                const EmailLabelsWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -1512,12 +1508,12 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                         .secondaryTitle,
                                                                     size: 24.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         16.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 12.0)),
                                                         ),
                                                       ),
@@ -2575,7 +2571,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           24.0,
@@ -2637,13 +2633,13 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0x33EA5455),
+                                                                              const Color(0x33EA5455),
                                                                           borderRadius:
                                                                               BorderRadius.circular(50.0),
                                                                         ),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               12.0,
                                                                               0.0,
                                                                               12.0,
@@ -2665,7 +2661,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             12.0)),
                                                                   ),
@@ -2701,8 +2697,8 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               context: context,
                                                                               isGlobal: false,
                                                                               avoidOverflow: false,
-                                                                              targetAnchor: AlignmentDirectional(-6.0, 11.0).resolve(Directionality.of(context)),
-                                                                              followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              targetAnchor: const AlignmentDirectional(-6.0, 11.0).resolve(Directionality.of(context)),
+                                                                              followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               builder: (dialogContext) {
                                                                                 return Material(
                                                                                   color: Colors.transparent,
@@ -2712,7 +2708,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                         FocusScope.of(dialogContext).unfocus();
                                                                                         FocusManager.instance.primaryFocus?.unfocus();
                                                                                       },
-                                                                                      child: MailActionWidget(),
+                                                                                      child: const MailActionWidget(),
                                                                                     ),
                                                                                   ),
                                                                                 );
@@ -2729,7 +2725,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             14.0)),
                                                                   ),
@@ -2745,7 +2741,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           12.0,
@@ -2800,9 +2796,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                           avoidOverflow:
                                                                               false,
                                                                           targetAnchor:
-                                                                              AlignmentDirectional(-6.0, 8.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(-6.0, 8.0).resolve(Directionality.of(context)),
                                                                           followerAnchor:
-                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           builder:
                                                                               (dialogContext) {
                                                                             return Material(
@@ -2813,7 +2809,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                   },
-                                                                                  child: MailOptionWidget(),
+                                                                                  child: const MailOptionWidget(),
                                                                                 ),
                                                                               ),
                                                                             );
@@ -2859,9 +2855,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                           avoidOverflow:
                                                                               false,
                                                                           targetAnchor:
-                                                                              AlignmentDirectional(-6.0, 8.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(-6.0, 8.0).resolve(Directionality.of(context)),
                                                                           followerAnchor:
-                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           builder:
                                                                               (dialogContext) {
                                                                             return Material(
@@ -2872,7 +2868,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                   },
-                                                                                  child: MailLabelsWidget(),
+                                                                                  child: const MailLabelsWidget(),
                                                                                 ),
                                                                               ),
                                                                             );
@@ -2927,11 +2923,11 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                           size:
                                                                               24.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 16.0)),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         14.0)),
                                                               ),
@@ -2969,7 +2965,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               3.0,
                                                                               24.0,
@@ -2981,7 +2977,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                              boxShadow: [
+                                                                              boxShadow: const [
                                                                                 BoxShadow(
                                                                                   blurRadius: 20.0,
                                                                                   color: Color(0x1E000000),
@@ -2993,7 +2989,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(20.0),
+                                                                              padding: const EdgeInsets.all(20.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3008,7 +3004,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                           wrapWithModel(
                                                                                             model: _model.avatar2Model1,
                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                            child: Avatar2Widget(
+                                                                                            child: const Avatar2Widget(
                                                                                               diameter: 42.0,
                                                                                               image: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/mteufgo4w1e1/2.png',
                                                                                               name: 'Ross Geller',
@@ -3034,9 +3030,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 14.0)),
+                                                                                        ].divide(const SizedBox(width: 14.0)),
                                                                                       ),
                                                                                       Expanded(
                                                                                         child: Row(
@@ -3096,8 +3092,8 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                     context: context,
                                                                                                     isGlobal: false,
                                                                                                     avoidOverflow: false,
-                                                                                                    targetAnchor: AlignmentDirectional(-6.0, 8.0).resolve(Directionality.of(context)),
-                                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    targetAnchor: const AlignmentDirectional(-6.0, 8.0).resolve(Directionality.of(context)),
+                                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     builder: (dialogContext) {
                                                                                                       return Material(
                                                                                                         color: Colors.transparent,
@@ -3107,7 +3103,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: MailActionsWidget(),
+                                                                                                            child: const MailActionsWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -3121,7 +3117,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 16.0)),
+                                                                                          ].divide(const SizedBox(width: 16.0)),
                                                                                         ),
                                                                                       ),
                                                                                     ],
@@ -3178,15 +3174,15 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 8.0)),
+                                                                                    ].divide(const SizedBox(width: 8.0)),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 20.0)),
+                                                                                ].divide(const SizedBox(height: 20.0)),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               3.0,
                                                                               24.0,
@@ -3198,7 +3194,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                              boxShadow: [
+                                                                              boxShadow: const [
                                                                                 BoxShadow(
                                                                                   blurRadius: 20.0,
                                                                                   color: Color(0x1E000000),
@@ -3210,7 +3206,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(20.0),
+                                                                              padding: const EdgeInsets.all(20.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3225,7 +3221,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                           wrapWithModel(
                                                                                             model: _model.avatar2Model2,
                                                                                             updateCallback: () => safeSetState(() {}),
-                                                                                            child: Avatar2Widget(
+                                                                                            child: const Avatar2Widget(
                                                                                               diameter: 42.0,
                                                                                               image: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/x4gkpaxl5mr7/1.png',
                                                                                               name: 'Chandler Bing',
@@ -3251,9 +3247,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                       letterSpacing: 0.0,
                                                                                                     ),
                                                                                               ),
-                                                                                            ].divide(SizedBox(height: 6.0)),
+                                                                                            ].divide(const SizedBox(height: 6.0)),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 14.0)),
+                                                                                        ].divide(const SizedBox(width: 14.0)),
                                                                                       ),
                                                                                       Expanded(
                                                                                         child: Row(
@@ -3313,8 +3309,8 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                     context: context,
                                                                                                     isGlobal: false,
                                                                                                     avoidOverflow: false,
-                                                                                                    targetAnchor: AlignmentDirectional(-1.0, 8.0).resolve(Directionality.of(context)),
-                                                                                                    followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    targetAnchor: const AlignmentDirectional(-1.0, 8.0).resolve(Directionality.of(context)),
+                                                                                                    followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     builder: (dialogContext) {
                                                                                                       return Material(
                                                                                                         color: Colors.transparent,
@@ -3324,7 +3320,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                               FocusScope.of(dialogContext).unfocus();
                                                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                                                             },
-                                                                                                            child: MailActionsWidget(),
+                                                                                                            child: const MailActionsWidget(),
                                                                                                           ),
                                                                                                         ),
                                                                                                       );
@@ -3338,7 +3334,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 16.0)),
+                                                                                          ].divide(const SizedBox(width: 16.0)),
                                                                                         ),
                                                                                       ),
                                                                                     ],
@@ -3395,14 +3391,14 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 8.0)),
+                                                                                    ].divide(const SizedBox(width: 8.0)),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 20.0)),
+                                                                                ].divide(const SizedBox(height: 20.0)),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     );
                                                                   } else {
@@ -3439,7 +3435,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
@@ -3448,13 +3444,13 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               Stack(
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                                                                                 child: Container(
                                                                                   width: double.infinity,
                                                                                   height: 350.0,
                                                                                   decoration: BoxDecoration(
                                                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                    boxShadow: [
+                                                                                    boxShadow: const [
                                                                                       BoxShadow(
                                                                                         blurRadius: 20.0,
                                                                                         color: Color(0x1F000000),
@@ -3467,13 +3463,13 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 0.0),
                                                                                 child: Container(
                                                                                   width: double.infinity,
                                                                                   height: 350.0,
                                                                                   decoration: BoxDecoration(
                                                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                    boxShadow: [
+                                                                                    boxShadow: const [
                                                                                       BoxShadow(
                                                                                         blurRadius: 20.0,
                                                                                         color: Color(0x15000000),
@@ -3486,12 +3482,12 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                                                                                 child: Container(
                                                                                   width: double.infinity,
                                                                                   decoration: BoxDecoration(
                                                                                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                    boxShadow: [
+                                                                                    boxShadow: const [
                                                                                       BoxShadow(
                                                                                         blurRadius: 20.0,
                                                                                         color: Color(0x1E000000),
@@ -3502,7 +3498,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                   ),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsets.all(20.0),
+                                                                                    padding: const EdgeInsets.all(20.0),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -3545,9 +3541,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                     ),
-                                                                                                  ].divide(SizedBox(height: 6.0)),
+                                                                                                  ].divide(const SizedBox(height: 6.0)),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(width: 14.0)),
+                                                                                              ].divide(const SizedBox(width: 14.0)),
                                                                                             ),
                                                                                             Expanded(
                                                                                               child: Row(
@@ -3607,8 +3603,8 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                           context: context,
                                                                                                           isGlobal: false,
                                                                                                           avoidOverflow: false,
-                                                                                                          targetAnchor: AlignmentDirectional(-1.0, 8.0).resolve(Directionality.of(context)),
-                                                                                                          followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                          targetAnchor: const AlignmentDirectional(-1.0, 8.0).resolve(Directionality.of(context)),
+                                                                                                          followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                           builder: (dialogContext) {
                                                                                                             return Material(
                                                                                                               color: Colors.transparent,
@@ -3618,7 +3614,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                                     FocusScope.of(dialogContext).unfocus();
                                                                                                                     FocusManager.instance.primaryFocus?.unfocus();
                                                                                                                   },
-                                                                                                                  child: MailActionsWidget(),
+                                                                                                                  child: const MailActionsWidget(),
                                                                                                                 ),
                                                                                                               ),
                                                                                                             );
@@ -3632,7 +3628,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                       ),
                                                                                                     ),
                                                                                                   ),
-                                                                                                ].divide(SizedBox(width: 16.0)),
+                                                                                                ].divide(const SizedBox(width: 16.0)),
                                                                                               ),
                                                                                             ),
                                                                                           ],
@@ -3689,9 +3685,9 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                                     letterSpacing: 0.0,
                                                                                                   ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 8.0)),
+                                                                                          ].divide(const SizedBox(width: 8.0)),
                                                                                         ),
-                                                                                      ].divide(SizedBox(height: 20.0)),
+                                                                                      ].divide(const SizedBox(height: 20.0)),
                                                                                     ),
                                                                                   ),
                                                                                 ),
@@ -3699,14 +3695,14 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     );
                                                                   }
                                                                 },
                                                               ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
@@ -3728,7 +3724,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -3760,11 +3756,11 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                             wrapWithModel(
                                                                               model: _model.textStyleModel,
                                                                               updateCallback: () => safeSetState(() {}),
-                                                                              child: TextStyleWidget(),
+                                                                              child: const TextStyleWidget(),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
-                                                                        Container(
+                                                                        SizedBox(
                                                                           width:
                                                                               double.infinity,
                                                                           child:
@@ -3829,8 +3825,8 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: Colors.transparent,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Public Sans',
@@ -3838,7 +3834,7 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 0.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 0.0,
                                                                                 ),
@@ -3850,15 +3846,15 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                 print('Button pressed ...');
                                                                               },
                                                                               text: 'Send',
-                                                                              icon: Icon(
+                                                                              icon: const Icon(
                                                                                 FFIcons.ksend2,
                                                                                 color: Colors.white,
                                                                                 size: 22.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Public Sans',
@@ -3866,30 +3862,30 @@ class _EmailWidgetState extends State<EmailWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 0.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 0.0,
                                                                                 ),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 12.0)),
+                                                                          ].divide(const SizedBox(width: 12.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 30.0)),
                                                                     ),
                                                                   ),
                                                                 ),
                                                               ),
                                                             ]
-                                                                .divide(SizedBox(
+                                                                .divide(const SizedBox(
                                                                     height:
                                                                         28.0))
                                                                 .addToStart(
-                                                                    SizedBox(
+                                                                    const SizedBox(
                                                                         height:
                                                                             22.0))
-                                                                .addToEnd(SizedBox(
+                                                                .addToEnd(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                           ),
@@ -3909,25 +3905,25 @@ class _EmailWidgetState extends State<EmailWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 140.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 140.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

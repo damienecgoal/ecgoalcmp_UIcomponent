@@ -1,25 +1,12 @@
-import '/auth/base_auth_user_provider.dart';
-import '/components/edit_popup/select_payment_methods/select_payment_methods_widget.dart';
-import '/components/edit_popup/select_payment_providers/select_payment_providers_widget.dart';
-import '/components/nodal/shipping_action/shipping_action_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'settings_widget.dart' show SettingsWidget;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class SettingsModel extends FlutterFlowModel<SettingsWidget> {
   ///  Local state fields for this page.

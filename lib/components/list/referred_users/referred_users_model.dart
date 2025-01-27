@@ -1,12 +1,8 @@
 import '/components/avatar_2/avatar2_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'referred_users_widget.dart' show ReferredUsersWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class ReferredUsersModel extends FlutterFlowModel<ReferredUsersWidget> {
   ///  State fields for stateful widgets in this component.

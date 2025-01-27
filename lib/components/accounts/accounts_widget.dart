@@ -1,10 +1,7 @@
 import '/components/company_card/company_card_widget.dart';
 import '/components_2/custom_switch/custom_switch_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'accounts_model.dart';
 export 'accounts_model.dart';
@@ -63,10 +60,10 @@ class _AccountsWidgetState extends State<AccountsWidget> {
           model: _model.companyCardModel,
           updateCallback: () => safeSetState(() {}),
           child: CompanyCardWidget(
-            logo: widget!.logo!,
-            name: widget!.name!,
-            description: widget!.description!,
-            color: widget!.color!,
+            logo: widget.logo!,
+            name: widget.name!,
+            description: widget.description!,
+            color: widget.color!,
           ),
         ),
         wrapWithModel(

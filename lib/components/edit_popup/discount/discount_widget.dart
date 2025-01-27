@@ -3,10 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'discount_model.dart';
 export 'discount_model.dart';
 
@@ -47,13 +44,13 @@ class _DiscountWidgetState extends State<DiscountWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 340.0,
         height: 280.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -64,7 +61,7 @@ class _DiscountWidgetState extends State<DiscountWidget> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,6 +81,12 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                   MouseRegion(
                     opaque: false,
                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                    onEnter: ((event) async {
+                      safeSetState(() => _model.mouseRegionHovered1 = true);
+                    }),
+                    onExit: ((event) async {
+                      safeSetState(() => _model.mouseRegionHovered1 = false);
+                    }),
                     child: TextFormField(
                       controller: _model.textController,
                       focusNode: _model.textFieldFocusNode,
@@ -107,7 +110,7 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: valueOrDefault<Color>(
-                              _model.mouseRegionHovered1!
+                              _model.mouseRegionHovered1
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
@@ -137,7 +140,7 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        contentPadding: EdgeInsets.all(15.0),
+                        contentPadding: const EdgeInsets.all(15.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Public Sans',
@@ -147,14 +150,8 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                       validator:
                           _model.textControllerValidator.asValidator(context),
                     ),
-                    onEnter: ((event) async {
-                      safeSetState(() => _model.mouseRegionHovered1 = true);
-                    }),
-                    onExit: ((event) async {
-                      safeSetState(() => _model.mouseRegionHovered1 = false);
-                    }),
                   ),
-                ].divide(SizedBox(height: 6.0)),
+                ].divide(const SizedBox(height: 6.0)),
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
@@ -176,10 +173,18 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered2 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered2 = false);
+                          }),
                           child: FlutterFlowDropDown<String>(
                             controller: _model.dropDownValueController1 ??=
                                 FormFieldController<String>(null),
-                            options: ['0%', '1%', '10%', '18%', '40%'],
+                            options: const ['0%', '1%', '10%', '18%', '40%'],
                             onChanged: (val) =>
                                 safeSetState(() => _model.dropDownValue1 = val),
                             height: 42.0,
@@ -220,30 +225,22 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                                 .secondaryBackground,
                             elevation: 3.0,
                             borderColor: valueOrDefault<Color>(
-                              _model.mouseRegionHovered2!
+                              _model.mouseRegionHovered2
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
                             ),
                             borderWidth: 1.0,
                             borderRadius: 8.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isOverButton: false,
                             isSearchable: true,
                             isMultiSelect: false,
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered2 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered2 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 6.0)),
+                      ].divide(const SizedBox(height: 6.0)),
                     ),
                   ),
                   Expanded(
@@ -263,10 +260,18 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                         MouseRegion(
                           opaque: false,
                           cursor: MouseCursor.defer ?? MouseCursor.defer,
+                          onEnter: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered3 = true);
+                          }),
+                          onExit: ((event) async {
+                            safeSetState(
+                                () => _model.mouseRegionHovered3 = false);
+                          }),
                           child: FlutterFlowDropDown<String>(
                             controller: _model.dropDownValueController2 ??=
                                 FormFieldController<String>(null),
-                            options: ['0%', '1%', '10%', '18%', '40%'],
+                            options: const ['0%', '1%', '10%', '18%', '40%'],
                             onChanged: (val) =>
                                 safeSetState(() => _model.dropDownValue2 = val),
                             height: 42.0,
@@ -307,33 +312,25 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                                 .secondaryBackground,
                             elevation: 3.0,
                             borderColor: valueOrDefault<Color>(
-                              _model.mouseRegionHovered3!
+                              _model.mouseRegionHovered3
                                   ? FlutterFlowTheme.of(context).secondaryText
                                   : FlutterFlowTheme.of(context).lineColor,
                               FlutterFlowTheme.of(context).lineColor,
                             ),
                             borderWidth: 1.0,
                             borderRadius: 8.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isOverButton: false,
                             isSearchable: true,
                             isMultiSelect: false,
                           ),
-                          onEnter: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered3 = true);
-                          }),
-                          onExit: ((event) async {
-                            safeSetState(
-                                () => _model.mouseRegionHovered3 = false);
-                          }),
                         ),
-                      ].divide(SizedBox(height: 6.0)),
+                      ].divide(const SizedBox(height: 6.0)),
                     ),
                   ),
-                ].divide(SizedBox(width: 16.0)),
+                ].divide(const SizedBox(width: 16.0)),
               ),
               Divider(
                 thickness: 1.0,
@@ -346,24 +343,24 @@ class _DiscountWidgetState extends State<DiscountWidget> {
                 text: 'Apply',
                 options: FFButtonOptions(
                   height: 40.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: Color(0x337367F0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  color: const Color(0x337367F0),
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Public Sans',
                         color: FlutterFlowTheme.of(context).primary,
                         letterSpacing: 0.0,
                       ),
                   elevation: 0.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 0.0,
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),
               ),
-            ].divide(SizedBox(height: 16.0)),
+            ].divide(const SizedBox(height: 16.0)),
           ),
         ),
       ),

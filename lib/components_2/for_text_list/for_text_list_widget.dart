@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'for_text_list_model.dart';
 export 'for_text_list_model.dart';
 
@@ -52,14 +49,14 @@ class _ForTextListWidgetState extends State<ForTextListWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
             valueOrDefault<String>(
-              widget!.text1,
+              widget.text1,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -71,7 +68,7 @@ class _ForTextListWidgetState extends State<ForTextListWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.text2,
+              widget.text2,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -83,7 +80,7 @@ class _ForTextListWidgetState extends State<ForTextListWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.text3,
+              widget.text3,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -95,7 +92,7 @@ class _ForTextListWidgetState extends State<ForTextListWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.text4,
+              widget.text4,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -105,7 +102,7 @@ class _ForTextListWidgetState extends State<ForTextListWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-        ].divide(SizedBox(height: 12.0)),
+        ].divide(const SizedBox(height: 12.0)),
       ),
     );
   }

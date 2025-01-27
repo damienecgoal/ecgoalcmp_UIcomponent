@@ -1,8 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'icon_container_model.dart';
 export 'icon_container_model.dart';
 
@@ -50,11 +47,11 @@ class _IconContainerWidgetState extends State<IconContainerWidget> {
       width: 46.0,
       height: 46.0,
       decoration: BoxDecoration(
-        color: widget!.bgcolor,
+        color: widget.bgcolor,
         borderRadius: BorderRadius.circular(8.0),
         shape: BoxShape.rectangle,
       ),
-      child: widget!.icon!,
+      child: widget.icon!,
     );
   }
 }

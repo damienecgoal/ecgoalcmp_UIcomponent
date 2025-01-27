@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'sales_by_countries_model.dart';
 export 'sales_by_countries_model.dart';
 
@@ -56,7 +53,7 @@ class _SalesByCountriesWidgetState extends State<SalesByCountriesWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -64,11 +61,11 @@ class _SalesByCountriesWidgetState extends State<SalesByCountriesWidget> {
             width: 44.0,
             height: 44.0,
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
             ),
             child: Image.network(
-              widget!.image!,
+              widget.image!,
               fit: BoxFit.cover,
             ),
           ),
@@ -79,7 +76,7 @@ class _SalesByCountriesWidgetState extends State<SalesByCountriesWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.sales,
+                    widget.sales,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -91,7 +88,7 @@ class _SalesByCountriesWidgetState extends State<SalesByCountriesWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.country,
+                    widget.country,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -101,28 +98,28 @@ class _SalesByCountriesWidgetState extends State<SalesByCountriesWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 6.0)),
+              ].divide(const SizedBox(height: 6.0)),
             ),
           ),
           Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              widget!.icon!,
+              widget.icon!,
               Text(
                 valueOrDefault<String>(
-                  widget!.value,
+                  widget.value,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Public Sans',
-                      color: widget!.valueColor,
+                      color: widget.valueColor,
                       fontSize: 16.0,
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(width: 6.0)),
+            ].divide(const SizedBox(width: 6.0)),
           ),
-        ].divide(SizedBox(width: 16.0)),
+        ].divide(const SizedBox(width: 16.0)),
       ),
     );
   }

@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'interested_model.dart';
 export 'interested_model.dart';
 
@@ -50,7 +47,7 @@ class _InterestedWidgetState extends State<InterestedWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -62,7 +59,7 @@ class _InterestedWidgetState extends State<InterestedWidget> {
                 width: 14.0,
                 height: 14.0,
                 decoration: BoxDecoration(
-                  color: widget!.color,
+                  color: widget.color,
                   shape: BoxShape.circle,
                 ),
               ),
@@ -72,7 +69,7 @@ class _InterestedWidgetState extends State<InterestedWidget> {
                 children: [
                   Text(
                     valueOrDefault<String>(
-                      widget!.name,
+                      widget.name,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -84,7 +81,7 @@ class _InterestedWidgetState extends State<InterestedWidget> {
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.persentage,
+                      widget.persentage,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,11 +91,11 @@ class _InterestedWidgetState extends State<InterestedWidget> {
                           fontWeight: FontWeight.w500,
                         ),
                   ),
-                ].divide(SizedBox(height: 12.0)),
+                ].divide(const SizedBox(height: 12.0)),
               ),
-            ].divide(SizedBox(width: 10.0)),
+            ].divide(const SizedBox(width: 10.0)),
           ),
-        ].divide(SizedBox(height: 12.0)),
+        ].divide(const SizedBox(height: 12.0)),
       ),
     );
   }

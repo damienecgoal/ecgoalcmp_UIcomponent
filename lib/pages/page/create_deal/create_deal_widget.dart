@@ -11,10 +11,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_deal_model.dart';
 export 'create_deal_model.dart';
@@ -44,7 +42,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -108,21 +106,21 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(-1.0, -1.0),
+                              alignment: const AlignmentDirectional(-1.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     28.0, 0.0, 28.0, 0.0),
                                 child: Wrap(
                                   spacing: 28.0,
@@ -135,7 +133,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                   clipBehavior: Clip.none,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -172,7 +170,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -192,7 +190,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:
@@ -222,7 +220,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child: IconBoxWidget(
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             FFIcons.kusers,
                                                             color: Color(
                                                                 0xFFB0B8DC),
@@ -299,11 +297,11 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 20.0)),
+                                                        const SizedBox(width: 20.0)),
                                                   ),
                                                 ),
                                                 InkWell(
@@ -330,7 +328,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child: IconBoxWidget(
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             FFIcons.kid,
                                                             color: Color(
                                                                 0xFFB0B8DC),
@@ -407,11 +405,11 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 20.0)),
+                                                        const SizedBox(width: 20.0)),
                                                   ),
                                                 ),
                                                 InkWell(
@@ -438,7 +436,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child: IconBoxWidget(
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             FFIcons.kcreditCard,
                                                             color: Color(
                                                                 0xFFB0B8DC),
@@ -515,11 +513,11 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 20.0)),
+                                                        const SizedBox(width: 20.0)),
                                                   ),
                                                 ),
                                                 InkWell(
@@ -546,7 +544,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child: IconBoxWidget(
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             FFIcons.kcheckbox,
                                                             color: Color(
                                                                 0xFFB0B8DC),
@@ -623,19 +621,19 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 20.0)),
+                                                        const SizedBox(width: 20.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 24.0)),
+                                              ].divide(const SizedBox(height: 24.0)),
                                             ),
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 16.0, 0.0),
                                               child: Builder(
@@ -667,7 +665,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                     .max,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         20.0,
@@ -711,6 +709,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered1 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered1 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -737,7 +741,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered1! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered1 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -765,7 +769,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -777,14 +781,8 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered1 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered1 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -803,6 +801,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered2 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered2 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -829,7 +833,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered2! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered2 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -857,7 +861,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -869,17 +873,11 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered2 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered2 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
@@ -904,6 +902,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered3 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered3 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -930,7 +934,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered3! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered3 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -958,7 +962,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -972,14 +976,8 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered3 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered3 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -1001,9 +999,15 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       MouseRegion(
                                                                                         opaque: false,
                                                                                         cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                        onEnter: ((event) async {
+                                                                                          safeSetState(() => _model.mouseRegionHovered4 = true);
+                                                                                        }),
+                                                                                        onExit: ((event) async {
+                                                                                          safeSetState(() => _model.mouseRegionHovered4 = false);
+                                                                                        }),
                                                                                         child: FlutterFlowDropDown<String>(
                                                                                           multiSelectController: _model.dropDownValueController1 ??= FormListFieldController<String>(null),
-                                                                                          options: [
+                                                                                          options: const [
                                                                                             'Apple iPhone 12 Pro Max (256GB)',
                                                                                             'Apple iPhone 12 Pro  (512GB)',
                                                                                             'Apple iPhone 12 Mini (256GB)',
@@ -1038,26 +1042,20 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           elevation: 3.0,
                                                                                           borderColor: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered4! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                            _model.mouseRegionHovered4 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                             FlutterFlowTheme.of(context).lineColor,
                                                                                           ),
                                                                                           borderWidth: 1.0,
                                                                                           borderRadius: 8.0,
-                                                                                          margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                          margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                           hidesUnderline: true,
                                                                                           isOverButton: false,
                                                                                           isSearchable: true,
                                                                                           isMultiSelect: true,
                                                                                           onMultiSelectChanged: (val) => safeSetState(() => _model.dropDownValue1 = val),
                                                                                         ),
-                                                                                        onEnter: ((event) async {
-                                                                                          safeSetState(() => _model.mouseRegionHovered4 = true);
-                                                                                        }),
-                                                                                        onExit: ((event) async {
-                                                                                          safeSetState(() => _model.mouseRegionHovered4 = false);
-                                                                                        }),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 8.0)),
+                                                                                    ].divide(const SizedBox(height: 8.0)),
                                                                                   ),
                                                                                   Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -1074,9 +1072,15 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       MouseRegion(
                                                                                         opaque: false,
                                                                                         cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                        onEnter: ((event) async {
+                                                                                          safeSetState(() => _model.mouseRegionHovered5 = true);
+                                                                                        }),
+                                                                                        onExit: ((event) async {
+                                                                                          safeSetState(() => _model.mouseRegionHovered5 = false);
+                                                                                        }),
                                                                                         child: FlutterFlowDropDown<String>(
                                                                                           multiSelectController: _model.dropDownValueController2 ??= FormListFieldController<String>(null),
-                                                                                          options: [
+                                                                                          options: const [
                                                                                             'Australi',
                                                                                             'Bangladeng',
                                                                                             'Belarus',
@@ -1122,31 +1126,25 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           elevation: 3.0,
                                                                                           borderColor: valueOrDefault<Color>(
-                                                                                            _model.mouseRegionHovered5! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                            _model.mouseRegionHovered5 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                             FlutterFlowTheme.of(context).lineColor,
                                                                                           ),
                                                                                           borderWidth: 1.0,
                                                                                           borderRadius: 8.0,
-                                                                                          margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                          margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                           hidesUnderline: true,
                                                                                           isOverButton: false,
                                                                                           isSearchable: true,
                                                                                           isMultiSelect: true,
                                                                                           onMultiSelectChanged: (val) => safeSetState(() => _model.dropDownValue2 = val),
                                                                                         ),
-                                                                                        onEnter: ((event) async {
-                                                                                          safeSetState(() => _model.mouseRegionHovered5 = true);
-                                                                                        }),
-                                                                                        onExit: ((event) async {
-                                                                                          safeSetState(() => _model.mouseRegionHovered5 = false);
-                                                                                        }),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 8.0)),
+                                                                                    ].divide(const SizedBox(height: 8.0)),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 26.0)),
+                                                                                ].divide(const SizedBox(height: 26.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
@@ -1171,6 +1169,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered6 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered6 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -1197,7 +1201,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered6! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered6 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -1225,7 +1229,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -1237,14 +1241,8 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered6 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered6 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -1299,7 +1297,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 4.0)),
+                                                                                        ].divide(const SizedBox(width: 4.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -1337,7 +1335,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 4.0)),
+                                                                                        ].divide(const SizedBox(width: 4.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -1375,16 +1373,16 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 4.0)),
+                                                                                        ].divide(const SizedBox(width: 4.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 16.0)),
+                                                                                    ].divide(const SizedBox(width: 16.0)),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 12.0)),
+                                                                                ].divide(const SizedBox(height: 12.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                     Row(
@@ -1416,12 +1414,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1436,7 +1434,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1477,7 +1475,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -1490,12 +1488,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                    Icon(
+                                                                                    const Icon(
                                                                                       FFIcons.karrowRight,
                                                                                       color: Colors.white,
                                                                                       size: 22.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
@@ -1503,7 +1501,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           28.0)),
                                                                 ),
@@ -1540,7 +1538,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                     .max,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         20.0,
@@ -1586,6 +1584,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered7 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered7 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -1612,7 +1616,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered7! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered7 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -1640,7 +1644,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -1652,14 +1656,8 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered7 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered7 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -1678,9 +1676,15 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered8 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered8 = false);
+                                                                                    }),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       multiSelectController: _model.dropDownValueController3 ??= FormListFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'All',
                                                                                         'Registered',
                                                                                         'Unregistered',
@@ -1714,29 +1718,23 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                       elevation: 3.0,
                                                                                       borderColor: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered8! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered8 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       borderWidth: 1.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: true,
                                                                                       isMultiSelect: true,
                                                                                       onMultiSelectChanged: (val) => safeSetState(() => _model.dropDownValue3 = val),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered8 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered8 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
@@ -1761,6 +1759,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered9 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered9 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -1787,7 +1791,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered9! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered9 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -1815,7 +1819,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -1827,14 +1831,8 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered9 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered9 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -1853,9 +1851,15 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered10 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered10 = false);
+                                                                                    }),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       multiSelectController: _model.dropDownValueController4 ??= FormListFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Any',
                                                                                         'Credit Card',
                                                                                         'Net Banking',
@@ -1889,29 +1893,23 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                       elevation: 3.0,
                                                                                       borderColor: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered10! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered10 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       borderWidth: 1.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: true,
                                                                                       isMultiSelect: true,
                                                                                       onMultiSelectChanged: (val) => safeSetState(() => _model.dropDownValue4 = val),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered10 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered10 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
@@ -1936,6 +1934,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered11 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered11 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -1962,7 +1966,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered11! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered11 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -1990,7 +1994,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -2002,14 +2006,8 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered11 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered11 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -2028,9 +2026,15 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered12 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered12 = false);
+                                                                                    }),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       multiSelectController: _model.dropDownValueController5 ??= FormListFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Active',
                                                                                         'inactive',
                                                                                         'Suspend',
@@ -2064,31 +2068,25 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                       elevation: 3.0,
                                                                                       borderColor: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered12! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered12 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       borderWidth: 1.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: true,
                                                                                       isMultiSelect: true,
                                                                                       onMultiSelectChanged: (val) => safeSetState(() => _model.dropDownValue5 = val),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered12 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered12 = false);
-                                                                                    }),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                     Row(
@@ -2124,7 +2122,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 8.0)),
                                                                     ),
                                                                     Row(
@@ -2156,12 +2154,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -2176,7 +2174,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -2217,7 +2215,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2230,12 +2228,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                    Icon(
+                                                                                    const Icon(
                                                                                       FFIcons.karrowRight,
                                                                                       color: Colors.white,
                                                                                       size: 22.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
@@ -2243,7 +2241,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           28.0)),
                                                                 ),
@@ -2280,7 +2278,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                     .max,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         20.0,
@@ -2387,7 +2385,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                     letterSpacing: 0.0,
                                                                                                   ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(height: 14.0)),
+                                                                                          ].divide(const SizedBox(height: 14.0)),
                                                                                         ),
                                                                                       ),
                                                                                       Expanded(
@@ -2406,7 +2404,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 14.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 14.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 '25%',
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2418,19 +2416,19 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                               child: wrapWithModel(
                                                                                                 model: _model.statusCardModel,
                                                                                                 updateCallback: () => safeSetState(() {}),
                                                                                                 child: StatusCardWidget(
                                                                                                   title: '25PEROFF',
                                                                                                   titleColor: FlutterFlowTheme.of(context).warning,
-                                                                                                  bgColor: Color(0x33FF9F43),
+                                                                                                  bgColor: const Color(0x33FF9F43),
                                                                                                 ),
                                                                                               ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'Black friday sale, 25% OFF',
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2442,7 +2440,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 14.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 14.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 '2021-07-14 to 2021-07-30',
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -2458,7 +2456,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       ),
                                                                                     ],
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 24.0)),
+                                                                                ].divide(const SizedBox(height: 24.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -2470,7 +2468,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   ),
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                                                                                   child: ClipRRect(
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                     child: Image.asset(
@@ -2483,9 +2481,9 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                     Row(
@@ -2521,7 +2519,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 8.0)),
                                                                     ),
                                                                     Row(
@@ -2553,12 +2551,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -2573,7 +2571,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -2602,7 +2600,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -2615,19 +2613,19 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                  Icon(
+                                                                                  const Icon(
                                                                                     FFIcons.kcheck,
                                                                                     color: Colors.white,
                                                                                     size: 22.0,
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 8.0)),
+                                                                                ].divide(const SizedBox(width: 8.0)),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           28.0)),
                                                                 ),
@@ -2663,7 +2661,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                     .max,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         20.0,
@@ -2706,7 +2704,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                               Stack(
                                                                             children: [
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(0.0, 1.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 1.0),
                                                                                 child: ClipRRect(
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                   child: Image.asset(
@@ -2718,9 +2716,9 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 ),
                                                                               ),
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                                                                                   child: ClipRRect(
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                     child: Image.asset(
@@ -2743,6 +2741,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                               child: MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered13 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered13 = false);
+                                                                                }),
                                                                                 child: InkWell(
                                                                                   splashColor: Colors.transparent,
                                                                                   focusColor: Colors.transparent,
@@ -2762,7 +2766,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           () {
                                                                                             if (_model.deal == 'Percentage') {
                                                                                               return FlutterFlowTheme.of(context).primary;
-                                                                                            } else if (_model.mouseRegionHovered13!) {
+                                                                                            } else if (_model.mouseRegionHovered13) {
                                                                                               return FlutterFlowTheme.of(context).secondaryText;
                                                                                             } else {
                                                                                               return FlutterFlowTheme.of(context).lineColor;
@@ -2773,7 +2777,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsets.all(20.0),
+                                                                                      padding: const EdgeInsets.all(20.0),
                                                                                       child: Column(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
@@ -2823,23 +2827,23 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               ),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(height: 12.0)),
+                                                                                        ].divide(const SizedBox(height: 12.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered13 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered13 = false);
-                                                                                }),
                                                                               ),
                                                                             ),
                                                                             Expanded(
                                                                               child: MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered14 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered14 = false);
+                                                                                }),
                                                                                 child: InkWell(
                                                                                   splashColor: Colors.transparent,
                                                                                   focusColor: Colors.transparent,
@@ -2859,7 +2863,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           () {
                                                                                             if (_model.deal == 'Flat Amount') {
                                                                                               return FlutterFlowTheme.of(context).primary;
-                                                                                            } else if (_model.mouseRegionHovered14!) {
+                                                                                            } else if (_model.mouseRegionHovered14) {
                                                                                               return FlutterFlowTheme.of(context).secondaryText;
                                                                                             } else {
                                                                                               return FlutterFlowTheme.of(context).lineColor;
@@ -2870,7 +2874,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsets.all(20.0),
+                                                                                      padding: const EdgeInsets.all(20.0),
                                                                                       child: Column(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
@@ -2920,23 +2924,23 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               ),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(height: 12.0)),
+                                                                                        ].divide(const SizedBox(height: 12.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered14 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered14 = false);
-                                                                                }),
                                                                               ),
                                                                             ),
                                                                             Expanded(
                                                                               child: MouseRegion(
                                                                                 opaque: false,
                                                                                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                onEnter: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered15 = true);
+                                                                                }),
+                                                                                onExit: ((event) async {
+                                                                                  safeSetState(() => _model.mouseRegionHovered15 = false);
+                                                                                }),
                                                                                 child: InkWell(
                                                                                   splashColor: Colors.transparent,
                                                                                   focusColor: Colors.transparent,
@@ -2956,7 +2960,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           () {
                                                                                             if (_model.deal == 'Prime Member') {
                                                                                               return FlutterFlowTheme.of(context).primary;
-                                                                                            } else if (_model.mouseRegionHovered15!) {
+                                                                                            } else if (_model.mouseRegionHovered15) {
                                                                                               return FlutterFlowTheme.of(context).secondaryText;
                                                                                             } else {
                                                                                               return FlutterFlowTheme.of(context).lineColor;
@@ -2967,7 +2971,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       ),
                                                                                     ),
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsets.all(20.0),
+                                                                                      padding: const EdgeInsets.all(20.0),
                                                                                       child: Column(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
@@ -3017,20 +3021,14 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               ),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(height: 12.0)),
+                                                                                        ].divide(const SizedBox(height: 12.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                                onEnter: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered15 = true);
-                                                                                }),
-                                                                                onExit: ((event) async {
-                                                                                  safeSetState(() => _model.mouseRegionHovered15 = false);
-                                                                                }),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                          ].divide(const SizedBox(width: 20.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
@@ -3053,6 +3051,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered16 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered16 = false);
+                                                                                    }),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3079,7 +3083,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                               enabledBorder: OutlineInputBorder(
                                                                                                 borderSide: BorderSide(
                                                                                                   color: valueOrDefault<Color>(
-                                                                                                    _model.mouseRegionHovered16! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                                    _model.mouseRegionHovered16 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                                     FlutterFlowTheme.of(context).lineColor,
                                                                                                   ),
                                                                                                   width: 1.0,
@@ -3107,7 +3111,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                                 ),
                                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                               ),
-                                                                                              contentPadding: EdgeInsets.all(16.0),
+                                                                                              contentPadding: const EdgeInsets.all(16.0),
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Public Sans',
@@ -3119,12 +3123,6 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered16 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered16 = false);
-                                                                                    }),
                                                                                   ),
                                                                                   Text(
                                                                                     'Enter the discount percentage. 10 = 10%',
@@ -3134,7 +3132,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
                                                                             Expanded(
@@ -3153,9 +3151,15 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                   MouseRegion(
                                                                                     opaque: false,
                                                                                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                                                                                    onEnter: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered17 = true);
+                                                                                    }),
+                                                                                    onExit: ((event) async {
+                                                                                      safeSetState(() => _model.mouseRegionHovered17 = false);
+                                                                                    }),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       multiSelectController: _model.dropDownValueController6 ??= FormListFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Australi',
                                                                                         'Bangladeng',
                                                                                         'Belarus',
@@ -3201,24 +3205,18 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                       fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                       elevation: 3.0,
                                                                                       borderColor: valueOrDefault<Color>(
-                                                                                        _model.mouseRegionHovered17! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                        _model.mouseRegionHovered17 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                         FlutterFlowTheme.of(context).lineColor,
                                                                                       ),
                                                                                       borderWidth: 1.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: true,
                                                                                       isMultiSelect: true,
                                                                                       onMultiSelectChanged: (val) => safeSetState(() => _model.dropDownValue6 = val),
                                                                                     ),
-                                                                                    onEnter: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered17 = true);
-                                                                                    }),
-                                                                                    onExit: ((event) async {
-                                                                                      safeSetState(() => _model.mouseRegionHovered17 = false);
-                                                                                    }),
                                                                                   ),
                                                                                   Text(
                                                                                     'Select applicable regions for the deal.',
@@ -3228,12 +3226,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 28.0)),
+                                                                          ].divide(const SizedBox(width: 28.0)),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                     Row(
@@ -3263,12 +3261,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -3283,7 +3281,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -3324,7 +3322,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -3337,12 +3335,12 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                    Icon(
+                                                                                    const Icon(
                                                                                       FFIcons.karrowRight,
                                                                                       color: Colors.white,
                                                                                       size: 22.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 8.0)),
+                                                                                  ].divide(const SizedBox(width: 8.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
@@ -3350,7 +3348,7 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           24.0)),
                                                                 ),
@@ -3373,25 +3371,25 @@ class _CreateDealWidgetState extends State<CreateDealWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

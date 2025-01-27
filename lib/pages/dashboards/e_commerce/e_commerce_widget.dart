@@ -15,14 +15,12 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'dart:math' as math;
 import 'package:styled_divider/styled_divider.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
@@ -92,19 +90,19 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -126,7 +124,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               BorderRadius.circular(8.0),
                                           child: Container(
                                             height: 180.0,
-                                            constraints: BoxConstraints(
+                                            constraints: const BoxConstraints(
                                               minWidth: 240.0,
                                               maxWidth: 360.0,
                                             ),
@@ -134,7 +132,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -154,16 +152,16 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                 Expanded(
                                                   child: Stack(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 1.0, 1.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -184,7 +182,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     20.0,
@@ -238,7 +236,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 6.0)),
                                                             ),
                                                             Column(
@@ -279,14 +277,14 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       FFButtonOptions(
                                                                     height:
                                                                         38.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -310,7 +308,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     elevation:
                                                                         0.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -321,7 +319,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             8.0),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 8.0)),
                                                             ),
                                                           ],
@@ -342,7 +340,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               BorderRadius.circular(8.0),
                                           child: Container(
                                             height: 180.0,
-                                            constraints: BoxConstraints(
+                                            constraints: const BoxConstraints(
                                               minWidth: 240.0,
                                               maxWidth: 360.0,
                                             ),
@@ -350,7 +348,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -365,7 +363,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(20.0),
+                                              padding: const EdgeInsets.all(20.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -441,7 +439,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .primary,
                                                               size: 24.0,
                                                             ),
-                                                            bgcolor: Color(
+                                                            bgcolor: const Color(
                                                                 0x347367F0),
                                                             title: '230k',
                                                             subtitle: 'Sales',
@@ -462,7 +460,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .info,
                                                               size: 24.0,
                                                             ),
-                                                            bgcolor: Color(
+                                                            bgcolor: const Color(
                                                                 0x3400CFE8),
                                                             title: '8.549k',
                                                             subtitle:
@@ -485,7 +483,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .error,
                                                               size: 24.0,
                                                             ),
-                                                            bgcolor: Color(
+                                                            bgcolor: const Color(
                                                                 0x34EA5455),
                                                             title: '1.423k',
                                                             subtitle:
@@ -494,7 +492,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -516,7 +514,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .success,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x3328C76F),
                                                               title: '\$9745',
                                                               subtitle:
@@ -528,13 +526,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 24.0)),
+                                                    const SizedBox(height: 24.0)),
                                               ),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -567,7 +565,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                     child: Container(
                                                       height: 250.0,
                                                       constraints:
-                                                          BoxConstraints(
+                                                          const BoxConstraints(
                                                         minWidth: 240.0,
                                                         maxWidth: 360.0,
                                                       ),
@@ -575,7 +573,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
-                                                        boxShadow: [
+                                                        boxShadow: const [
                                                           BoxShadow(
                                                             blurRadius: 12.0,
                                                             color: Color(
@@ -592,7 +590,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 .circular(8.0),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -641,7 +639,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 6.0)),
                                                             ),
                                                             Expanded(
@@ -649,7 +647,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
@@ -676,7 +674,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
@@ -703,12 +701,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             -1.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           54.0,
                                                                           0.0,
@@ -731,7 +729,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             1.0),
                                                                     child: Text(
@@ -770,7 +768,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                     child: Container(
                                                       height: 250.0,
                                                       constraints:
-                                                          BoxConstraints(
+                                                          const BoxConstraints(
                                                         minWidth: 240.0,
                                                         maxWidth: 360.0,
                                                       ),
@@ -778,7 +776,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
-                                                        boxShadow: [
+                                                        boxShadow: const [
                                                           BoxShadow(
                                                             blurRadius: 12.0,
                                                             color: Color(
@@ -803,7 +801,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         20.0,
@@ -849,12 +847,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 6.0)),
                                                             ),
                                                           ),
                                                           Expanded(
-                                                            child: Container(
+                                                            child: SizedBox(
                                                               width: double
                                                                   .infinity,
                                                               height: 72.0,
@@ -898,16 +896,16 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       false,
                                                                 ),
                                                                 axisBounds:
-                                                                    AxisBounds(
+                                                                    const AxisBounds(
                                                                   maxX: 1.0,
                                                                 ),
                                                                 xAxisLabelInfo:
-                                                                    AxisLabelInfo(
+                                                                    const AxisLabelInfo(
                                                                   reservedSize:
                                                                       32.0,
                                                                 ),
                                                                 yAxisLabelInfo:
-                                                                    AxisLabelInfo(
+                                                                    const AxisLabelInfo(
                                                                   reservedSize:
                                                                       40.0,
                                                                 ),
@@ -926,7 +924,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -972,13 +970,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 16.0)),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 28.0)),
+                                              ].divide(const SizedBox(width: 28.0)),
                                             ),
                                             ClipRRect(
                                               borderRadius:
@@ -990,7 +988,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 12.0,
                                                       color: Color(0x14000000),
@@ -1013,7 +1011,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                   children: [
                                                     Expanded(
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Row(
                                                           mainAxisSize:
@@ -1061,7 +1059,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -1105,9 +1103,9 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 6.0)),
+                                                                        ].divide(const SizedBox(width: 6.0)),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             8.0)),
                                                                   ),
@@ -1116,7 +1114,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1124,7 +1122,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                           0.0),
                                                               child: Stack(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 children: [
@@ -1140,10 +1138,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     animateFromLastPercent:
                                                                         true,
                                                                     progressColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x6628C76F),
                                                                     backgroundColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x3328C76F),
                                                                   ),
                                                                   CircularPercentIndicator(
@@ -1158,7 +1156,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     animateFromLastPercent:
                                                                         true,
                                                                     progressColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0x9928C76F),
                                                                     backgroundColor:
                                                                         Colors
@@ -1176,7 +1174,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     animateFromLastPercent:
                                                                         true,
                                                                     progressColor:
-                                                                        Color(
+                                                                        const Color(
                                                                             0xFF28C76F),
                                                                     backgroundColor:
                                                                         Colors
@@ -1210,7 +1208,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             4.0)),
                                                                   ),
@@ -1233,13 +1231,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                         child: Container(
                                           width: 100.0,
                                           height: 500.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             maxWidth: 600.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1259,7 +1257,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               Expanded(
                                                 flex: 2,
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1330,14 +1328,14 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       14.0,
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 18.0)),
                                                           ),
                                                         ],
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     8.0,
@@ -1356,7 +1354,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       .end,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1433,7 +1431,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             55.0)),
                                                                   ),
@@ -1441,7 +1439,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 Expanded(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             22.0,
                                                                             0.0,
@@ -1457,7 +1455,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               .end,
                                                                       children:
                                                                           [
-                                                                        Container(
+                                                                        SizedBox(
                                                                           width:
                                                                               double.infinity,
                                                                           height:
@@ -1486,13 +1484,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               showBorder: false,
                                                                             ),
                                                                             axisBounds:
-                                                                                AxisBounds(),
+                                                                                const AxisBounds(),
                                                                             xAxisLabelInfo:
-                                                                                AxisLabelInfo(
+                                                                                const AxisLabelInfo(
                                                                               reservedSize: 12.0,
                                                                             ),
                                                                             yAxisLabelInfo:
-                                                                                AxisLabelInfo(
+                                                                                const AxisLabelInfo(
                                                                               reservedSize: 42.0,
                                                                             ),
                                                                           ),
@@ -1502,7 +1500,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                           angle:
                                                                               180.0 * (math.pi / 180),
                                                                           child:
-                                                                              Container(
+                                                                              SizedBox(
                                                                             width:
                                                                                 double.infinity,
                                                                             height:
@@ -1524,11 +1522,11 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                 backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 showBorder: false,
                                                                               ),
-                                                                              axisBounds: AxisBounds(),
-                                                                              xAxisLabelInfo: AxisLabelInfo(
+                                                                              axisBounds: const AxisBounds(),
+                                                                              xAxisLabelInfo: const AxisLabelInfo(
                                                                                 reservedSize: 12.0,
                                                                               ),
-                                                                              yAxisLabelInfo: AxisLabelInfo(
+                                                                              yAxisLabelInfo: const AxisLabelInfo(
                                                                                 reservedSize: 42.0,
                                                                               ),
                                                                             ),
@@ -1623,22 +1621,22 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 20.0)),
                                                                     ),
                                                                   ),
                                                                 ),
                                                               ].addToEnd(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       width:
                                                                           12.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 16.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                               ),
@@ -1654,7 +1652,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               Expanded(
                                                 flex: 1,
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(40.0),
+                                                  padding: const EdgeInsets.all(40.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1665,7 +1663,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 .dropDownValueController1 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: [
+                                                        options: const [
                                                           '2024',
                                                           '2023',
                                                           '2022',
@@ -1710,7 +1708,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         borderWidth: 1.0,
                                                         borderRadius: 6.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -1756,12 +1754,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                       Stack(
                                                         children: [
-                                                          Container(
+                                                          SizedBox(
                                                             width:
                                                                 double.infinity,
                                                             height: 80.0,
@@ -1784,7 +1782,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                         2.0,
                                                                     isCurved:
                                                                         true,
-                                                                    dotData: FlDotData(
+                                                                    dotData: const FlDotData(
                                                                         show:
                                                                             false),
                                                                   ),
@@ -1800,17 +1798,17 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     false,
                                                               ),
                                                               axisBounds:
-                                                                  AxisBounds(
+                                                                  const AxisBounds(
                                                                 minY: 0.0,
                                                                 maxY: 1.0,
                                                               ),
                                                               xAxisLabelInfo:
-                                                                  AxisLabelInfo(
+                                                                  const AxisLabelInfo(
                                                                 reservedSize:
                                                                     32.0,
                                                               ),
                                                               yAxisLabelInfo:
-                                                                  AxisLabelInfo(
+                                                                  const AxisLabelInfo(
                                                                 reservedSize:
                                                                     40.0,
                                                               ),
@@ -1818,13 +1816,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         44.0,
                                                                         0.0,
                                                                         0.0),
-                                                            child: Container(
+                                                            child: SizedBox(
                                                               width: double
                                                                   .infinity,
                                                               height: 80.0,
@@ -1845,14 +1843,14 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                           2.0,
                                                                       isCurved:
                                                                           true,
-                                                                      dotData: FlDotData(
+                                                                      dotData: const FlDotData(
                                                                           show:
                                                                               false),
                                                                     ),
                                                                   )
                                                                 ],
                                                                 chartStylingInfo:
-                                                                    ChartStylingInfo(
+                                                                    const ChartStylingInfo(
                                                                   backgroundColor:
                                                                       Colors
                                                                           .transparent,
@@ -1860,17 +1858,17 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       false,
                                                                 ),
                                                                 axisBounds:
-                                                                    AxisBounds(
+                                                                    const AxisBounds(
                                                                   minY: 0.0,
                                                                   maxY: 1.0,
                                                                 ),
                                                                 xAxisLabelInfo:
-                                                                    AxisLabelInfo(
+                                                                    const AxisLabelInfo(
                                                                   reservedSize:
                                                                       32.0,
                                                                 ),
                                                                 yAxisLabelInfo:
-                                                                    AxisLabelInfo(
+                                                                    const AxisLabelInfo(
                                                                   reservedSize:
                                                                       40.0,
                                                                 ),
@@ -1891,14 +1889,14 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                               double.infinity,
                                                           height: 42.0,
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1921,7 +1919,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   ),
                                                           elevation: 0.0,
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 0.0,
@@ -1933,9 +1931,9 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         ),
                                                       ),
                                                     ]
-                                                        .divide(SizedBox(
+                                                        .divide(const SizedBox(
                                                             height: 28.0))
-                                                        .addToStart(SizedBox(
+                                                        .addToStart(const SizedBox(
                                                             height: 28.0)),
                                                   ),
                                                 ),
@@ -1944,7 +1942,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1957,7 +1955,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1972,7 +1970,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -2027,13 +2025,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2057,7 +2055,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2094,7 +2092,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Expanded(
                                                   child: Column(
@@ -2115,7 +2113,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 .primary,
                                                             size: 26.0,
                                                           ),
-                                                          bg: Color(0x337367F0),
+                                                          bg: const Color(0x337367F0),
                                                           title: 'Net Profit',
                                                           subtitle:
                                                               '12.4k Sales',
@@ -2148,7 +2146,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 .success,
                                                             size: 26.0,
                                                           ),
-                                                          bg: Color(0x3428C76F),
+                                                          bg: const Color(0x3428C76F),
                                                           title: 'Total Income',
                                                           subtitle:
                                                               'Sales, Affiliation',
@@ -2180,7 +2178,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 .secondary,
                                                             size: 26.0,
                                                           ),
-                                                          bg: Color(0x33A8AAAE),
+                                                          bg: const Color(0x33A8AAAE),
                                                           title:
                                                               'Total Expenses',
                                                           subtitle:
@@ -2203,13 +2201,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         flex: 2,
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
                                                                       8.0,
                                                                       8.0),
-                                                          child: Container(
+                                                          child: SizedBox(
                                                             width:
                                                                 double.infinity,
                                                             height: 180.0,
@@ -2247,7 +2245,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     false,
                                                               ),
                                                               axisBounds:
-                                                                  AxisBounds(),
+                                                                  const AxisBounds(),
                                                               xAxisLabelInfo:
                                                                   AxisLabelInfo(
                                                                 showLabels:
@@ -2266,7 +2264,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     12.0,
                                                               ),
                                                               yAxisLabelInfo:
-                                                                  AxisLabelInfo(
+                                                                  const AxisLabelInfo(
                                                                 reservedSize:
                                                                     42.0,
                                                               ),
@@ -2275,10 +2273,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 22.0)),
+                                                        const SizedBox(height: 22.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 22.0)),
+                                              ].divide(const SizedBox(height: 22.0)),
                                             ),
                                           ),
                                         ),
@@ -2291,7 +2289,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2306,7 +2304,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -2361,13 +2359,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2391,7 +2389,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            PopularWidget(),
+                                                                            const PopularWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2428,14 +2426,14 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 wrapWithModel(
                                                   model: _model
                                                       .popularProductsModel1,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: PopularProductsWidget(
+                                                  child: const PopularProductsWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/t4a8efzl9mk2/iphone.png',
                                                     itemName: 'Apple iPhone 13',
@@ -2449,7 +2447,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       .popularProductsModel2,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: PopularProductsWidget(
+                                                  child: const PopularProductsWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/kwypl3iyp13w/nike-air-jordan.png',
                                                     itemName: 'Nike Air Jordan',
@@ -2463,7 +2461,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       .popularProductsModel3,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: PopularProductsWidget(
+                                                  child: const PopularProductsWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/1mp526x7d2wo/headphones.png',
                                                     itemName: 'Beats Studio 2',
@@ -2477,7 +2475,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       .popularProductsModel4,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: PopularProductsWidget(
+                                                  child: const PopularProductsWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/4phdhq206miz/apple-watch.png',
                                                     itemName:
@@ -2492,7 +2490,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       .popularProductsModel5,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: PopularProductsWidget(
+                                                  child: const PopularProductsWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/2a1fazwbrwqu/amazon-echo.png',
                                                     itemName: 'Amazon Echo Dot',
@@ -2506,7 +2504,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       .popularProductsModel6,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: PopularProductsWidget(
+                                                  child: const PopularProductsWidget(
                                                     image:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/j2jpw75nmj9t/play-station.png',
                                                     itemName:
@@ -2516,7 +2514,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                     amount: '\$129.48',
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 24.0)),
+                                              ].divide(const SizedBox(height: 24.0)),
                                             ),
                                           ),
                                         ),
@@ -2529,7 +2527,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2547,7 +2545,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 20.0, 20.0, 0.0),
                                                 child: Column(
@@ -2601,13 +2599,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2631,7 +2629,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2668,7 +2666,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ),
                                               Expanded(
@@ -2685,7 +2683,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         48.0,
@@ -2707,7 +2705,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    Alignment(
+                                                                    const Alignment(
                                                                         0.0, 0),
                                                                 child: TabBar(
                                                                   labelColor:
@@ -2750,7 +2748,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                           .primary,
                                                                   indicatorWeight:
                                                                       2.5,
-                                                                  tabs: [
+                                                                  tabs: const [
                                                                     Tab(
                                                                       text:
                                                                           'New',
@@ -2783,7 +2781,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       .tabBarController,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           26.0,
                                                                           0.0,
                                                                           26.0,
@@ -2801,7 +2799,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -2831,7 +2829,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -2861,10 +2859,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -2876,7 +2874,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -2906,12 +2904,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -2934,7 +2932,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -2964,7 +2962,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -2994,10 +2992,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3009,7 +3007,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3039,22 +3037,22 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)).addToStart(SizedBox(height: 18.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 18.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           26.0,
                                                                           0.0,
                                                                           26.0,
@@ -3072,7 +3070,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3102,7 +3100,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3132,10 +3130,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3147,7 +3145,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3177,12 +3175,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -3205,7 +3203,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3235,7 +3233,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3265,10 +3263,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3280,7 +3278,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3310,22 +3308,22 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)).addToStart(SizedBox(height: 18.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 18.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           26.0,
                                                                           0.0,
                                                                           26.0,
@@ -3343,7 +3341,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3373,7 +3371,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3403,10 +3401,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3418,7 +3416,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3448,12 +3446,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -3476,7 +3474,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3506,7 +3504,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3536,10 +3534,10 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3551,7 +3549,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3581,18 +3579,18 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)).addToStart(SizedBox(height: 18.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 18.0)),
                                                                       ),
                                                                     ),
                                                                   ],
@@ -3604,17 +3602,17 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 25.0)),
+                                                      const SizedBox(height: 25.0)),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 12.0)),
+                                            ].divide(const SizedBox(height: 12.0)),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -3628,7 +3626,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -3643,7 +3641,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 20.0),
                                               child: Column(
@@ -3658,7 +3656,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -3710,12 +3708,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                         false,
                                                                     avoidOverflow:
                                                                         false,
-                                                                    targetAnchor: AlignmentDirectional(
+                                                                    targetAnchor: const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
-                                                                    followerAnchor: AlignmentDirectional(
+                                                                    followerAnchor: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -3735,7 +3733,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               FocusManager.instance.primaryFocus?.unfocus();
                                                                             },
                                                                             child:
-                                                                                PopularWidget(),
+                                                                                const PopularWidget(),
                                                                           ),
                                                                         ),
                                                                       );
@@ -3756,11 +3754,11 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 6.0)),
+                                                        const SizedBox(height: 6.0)),
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Column(
@@ -3782,7 +3780,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .primary,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x347367F0),
                                                             title: 'Wallet',
                                                             subtitle:
@@ -3809,7 +3807,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .success,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x3428C76F),
                                                             title:
                                                                 'Bank Transfer',
@@ -3837,7 +3835,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .error,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x33EA5455),
                                                             title: 'Paypal',
                                                             subtitle:
@@ -3864,7 +3862,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .secondary,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x33A8AAAE),
                                                             title:
                                                                 'Master Card',
@@ -3892,7 +3890,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .info,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x3300CFE8),
                                                             title:
                                                                 'Bank Transactions',
@@ -3919,7 +3917,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .error,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x34EA5455),
                                                             title: 'Paypal',
                                                             subtitle:
@@ -3946,7 +3944,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   .success,
                                                               size: 26.0,
                                                             ),
-                                                            bg: Color(
+                                                            bg: const Color(
                                                                 0x3428C76F),
                                                             title:
                                                                 'Bank Transfer',
@@ -3959,14 +3957,14 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                           ),
                                                         ),
                                                       ]
-                                                          .divide(SizedBox(
+                                                          .divide(const SizedBox(
                                                               height: 26.0))
-                                                          .addToEnd(SizedBox(
+                                                          .addToEnd(const SizedBox(
                                                               height: 12.0)),
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 22.0)),
+                                                    const SizedBox(height: 22.0)),
                                               ),
                                             ),
                                           ),
@@ -3979,7 +3977,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -3994,7 +3992,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 16.0, 0.0, 20.0),
                                               child: Column(
@@ -4002,7 +4000,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -4026,7 +4024,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   '7',
                                                                   '10',
                                                                   '25',
@@ -4072,7 +4070,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     1.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         0.0,
@@ -4104,13 +4102,13 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4137,7 +4135,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                   elevation:
                                                                       2.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 1.0,
@@ -4148,7 +4146,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               8.0),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 14.0)),
                                                           ),
                                                         ),
@@ -4177,7 +4175,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             8.0),
                                                                   ),
                                                                   child:
-                                                                      Container(
+                                                                      SizedBox(
                                                                     width:
                                                                         250.0,
                                                                     child:
@@ -4286,7 +4284,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'Select Status',
                                                                     'Downloaded',
                                                                     'Draft',
@@ -4333,7 +4331,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       1.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           0.0,
@@ -4349,7 +4347,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       false,
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 14.0)),
                                                           ),
                                                         ),
@@ -4373,7 +4371,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         6.0,
@@ -4391,7 +4389,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4426,7 +4424,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4439,7 +4437,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4471,7 +4469,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4484,7 +4482,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4519,7 +4517,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4532,7 +4530,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4567,7 +4565,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4579,7 +4577,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                       Container(
                                                                     width: 70.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4603,7 +4601,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -4637,7 +4635,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .success,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x3328C76F),
                                                               total: '\$2869',
                                                               issueddate:
@@ -4661,7 +4659,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .primary,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x347367F0),
                                                               total: '\$3740',
                                                               issueddate:
@@ -4685,7 +4683,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .success,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x3328C76F),
                                                               total: '\$5181',
                                                               issueddate:
@@ -4709,7 +4707,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .success,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x3328C76F),
                                                               total: '\$2032',
                                                               issueddate:
@@ -4733,7 +4731,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .primary,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x347367F0),
                                                               total: '\$4077',
                                                               issueddate:
@@ -4757,7 +4755,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .secondary,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x33A8AAAE),
                                                               total: '\$4372',
                                                               issueddate:
@@ -4781,7 +4779,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                     .primary,
                                                                 size: 24.0,
                                                               ),
-                                                              bgcolor: Color(
+                                                              bgcolor: const Color(
                                                                   0x347367F0),
                                                               total: '\$3851',
                                                               issueddate:
@@ -4794,7 +4792,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -4804,7 +4802,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                         Expanded(
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             children: [
                                                               Text(
@@ -4824,7 +4822,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
                                                                 child: Row(
@@ -4847,12 +4845,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -4870,7 +4868,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -4893,12 +4891,12 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             44.0,
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -4916,7 +4914,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -4948,18 +4946,18 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -4969,7 +4967,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -4990,18 +4988,18 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -5011,7 +5009,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -5032,18 +5030,18 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -5053,7 +5051,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -5074,18 +5072,18 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -5095,7 +5093,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -5103,7 +5101,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 4.0)),
                                                                     ),
                                                                     FFButtonWidget(
@@ -5118,17 +5116,17 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x347983BB),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -5141,7 +5139,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -5151,7 +5149,7 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           4.0)),
                                                                 ),
@@ -5163,37 +5161,37 @@ class _ECommerceWidgetState extends State<ECommerceWidget>
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 18.0)),
+                                                    const SizedBox(height: 18.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

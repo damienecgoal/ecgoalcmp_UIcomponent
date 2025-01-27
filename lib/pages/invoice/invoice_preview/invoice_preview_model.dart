@@ -1,22 +1,12 @@
-import '/auth/base_auth_user_provider.dart';
-import '/components/drawer/add_payment/add_payment_widget.dart';
-import '/components/drawer/send_invoice/send_invoice_widget.dart';
 import '/components/list/invoice_bill/invoice_bill_widget.dart';
 import '/components_2/five_text_list/five_text_list_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/for_text_list/for_text_list_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'invoice_preview_widget.dart' show InvoicePreviewWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class InvoicePreviewModel extends FlutterFlowModel<InvoicePreviewWidget> {
   ///  Local state fields for this page.

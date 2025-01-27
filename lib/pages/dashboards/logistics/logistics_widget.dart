@@ -14,12 +14,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
@@ -86,19 +84,19 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -111,7 +109,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                 clipBehavior: Clip.none,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -150,12 +148,20 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered1 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered1 = false);
+                                          }),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 150.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
@@ -163,7 +169,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -178,12 +184,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
@@ -191,14 +197,14 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       decoration: BoxDecoration(
                                                         color: valueOrDefault<
                                                             Color>(
-                                                          _model.mouseRegionHovered1!
+                                                          _model.mouseRegionHovered1
                                                               ? FlutterFlowTheme
                                                                       .of(
                                                                           context)
                                                                   .primary
-                                                              : Color(
+                                                              : const Color(
                                                                   0x7F7367F0),
-                                                          Color(0x7F7367F0),
+                                                          const Color(0x7F7367F0),
                                                         ),
                                                       ),
                                                     ),
@@ -212,7 +218,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 0.0,
                                                                 valueOrDefault<
                                                                     double>(
-                                                                  _model.mouseRegionHovered1!
+                                                                  _model.mouseRegionHovered1
                                                                       ? 2.0
                                                                       : 1.0,
                                                                   1.0,
@@ -229,7 +235,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .circular(8.0),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -263,7 +269,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                       size:
                                                                           26.0,
                                                                     ),
-                                                                    bgcolor: Color(
+                                                                    bgcolor: const Color(
                                                                         0x347367F0),
                                                                   ),
                                                                 ),
@@ -281,12 +287,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 14.0)),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -312,7 +318,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -351,12 +357,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 9.0)),
                                                         ),
                                                       ),
@@ -366,14 +372,6 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                               ),
                                             ),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered1 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered1 = false);
-                                          }),
                                         ),
                                       ),
                                       Expanded(
@@ -381,12 +379,20 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered2 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered2 = false);
+                                          }),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 150.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
@@ -394,7 +400,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -409,12 +415,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
@@ -422,14 +428,14 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       decoration: BoxDecoration(
                                                         color: valueOrDefault<
                                                             Color>(
-                                                          _model.mouseRegionHovered2!
+                                                          _model.mouseRegionHovered2
                                                               ? FlutterFlowTheme
                                                                       .of(
                                                                           context)
                                                                   .warning
-                                                              : Color(
+                                                              : const Color(
                                                                   0x80FF9F43),
-                                                          Color(0x80FF9F43),
+                                                          const Color(0x80FF9F43),
                                                         ),
                                                       ),
                                                     ),
@@ -443,7 +449,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 0.0,
                                                                 valueOrDefault<
                                                                     double>(
-                                                                  _model.mouseRegionHovered2!
+                                                                  _model.mouseRegionHovered2
                                                                       ? 2.0
                                                                       : 1.0,
                                                                   1.0,
@@ -460,7 +466,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .circular(8.0),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -494,7 +500,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                       size:
                                                                           26.0,
                                                                     ),
-                                                                    bgcolor: Color(
+                                                                    bgcolor: const Color(
                                                                         0x33FF9F43),
                                                                   ),
                                                                 ),
@@ -512,12 +518,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 14.0)),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -543,7 +549,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -582,12 +588,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 9.0)),
                                                         ),
                                                       ),
@@ -597,14 +603,6 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                               ),
                                             ),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered2 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered2 = false);
-                                          }),
                                         ),
                                       ),
                                       Expanded(
@@ -612,12 +610,20 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered3 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered3 = false);
+                                          }),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 150.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
@@ -625,7 +631,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -640,12 +646,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
@@ -653,14 +659,14 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       decoration: BoxDecoration(
                                                         color: valueOrDefault<
                                                             Color>(
-                                                          _model.mouseRegionHovered3!
+                                                          _model.mouseRegionHovered3
                                                               ? FlutterFlowTheme
                                                                       .of(
                                                                           context)
                                                                   .error
-                                                              : Color(
+                                                              : const Color(
                                                                   0x7FEA5455),
-                                                          Color(0x7FEA5455),
+                                                          const Color(0x7FEA5455),
                                                         ),
                                                       ),
                                                     ),
@@ -674,7 +680,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 0.0,
                                                                 valueOrDefault<
                                                                     double>(
-                                                                  _model.mouseRegionHovered3!
+                                                                  _model.mouseRegionHovered3
                                                                       ? 2.0
                                                                       : 1.0,
                                                                   1.0,
@@ -691,7 +697,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .circular(8.0),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -725,7 +731,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                       size:
                                                                           26.0,
                                                                     ),
-                                                                    bgcolor: Color(
+                                                                    bgcolor: const Color(
                                                                         0x33EA5455),
                                                                   ),
                                                                 ),
@@ -743,12 +749,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 14.0)),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -774,7 +780,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -813,12 +819,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 9.0)),
                                                         ),
                                                       ),
@@ -828,14 +834,6 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                               ),
                                             ),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered3 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered3 = false);
-                                          }),
                                         ),
                                       ),
                                       Expanded(
@@ -843,12 +841,20 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           opaque: false,
                                           cursor: MouseCursor.defer ??
                                               MouseCursor.defer,
+                                          onEnter: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered4 = true);
+                                          }),
+                                          onExit: ((event) async {
+                                            safeSetState(() => _model
+                                                .mouseRegionHovered4 = false);
+                                          }),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             child: Container(
                                               height: 150.0,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minWidth: 240.0,
                                                 maxWidth: 360.0,
                                               ),
@@ -856,7 +862,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 12.0,
                                                     color: Color(0x14000000),
@@ -871,12 +877,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
@@ -884,14 +890,14 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       decoration: BoxDecoration(
                                                         color: valueOrDefault<
                                                             Color>(
-                                                          _model.mouseRegionHovered4!
+                                                          _model.mouseRegionHovered4
                                                               ? FlutterFlowTheme
                                                                       .of(
                                                                           context)
                                                                   .info
-                                                              : Color(
+                                                              : const Color(
                                                                   0x7F00CFE8),
-                                                          Color(0x7F00CFE8),
+                                                          const Color(0x7F00CFE8),
                                                         ),
                                                       ),
                                                     ),
@@ -905,7 +911,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 0.0,
                                                                 valueOrDefault<
                                                                     double>(
-                                                                  _model.mouseRegionHovered4!
+                                                                  _model.mouseRegionHovered4
                                                                       ? 2.0
                                                                       : 1.0,
                                                                   1.0,
@@ -922,7 +928,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .circular(8.0),
                                                       ),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -956,7 +962,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                       size:
                                                                           23.0,
                                                                     ),
-                                                                    bgcolor: Color(
+                                                                    bgcolor: const Color(
                                                                         0x3300CFE8),
                                                                   ),
                                                                 ),
@@ -974,12 +980,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 14.0)),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -1005,7 +1011,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1044,12 +1050,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 9.0)),
                                                         ),
                                                       ),
@@ -1059,17 +1065,9 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                               ),
                                             ),
                                           ),
-                                          onEnter: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered4 = true);
-                                          }),
-                                          onExit: ((event) async {
-                                            safeSetState(() => _model
-                                                .mouseRegionHovered4 = false);
-                                          }),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1081,13 +1079,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                         child: Container(
                                           width: 100.0,
                                           height: 400.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             maxWidth: 600.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1102,7 +1100,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -1166,7 +1164,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -1182,7 +1180,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                         context)
                                                                     .darkWhite,
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -1199,7 +1197,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 ),
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         14.0,
                                                                         0.0,
@@ -1227,7 +1225,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ),
@@ -1269,7 +1267,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -1286,7 +1284,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     .primary,
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         14.0,
                                                                         0.0,
@@ -1316,7 +1314,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ),
@@ -1358,7 +1356,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -1375,7 +1373,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     .tertiary,
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         14.0,
                                                                         0.0,
@@ -1405,7 +1403,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ),
@@ -1447,7 +1445,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -1463,7 +1461,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                         context)
                                                                     .whiteDark,
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -1480,7 +1478,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 ),
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         14.0,
                                                                         0.0,
@@ -1510,7 +1508,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 8.0)),
                                                       ),
                                                     ),
@@ -1600,7 +1598,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                     ),
                                                   ],
                                                 ),
-                                              ].divide(SizedBox(height: 22.0)),
+                                              ].divide(const SizedBox(height: 22.0)),
                                             ),
                                           ),
                                         ),
@@ -1610,13 +1608,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                         child: Container(
                                           width: 100.0,
                                           height: 400.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             maxWidth: 600.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -1631,7 +1629,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -1696,7 +1694,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     0.0,
                                                               ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                     FlutterFlowDropDown<String>(
@@ -1704,7 +1702,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               .dropDownValueController ??=
                                                           FormFieldController<
                                                               String>(null),
-                                                      options: [
+                                                      options: const [
                                                         'January',
                                                         'February',
                                                         'March',
@@ -1762,7 +1760,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       borderWidth: 0.0,
                                                       borderRadius: 8.0,
                                                       margin:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   0.0,
@@ -1776,7 +1774,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                   ],
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Column(
@@ -1878,13 +1876,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         29.0)),
                                                               ),
                                                               Expanded(
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1945,13 +1943,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                         lineStyle:
                                                                             DividerLineStyle.dashed,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             44.0)),
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 16.0)),
                                                           ),
                                                           Row(
@@ -1964,7 +1962,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             children: [
                                                               Expanded(
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           42.0,
                                                                           3.0,
@@ -1980,7 +1978,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     children: [
                                                                       Stack(
                                                                         children: [
-                                                                          Container(
+                                                                          SizedBox(
                                                                             width:
                                                                                 double.infinity,
                                                                             height:
@@ -1995,7 +1993,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               ],
                                                                               xLabels: FFAppState().xAxis2,
                                                                               barWidth: 16.0,
-                                                                              barBorderRadius: BorderRadius.only(
+                                                                              barBorderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(4.0),
@@ -2003,27 +2001,27 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               ),
                                                                               groupSpace: 8.0,
                                                                               alignment: BarChartAlignment.spaceAround,
-                                                                              chartStylingInfo: ChartStylingInfo(
+                                                                              chartStylingInfo: const ChartStylingInfo(
                                                                                 backgroundColor: Colors.transparent,
                                                                                 showBorder: false,
                                                                               ),
-                                                                              axisBounds: AxisBounds(),
-                                                                              xAxisLabelInfo: AxisLabelInfo(
+                                                                              axisBounds: const AxisBounds(),
+                                                                              xAxisLabelInfo: const AxisLabelInfo(
                                                                                 reservedSize: 12.0,
                                                                               ),
-                                                                              yAxisLabelInfo: AxisLabelInfo(
+                                                                              yAxisLabelInfo: const AxisLabelInfo(
                                                                                 reservedSize: 42.0,
                                                                               ),
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 0.0,
                                                                                 16.0,
                                                                                 0.0),
                                                                             child:
-                                                                                Container(
+                                                                                SizedBox(
                                                                               width: double.infinity,
                                                                               height: 190.0,
                                                                               child: FlutterFlowLineChart(
@@ -2038,20 +2036,20 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                     ),
                                                                                   )
                                                                                 ],
-                                                                                chartStylingInfo: ChartStylingInfo(
+                                                                                chartStylingInfo: const ChartStylingInfo(
                                                                                   backgroundColor: Colors.transparent,
                                                                                   showBorder: false,
                                                                                 ),
-                                                                                axisBounds: AxisBounds(
+                                                                                axisBounds: const AxisBounds(
                                                                                   minX: 0.0,
                                                                                   minY: 0.93,
                                                                                   maxX: 1.0,
                                                                                   maxY: 6.0,
                                                                                 ),
-                                                                                xAxisLabelInfo: AxisLabelInfo(
+                                                                                xAxisLabelInfo: const AxisLabelInfo(
                                                                                   reservedSize: 32.0,
                                                                                 ),
-                                                                                yAxisLabelInfo: AxisLabelInfo(
+                                                                                yAxisLabelInfo: const AxisLabelInfo(
                                                                                   reservedSize: 40.0,
                                                                                 ),
                                                                               ),
@@ -2157,7 +2155,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                           ),
                                                                         ],
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             14.0)),
                                                                   ),
@@ -2204,19 +2202,19 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               daimiter: 10.0,
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 18.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 16.0)),
+                                                        const SizedBox(height: 16.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 8.0)),
+                                              ].divide(const SizedBox(height: 8.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2229,7 +2227,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2244,7 +2242,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -2299,13 +2297,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2329,7 +2327,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2366,7 +2364,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Expanded(
                                                   child: Column(
@@ -2387,7 +2385,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .primary,
                                                             size: 22.0,
                                                           ),
-                                                          bg: Color(0x347367F0),
+                                                          bg: const Color(0x347367F0),
                                                           title:
                                                               'Packages in transit',
                                                           chevron: Icon(
@@ -2419,7 +2417,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .info,
                                                             size: 22.0,
                                                           ),
-                                                          bg: Color(0x3300CFE8),
+                                                          bg: const Color(0x3300CFE8),
                                                           title:
                                                               'Packages out for delivery',
                                                           chevron: Icon(
@@ -2452,7 +2450,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .success,
                                                             size: 22.0,
                                                           ),
-                                                          bg: Color(0x3428C76F),
+                                                          bg: const Color(0x3428C76F),
                                                           title:
                                                               'Packages delivered',
                                                           chevron: Icon(
@@ -2485,7 +2483,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .warning,
                                                             size: 22.0,
                                                           ),
-                                                          bg: Color(0x33FF9F43),
+                                                          bg: const Color(0x33FF9F43),
                                                           title:
                                                               'Delivery success rate',
                                                           chevron: Icon(
@@ -2517,7 +2515,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .secondary,
                                                             size: 22.0,
                                                           ),
-                                                          bg: Color(0x33A8AAAE),
+                                                          bg: const Color(0x33A8AAAE),
                                                           title:
                                                               'Average delivery time',
                                                           chevron: Icon(
@@ -2551,7 +2549,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 .error,
                                                             size: 22.0,
                                                           ),
-                                                          bg: Color(0x34EA5455),
+                                                          bg: const Color(0x34EA5455),
                                                           title:
                                                               'Customer satisfaction',
                                                           chevron: Icon(
@@ -2570,10 +2568,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 30.0)),
+                                                        const SizedBox(height: 30.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 22.0)),
+                                              ].divide(const SizedBox(height: 22.0)),
                                             ),
                                           ),
                                         ),
@@ -2586,7 +2584,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2601,7 +2599,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 BorderRadius.circular(8.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(20.0),
+                                            padding: const EdgeInsets.all(20.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -2660,13 +2658,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -2690,7 +2688,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -2710,17 +2708,17 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       ],
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 40.0, 0.0, 0.0),
-                                                  child: Container(
+                                                  child: SizedBox(
                                                     width: double.infinity,
                                                     child: Stack(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       children: [
                                                         CircularPercentIndicator(
@@ -2731,9 +2729,9 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           animateFromLastPercent:
                                                               true,
                                                           progressColor:
-                                                              Color(0x6628C76F),
+                                                              const Color(0x6628C76F),
                                                           backgroundColor:
-                                                              Color(0x3328C76F),
+                                                              const Color(0x3328C76F),
                                                         ),
                                                         CircularPercentIndicator(
                                                           percent: 0.4,
@@ -2743,7 +2741,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           animateFromLastPercent:
                                                               true,
                                                           progressColor:
-                                                              Color(0x9928C76F),
+                                                              const Color(0x9928C76F),
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
@@ -2756,7 +2754,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           animateFromLastPercent:
                                                               true,
                                                           progressColor:
-                                                              Color(0xFF28C76F),
+                                                              const Color(0xFF28C76F),
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
@@ -2799,7 +2797,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 14.0)),
                                                         ),
                                                       ],
@@ -2842,7 +2840,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ChartNameWidget(
+                                                              const ChartNameWidget(
                                                             name:
                                                                 'Weather conditions',
                                                             color: Color(
@@ -2850,7 +2848,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             daimiter: 10.0,
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           width: 20.0)),
                                                     ),
                                                     Row(
@@ -2867,7 +2865,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ChartNameWidget(
+                                                              const ChartNameWidget(
                                                             name:
                                                                 'Federal Holidays',
                                                             color: Color(
@@ -2882,7 +2880,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               safeSetState(
                                                                   () {}),
                                                           child:
-                                                              ChartNameWidget(
+                                                              const ChartNameWidget(
                                                             name:
                                                                 'Damage during transit',
                                                             color: Color(
@@ -2890,13 +2888,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             daimiter: 10.0,
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           width: 20.0)),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 12.0)),
+                                                      const SizedBox(height: 12.0)),
                                                 ),
-                                              ].divide(SizedBox(height: 24.0)),
+                                              ].divide(const SizedBox(height: 24.0)),
                                             ),
                                           ),
                                         ),
@@ -2909,7 +2907,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -2927,7 +2925,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 20.0, 20.0, 0.0),
                                                 child: Column(
@@ -2981,13 +2979,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -3011,7 +3009,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -3048,7 +3046,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ),
                                               Expanded(
@@ -3065,7 +3063,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         48.0,
@@ -3087,7 +3085,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    Alignment(
+                                                                    const Alignment(
                                                                         0.0, 0),
                                                                 child: TabBar(
                                                                   labelColor:
@@ -3130,7 +3128,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                           .primary,
                                                                   indicatorWeight:
                                                                       2.5,
-                                                                  tabs: [
+                                                                  tabs: const [
                                                                     Tab(
                                                                       text:
                                                                           'New',
@@ -3163,7 +3161,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                       .tabBarController,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           26.0,
                                                                           0.0,
                                                                           26.0,
@@ -3181,7 +3179,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3211,7 +3209,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3241,10 +3239,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3256,7 +3254,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3286,12 +3284,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -3314,7 +3312,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3344,7 +3342,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3374,10 +3372,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3389,7 +3387,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3419,22 +3417,22 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)).addToStart(SizedBox(height: 18.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 18.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           26.0,
                                                                           0.0,
                                                                           26.0,
@@ -3452,7 +3450,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3482,7 +3480,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3512,10 +3510,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3527,7 +3525,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3557,12 +3555,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -3585,7 +3583,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3615,7 +3613,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3645,10 +3643,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3660,7 +3658,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3690,22 +3688,22 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)).addToStart(SizedBox(height: 18.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 18.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           26.0,
                                                                           0.0,
                                                                           26.0,
@@ -3723,7 +3721,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3753,7 +3751,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3783,10 +3781,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3798,7 +3796,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3828,12 +3826,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
@@ -3856,7 +3854,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               Stack(
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 18.0, 0.0, 0.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -3886,7 +3884,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3916,10 +3914,10 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
                                                                                       Row(
                                                                                         mainAxisSize: MainAxisSize.max,
@@ -3931,7 +3929,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                             size: 22.0,
                                                                                           ),
                                                                                           Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -3961,18 +3959,18 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
-                                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                                             ),
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 16.0)),
+                                                                                        ].divide(const SizedBox(width: 16.0)),
                                                                                       ),
-                                                                                    ].divide(SizedBox(height: 18.0)),
+                                                                                    ].divide(const SizedBox(height: 18.0)),
                                                                                   ),
                                                                                 ],
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 20.0)).addToStart(SizedBox(height: 18.0)),
+                                                                        ].divide(const SizedBox(height: 20.0)).addToStart(const SizedBox(height: 18.0)),
                                                                       ),
                                                                     ),
                                                                   ],
@@ -3984,17 +3982,17 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 25.0)),
+                                                      const SizedBox(height: 25.0)),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 12.0)),
+                                            ].divide(const SizedBox(height: 12.0)),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -4009,7 +4007,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -4024,7 +4022,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 16.0, 0.0, 20.0),
                                               child: Column(
@@ -4032,7 +4030,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 20.0,
                                                                 12.0,
@@ -4083,13 +4081,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             -7.0,
                                                                             8.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -4113,7 +4111,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               ?.unfocus();
                                                                         },
                                                                         child:
-                                                                            RefreshShareWidget(),
+                                                                            const RefreshShareWidget(),
                                                                       ),
                                                                     ),
                                                                   );
@@ -4150,7 +4148,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -4215,7 +4213,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4250,7 +4248,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4263,7 +4261,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     width:
                                                                         190.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4298,7 +4296,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4311,7 +4309,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4346,7 +4344,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4359,7 +4357,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4394,7 +4392,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
@@ -4407,7 +4405,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4442,13 +4440,13 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                               color: FlutterFlowTheme.of(context).textFiled,
                                                                               size: 18.0,
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -4485,7 +4483,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .success,
-                                                              warbg: Color(
+                                                              warbg: const Color(
                                                                   0x3428C76F),
                                                               persentage: '60%',
                                                               progress: 0.8,
@@ -4511,7 +4509,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary,
-                                                              warbg: Color(
+                                                              warbg: const Color(
                                                                   0x337367F0),
                                                               persentage: '82%',
                                                               progress: 0.8,
@@ -4537,7 +4535,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .warning,
-                                                              warbg: Color(
+                                                              warbg: const Color(
                                                                   0x34FF9F43),
                                                               persentage: '30%',
                                                               progress: 0.8,
@@ -4563,7 +4561,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .error,
-                                                              warbg: Color(
+                                                              warbg: const Color(
                                                                   0x34EA5455),
                                                               persentage: '90%',
                                                               progress: 0.8,
@@ -4589,7 +4587,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .info,
-                                                              warbg: Color(
+                                                              warbg: const Color(
                                                                   0x3300CFE8),
                                                               persentage: '24%',
                                                               progress: 0.8,
@@ -4601,7 +4599,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -4611,7 +4609,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                         Expanded(
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             children: [
                                                               Text(
@@ -4631,7 +4629,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
                                                                 child: Row(
@@ -4654,12 +4652,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -4677,7 +4675,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -4709,12 +4707,12 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -4730,7 +4728,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -4751,18 +4749,18 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -4772,7 +4770,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -4793,18 +4791,18 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -4814,7 +4812,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -4835,18 +4833,18 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -4856,7 +4854,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -4877,18 +4875,18 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -4898,7 +4896,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -4906,7 +4904,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 4.0)),
                                                                     ),
                                                                     FFButtonWidget(
@@ -4921,17 +4919,17 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x347983BB),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -4944,7 +4942,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -4954,7 +4952,7 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           4.0)),
                                                                 ),
@@ -4966,37 +4964,37 @@ class _LogisticsWidgetState extends State<LogisticsWidget>
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 18.0)),
+                                                    const SizedBox(height: 18.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

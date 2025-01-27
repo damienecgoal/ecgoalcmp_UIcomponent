@@ -1,10 +1,7 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'users_activity_model.dart';
 export 'users_activity_model.dart';
 
@@ -62,13 +59,13 @@ class _UsersActivityWidgetState extends State<UsersActivityWidget> {
       borderRadius: BorderRadius.circular(8.0),
       child: Container(
         height: 130.0,
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           minWidth: 240.0,
           maxWidth: 360.0,
         ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 12.0,
               color: Color(0x14000000),
@@ -82,7 +79,7 @@ class _UsersActivityWidgetState extends State<UsersActivityWidget> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -94,7 +91,7 @@ class _UsersActivityWidgetState extends State<UsersActivityWidget> {
                 children: [
                   Text(
                     valueOrDefault<String>(
-                      widget!.title,
+                      widget.title,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -110,7 +107,7 @@ class _UsersActivityWidgetState extends State<UsersActivityWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.count,
+                          widget.count,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -122,21 +119,21 @@ class _UsersActivityWidgetState extends State<UsersActivityWidget> {
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.value,
+                          widget.value,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Public Sans',
-                              color: widget!.valueColor,
+                              color: widget.valueColor,
                               fontSize: 16.0,
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 6.0)),
+                    ].divide(const SizedBox(width: 6.0)),
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.description,
+                      widget.description,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -155,8 +152,8 @@ class _UsersActivityWidgetState extends State<UsersActivityWidget> {
                     model: _model.iconBoxModel,
                     updateCallback: () => safeSetState(() {}),
                     child: IconBoxWidget(
-                      icon: widget!.icon!,
-                      bg: widget!.bg!,
+                      icon: widget.icon!,
+                      bg: widget.bg!,
                       size: 42.0,
                     ),
                   ),

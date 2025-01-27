@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'language_select_nodal_model.dart';
 export 'language_select_nodal_model.dart';
 
@@ -42,12 +39,12 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
       child: Container(
         width: 170.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -58,13 +55,19 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(8.0, 12.0, 8.0, 12.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(8.0, 12.0, 8.0, 12.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered1 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered1 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -80,8 +83,8 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
                         () {
-                          if (_model.mouseRegionHovered1!) {
-                            return Color(0x347367F0);
+                          if (_model.mouseRegionHovered1) {
+                            return const Color(0x347367F0);
                           } else if (_model.select == 'English') {
                             return FlutterFlowTheme.of(context).primary;
                           } else {
@@ -95,7 +98,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -107,7 +110,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
                                     () {
-                                      if (_model.mouseRegionHovered1!) {
+                                      if (_model.mouseRegionHovered1) {
                                         return FlutterFlowTheme.of(context)
                                             .primary;
                                       } else if (_model.select == 'English') {
@@ -128,16 +131,16 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered1 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered1 = false);
-                }),
               ),
               MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -153,8 +156,8 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
                         () {
-                          if (_model.mouseRegionHovered2!) {
-                            return Color(0x347367F0);
+                          if (_model.mouseRegionHovered2) {
+                            return const Color(0x347367F0);
                           } else if (_model.select == 'French') {
                             return FlutterFlowTheme.of(context).primary;
                           } else {
@@ -168,7 +171,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -180,7 +183,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
                                     () {
-                                      if (_model.mouseRegionHovered2!) {
+                                      if (_model.mouseRegionHovered2) {
                                         return FlutterFlowTheme.of(context)
                                             .primary;
                                       } else if (_model.select == 'French') {
@@ -201,16 +204,16 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = false);
-                }),
               ),
               MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered3 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered3 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -226,8 +229,8 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
                         () {
-                          if (_model.mouseRegionHovered3!) {
-                            return Color(0x347367F0);
+                          if (_model.mouseRegionHovered3) {
+                            return const Color(0x347367F0);
                           } else if (_model.select == 'Arabic') {
                             return FlutterFlowTheme.of(context).primary;
                           } else {
@@ -241,7 +244,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -253,7 +256,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
                                     () {
-                                      if (_model.mouseRegionHovered3!) {
+                                      if (_model.mouseRegionHovered3) {
                                         return FlutterFlowTheme.of(context)
                                             .primary;
                                       } else if (_model.select == 'Arabic') {
@@ -274,16 +277,16 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered3 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered3 = false);
-                }),
               ),
               MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered4 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered4 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -299,8 +302,8 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
                         () {
-                          if (_model.mouseRegionHovered4!) {
-                            return Color(0x347367F0);
+                          if (_model.mouseRegionHovered4) {
+                            return const Color(0x347367F0);
                           } else if (_model.select == 'German') {
                             return FlutterFlowTheme.of(context).primary;
                           } else {
@@ -314,7 +317,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -326,7 +329,7 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
                                     () {
-                                      if (_model.mouseRegionHovered4!) {
+                                      if (_model.mouseRegionHovered4) {
                                         return FlutterFlowTheme.of(context)
                                             .primary;
                                       } else if (_model.select == 'German') {
@@ -347,12 +350,6 @@ class _LanguageSelectNodalWidgetState extends State<LanguageSelectNodalWidget> {
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered4 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered4 = false);
-                }),
               ),
             ],
           ),

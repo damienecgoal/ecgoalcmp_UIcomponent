@@ -9,13 +9,10 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/flutter_flow_youtube_player.dart';
-import 'dart:ui';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'course_details_model.dart';
 export 'course_details_model.dart';
@@ -45,7 +42,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -94,19 +91,19 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                 wrapWithModel(
                   model: _model.navMenuModel,
                   updateCallback: () => safeSetState(() {}),
-                  child: NavMenuWidget(),
+                  child: const NavMenuWidget(),
                 ),
                 Expanded(
                   child: Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     28.0, 0.0, 28.0, 16.0),
                                 child: Wrap(
                                   spacing: 28.0,
@@ -119,7 +116,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                   clipBehavior: Clip.none,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -155,7 +152,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -170,7 +167,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(20.0),
+                                        padding: const EdgeInsets.all(20.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -232,7 +229,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                             .normal,
                                                                   ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 8.0)),
                                                         ),
                                                         Row(
@@ -255,7 +252,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                     FlutterFlowTheme.of(
                                                                             context)
                                                                         .error,
-                                                                bgColor: Color(
+                                                                bgColor: const Color(
                                                                     0x34EA5455),
                                                               ),
                                                             ),
@@ -274,7 +271,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   .secondaryTitle,
                                                               size: 24.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
@@ -296,7 +293,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsets.all(8.0),
+                                                            const EdgeInsets.all(8.0),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -318,7 +315,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                               6.0),
                                                                 ),
                                                                 child:
-                                                                    FlutterFlowYoutubePlayer(
+                                                                    const FlutterFlowYoutubePlayer(
                                                                   url:
                                                                       'https://www.youtube.com/watch?v=bTqVqk7FSmY&pp=ygUTdmlldyBmcm9tIGJsdWUgbW9vbg%3D%3D',
                                                                   autoPlay:
@@ -336,7 +333,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(
                                                                           12.0),
                                                               child: Column(
@@ -364,7 +361,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -390,7 +387,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .lineColor,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             20.0)),
                                                                   ),
@@ -414,7 +411,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -479,7 +476,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                                     title: 'Captions: Yes',
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 16.0)),
+                                                                              ].divide(const SizedBox(height: 16.0)),
                                                                             ),
                                                                             Column(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -509,9 +506,9 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                                     title: 'Video: 1.5 total hours',
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 16.0)),
+                                                                              ].divide(const SizedBox(height: 16.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 40.0)),
+                                                                          ].divide(const SizedBox(width: 40.0)),
                                                                         ),
                                                                       ),
                                                                       Divider(
@@ -522,7 +519,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .lineColor,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             20.0)),
                                                                   ),
@@ -546,7 +543,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -573,7 +570,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .lineColor,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             20.0)),
                                                                   ),
@@ -606,7 +603,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                             updateCallback: () =>
                                                                                 safeSetState(() {}),
                                                                             child:
-                                                                                AvatarNameWidget(
+                                                                                const AvatarNameWidget(
                                                                               avatar: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/yeybej8fe3x9/11.png',
                                                                               name: 'Devonne Wallbridge',
                                                                               title: 'Web Developer, Designer, and Teacher',
@@ -615,26 +612,26 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           ),
                                                                         ],
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             20.0)),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         24.0)),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
                                                     ),
                                                   ]
-                                                      .divide(SizedBox(
+                                                      .divide(const SizedBox(
                                                           height: 20.0))
                                                       .addToStart(
-                                                          SizedBox(height: 4.0))
-                                                      .addToEnd(SizedBox(
+                                                          const SizedBox(height: 4.0))
+                                                      .addToEnd(const SizedBox(
                                                           height: 20.0)),
                                                 ),
                                               ),
@@ -680,7 +677,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  CourseContentTileWidget(
+                                                                  const CourseContentTileWidget(
                                                                 chapterTitle:
                                                                     'Course Content',
                                                                 currentChapter:
@@ -727,7 +724,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -742,7 +739,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '1. Welcome to this course',
                                                                             time:
@@ -755,7 +752,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '2. Watch before you start',
                                                                             time:
@@ -768,7 +765,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '3. Basic design theory',
                                                                             time:
@@ -781,7 +778,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '4. Basic fundamentals',
                                                                             time:
@@ -794,14 +791,14 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '5. What is ui/ux',
                                                                             time:
                                                                                 '10.6 min',
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                   ),
@@ -860,7 +857,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  CourseContentTileWidget(
+                                                                  const CourseContentTileWidget(
                                                                 chapterTitle:
                                                                     'Course Content',
                                                                 currentChapter:
@@ -907,7 +904,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -922,7 +919,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '1. How to use Pages in Figma',
                                                                             time:
@@ -935,7 +932,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '2. What is Lo Fi Wireframe',
                                                                             time:
@@ -948,7 +945,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '3. How to use color in Figma',
                                                                             time:
@@ -961,14 +958,14 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '4. Frames vs Groups in Figma',
                                                                             time:
                                                                                 '3.6 min',
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                   ),
@@ -1027,7 +1024,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  CourseContentTileWidget(
+                                                                  const CourseContentTileWidget(
                                                                 chapterTitle:
                                                                     'Course Content',
                                                                 currentChapter:
@@ -1074,7 +1071,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -1089,7 +1086,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '1. Section & Div Block',
                                                                             time:
@@ -1102,7 +1099,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '2. Read-Only Version of Chat App',
                                                                             time:
@@ -1115,7 +1112,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '3. Webflow Autosave',
                                                                             time:
@@ -1128,7 +1125,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '4. Canvas Settings',
                                                                             time:
@@ -1141,7 +1138,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '5. HTML Tags',
                                                                             time:
@@ -1154,14 +1151,14 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '6. Footer (Chat App)',
                                                                             time:
                                                                                 '9.10 min',
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                   ),
@@ -1220,7 +1217,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  CourseContentTileWidget(
+                                                                  const CourseContentTileWidget(
                                                                 chapterTitle:
                                                                     'Course Content',
                                                                 currentChapter:
@@ -1267,7 +1264,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             20.0),
                                                                     child:
                                                                         Column(
@@ -1282,7 +1279,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '1. Responsive Blog Site',
                                                                             time:
@@ -1295,7 +1292,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '2. Responsive Portfolio',
                                                                             time:
@@ -1308,14 +1305,14 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                                           updateCallback: () =>
                                                                               safeSetState(() {}),
                                                                           child:
-                                                                              LasonVideoWidget(
+                                                                              const LasonVideoWidget(
                                                                             topic:
                                                                                 '3. Responsive eCommerce Website',
                                                                             time:
                                                                                 '15 min',
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 16.0)),
                                                                     ),
                                                                   ),
@@ -1359,7 +1356,7 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                                 ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 20.0)),
+                                          ].divide(const SizedBox(width: 20.0)),
                                         ),
                                       ),
                                     ),
@@ -1367,25 +1364,25 @@ class _CourseDetailsWidgetState extends State<CourseDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     28.0, 0.0, 28.0, 0.0),
                                 child: wrapWithModel(
                                   model: _model.footerModel,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: FooterWidget(),
+                                  child: const FooterWidget(),
                                 ),
                               ),
                             ]
-                                .divide(SizedBox(height: 28.0))
-                                .addToStart(SizedBox(height: 110.0))
-                                .addToEnd(SizedBox(height: 28.0)),
+                                .divide(const SizedBox(height: 28.0))
+                                .addToStart(const SizedBox(height: 110.0))
+                                .addToEnd(const SizedBox(height: 28.0)),
                           ),
                         ),
                       ),
                       wrapWithModel(
                         model: _model.searchBarModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: SearchBarWidget(),
+                        child: const SearchBarWidget(),
                       ),
                     ],
                   ),

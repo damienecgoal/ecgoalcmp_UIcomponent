@@ -1,6 +1,5 @@
 import '/components/chart_name/chart_name_widget.dart';
 import '/components/list/on_route_vehicles/on_route_vehicles_widget.dart';
-import '/components/nodal/refresh_share/refresh_share_widget.dart';
 import '/components_2/chart_view_box/chart_view_box_widget.dart';
 import '/components_2/delivery_performance/delivery_performance_widget.dart';
 import '/components_2/footer/footer_widget.dart';
@@ -8,22 +7,10 @@ import '/components_2/icon_container/icon_container_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/vehicles_overview/vehicles_overview_widget.dart';
-import '/flutter_flow/flutter_flow_charts.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'logistics_widget.dart' show LogisticsWidget;
-import 'package:styled_divider/styled_divider.dart';
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class LogisticsModel extends FlutterFlowModel<LogisticsWidget> {
   ///  Local state fields for this page.

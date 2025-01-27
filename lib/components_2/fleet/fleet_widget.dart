@@ -1,10 +1,7 @@
 import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'fleet_model.dart';
 export 'fleet_model.dart';
 
@@ -49,7 +46,7 @@ class _FleetWidgetState extends State<FleetWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -62,7 +59,7 @@ class _FleetWidgetState extends State<FleetWidget> {
                 color: FlutterFlowTheme.of(context).secondaryTitle,
                 size: 24.0,
               ),
-              bgcolor: Color(0x34A8AAAE),
+              bgcolor: const Color(0x34A8AAAE),
               daimiter: 44.0,
             ),
           ),
@@ -72,7 +69,7 @@ class _FleetWidgetState extends State<FleetWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.pin,
+                  widget.pin,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -84,7 +81,7 @@ class _FleetWidgetState extends State<FleetWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.location,
+                  widget.location,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -95,9 +92,9 @@ class _FleetWidgetState extends State<FleetWidget> {
                       fontWeight: FontWeight.normal,
                     ),
               ),
-            ].divide(SizedBox(height: 6.0)),
+            ].divide(const SizedBox(height: 6.0)),
           ),
-        ].divide(SizedBox(width: 8.0)),
+        ].divide(const SizedBox(width: 8.0)),
       ),
     );
   }

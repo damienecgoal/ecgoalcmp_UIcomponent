@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_action_model.dart';
 export 'profile_action_model.dart';
 
@@ -44,7 +41,7 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
       width: 180.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 20.0,
             color: Color(0x29000000),
@@ -55,15 +52,21 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered1 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered1 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -77,8 +80,8 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                     height: 42.0,
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
-                        _model.mouseRegionHovered1!
-                            ? Color(0x327367F0)
+                        _model.mouseRegionHovered1
+                            ? const Color(0x327367F0)
                             : FlutterFlowTheme.of(context).secondaryBackground,
                         FlutterFlowTheme.of(context).secondaryBackground,
                       ),
@@ -86,7 +89,7 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -97,7 +100,7 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                                 .override(
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered1!
+                                    _model.mouseRegionHovered1
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryTitle,
@@ -108,24 +111,24 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 12.0)),
+                        ].divide(const SizedBox(width: 12.0)),
                       ),
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered1 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered1 = false);
-                }),
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered2 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -139,8 +142,8 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                     height: 42.0,
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
-                        _model.mouseRegionHovered2!
-                            ? Color(0x327367F0)
+                        _model.mouseRegionHovered2
+                            ? const Color(0x327367F0)
                             : FlutterFlowTheme.of(context).secondaryBackground,
                         FlutterFlowTheme.of(context).secondaryBackground,
                       ),
@@ -148,7 +151,7 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -159,7 +162,7 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                                 .override(
                                   fontFamily: 'Public Sans',
                                   color: valueOrDefault<Color>(
-                                    _model.mouseRegionHovered2!
+                                    _model.mouseRegionHovered2
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryTitle,
@@ -170,17 +173,11 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 12.0)),
+                        ].divide(const SizedBox(width: 12.0)),
                       ),
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered2 = false);
-                }),
               ),
             ),
             Divider(
@@ -189,10 +186,16 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
               color: FlutterFlowTheme.of(context).lineColor,
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered3 = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered3 = false);
+                }),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -206,8 +209,8 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                     height: 42.0,
                     decoration: BoxDecoration(
                       color: valueOrDefault<Color>(
-                        _model.mouseRegionHovered3!
-                            ? Color(0x327367F0)
+                        _model.mouseRegionHovered3
+                            ? const Color(0x327367F0)
                             : FlutterFlowTheme.of(context).secondaryBackground,
                         FlutterFlowTheme.of(context).secondaryBackground,
                       ),
@@ -215,7 +218,7 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -232,20 +235,14 @@ class _ProfileActionWidgetState extends State<ProfileActionWidget> {
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 12.0)),
+                        ].divide(const SizedBox(width: 12.0)),
                       ),
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered3 = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered3 = false);
-                }),
               ),
             ),
-          ].divide(SizedBox(height: 6.0)),
+          ].divide(const SizedBox(height: 6.0)),
         ),
       ),
     );

@@ -3,10 +3,7 @@ import '/components_2/icon_container/icon_container_widget.dart';
 import '/components_2/title_subtitle/title_subtitle_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'earning_reports_model.dart';
 export 'earning_reports_model.dart';
 
@@ -63,7 +60,7 @@ class _EarningReportsWidgetState extends State<EarningReportsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -71,8 +68,8 @@ class _EarningReportsWidgetState extends State<EarningReportsWidget> {
             model: _model.iconContainerModel,
             updateCallback: () => safeSetState(() {}),
             child: IconContainerWidget(
-              icon: widget!.icon!,
-              bgcolor: widget!.bg!,
+              icon: widget.icon!,
+              bgcolor: widget.bg!,
             ),
           ),
           Expanded(
@@ -80,8 +77,8 @@ class _EarningReportsWidgetState extends State<EarningReportsWidget> {
               model: _model.titleSubtitleModel,
               updateCallback: () => safeSetState(() {}),
               child: TitleSubtitleWidget(
-                title: widget!.title!,
-                subtitle: widget!.subtitle!,
+                title: widget.title!,
+                subtitle: widget.subtitle!,
               ),
             ),
           ),
@@ -90,7 +87,7 @@ class _EarningReportsWidgetState extends State<EarningReportsWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.amount,
+                  widget.amount,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -104,14 +101,14 @@ class _EarningReportsWidgetState extends State<EarningReportsWidget> {
                 model: _model.upDownTextModel,
                 updateCallback: () => safeSetState(() {}),
                 child: UpDownTextWidget(
-                  chavron: widget!.cevron!,
-                  text: widget!.text!,
-                  color: widget!.color!,
+                  chavron: widget.cevron!,
+                  text: widget.text!,
+                  color: widget.color!,
                 ),
               ),
-            ].divide(SizedBox(width: 16.0)),
+            ].divide(const SizedBox(width: 16.0)),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

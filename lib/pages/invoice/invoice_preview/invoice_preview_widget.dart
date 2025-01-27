@@ -10,10 +10,8 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'invoice_preview_model.dart';
@@ -44,7 +42,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -84,19 +82,19 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -109,7 +107,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                 clipBehavior: Clip.none,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -142,7 +140,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -157,7 +155,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -175,7 +173,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(40.0, 40.0,
                                                           40.0, 0.0),
                                                   child: Row(
@@ -263,11 +261,11 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       12.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -335,7 +333,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       20.0)),
                                                             ),
@@ -353,7 +351,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       .lineColor,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           40.0, 0.0, 40.0, 0.0),
                                                   child: Row(
@@ -395,7 +393,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                   safeSetState(
                                                                       () {}),
                                                               child:
-                                                                  FiveTextListWidget(
+                                                                  const FiveTextListWidget(
                                                                 details1:
                                                                     'Thomas shelby',
                                                                 details2:
@@ -408,7 +406,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                     'peakyFBlinders@gmail.com',
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -449,7 +447,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      FiveTextListWidget(
+                                                                      const FiveTextListWidget(
                                                                     details1:
                                                                         'Total Due:',
                                                                     details2:
@@ -469,7 +467,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                       safeSetState(
                                                                           () {}),
                                                                   child:
-                                                                      FiveTextListWidget(
+                                                                      const FiveTextListWidget(
                                                                     details1:
                                                                         '\t\$12,110.55',
                                                                     details2:
@@ -482,10 +480,10 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                         '\tBR91905',
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       ),
@@ -509,7 +507,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       16.0,
@@ -632,7 +630,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                           .invoiceBillModel1,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InvoiceBillWidget(
+                                                      child: const InvoiceBillWidget(
                                                         item:
                                                             'Vuexy Admin Template',
                                                         description:
@@ -647,7 +645,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                           .invoiceBillModel2,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InvoiceBillWidget(
+                                                      child: const InvoiceBillWidget(
                                                         item:
                                                             'Frest Admin Template',
                                                         description:
@@ -662,7 +660,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                           .invoiceBillModel3,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InvoiceBillWidget(
+                                                      child: const InvoiceBillWidget(
                                                         item:
                                                             'Apex Admin Template',
                                                         description:
@@ -677,7 +675,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                           .invoiceBillModel4,
                                                       updateCallback: () =>
                                                           safeSetState(() {}),
-                                                      child: InvoiceBillWidget(
+                                                      child: const InvoiceBillWidget(
                                                         item:
                                                             'Robust Admin Template',
                                                         description:
@@ -690,7 +688,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                   ],
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           40.0, 0.0, 40.0, 0.0),
                                                   child: Row(
@@ -744,7 +742,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                       Row(
@@ -758,7 +756,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                 safeSetState(
                                                                     () {}),
                                                             child:
-                                                                ForTextListWidget(
+                                                                const ForTextListWidget(
                                                               text1:
                                                                   'Subtotal:',
                                                               text2:
@@ -843,10 +841,10 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 height: 12.0)),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 24.0)),
                                                       ),
                                                     ],
@@ -860,7 +858,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       .lineColor,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(40.0, 0.0, 40.0,
                                                           40.0),
                                                   child: Row(
@@ -891,7 +889,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 40.0)),
+                                              ].divide(const SizedBox(height: 40.0)),
                                             ),
                                           ),
                                         ),
@@ -903,7 +901,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -918,7 +916,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(20.0),
+                                              padding: const EdgeInsets.all(20.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -928,7 +926,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       onPressed: () async {
                                                         await showDialog(
                                                           barrierColor:
-                                                              Color(0x34000000),
+                                                              const Color(0x34000000),
                                                           context: context,
                                                           builder:
                                                               (dialogContext) {
@@ -940,7 +938,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                               backgroundColor:
                                                                   Colors
                                                                       .transparent,
-                                                              alignment: AlignmentDirectional(
+                                                              alignment: const AlignmentDirectional(
                                                                       1.0, 0.0)
                                                                   .resolve(
                                                                       Directionality.of(
@@ -959,7 +957,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                         ?.unfocus();
                                                                   },
                                                                   child:
-                                                                      SendInvoiceWidget(),
+                                                                      const SendInvoiceWidget(),
                                                                 ),
                                                               ),
                                                             );
@@ -967,7 +965,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                         );
                                                       },
                                                       text: 'Send Invoice',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         FFIcons.ksend2,
                                                         color: Colors.white,
                                                         size: 22.0,
@@ -976,14 +974,14 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                         width: double.infinity,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1006,7 +1004,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 0.0,
@@ -1027,20 +1025,20 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       width: double.infinity,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
                                                                   4.0,
                                                                   0.0),
-                                                      color: Color(0x33A8AAAE),
+                                                      color: const Color(0x33A8AAAE),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1055,7 +1053,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                     0.0,
                                                               ),
                                                       elevation: 0.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 0.0,
@@ -1075,20 +1073,20 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       width: double.infinity,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
                                                                   4.0,
                                                                   0.0),
-                                                      color: Color(0x33A8AAAE),
+                                                      color: const Color(0x33A8AAAE),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1103,7 +1101,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                     0.0,
                                                               ),
                                                       elevation: 0.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 0.0,
@@ -1120,7 +1118,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -1134,20 +1132,20 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       width: double.infinity,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
                                                                   4.0,
                                                                   0.0),
-                                                      color: Color(0x33A8AAAE),
+                                                      color: const Color(0x33A8AAAE),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1162,7 +1160,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                     0.0,
                                                               ),
                                                       elevation: 0.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 0.0,
@@ -1178,7 +1176,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       onPressed: () async {
                                                         await showDialog(
                                                           barrierColor:
-                                                              Color(0x34000000),
+                                                              const Color(0x34000000),
                                                           context: context,
                                                           builder:
                                                               (dialogContext) {
@@ -1190,7 +1188,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                               backgroundColor:
                                                                   Colors
                                                                       .transparent,
-                                                              alignment: AlignmentDirectional(
+                                                              alignment: const AlignmentDirectional(
                                                                       1.0, 0.0)
                                                                   .resolve(
                                                                       Directionality.of(
@@ -1209,7 +1207,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                         ?.unfocus();
                                                                   },
                                                                   child:
-                                                                      AddPaymentWidget(),
+                                                                      const AddPaymentWidget(),
                                                                 ),
                                                               ),
                                                             );
@@ -1217,7 +1215,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                         );
                                                       },
                                                       text: 'Add Payment',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         FFIcons.kcurrencyDollar,
                                                         color: Colors.white,
                                                         size: 22.0,
@@ -1226,14 +1224,14 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                         width: double.infinity,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1256,7 +1254,7 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 0.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 0.0,
@@ -1267,37 +1265,37 @@ class _InvoicePreviewWidgetState extends State<InvoicePreviewWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(height: 8.0)),
+                                                ].divide(const SizedBox(height: 8.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

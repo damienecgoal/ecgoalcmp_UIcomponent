@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'shipping_details_model.dart';
 export 'shipping_details_model.dart';
 
@@ -58,9 +55,9 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,10 +65,10 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                widget!.icon!,
+                widget.icon!,
                 Text(
                   valueOrDefault<String>(
-                    widget!.title,
+                    widget.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -81,7 +78,7 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
                         fontWeight: FontWeight.w500,
                       ),
                 ),
-              ].divide(SizedBox(width: 6.0)),
+              ].divide(const SizedBox(width: 6.0)),
             ),
             Column(
               mainAxisSize: MainAxisSize.max,
@@ -89,7 +86,7 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.details1,
+                    widget.details1,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -101,7 +98,7 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.details2,
+                    widget.details2,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -113,7 +110,7 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.details3,
+                    widget.details3,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -125,7 +122,7 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.details4,
+                    widget.details4,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -135,11 +132,11 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 6.0)),
+              ].divide(const SizedBox(height: 6.0)),
             ),
             Text(
               valueOrDefault<String>(
-                widget!.number,
+                widget.number,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -148,7 +145,7 @@ class _ShippingDetailsWidgetState extends State<ShippingDetailsWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-          ].divide(SizedBox(height: 20.0)),
+          ].divide(const SizedBox(height: 20.0)),
         ),
       ),
     );

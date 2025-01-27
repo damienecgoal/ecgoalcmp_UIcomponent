@@ -1,10 +1,7 @@
 import '/components/avatar_2/avatar2_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'message_model.dart';
 export 'message_model.dart';
 
@@ -16,7 +13,7 @@ class MessageWidget extends StatefulWidget {
     required this.message,
     required this.time,
     bool? seen,
-  }) : this.seen = seen ?? false;
+  }) : seen = seen ?? false;
 
   final String? avatar;
   final String? name;
@@ -57,11 +54,17 @@ class _MessageWidgetState extends State<MessageWidget> {
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
+      onEnter: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = false);
+      }),
       child: Container(
         decoration: BoxDecoration(
           color: valueOrDefault<Color>(
-            _model.mouseRegionHovered!
-                ? Color(0x1AA8AAAE)
+            _model.mouseRegionHovered
+                ? const Color(0x1AA8AAAE)
                 : FlutterFlowTheme.of(context).secondaryBackground,
             FlutterFlowTheme.of(context).secondaryBackground,
           ),
@@ -70,7 +73,7 @@ class _MessageWidgetState extends State<MessageWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(18.0, 18.0, 18.0, 18.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(18.0, 18.0, 18.0, 18.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,8 +83,8 @@ class _MessageWidgetState extends State<MessageWidget> {
                     updateCallback: () => safeSetState(() {}),
                     child: Avatar2Widget(
                       diameter: 42.0,
-                      image: widget!.avatar!,
-                      name: widget!.name!,
+                      image: widget.avatar!,
+                      name: widget.name!,
                     ),
                   ),
                   Expanded(
@@ -91,7 +94,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.name,
+                            widget.name,
                             'name',
                           ),
                           style:
@@ -104,7 +107,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                         ),
                         Text(
                           valueOrDefault<String>(
-                            widget!.message,
+                            widget.message,
                             'message',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -118,7 +121,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                               ),
                         ),
                         Text(
-                          dateTimeFormat("relative", widget!.time),
+                          dateTimeFormat("relative", widget.time),
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
@@ -128,13 +131,13 @@ class _MessageWidgetState extends State<MessageWidget> {
                                 letterSpacing: 0.0,
                               ),
                         ),
-                      ].divide(SizedBox(height: 9.0)),
+                      ].divide(const SizedBox(height: 9.0)),
                     ),
                   ),
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      if (!widget!.seen)
+                      if (!widget.seen)
                         Container(
                           width: 10.0,
                           height: 10.0,
@@ -143,7 +146,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                             shape: BoxShape.circle,
                           ),
                         ),
-                      if (widget!.seen && _model.mouseRegionHovered!)
+                      if (widget.seen && _model.mouseRegionHovered)
                         Container(
                           width: 10.0,
                           height: 10.0,
@@ -155,7 +158,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                       Icon(
                         FFIcons.kx,
                         color: valueOrDefault<Color>(
-                          _model.mouseRegionHovered!
+                          _model.mouseRegionHovered
                               ? FlutterFlowTheme.of(context).secondaryText
                               : FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -163,9 +166,9 @@ class _MessageWidgetState extends State<MessageWidget> {
                         ),
                         size: 24.0,
                       ),
-                    ].divide(SizedBox(height: 10.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
-                ].divide(SizedBox(width: 12.0)),
+                ].divide(const SizedBox(width: 12.0)),
               ),
             ),
             Container(
@@ -178,12 +181,6 @@ class _MessageWidgetState extends State<MessageWidget> {
           ],
         ),
       ),
-      onEnter: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = false);
-      }),
     );
   }
 }

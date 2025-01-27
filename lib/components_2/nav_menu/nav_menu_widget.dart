@@ -3,10 +3,8 @@ import '/components_2/menu_option_sub/menu_option_sub_widget.dart';
 import '/components_2/menu_option_x/menu_option_x_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'nav_menu_model.dart';
 export 'nav_menu_model.dart';
@@ -108,9 +106,9 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
           children: [
             Container(
               height: 64.0,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -151,7 +149,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           width: 2.0,
                         ),
                       ),
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: 4.0,
                         height: 4.0,
@@ -175,7 +173,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                   children: [
                     Container(
                       width: double.infinity,
-                      color: Color(0x00000000),
+                      color: const Color(0x00000000),
                       child: ExpandableNotifier(
                         controller: _model.expandableExpandableController1,
                         child: ExpandablePanel(
@@ -184,7 +182,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                             updateCallback: () => safeSetState(() {}),
                             child: MenuOptionXWidget(
                               title: 'Dashboards',
-                              iconActive: Icon(
+                              iconActive: const Icon(
                                 FFIcons.ksmartHome,
                                 color: Colors.white,
                                 size: 22.0,
@@ -220,7 +218,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     context.goNamed(
                                       'Analytics',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -240,7 +238,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     context.goNamed(
                                       'CRM',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -261,7 +259,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     context.goNamed(
                                       'eCommerce',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -282,7 +280,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     context.goNamed(
                                       'Logistics',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -302,7 +300,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     context.goNamed(
                                       'Academy',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -312,7 +310,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   },
                                 ),
                               ),
-                            ].addToStart(SizedBox(height: 4.0)),
+                            ].addToStart(const SizedBox(height: 4.0)),
                           ),
                           theme: ExpandableThemeData(
                             tapHeaderToExpand: true,
@@ -335,7 +333,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 0.0, 12.0),
                           child: Text(
                             'APPS & PAGES',
@@ -352,7 +350,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: MenuOptionWidget(
                             title: 'Email',
-                            iconActive: Icon(
+                            iconActive: const Icon(
                               FFIcons.kmail,
                               color: Colors.white,
                               size: 22.0,
@@ -367,7 +365,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                               context.pushNamed(
                                 'Email',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                   ),
@@ -381,7 +379,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: MenuOptionWidget(
                             title: 'Chat',
-                            iconActive: Icon(
+                            iconActive: const Icon(
                               FFIcons.kmessages,
                               color: Colors.white,
                               size: 22.0,
@@ -396,7 +394,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                               context.pushNamed(
                                 'Chat',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                   ),
@@ -410,7 +408,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: MenuOptionWidget(
                             title: 'Calendar',
-                            iconActive: Icon(
+                            iconActive: const Icon(
                               FFIcons.kcalendar,
                               color: Colors.white,
                               size: 22.0,
@@ -425,7 +423,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                               context.pushNamed(
                                 'Calender',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                   ),
@@ -439,7 +437,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: MenuOptionWidget(
                             title: 'Kanban',
-                            iconActive: Icon(
+                            iconActive: const Icon(
                               FFIcons.klayoutKanban,
                               color: Colors.white,
                               size: 22.0,
@@ -457,7 +455,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                         ),
                         Container(
                           width: double.infinity,
-                          color: Color(0x00000000),
+                          color: const Color(0x00000000),
                           child: ExpandableNotifier(
                             controller: _model.expandableExpandableController2,
                             child: ExpandablePanel(
@@ -466,7 +464,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                 updateCallback: () => safeSetState(() {}),
                                 child: MenuOptionXWidget(
                                   title: 'eCommerce',
-                                  iconActive: Icon(
+                                  iconActive: const Icon(
                                     FFIcons.kshoppingCart,
                                     color: Colors.white,
                                     size: 22.0,
@@ -502,7 +500,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         context.goNamed(
                                           'eCommerce',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
+                                            kTransitionInfoKey: const TransitionInfo(
                                               hasTransition: true,
                                               transitionType:
                                                   PageTransitionType.fade,
@@ -513,10 +511,10 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Container(
                                       width: double.infinity,
-                                      color: Color(0x00000000),
+                                      color: const Color(0x00000000),
                                       child: ExpandableNotifier(
                                         controller: _model
                                             .expandableExpandableController3,
@@ -527,7 +525,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                 safeSetState(() {}),
                                             child: MenuOptionXWidget(
                                               title: 'Products',
-                                              iconActive: Icon(
+                                              iconActive: const Icon(
                                                 FFIcons.kpoint,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -569,7 +567,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Product_List',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -595,7 +593,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Add_Product',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -621,7 +619,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Categories',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -632,7 +630,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   },
                                                 ),
                                               ),
-                                            ].addToStart(SizedBox(height: 4.0)),
+                                            ].addToStart(const SizedBox(height: 4.0)),
                                           ),
                                           theme: ExpandableThemeData(
                                             tapHeaderToExpand: true,
@@ -654,10 +652,10 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Container(
                                       width: double.infinity,
-                                      color: Color(0x00000000),
+                                      color: const Color(0x00000000),
                                       child: ExpandableNotifier(
                                         controller: _model
                                             .expandableExpandableController4,
@@ -668,7 +666,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                 safeSetState(() {}),
                                             child: MenuOptionXWidget(
                                               title: 'Order',
-                                              iconActive: Icon(
+                                              iconActive: const Icon(
                                                 FFIcons.kpoint,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -710,7 +708,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Order_List',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -736,7 +734,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Order_Details',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -747,7 +745,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   },
                                                 ),
                                               ),
-                                            ].addToStart(SizedBox(height: 4.0)),
+                                            ].addToStart(const SizedBox(height: 4.0)),
                                           ),
                                           theme: ExpandableThemeData(
                                             tapHeaderToExpand: true,
@@ -769,10 +767,10 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Container(
                                       width: double.infinity,
-                                      color: Color(0x00000000),
+                                      color: const Color(0x00000000),
                                       child: ExpandableNotifier(
                                         controller: _model
                                             .expandableExpandableController5,
@@ -783,7 +781,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                 safeSetState(() {}),
                                             child: MenuOptionXWidget(
                                               title: 'Customer',
-                                              iconActive: Icon(
+                                              iconActive: const Icon(
                                                 FFIcons.kpoint,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -825,7 +823,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'All_Customer',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -837,10 +835,10 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                 ),
                                               ),
                                               Container(
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Container(
                                                   width: double.infinity,
-                                                  color: Color(0x00000000),
+                                                  color: const Color(0x00000000),
                                                   child: ExpandableNotifier(
                                                     controller: _model
                                                         .expandableExpandableController6,
@@ -854,7 +852,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                             MenuOptionXWidget(
                                                           title:
                                                               'Customer details',
-                                                          iconActive: Icon(
+                                                          iconActive: const Icon(
                                                             FFIcons.kpoint,
                                                             color: Colors.white,
                                                             size: 22.0,
@@ -902,7 +900,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                                   extra: <String,
                                                                       dynamic>{
                                                                     kTransitionInfoKey:
-                                                                        TransitionInfo(
+                                                                        const TransitionInfo(
                                                                       hasTransition:
                                                                           true,
                                                                       transitionType:
@@ -914,7 +912,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                               },
                                                             ),
                                                           ),
-                                                        ].addToStart(SizedBox(
+                                                        ].addToStart(const SizedBox(
                                                             height: 4.0)),
                                                       ),
                                                       theme:
@@ -941,7 +939,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].addToStart(SizedBox(height: 4.0)),
+                                            ].addToStart(const SizedBox(height: 4.0)),
                                           ),
                                           theme: ExpandableThemeData(
                                             tapHeaderToExpand: true,
@@ -973,7 +971,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         context.goNamed(
                                           'Manage_Reviews',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
+                                            kTransitionInfoKey: const TransitionInfo(
                                               hasTransition: true,
                                               transitionType:
                                                   PageTransitionType.fade,
@@ -994,7 +992,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         context.goNamed(
                                           'Referrals',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
+                                            kTransitionInfoKey: const TransitionInfo(
                                               hasTransition: true,
                                               transitionType:
                                                   PageTransitionType.fade,
@@ -1005,10 +1003,10 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Container(
                                       width: double.infinity,
-                                      color: Color(0x00000000),
+                                      color: const Color(0x00000000),
                                       child: ExpandableNotifier(
                                         controller: _model
                                             .expandableExpandableController7,
@@ -1019,7 +1017,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                 safeSetState(() {}),
                                             child: MenuOptionXWidget(
                                               title: 'Settings',
-                                              iconActive: Icon(
+                                              iconActive: const Icon(
                                                 FFIcons.kpoint,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -1061,7 +1059,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Settings',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1087,7 +1085,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Settings',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1113,7 +1111,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Settings',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1139,7 +1137,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Settings',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1165,7 +1163,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Settings',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1191,7 +1189,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                       'Settings',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1202,7 +1200,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   },
                                                 ),
                                               ),
-                                            ].addToStart(SizedBox(height: 4.0)),
+                                            ].addToStart(const SizedBox(height: 4.0)),
                                           ),
                                           theme: ExpandableThemeData(
                                             tapHeaderToExpand: true,
@@ -1223,7 +1221,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                     ),
                                   ),
-                                ].addToStart(SizedBox(height: 4.0)),
+                                ].addToStart(const SizedBox(height: 4.0)),
                               ),
                               theme: ExpandableThemeData(
                                 tapHeaderToExpand: true,
@@ -1248,7 +1246,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController8,
@@ -1258,7 +1256,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Academy',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.kbook,
                                       color: Colors.white,
                                       size: 22.0,
@@ -1295,7 +1293,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Academy',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1317,7 +1315,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'MyCourses',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1339,7 +1337,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Course_Details',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1349,7 +1347,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         },
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -1375,7 +1373,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController9,
@@ -1385,7 +1383,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Logistics',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.ktruck,
                                       color: Colors.white,
                                       size: 22.0,
@@ -1422,7 +1420,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Logistics',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1444,7 +1442,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Logistics_Fleet',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1454,7 +1452,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         },
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -1480,7 +1478,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController10,
@@ -1490,7 +1488,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Invoice',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.kfileDollar,
                                       color: Colors.white,
                                       size: 22.0,
@@ -1527,7 +1525,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'lnvoice_List',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1549,7 +1547,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Invoice_Preview',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1571,7 +1569,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Invoice_Edit',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1593,7 +1591,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Invoice_Add',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1603,7 +1601,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         },
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -1629,7 +1627,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController11,
@@ -1639,7 +1637,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Users',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.kusers,
                                       color: Colors.white,
                                       size: 22.0,
@@ -1676,7 +1674,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Users',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1698,7 +1696,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Users_Account',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1708,7 +1706,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         },
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -1734,7 +1732,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController12,
@@ -1744,7 +1742,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Roles & Permissions',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.ksettings,
                                       color: Colors.white,
                                       size: 22.0,
@@ -1781,7 +1779,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Roles',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1803,7 +1801,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Permissions',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1813,7 +1811,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         },
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -1839,7 +1837,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController13,
@@ -1849,7 +1847,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Pages',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.kfile,
                                       color: Colors.white,
                                       size: 22.0,
@@ -1886,7 +1884,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Profile',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1908,7 +1906,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Account',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1930,7 +1928,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'FAQ',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1952,7 +1950,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Pricing',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -1969,7 +1967,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController14,
@@ -1980,7 +1978,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Misc',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2023,7 +2021,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2050,7 +2048,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2077,7 +2075,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2089,7 +2087,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2111,7 +2109,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -2137,7 +2135,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController15,
@@ -2147,7 +2145,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Authentications',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.klock,
                                       color: Colors.white,
                                       size: 22.0,
@@ -2179,7 +2177,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController16,
@@ -2190,7 +2188,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Login',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2233,7 +2231,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2260,7 +2258,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2272,7 +2270,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2301,7 +2299,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController17,
@@ -2312,7 +2310,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Register',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2355,7 +2353,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2382,7 +2380,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2409,7 +2407,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2421,7 +2419,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2450,7 +2448,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController18,
@@ -2461,7 +2459,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Verify Email',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2504,7 +2502,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2531,7 +2529,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2543,7 +2541,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2572,7 +2570,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController19,
@@ -2583,7 +2581,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Reset Password',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2626,7 +2624,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2653,7 +2651,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2665,7 +2663,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2694,7 +2692,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController20,
@@ -2705,7 +2703,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Forgot Password',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2748,7 +2746,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2775,7 +2773,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2787,7 +2785,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2816,7 +2814,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                       ),
                                       child: Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController21,
@@ -2827,7 +2825,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   safeSetState(() {}),
                                               child: MenuOptionXWidget(
                                                 title: 'Tow Steps',
-                                                iconActive: Icon(
+                                                iconActive: const Icon(
                                                   FFIcons.kpoint,
                                                   color: Colors.white,
                                                   size: 22.0,
@@ -2870,7 +2868,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2897,7 +2895,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -2909,7 +2907,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                                   ),
                                                 ),
                                               ].addToStart(
-                                                  SizedBox(height: 4.0)),
+                                                  const SizedBox(height: 4.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -2931,7 +2929,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -2957,7 +2955,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            color: Color(0x00000000),
+                            color: const Color(0x00000000),
                             child: ExpandableNotifier(
                               controller:
                                   _model.expandableExpandableController22,
@@ -2967,7 +2965,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                   updateCallback: () => safeSetState(() {}),
                                   child: MenuOptionXWidget(
                                     title: 'Wizard Examples',
-                                    iconActive: Icon(
+                                    iconActive: const Icon(
                                       FFIcons.kfile,
                                       color: Colors.white,
                                       size: 22.0,
@@ -3004,7 +3002,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Checkout',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -3026,7 +3024,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                             'Account',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -3036,7 +3034,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                                         },
                                       ),
                                     ),
-                                  ].addToStart(SizedBox(height: 4.0)),
+                                  ].addToStart(const SizedBox(height: 4.0)),
                                 ),
                                 theme: ExpandableThemeData(
                                   tapHeaderToExpand: true,
@@ -3062,7 +3060,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'MISC',
@@ -3079,7 +3077,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: MenuOptionWidget(
                             title: 'Support',
-                            iconActive: Icon(
+                            iconActive: const Icon(
                               FFIcons.klifebuoy,
                               color: Colors.white,
                               size: 22.0,
@@ -3098,7 +3096,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: MenuOptionWidget(
                             title: 'Documentation',
-                            iconActive: Icon(
+                            iconActive: const Icon(
                               FFIcons.kfileDescription,
                               color: Colors.white,
                               size: 22.0,
@@ -3114,7 +3112,7 @@ class _NavMenuWidgetState extends State<NavMenuWidget> {
                         ),
                       ],
                     ),
-                  ].divide(SizedBox(height: 24.0)),
+                  ].divide(const SizedBox(height: 24.0)),
                 ),
               ),
             ),

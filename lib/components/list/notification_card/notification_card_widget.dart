@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'notification_card_model.dart';
 export 'notification_card_model.dart';
 
@@ -46,12 +43,12 @@ class _NotificationCardWidgetState extends State<NotificationCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 6.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 6.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -59,7 +56,7 @@ class _NotificationCardWidgetState extends State<NotificationCardWidget> {
                   flex: 2,
                   child: Text(
                     valueOrDefault<String>(
-                      widget!.name,
+                      widget.name,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -119,7 +116,7 @@ class _NotificationCardWidgetState extends State<NotificationCardWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 4.0)),
+                        ].divide(const SizedBox(width: 4.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -164,7 +161,7 @@ class _NotificationCardWidgetState extends State<NotificationCardWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 4.0)),
+                        ].divide(const SizedBox(width: 4.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -209,9 +206,9 @@ class _NotificationCardWidgetState extends State<NotificationCardWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 4.0)),
+                        ].divide(const SizedBox(width: 4.0)),
                       ),
-                    ].divide(SizedBox(width: 40.0)),
+                    ].divide(const SizedBox(width: 40.0)),
                   ),
                 ),
               ],

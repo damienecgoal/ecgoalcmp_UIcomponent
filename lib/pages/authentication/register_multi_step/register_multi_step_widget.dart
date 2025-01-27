@@ -4,11 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'register_multi_step_model.dart';
 export 'register_multi_step_model.dart';
 
@@ -121,7 +118,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                     child: Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
@@ -129,12 +126,12 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                               width: double.infinity,
                               height: 260.0,
                               fit: BoxFit.cover,
-                              alignment: Alignment(-1.0, 0.0),
+                              alignment: const Alignment(-1.0, 0.0),
                             ),
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
@@ -150,7 +147,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     height: double.infinity,
                     decoration: BoxDecoration(
@@ -226,7 +223,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                   child: wrapWithModel(
                                     model: _model.multiStepAccountModel1,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: MultiStepAccountWidget(
+                                    child: const MultiStepAccountWidget(
                                       title: 'Account',
                                       subTitle: 'Account Details',
                                       icon: Icon(
@@ -372,7 +369,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   fontWeight: FontWeight.normal,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 12.0)),
+                                        ].divide(const SizedBox(height: 12.0)),
                                       ),
                                       Form(
                                         key: _model.formKey3,
@@ -410,6 +407,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered1 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered1 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController1,
@@ -450,7 +458,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered1!
+                                                                  _model.mouseRegionHovered1
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -525,20 +533,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered1 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered1 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -567,6 +564,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered2 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered2 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController2,
@@ -607,7 +615,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered2!
+                                                                  _model.mouseRegionHovered2
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -682,23 +690,12 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered2 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered2 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -729,6 +726,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered3 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered3 =
+                                                                  false);
+                                                        }),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -742,7 +750,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                         context)
                                                                     .secondaryBackground,
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -762,7 +770,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   color:
                                                                       valueOrDefault<
                                                                           Color>(
-                                                                    _model.mouseRegionHovered3!
+                                                                    _model.mouseRegionHovered3
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .secondaryText
                                                                         : FlutterFlowTheme.of(context)
@@ -798,7 +806,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               ),
                                                             ),
                                                             Expanded(
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 width: 234.0,
                                                                 child:
                                                                     TextFormField(
@@ -840,7 +848,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                           BorderSide(
                                                                         color: valueOrDefault<
                                                                             Color>(
-                                                                          _model.mouseRegionHovered3!
+                                                                          _model.mouseRegionHovered3
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -850,7 +858,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                             1.0,
                                                                       ),
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(0.0),
@@ -872,7 +880,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                             1.0,
                                                                       ),
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(0.0),
@@ -894,7 +902,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                             1.0,
                                                                       ),
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(0.0),
@@ -916,7 +924,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                             1.0,
                                                                       ),
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(0.0),
@@ -947,20 +955,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                             ),
                                                           ],
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered3 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered3 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -989,6 +986,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered4 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered4 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController4,
@@ -1030,7 +1038,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered4!
+                                                                  _model.mouseRegionHovered4
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -1105,23 +1113,12 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered4 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered4 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                             Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -1143,6 +1140,16 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   opaque: false,
                                                   cursor: MouseCursor.defer ??
                                                       MouseCursor.defer,
+                                                  onEnter: ((event) async {
+                                                    safeSetState(() => _model
+                                                            .mouseRegionHovered5 =
+                                                        true);
+                                                  }),
+                                                  onExit: ((event) async {
+                                                    safeSetState(() => _model
+                                                            .mouseRegionHovered5 =
+                                                        false);
+                                                  }),
                                                   child: TextFormField(
                                                     controller: _model
                                                         .passwordTextController1,
@@ -1180,7 +1187,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         borderSide: BorderSide(
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered5!
+                                                            _model.mouseRegionHovered5
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText
@@ -1248,18 +1255,8 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         .passwordTextController1Validator
                                                         .asValidator(context),
                                                   ),
-                                                  onEnter: ((event) async {
-                                                    safeSetState(() => _model
-                                                            .mouseRegionHovered5 =
-                                                        true);
-                                                  }),
-                                                  onExit: ((event) async {
-                                                    safeSetState(() => _model
-                                                            .mouseRegionHovered5 =
-                                                        false);
-                                                  }),
                                                 ),
-                                              ].divide(SizedBox(height: 8.0)),
+                                              ].divide(const SizedBox(height: 8.0)),
                                             ),
                                             Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -1281,6 +1278,16 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   opaque: false,
                                                   cursor: MouseCursor.defer ??
                                                       MouseCursor.defer,
+                                                  onEnter: ((event) async {
+                                                    safeSetState(() => _model
+                                                            .mouseRegionHovered6 =
+                                                        true);
+                                                  }),
+                                                  onExit: ((event) async {
+                                                    safeSetState(() => _model
+                                                            .mouseRegionHovered6 =
+                                                        false);
+                                                  }),
                                                   child: TextFormField(
                                                     controller: _model
                                                         .passwordTextController2,
@@ -1318,7 +1325,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         borderSide: BorderSide(
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered6!
+                                                            _model.mouseRegionHovered6
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText
@@ -1386,18 +1393,8 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         .passwordTextController2Validator
                                                         .asValidator(context),
                                                   ),
-                                                  onEnter: ((event) async {
-                                                    safeSetState(() => _model
-                                                            .mouseRegionHovered6 =
-                                                        true);
-                                                  }),
-                                                  onExit: ((event) async {
-                                                    safeSetState(() => _model
-                                                            .mouseRegionHovered6 =
-                                                        false);
-                                                  }),
                                                 ),
-                                              ].divide(SizedBox(height: 8.0)),
+                                              ].divide(const SizedBox(height: 8.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1428,6 +1425,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered7 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered7 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController5,
@@ -1468,7 +1476,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered7!
+                                                                  _model.mouseRegionHovered7
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -1543,20 +1551,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered7 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered7 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -1585,6 +1582,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered8 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered8 =
+                                                                  false);
+                                                        }),
                                                         child:
                                                             FlutterFlowDropDown<
                                                                 String>(
@@ -1592,7 +1600,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   .usernameValueController ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'Alabama',
                                                             'California',
                                                             'Delaware',
@@ -1664,7 +1672,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                           borderColor:
                                                               valueOrDefault<
                                                                   Color>(
-                                                            _model.mouseRegionHovered8!
+                                                            _model.mouseRegionHovered8
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText
@@ -1678,7 +1686,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                           borderWidth: 1.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -1689,28 +1697,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                           isSearchable: true,
                                                           isMultiSelect: false,
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered8 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered8 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
-                                          ].divide(SizedBox(height: 26.0)),
+                                          ].divide(const SizedBox(height: 26.0)),
                                         ),
                                       ),
-                                    ].divide(SizedBox(height: 36.0)),
+                                    ].divide(const SizedBox(height: 36.0)),
                                   );
                                 } else if (_model.selectedTab == 'Billing') {
                                   return Column(
@@ -1751,7 +1748,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   fontWeight: FontWeight.normal,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 12.0)),
+                                        ].divide(const SizedBox(height: 12.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1760,6 +1757,14 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                             opaque: false,
                                             cursor: MouseCursor.defer ??
                                                 MouseCursor.defer,
+                                            onEnter: ((event) async {
+                                              safeSetState(() => _model
+                                                  .mouseRegionHovered9 = true);
+                                            }),
+                                            onExit: ((event) async {
+                                              safeSetState(() => _model
+                                                  .mouseRegionHovered9 = false);
+                                            }),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -1789,7 +1794,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   .of(context)
                                                               .primary;
                                                         } else if (_model
-                                                            .mouseRegionHovered9!) {
+                                                            .mouseRegionHovered9) {
                                                           return FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText;
@@ -1807,7 +1812,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(16.0),
+                                                  padding: const EdgeInsets.all(16.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1935,7 +1940,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 2.0)),
                                                       ),
                                                       Row(
@@ -1986,7 +1991,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(5.0),
                                                               child: Container(
                                                                 width: 100.0,
@@ -2014,24 +2019,25 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 12.0)),
+                                                        const SizedBox(height: 12.0)),
                                                   ),
                                                 ),
                                               ),
                                             ),
-                                            onEnter: ((event) async {
-                                              safeSetState(() => _model
-                                                  .mouseRegionHovered9 = true);
-                                            }),
-                                            onExit: ((event) async {
-                                              safeSetState(() => _model
-                                                  .mouseRegionHovered9 = false);
-                                            }),
                                           ),
                                           MouseRegion(
                                             opaque: false,
                                             cursor: MouseCursor.defer ??
                                                 MouseCursor.defer,
+                                            onEnter: ((event) async {
+                                              safeSetState(() => _model
+                                                  .mouseRegionHovered10 = true);
+                                            }),
+                                            onExit: ((event) async {
+                                              safeSetState(() =>
+                                                  _model.mouseRegionHovered10 =
+                                                      false);
+                                            }),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -2061,7 +2067,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   .of(context)
                                                               .primary;
                                                         } else if (_model
-                                                            .mouseRegionHovered10!) {
+                                                            .mouseRegionHovered10) {
                                                           return FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText;
@@ -2079,7 +2085,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(16.0),
+                                                  padding: const EdgeInsets.all(16.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2207,7 +2213,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 2.0)),
                                                       ),
                                                       Row(
@@ -2258,7 +2264,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(5.0),
                                                               child: Container(
                                                                 width: 100.0,
@@ -2286,25 +2292,25 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 12.0)),
+                                                        const SizedBox(height: 12.0)),
                                                   ),
                                                 ),
                                               ),
                                             ),
-                                            onEnter: ((event) async {
-                                              safeSetState(() => _model
-                                                  .mouseRegionHovered10 = true);
-                                            }),
-                                            onExit: ((event) async {
-                                              safeSetState(() =>
-                                                  _model.mouseRegionHovered10 =
-                                                      false);
-                                            }),
                                           ),
                                           MouseRegion(
                                             opaque: false,
                                             cursor: MouseCursor.defer ??
                                                 MouseCursor.defer,
+                                            onEnter: ((event) async {
+                                              safeSetState(() => _model
+                                                  .mouseRegionHovered11 = true);
+                                            }),
+                                            onExit: ((event) async {
+                                              safeSetState(() =>
+                                                  _model.mouseRegionHovered11 =
+                                                      false);
+                                            }),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
                                               focusColor: Colors.transparent,
@@ -2334,7 +2340,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   .of(context)
                                                               .primary;
                                                         } else if (_model
-                                                            .mouseRegionHovered11!) {
+                                                            .mouseRegionHovered11) {
                                                           return FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText;
@@ -2352,7 +2358,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(16.0),
+                                                  padding: const EdgeInsets.all(16.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2480,7 +2486,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 2.0)),
                                                       ),
                                                       Row(
@@ -2531,7 +2537,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(5.0),
                                                               child: Container(
                                                                 width: 100.0,
@@ -2559,22 +2565,13 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 12.0)),
+                                                        const SizedBox(height: 12.0)),
                                                   ),
                                                 ),
                                               ),
                                             ),
-                                            onEnter: ((event) async {
-                                              safeSetState(() => _model
-                                                  .mouseRegionHovered11 = true);
-                                            }),
-                                            onExit: ((event) async {
-                                              safeSetState(() =>
-                                                  _model.mouseRegionHovered11 =
-                                                      false);
-                                            }),
                                           ),
-                                        ].divide(SizedBox(width: 24.0)),
+                                        ].divide(const SizedBox(width: 24.0)),
                                       ),
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -2609,7 +2606,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   fontWeight: FontWeight.normal,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 12.0)),
+                                        ].divide(const SizedBox(height: 12.0)),
                                       ),
                                       Form(
                                         key: _model.formKey1,
@@ -2638,6 +2635,16 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   opaque: false,
                                                   cursor: MouseCursor.defer ??
                                                       MouseCursor.defer,
+                                                  onEnter: ((event) async {
+                                                    safeSetState(() => _model
+                                                            .mouseRegionHovered12 =
+                                                        true);
+                                                  }),
+                                                  onExit: ((event) async {
+                                                    safeSetState(() => _model
+                                                            .mouseRegionHovered12 =
+                                                        false);
+                                                  }),
                                                   child: TextFormField(
                                                     controller: _model
                                                         .passwordTextController3,
@@ -2676,7 +2683,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         borderSide: BorderSide(
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered12!
+                                                            _model.mouseRegionHovered12
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText
@@ -2744,18 +2751,8 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         .passwordTextController3Validator
                                                         .asValidator(context),
                                                   ),
-                                                  onEnter: ((event) async {
-                                                    safeSetState(() => _model
-                                                            .mouseRegionHovered12 =
-                                                        true);
-                                                  }),
-                                                  onExit: ((event) async {
-                                                    safeSetState(() => _model
-                                                            .mouseRegionHovered12 =
-                                                        false);
-                                                  }),
                                                 ),
-                                              ].divide(SizedBox(height: 8.0)),
+                                              ].divide(const SizedBox(height: 8.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2786,6 +2783,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered13 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered13 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController6,
@@ -2827,7 +2835,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered13!
+                                                                  _model.mouseRegionHovered13
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -2902,20 +2910,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered13 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered13 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -2944,6 +2941,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered14 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered14 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController7,
@@ -2984,7 +2992,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered14!
+                                                                  _model.mouseRegionHovered14
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -3059,20 +3067,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered14 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered14 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -3101,6 +3098,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         cursor: MouseCursor
                                                                 .defer ??
                                                             MouseCursor.defer,
+                                                        onEnter:
+                                                            ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered15 =
+                                                                  true);
+                                                        }),
+                                                        onExit: ((event) async {
+                                                          safeSetState(() =>
+                                                              _model.mouseRegionHovered15 =
+                                                                  false);
+                                                        }),
                                                         child: TextFormField(
                                                           controller: _model
                                                               .usernameTextController8,
@@ -3141,7 +3149,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered15!
+                                                                  _model.mouseRegionHovered15
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -3216,28 +3224,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               .asValidator(
                                                                   context),
                                                         ),
-                                                        onEnter:
-                                                            ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered15 =
-                                                                  true);
-                                                        }),
-                                                        onExit: ((event) async {
-                                                          safeSetState(() =>
-                                                              _model.mouseRegionHovered15 =
-                                                                  false);
-                                                        }),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 8.0)),
+                                                        const SizedBox(height: 8.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
-                                          ].divide(SizedBox(height: 26.0)),
+                                          ].divide(const SizedBox(height: 26.0)),
                                         ),
                                       ),
-                                    ].divide(SizedBox(height: 24.0)),
+                                    ].divide(const SizedBox(height: 24.0)),
                                   );
                                 } else {
                                   return Column(
@@ -3278,7 +3275,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   fontWeight: FontWeight.normal,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 12.0)),
+                                        ].divide(const SizedBox(height: 12.0)),
                                       ),
                                       Form(
                                         key: _model.formKey2,
@@ -3323,7 +3320,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                       cursor:
                                                           MouseCursor.defer ??
                                                               MouseCursor.defer,
-                                                      child: Container(
+                                                      onEnter: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered16 =
+                                                            true);
+                                                      }),
+                                                      onExit: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered16 =
+                                                            false);
+                                                      }),
+                                                      child: SizedBox(
                                                         width: 330.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -3365,7 +3372,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered16!
+                                                                  _model.mouseRegionHovered16
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -3441,19 +3448,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   context),
                                                         ),
                                                       ),
-                                                      onEnter: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered16 =
-                                                            true);
-                                                      }),
-                                                      onExit: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered16 =
-                                                            false);
-                                                      }),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -3477,7 +3474,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                       cursor:
                                                           MouseCursor.defer ??
                                                               MouseCursor.defer,
-                                                      child: Container(
+                                                      onEnter: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered17 =
+                                                            true);
+                                                      }),
+                                                      onExit: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered17 =
+                                                            false);
+                                                      }),
+                                                      child: SizedBox(
                                                         width: 330.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -3519,7 +3526,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered17!
+                                                                  _model.mouseRegionHovered17
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -3595,19 +3602,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   context),
                                                         ),
                                                       ),
-                                                      onEnter: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered17 =
-                                                            true);
-                                                      }),
-                                                      onExit: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered17 =
-                                                            false);
-                                                      }),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ],
                                             ),
@@ -3645,7 +3642,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                       cursor:
                                                           MouseCursor.defer ??
                                                               MouseCursor.defer,
-                                                      child: Container(
+                                                      onEnter: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered18 =
+                                                            true);
+                                                      }),
+                                                      onExit: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered18 =
+                                                            false);
+                                                      }),
+                                                      child: SizedBox(
                                                         width: 330.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -3689,7 +3696,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered18!
+                                                                  _model.mouseRegionHovered18
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -3788,19 +3795,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   context),
                                                         ),
                                                       ),
-                                                      onEnter: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered18 =
-                                                            true);
-                                                      }),
-                                                      onExit: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered18 =
-                                                            false);
-                                                      }),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -3824,7 +3821,17 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                       cursor:
                                                           MouseCursor.defer ??
                                                               MouseCursor.defer,
-                                                      child: Container(
+                                                      onEnter: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered19 =
+                                                            true);
+                                                      }),
+                                                      onExit: ((event) async {
+                                                        safeSetState(() => _model
+                                                                .mouseRegionHovered19 =
+                                                            false);
+                                                      }),
+                                                      child: SizedBox(
                                                         width: 330.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -3868,7 +3875,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                 color:
                                                                     valueOrDefault<
                                                                         Color>(
-                                                                  _model.mouseRegionHovered19!
+                                                                  _model.mouseRegionHovered19
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryText
@@ -3967,19 +3974,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                                   context),
                                                         ),
                                                       ),
-                                                      onEnter: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered19 =
-                                                            true);
-                                                      }),
-                                                      onExit: ((event) async {
-                                                        safeSetState(() => _model
-                                                                .mouseRegionHovered19 =
-                                                            false);
-                                                      }),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ],
                                             ),
@@ -3987,8 +3984,18 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                               opaque: false,
                                               cursor: MouseCursor.defer ??
                                                   MouseCursor.defer,
+                                              onEnter: ((event) async {
+                                                safeSetState(() => _model
+                                                        .mouseRegionHovered20 =
+                                                    true);
+                                              }),
+                                              onExit: ((event) async {
+                                                safeSetState(() => _model
+                                                        .mouseRegionHovered20 =
+                                                    false);
+                                              }),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 6.0, 0.0, 0.0),
                                                 child: Column(
@@ -4018,7 +4025,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                         ),
                                                       ],
                                                     ),
-                                                    Container(
+                                                    SizedBox(
                                                       width: 708.0,
                                                       child: TextFormField(
                                                         controller: _model
@@ -4061,7 +4068,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                               color:
                                                                   valueOrDefault<
                                                                       Color>(
-                                                                _model.mouseRegionHovered20!
+                                                                _model.mouseRegionHovered20
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryText
@@ -4141,24 +4148,14 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ),
-                                              onEnter: ((event) async {
-                                                safeSetState(() => _model
-                                                        .mouseRegionHovered20 =
-                                                    true);
-                                              }),
-                                              onExit: ((event) async {
-                                                safeSetState(() => _model
-                                                        .mouseRegionHovered20 =
-                                                    false);
-                                              }),
                                             ),
-                                          ].divide(SizedBox(height: 26.0)),
+                                          ].divide(const SizedBox(height: 26.0)),
                                         ),
                                       ),
-                                    ].divide(SizedBox(height: 36.0)),
+                                    ].divide(const SizedBox(height: 36.0)),
                                   );
                                 }
                               },
@@ -4227,9 +4224,9 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                   ),
                                   options: FFButtonOptions(
                                     height: 44.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context)
                                         .unselectBox,
@@ -4242,7 +4239,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 0.0,
                                     ),
@@ -4253,12 +4250,20 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                   opaque: false,
                                   cursor:
                                       MouseCursor.defer ?? MouseCursor.defer,
+                                  onEnter: ((event) async {
+                                    safeSetState(() =>
+                                        _model.mouseRegionHovered21 = true);
+                                  }),
+                                  onExit: ((event) async {
+                                    safeSetState(() =>
+                                        _model.mouseRegionHovered21 = false);
+                                  }),
                                   child: Container(
                                     height: 44.0,
                                     decoration: BoxDecoration(
                                       color: valueOrDefault<Color>(
-                                        _model.mouseRegionHovered21!
-                                            ? Color(0xFF9E94FF)
+                                        _model.mouseRegionHovered21
+                                            ? const Color(0xFF9E94FF)
                                             : FlutterFlowTheme.of(context)
                                                 .primary,
                                         FlutterFlowTheme.of(context).primary,
@@ -4266,7 +4271,7 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -4283,31 +4288,23 @@ class _RegisterMultiStepWidgetState extends State<RegisterMultiStepWidget> {
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
-                                          Icon(
+                                          const Icon(
                                             FFIcons.karrowRight,
                                             color: Colors.white,
                                             size: 24.0,
                                           ),
-                                        ].divide(SizedBox(width: 5.0)),
+                                        ].divide(const SizedBox(width: 5.0)),
                                       ),
                                     ),
                                   ),
-                                  onEnter: ((event) async {
-                                    safeSetState(() =>
-                                        _model.mouseRegionHovered21 = true);
-                                  }),
-                                  onExit: ((event) async {
-                                    safeSetState(() =>
-                                        _model.mouseRegionHovered21 = false);
-                                  }),
                                 ),
                               ],
                             ),
                           ),
                         ]
-                            .divide(SizedBox(height: 36.0))
-                            .addToStart(SizedBox(height: 24.0))
-                            .addToEnd(SizedBox(height: 24.0)),
+                            .divide(const SizedBox(height: 36.0))
+                            .addToStart(const SizedBox(height: 24.0))
+                            .addToEnd(const SizedBox(height: 24.0)),
                       ),
                     ),
                   ),

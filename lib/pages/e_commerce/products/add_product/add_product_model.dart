@@ -1,27 +1,13 @@
-import '/auth/base_auth_user_provider.dart';
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/components_2/custom_switch/custom_switch_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/text_style/text_style_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'add_product_widget.dart' show AddProductWidget;
-import 'package:styled_divider/styled_divider.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class AddProductModel extends FlutterFlowModel<AddProductWidget> {
   ///  Local state fields for this page.

@@ -1,12 +1,9 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'custom_switch_model.dart';
 export 'custom_switch_model.dart';
 
@@ -15,7 +12,7 @@ class CustomSwitchWidget extends StatefulWidget {
     super.key,
     bool? switchValue,
     required this.toggleAction,
-  }) : this.switchValue = switchValue ?? false;
+  }) : switchValue = switchValue ?? false;
 
   final bool switchValue;
   final Future Function()? toggleAction;
@@ -51,8 +48,8 @@ class _CustomSwitchWidgetState extends State<CustomSwitchWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(-18.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(-18.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -77,7 +74,7 @@ class _CustomSwitchWidgetState extends State<CustomSwitchWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(-1.0, 0.0),
+      alignment: const AlignmentDirectional(-1.0, 0.0),
       child: InkWell(
         splashColor: Colors.transparent,
         focusColor: Colors.transparent,
@@ -85,7 +82,7 @@ class _CustomSwitchWidgetState extends State<CustomSwitchWidget>
         highlightColor: Colors.transparent,
         onTap: () async {
           await widget.toggleAction?.call();
-          if (widget!.switchValue) {
+          if (widget.switchValue) {
             if (animationsMap['containerOnActionTriggerAnimation'] != null) {
               safeSetState(() => hasContainerTriggered = true);
               SchedulerBinding.instance.addPostFrameCallback((_) async =>
@@ -112,7 +109,7 @@ class _CustomSwitchWidgetState extends State<CustomSwitchWidget>
           height: 20.0,
           decoration: BoxDecoration(
             color: valueOrDefault<Color>(
-              widget!.switchValue
+              widget.switchValue
                   ? FlutterFlowTheme.of(context).primary
                   : Colors.transparent,
               Colors.transparent,
@@ -120,7 +117,7 @@ class _CustomSwitchWidgetState extends State<CustomSwitchWidget>
             borderRadius: BorderRadius.circular(50.0),
             border: Border.all(
               color: valueOrDefault<Color>(
-                widget!.switchValue
+                widget.switchValue
                     ? FlutterFlowTheme.of(context).primary
                     : FlutterFlowTheme.of(context).secondaryText,
                 FlutterFlowTheme.of(context).secondaryText,
@@ -130,18 +127,18 @@ class _CustomSwitchWidgetState extends State<CustomSwitchWidget>
           child: Align(
             alignment: AlignmentDirectional(
                 valueOrDefault<double>(
-                  widget!.switchValue ? 1.0 : -1.0,
+                  widget.switchValue ? 1.0 : -1.0,
                   -1.0,
                 ),
                 0.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 3.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 3.0, 0.0),
               child: Container(
                 width: 12.0,
                 height: 12.0,
                 decoration: BoxDecoration(
                   color: valueOrDefault<Color>(
-                    widget!.switchValue
+                    widget.switchValue
                         ? Colors.white
                         : FlutterFlowTheme.of(context).secondaryText,
                     FlutterFlowTheme.of(context).secondaryText,

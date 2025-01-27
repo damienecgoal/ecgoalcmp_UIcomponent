@@ -4,10 +4,8 @@ import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'product_list2_model.dart';
@@ -76,12 +74,12 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
     context.watch<FFAppState>();
 
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 8.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 8.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -93,11 +91,11 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                       color: FlutterFlowTheme.of(context).primary,
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: Color(0xFF8F83FF),
+                        color: const Color(0xFF8F83FF),
                         width: 1.0,
                       ),
                     ),
-                    child: Icon(
+                    child: const Icon(
                       FFIcons.kplus,
                       color: Colors.white,
                       size: 14.0,
@@ -137,13 +135,13 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                         borderRadius: BorderRadius.circular(6.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0x34A8AAAE),
+                            color: const Color(0x34A8AAAE),
                             borderRadius: BorderRadius.circular(6.0),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.network(
-                              widget!.image!,
+                              widget.image!,
                               width: 40.0,
                               height: 40.0,
                               fit: BoxFit.cover,
@@ -157,7 +155,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              widget!.productname,
+                              widget.productname,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -172,7 +170,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                           ),
                           Text(
                             valueOrDefault<String>(
-                              widget!.discription,
+                              widget.discription,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -185,9 +183,9 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(height: 4.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -199,15 +197,15 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                         model: _model.iconContainerCircleModel,
                         updateCallback: () => safeSetState(() {}),
                         child: IconContainerCircleWidget(
-                          icon: widget!.icon!,
-                          bgcolor: widget!.bg!,
+                          icon: widget.icon!,
+                          bgcolor: widget.bg!,
                           daimiter: 36.0,
                         ),
                       ),
                       Expanded(
                         child: Text(
                           valueOrDefault<String>(
-                            widget!.category,
+                            widget.category,
                             'na',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -221,7 +219,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -251,7 +249,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.sku,
+                          widget.sku,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -275,7 +273,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.price,
+                          widget.price,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -299,7 +297,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.qty,
+                          widget.qty,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -319,7 +317,7 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                     flex: 7,
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -337,9 +335,9 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                                     model: _model.statusCardModel,
                                     updateCallback: () => safeSetState(() {}),
                                     child: StatusCardWidget(
-                                      title: widget!.statusname!,
-                                      titleColor: widget!.textcolor!,
-                                      bgColor: widget!.stbg!,
+                                      title: widget.statusname!,
+                                      titleColor: widget.textcolor!,
+                                      bgColor: widget.stbg!,
                                     ),
                                   ),
                                 ],
@@ -377,16 +375,16 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                                           context: context,
                                           isGlobal: false,
                                           avoidOverflow: false,
-                                          targetAnchor: AlignmentDirectional(
+                                          targetAnchor: const AlignmentDirectional(
                                                   -6.0, 7.0)
                                               .resolve(
                                                   Directionality.of(context)),
-                                          followerAnchor: AlignmentDirectional(
+                                          followerAnchor: const AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
                                           builder: (dialogContext) {
-                                            return Material(
+                                            return const Material(
                                               color: Colors.transparent,
                                               child: WebViewAware(
                                                 child: ProductActionWidget(),
@@ -403,14 +401,14 @@ class _ProductList2WidgetState extends State<ProductList2Widget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 6.0)),
+                                ].divide(const SizedBox(width: 6.0)),
                               ),
                             ),
-                        ].divide(SizedBox(width: 24.0)),
+                        ].divide(const SizedBox(width: 24.0)),
                       ),
                     ),
                   ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

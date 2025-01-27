@@ -2,10 +2,7 @@ import '/components/edit_popup/edit_card/edit_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'payment_card_model.dart';
 export 'payment_card_model.dart';
@@ -65,7 +62,7 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -78,17 +75,17 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.network(
-                      widget!.logo!,
+                      widget.logo!,
                       width: 80.0,
                       height: 30.0,
                       fit: BoxFit.contain,
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.name,
+                        widget.name,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -101,7 +98,7 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.number,
+                      widget.number,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -128,16 +125,16 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                         builder: (context) => FFButtonWidget(
                           onPressed: () async {
                             showDialog(
-                              barrierColor: Color(0x34000000),
+                              barrierColor: const Color(0x34000000),
                               context: context,
                               builder: (dialogContext) {
                                 return Dialog(
                                   elevation: 0,
                                   insetPadding: EdgeInsets.zero,
                                   backgroundColor: Colors.transparent,
-                                  alignment: AlignmentDirectional(0.0, 0.0)
+                                  alignment: const AlignmentDirectional(0.0, 0.0)
                                       .resolve(Directionality.of(context)),
-                                  child: WebViewAware(
+                                  child: const WebViewAware(
                                     child: EditCardWidget(),
                                   ),
                                 );
@@ -147,11 +144,11 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                           text: 'Edit',
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0x347367F0),
+                            color: const Color(0x347367F0),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -160,7 +157,7 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 0.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 0.0,
                             ),
@@ -175,11 +172,11 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                         text: 'Delete',
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x34A8AAAE),
+                          color: const Color(0x34A8AAAE),
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
@@ -188,18 +185,18 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                                 letterSpacing: 0.0,
                               ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 0.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.expiresDate,
+                      widget.expiresDate,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -209,7 +206,7 @@ class _PaymentCardWidgetState extends State<PaymentCardWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
-                ].divide(SizedBox(height: 32.0)),
+                ].divide(const SizedBox(height: 32.0)),
               ),
             ),
           ],

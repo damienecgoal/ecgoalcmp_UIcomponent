@@ -1,13 +1,8 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'select_payment_providers_model.dart';
 export 'select_payment_providers_model.dart';
 
@@ -44,8 +39,8 @@ class _SelectPaymentProvidersWidgetState
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -58,8 +53,8 @@ class _SelectPaymentProvidersWidgetState
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, -300.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -300.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -78,22 +73,22 @@ class _SelectPaymentProvidersWidgetState
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
-      child: Container(
+      alignment: const AlignmentDirectional(0.0, 0.0),
+      child: SizedBox(
         width: 800.0,
         height: 790.0,
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
                 child: Container(
                   width: 800.0,
                   height: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 20.0,
                         color: Color(0x29000000),
@@ -105,12 +100,12 @@ class _SelectPaymentProvidersWidgetState
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 70.0),
+                        const EdgeInsetsDirectional.fromSTEB(50.0, 70.0, 50.0, 70.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 24.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -138,14 +133,14 @@ class _SelectPaymentProvidersWidgetState
                                       letterSpacing: 0.0,
                                     ),
                               ),
-                            ].divide(SizedBox(height: 12.0)),
+                            ].divide(const SizedBox(height: 12.0)),
                           ),
                         ),
                         Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -216,7 +211,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -232,7 +227,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -293,7 +288,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -309,7 +304,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -370,7 +365,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -386,7 +381,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -437,7 +432,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -453,7 +448,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -504,7 +499,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -520,7 +515,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -591,7 +586,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -607,7 +602,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 18.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -668,7 +663,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -684,7 +679,7 @@ class _SelectPaymentProvidersWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 18.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -725,7 +720,7 @@ class _SelectPaymentProvidersWidgetState
                                           fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 8.0)),
+                                    ].divide(const SizedBox(width: 8.0)),
                                   ),
                                 ],
                               ),
@@ -744,19 +739,25 @@ class _SelectPaymentProvidersWidgetState
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(1.0, -1.0),
+              alignment: const AlignmentDirectional(1.0, -1.0),
               child: MouseRegion(
                 opaque: false,
                 cursor: MouseCursor.defer ?? MouseCursor.defer,
+                onEnter: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered = true);
+                }),
+                onExit: ((event) async {
+                  safeSetState(() => _model.mouseRegionHovered = false);
+                }),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(
                       0.0,
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered ? 5.0 : 0.0,
                         0.0,
                       ),
                       valueOrDefault<double>(
-                        _model.mouseRegionHovered! ? 5.0 : 0.0,
+                        _model.mouseRegionHovered ? 5.0 : 0.0,
                         0.0,
                       ),
                       0.0),
@@ -779,8 +780,8 @@ class _SelectPaymentProvidersWidgetState
                         height: 36.0,
                         decoration: BoxDecoration(
                           color: valueOrDefault<Color>(
-                            _model.mouseRegionHovered!
-                                ? Color(0xFF383C54)
+                            _model.mouseRegionHovered
+                                ? const Color(0xFF383C54)
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                             FlutterFlowTheme.of(context).secondaryBackground,
@@ -796,12 +797,6 @@ class _SelectPaymentProvidersWidgetState
                     ),
                   ),
                 ),
-                onEnter: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered = true);
-                }),
-                onExit: ((event) async {
-                  safeSetState(() => _model.mouseRegionHovered = false);
-                }),
               ),
             ),
           ],

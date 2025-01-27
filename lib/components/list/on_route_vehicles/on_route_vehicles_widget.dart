@@ -2,11 +2,8 @@ import '/components_2/icon_container_circle/icon_container_circle_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
 import 'on_route_vehicles_model.dart';
 export 'on_route_vehicles_model.dart';
 
@@ -63,12 +60,12 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -111,13 +108,13 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                             color: FlutterFlowTheme.of(context).secondaryTitle,
                             size: 22.0,
                           ),
-                          bgcolor: Color(0x33A8AAAE),
+                          bgcolor: const Color(0x33A8AAAE),
                           daimiter: 40.0,
                         ),
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.location,
+                          widget.location,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -128,7 +125,7 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -140,7 +137,7 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.startingroute,
+                          widget.startingroute,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -163,7 +160,7 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.endinhRoute,
+                          widget.endinhRoute,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -188,9 +185,9 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                         model: _model.statusCardModel,
                         updateCallback: () => safeSetState(() {}),
                         child: StatusCardWidget(
-                          title: widget!.warning!,
-                          titleColor: widget!.warrcolor!,
-                          bgColor: widget!.warbg!,
+                          title: widget.warning!,
+                          titleColor: widget.warrcolor!,
+                          bgColor: widget.warbg!,
                         ),
                       ),
                     ],
@@ -203,20 +200,20 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                     children: [
                       Expanded(
                         child: LinearPercentIndicator(
-                          percent: widget!.progress!,
+                          percent: widget.progress!,
                           lineHeight: 8.0,
                           animation: true,
                           animateFromLastPercent: true,
                           progressColor: FlutterFlowTheme.of(context).primary,
                           backgroundColor:
                               FlutterFlowTheme.of(context).lineColor,
-                          barRadius: Radius.circular(50.0),
+                          barRadius: const Radius.circular(50.0),
                           padding: EdgeInsets.zero,
                         ),
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.persentage,
+                          widget.persentage,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -227,10 +224,10 @@ class _OnRouteVehiclesWidgetState extends State<OnRouteVehiclesWidget> {
                               fontWeight: FontWeight.w500,
                             ),
                       ),
-                    ].divide(SizedBox(width: 16.0)),
+                    ].divide(const SizedBox(width: 16.0)),
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

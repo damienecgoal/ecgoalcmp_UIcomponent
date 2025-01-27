@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'text_style_model.dart';
 export 'text_style_model.dart';
 
@@ -41,13 +38,19 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
           MouseRegion(
             opaque: false,
             cursor: MouseCursor.defer ?? MouseCursor.defer,
+            onEnter: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered1 = true);
+            }),
+            onExit: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered1 = false);
+            }),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -61,7 +64,7 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 FFIcons.kbold,
                 color: valueOrDefault<Color>(
                   () {
-                    if (_model.mouseRegionHovered1!) {
+                    if (_model.mouseRegionHovered1) {
                       return FlutterFlowTheme.of(context).primary;
                     } else if (_model.textStyle == 'Bold') {
                       return FlutterFlowTheme.of(context).primary;
@@ -74,16 +77,16 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 size: 22.0,
               ),
             ),
-            onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered1 = true);
-            }),
-            onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered1 = false);
-            }),
           ),
           MouseRegion(
             opaque: false,
             cursor: MouseCursor.defer ?? MouseCursor.defer,
+            onEnter: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered2 = true);
+            }),
+            onExit: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered2 = false);
+            }),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -97,7 +100,7 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 FFIcons.kitalic,
                 color: valueOrDefault<Color>(
                   () {
-                    if (_model.mouseRegionHovered2!) {
+                    if (_model.mouseRegionHovered2) {
                       return FlutterFlowTheme.of(context).primary;
                     } else if (_model.textStyle == 'Italic') {
                       return FlutterFlowTheme.of(context).primary;
@@ -110,16 +113,16 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 size: 22.0,
               ),
             ),
-            onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered2 = true);
-            }),
-            onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered2 = false);
-            }),
           ),
           MouseRegion(
             opaque: false,
             cursor: MouseCursor.defer ?? MouseCursor.defer,
+            onEnter: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered3 = true);
+            }),
+            onExit: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered3 = false);
+            }),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -133,7 +136,7 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 FFIcons.kunderline,
                 color: valueOrDefault<Color>(
                   () {
-                    if (_model.mouseRegionHovered3!) {
+                    if (_model.mouseRegionHovered3) {
                       return FlutterFlowTheme.of(context).primary;
                     } else if (_model.textStyle == 'Underline') {
                       return FlutterFlowTheme.of(context).primary;
@@ -146,16 +149,16 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 size: 22.0,
               ),
             ),
-            onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered3 = true);
-            }),
-            onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered3 = false);
-            }),
           ),
           MouseRegion(
             opaque: false,
             cursor: MouseCursor.defer ?? MouseCursor.defer,
+            onEnter: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered4 = true);
+            }),
+            onExit: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered4 = false);
+            }),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -169,7 +172,7 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 FFIcons.klistTree,
                 color: valueOrDefault<Color>(
                   () {
-                    if (_model.mouseRegionHovered4!) {
+                    if (_model.mouseRegionHovered4) {
                       return FlutterFlowTheme.of(context).primary;
                     } else if (_model.list == 'Number') {
                       return FlutterFlowTheme.of(context).primary;
@@ -182,16 +185,16 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 size: 22.0,
               ),
             ),
-            onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered4 = true);
-            }),
-            onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered4 = false);
-            }),
           ),
           MouseRegion(
             opaque: false,
             cursor: MouseCursor.defer ?? MouseCursor.defer,
+            onEnter: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered5 = true);
+            }),
+            onExit: ((event) async {
+              safeSetState(() => _model.mouseRegionHovered5 = false);
+            }),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -205,7 +208,7 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 FFIcons.klist,
                 color: valueOrDefault<Color>(
                   () {
-                    if (_model.mouseRegionHovered5!) {
+                    if (_model.mouseRegionHovered5) {
                       return FlutterFlowTheme.of(context).primary;
                     } else if (_model.list == 'Dots') {
                       return FlutterFlowTheme.of(context).primary;
@@ -218,54 +221,48 @@ class _TextStyleWidgetState extends State<TextStyleWidget> {
                 size: 22.0,
               ),
             ),
-            onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered5 = true);
-            }),
-            onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered5 = false);
-            }),
           ),
           MouseRegion(
             opaque: false,
             cursor: MouseCursor.defer ?? MouseCursor.defer,
-            child: Icon(
-              FFIcons.klink,
-              color: valueOrDefault<Color>(
-                _model.mouseRegionHovered6!
-                    ? FlutterFlowTheme.of(context).primary
-                    : FlutterFlowTheme.of(context).secondaryTitle,
-                FlutterFlowTheme.of(context).secondaryTitle,
-              ),
-              size: 22.0,
-            ),
             onEnter: ((event) async {
               safeSetState(() => _model.mouseRegionHovered6 = true);
             }),
             onExit: ((event) async {
               safeSetState(() => _model.mouseRegionHovered6 = false);
             }),
-          ),
-          MouseRegion(
-            opaque: false,
-            cursor: MouseCursor.defer ?? MouseCursor.defer,
             child: Icon(
-              Icons.image_outlined,
+              FFIcons.klink,
               color: valueOrDefault<Color>(
-                _model.mouseRegionHovered7!
+                _model.mouseRegionHovered6
                     ? FlutterFlowTheme.of(context).primary
                     : FlutterFlowTheme.of(context).secondaryTitle,
                 FlutterFlowTheme.of(context).secondaryTitle,
               ),
               size: 22.0,
             ),
+          ),
+          MouseRegion(
+            opaque: false,
+            cursor: MouseCursor.defer ?? MouseCursor.defer,
             onEnter: ((event) async {
               safeSetState(() => _model.mouseRegionHovered7 = true);
             }),
             onExit: ((event) async {
               safeSetState(() => _model.mouseRegionHovered7 = false);
             }),
+            child: Icon(
+              Icons.image_outlined,
+              color: valueOrDefault<Color>(
+                _model.mouseRegionHovered7
+                    ? FlutterFlowTheme.of(context).primary
+                    : FlutterFlowTheme.of(context).secondaryTitle,
+                FlutterFlowTheme.of(context).secondaryTitle,
+              ),
+              size: 22.0,
+            ),
           ),
-        ].divide(SizedBox(width: 8.0)),
+        ].divide(const SizedBox(width: 8.0)),
       ),
     );
   }

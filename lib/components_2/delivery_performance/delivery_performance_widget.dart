@@ -2,10 +2,7 @@ import '/components/up_down_text/up_down_text_widget.dart';
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'delivery_performance_model.dart';
 export 'delivery_performance_model.dart';
 
@@ -63,7 +60,7 @@ class _DeliveryPerformanceWidgetState extends State<DeliveryPerformanceWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -71,9 +68,9 @@ class _DeliveryPerformanceWidgetState extends State<DeliveryPerformanceWidget> {
             model: _model.iconBoxModel,
             updateCallback: () => safeSetState(() {}),
             child: IconBoxWidget(
-              icon: widget!.icon!,
-              bg: widget!.bg!,
-              size: widget!.size!,
+              icon: widget.icon!,
+              bg: widget.bg!,
+              size: widget.size!,
             ),
           ),
           Expanded(
@@ -83,7 +80,7 @@ class _DeliveryPerformanceWidgetState extends State<DeliveryPerformanceWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.title,
+                    widget.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -98,17 +95,17 @@ class _DeliveryPerformanceWidgetState extends State<DeliveryPerformanceWidget> {
                   model: _model.upDownTextModel,
                   updateCallback: () => safeSetState(() {}),
                   child: UpDownTextWidget(
-                    chavron: widget!.chevron!,
-                    text: widget!.text!,
-                    color: widget!.color!,
+                    chavron: widget.chevron!,
+                    text: widget.text!,
+                    color: widget.color!,
                   ),
                 ),
-              ].divide(SizedBox(height: 4.0)),
+              ].divide(const SizedBox(height: 4.0)),
             ),
           ),
           Text(
             valueOrDefault<String>(
-              widget!.performance,
+              widget.performance,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -119,7 +116,7 @@ class _DeliveryPerformanceWidgetState extends State<DeliveryPerformanceWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

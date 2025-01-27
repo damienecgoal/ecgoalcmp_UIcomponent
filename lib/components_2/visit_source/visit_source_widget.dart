@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'visit_source_model.dart';
 export 'visit_source_model.dart';
 
@@ -55,7 +52,7 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -63,10 +60,10 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
             width: 42.0,
             height: 42.0,
             decoration: BoxDecoration(
-              color: Color(0x337D818A),
+              color: const Color(0x337D818A),
               borderRadius: BorderRadius.circular(8.0),
             ),
-            child: widget!.icon!,
+            child: widget.icon!,
           ),
           Expanded(
             child: Column(
@@ -75,7 +72,7 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget!.title,
+                    widget.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -87,7 +84,7 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.subtitle,
+                    widget.subtitle,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -97,13 +94,13 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 6.0)),
+              ].divide(const SizedBox(height: 6.0)),
             ),
           ),
           Text(
             valueOrDefault<String>(
               formatNumber(
-                widget!.visits,
+                widget.visits,
                 formatType: FormatType.compact,
               ),
               '0',
@@ -120,22 +117,22 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
             decoration: BoxDecoration(
               color: valueOrDefault<Color>(
                 getJsonField(
-                  functions.percentAnalyze(widget!.percentage),
+                  functions.percentAnalyze(widget.percentage),
                   r'''$.type''',
                 )
-                    ? Color(0x3428C76F)
-                    : Color(0x34EA5455),
-                Color(0x3428C76F),
+                    ? const Color(0x3428C76F)
+                    : const Color(0x34EA5455),
+                const Color(0x3428C76F),
               ),
               borderRadius: BorderRadius.circular(4.0),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
               child: Text(
                 valueOrDefault<String>(
                   getJsonField(
-                    functions.percentAnalyze(widget!.percentage),
+                    functions.percentAnalyze(widget.percentage),
                     r'''$.value''',
                   )?.toString(),
                   '0',
@@ -144,7 +141,7 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
                       fontFamily: 'Public Sans',
                       color: valueOrDefault<Color>(
                         getJsonField(
-                          functions.percentAnalyze(widget!.percentage),
+                          functions.percentAnalyze(widget.percentage),
                           r'''$.type''',
                         )
                             ? FlutterFlowTheme.of(context).success
@@ -157,7 +154,7 @@ class _VisitSourceWidgetState extends State<VisitSourceWidget> {
               ),
             ),
           ),
-        ].divide(SizedBox(width: 14.0)),
+        ].divide(const SizedBox(width: 14.0)),
       ),
     );
   }

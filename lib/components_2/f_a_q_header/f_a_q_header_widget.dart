@@ -1,10 +1,7 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'f_a_q_header_model.dart';
 export 'f_a_q_header_model.dart';
 
@@ -51,7 +48,7 @@ class _FAQHeaderWidgetState extends State<FAQHeaderWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -60,8 +57,8 @@ class _FAQHeaderWidgetState extends State<FAQHeaderWidget> {
             model: _model.iconBoxModel,
             updateCallback: () => safeSetState(() {}),
             child: IconBoxWidget(
-              icon: widget!.icon!,
-              bg: Color(0x337367F0),
+              icon: widget.icon!,
+              bg: const Color(0x337367F0),
               size: 56.0,
             ),
           ),
@@ -71,7 +68,7 @@ class _FAQHeaderWidgetState extends State<FAQHeaderWidget> {
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget!.title,
+                  widget.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -83,7 +80,7 @@ class _FAQHeaderWidgetState extends State<FAQHeaderWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.description,
+                  widget.description,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -93,9 +90,9 @@ class _FAQHeaderWidgetState extends State<FAQHeaderWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(SizedBox(height: 8.0)),
+            ].divide(const SizedBox(height: 8.0)),
           ),
-        ].divide(SizedBox(width: 16.0)),
+        ].divide(const SizedBox(width: 16.0)),
       ),
     );
   }

@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'about_card_model.dart';
 export 'about_card_model.dart';
 
@@ -50,14 +47,14 @@ class _AboutCardWidgetState extends State<AboutCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          widget!.icon!,
+          widget.icon!,
           Text(
             valueOrDefault<String>(
-              widget!.title,
+              widget.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -70,7 +67,7 @@ class _AboutCardWidgetState extends State<AboutCardWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget!.title2,
+              widget.title2,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -80,7 +77,7 @@ class _AboutCardWidgetState extends State<AboutCardWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-        ].divide(SizedBox(width: 12.0)),
+        ].divide(const SizedBox(width: 12.0)),
       ),
     );
   }

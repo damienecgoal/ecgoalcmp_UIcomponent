@@ -1,10 +1,7 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'help_card_model.dart';
 export 'help_card_model.dart';
 
@@ -53,7 +50,7 @@ class _HelpCardWidgetState extends State<HelpCardWidget> {
     return Container(
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 12.0,
             color: Color(0x14000000),
@@ -67,7 +64,7 @@ class _HelpCardWidgetState extends State<HelpCardWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -75,23 +72,29 @@ class _HelpCardWidgetState extends State<HelpCardWidget> {
               model: _model.iconBoxModel,
               updateCallback: () => safeSetState(() {}),
               child: IconBoxWidget(
-                icon: widget!.icon!,
-                bg: Color(0x337367F0),
+                icon: widget.icon!,
+                bg: const Color(0x337367F0),
                 size: 50.0,
               ),
             ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
+              onEnter: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered = true);
+              }),
+              onExit: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered = false);
+              }),
               child: Text(
                 valueOrDefault<String>(
-                  widget!.title,
+                  widget.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Public Sans',
                       color: valueOrDefault<Color>(
-                        _model.mouseRegionHovered!
+                        _model.mouseRegionHovered
                             ? FlutterFlowTheme.of(context).primary
                             : FlutterFlowTheme.of(context).secondaryTitle,
                         FlutterFlowTheme.of(context).secondaryTitle,
@@ -101,16 +104,10 @@ class _HelpCardWidgetState extends State<HelpCardWidget> {
                       fontWeight: FontWeight.w500,
                     ),
               ),
-              onEnter: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered = true);
-              }),
-              onExit: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered = false);
-              }),
             ),
             Text(
               valueOrDefault<String>(
-                widget!.description,
+                widget.description,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -120,7 +117,7 @@ class _HelpCardWidgetState extends State<HelpCardWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-          ].divide(SizedBox(height: 16.0)),
+          ].divide(const SizedBox(height: 16.0)),
         ),
       ),
     );

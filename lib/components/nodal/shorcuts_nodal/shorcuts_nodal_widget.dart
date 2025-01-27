@@ -1,10 +1,7 @@
 import '/components_2/shortcuts/shortcuts_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'shorcuts_nodal_model.dart';
 export 'shorcuts_nodal_model.dart';
 
@@ -42,13 +39,13 @@ class _ShorcutsNodalWidgetState extends State<ShorcutsNodalWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 56.0, 0.0, 0.0),
       child: Container(
         width: 370.0,
         height: 468.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -73,7 +70,7 @@ class _ShorcutsNodalWidgetState extends State<ShorcutsNodalWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(18.0, 20.0, 18.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(18.0, 20.0, 18.0, 20.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

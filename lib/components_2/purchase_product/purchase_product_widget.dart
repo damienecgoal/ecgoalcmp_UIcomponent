@@ -1,10 +1,7 @@
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'purchase_product_model.dart';
 export 'purchase_product_model.dart';
 
@@ -49,9 +46,9 @@ class _PurchaseProductWidgetState extends State<PurchaseProductWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +56,7 @@ class _PurchaseProductWidgetState extends State<PurchaseProductWidget> {
             ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
-                widget!.product!,
+                widget.product!,
                 width: 60.0,
                 height: 80.0,
                 fit: BoxFit.cover,
@@ -73,15 +70,21 @@ class _PurchaseProductWidgetState extends State<PurchaseProductWidget> {
                   MouseRegion(
                     opaque: false,
                     cursor: MouseCursor.defer ?? MouseCursor.defer,
+                    onEnter: ((event) async {
+                      safeSetState(() => _model.mouseRegionHovered = true);
+                    }),
+                    onExit: ((event) async {
+                      safeSetState(() => _model.mouseRegionHovered = false);
+                    }),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.name,
+                        widget.name,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Public Sans',
                             color: valueOrDefault<Color>(
-                              _model.mouseRegionHovered!
+                              _model.mouseRegionHovered
                                   ? FlutterFlowTheme.of(context).primary
                                   : FlutterFlowTheme.of(context).primaryText,
                               FlutterFlowTheme.of(context).primaryText,
@@ -91,12 +94,6 @@ class _PurchaseProductWidgetState extends State<PurchaseProductWidget> {
                             fontWeight: FontWeight.w500,
                           ),
                     ),
-                    onEnter: ((event) async {
-                      safeSetState(() => _model.mouseRegionHovered = true);
-                    }),
-                    onExit: ((event) async {
-                      safeSetState(() => _model.mouseRegionHovered = false);
-                    }),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -134,10 +131,10 @@ class _PurchaseProductWidgetState extends State<PurchaseProductWidget> {
                             child: StatusCardWidget(
                               title: 'In stock',
                               titleColor: FlutterFlowTheme.of(context).success,
-                              bgColor: Color(0x3428C76F),
+                              bgColor: const Color(0x3428C76F),
                             ),
                           ),
-                        ].divide(SizedBox(width: 12.0)),
+                        ].divide(const SizedBox(width: 12.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -165,14 +162,14 @@ class _PurchaseProductWidgetState extends State<PurchaseProductWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(width: 4.0)),
+                        ].divide(const SizedBox(width: 4.0)),
                       ),
                     ],
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                ].divide(const SizedBox(height: 16.0)),
               ),
             ),
-          ].divide(SizedBox(width: 24.0)),
+          ].divide(const SizedBox(width: 24.0)),
         ),
       ),
     );

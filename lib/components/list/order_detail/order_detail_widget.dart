@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'order_detail_model.dart';
 export 'order_detail_model.dart';
 
@@ -56,12 +53,12 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -99,13 +96,13 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                         borderRadius: BorderRadius.circular(6.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Color(0x34A8AAAE),
+                            color: const Color(0x34A8AAAE),
                             borderRadius: BorderRadius.circular(6.0),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.network(
-                              widget!.product!,
+                              widget.product!,
                               width: 40.0,
                               height: 40.0,
                               fit: BoxFit.cover,
@@ -119,7 +116,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              widget!.name,
+                              widget.name,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -134,7 +131,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                           ),
                           Text(
                             valueOrDefault<String>(
-                              widget!.description,
+                              widget.description,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -147,9 +144,9 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                        ].divide(SizedBox(height: 4.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
                 Expanded(
@@ -161,7 +158,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.price,
+                          widget.price,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -185,7 +182,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.qty,
+                          widget.qty,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -209,7 +206,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.totla,
+                          widget.totla,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -224,7 +221,7 @@ class _OrderDetailWidgetState extends State<OrderDetailWidget> {
                     ],
                   ),
                 ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

@@ -4,12 +4,9 @@ import '/components/nodal/review_action/review_action_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'manage_review_model.dart';
 export 'manage_review_model.dart';
@@ -77,12 +74,12 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -90,7 +87,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                   Builder(
                     builder: (context) => Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -104,9 +101,9 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                 elevation: 0,
                                 insetPadding: EdgeInsets.zero,
                                 backgroundColor: Colors.transparent,
-                                alignment: AlignmentDirectional(0.0, -1.0)
+                                alignment: const AlignmentDirectional(0.0, -1.0)
                                     .resolve(Directionality.of(context)),
-                                child: WebViewAware(
+                                child: const WebViewAware(
                                   child: DetailsUndefinedWidget(),
                                 ),
                               );
@@ -120,10 +117,10 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                             color: FlutterFlowTheme.of(context).primary,
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: Color(0x80A8AAAE),
+                              color: const Color(0x80A8AAAE),
                             ),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             FFIcons.kplus,
                             color: Colors.white,
                             size: 14.0,
@@ -166,13 +163,13 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                         width: 36.0,
                         height: 36.0,
                         decoration: BoxDecoration(
-                          color: Color(0x33A8AAAE),
+                          color: const Color(0x33A8AAAE),
                           borderRadius: BorderRadius.circular(6.0),
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6.0),
                           child: Image.network(
-                            widget!.product!,
+                            widget.product!,
                             width: 40.0,
                             height: 40.0,
                             fit: BoxFit.cover,
@@ -186,7 +183,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                           children: [
                             Text(
                               valueOrDefault<String>(
-                                widget!.title,
+                                widget.title,
                                 'na',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -202,7 +199,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                             ),
                             Text(
                               valueOrDefault<String>(
-                                widget!.description,
+                                widget.description,
                                 'na',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -214,10 +211,10 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                          ].divide(SizedBox(height: 4.0)),
+                          ].divide(const SizedBox(height: 4.0)),
                         ),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
                 ),
                 Expanded(
@@ -238,8 +235,8 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                           updateCallback: () => safeSetState(() {}),
                           child: Avatar2Widget(
                             diameter: 40.0,
-                            image: widget!.avatar!,
-                            name: widget!.name!,
+                            image: widget.avatar!,
+                            name: widget.name!,
                           ),
                         ),
                         Column(
@@ -249,6 +246,14 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                             MouseRegion(
                               opaque: false,
                               cursor: MouseCursor.defer ?? MouseCursor.defer,
+                              onEnter: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered1 = true);
+                              }),
+                              onExit: ((event) async {
+                                safeSetState(
+                                    () => _model.mouseRegionHovered1 = false);
+                              }),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -259,7 +264,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                 },
                                 child: Text(
                                   valueOrDefault<String>(
-                                    widget!.name,
+                                    widget.name,
                                     'an',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -267,7 +272,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                       .override(
                                         fontFamily: 'Public Sans',
                                         color: valueOrDefault<Color>(
-                                          _model.mouseRegionHovered1!
+                                          _model.mouseRegionHovered1
                                               ? FlutterFlowTheme.of(context)
                                                   .primary
                                               : FlutterFlowTheme.of(context)
@@ -280,18 +285,10 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                       ),
                                 ),
                               ),
-                              onEnter: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered1 = true);
-                              }),
-                              onExit: ((event) async {
-                                safeSetState(
-                                    () => _model.mouseRegionHovered1 = false);
-                              }),
                             ),
                             Text(
                               valueOrDefault<String>(
-                                widget!.email,
+                                widget.email,
                                 'na',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -304,9 +301,9 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                          ].divide(SizedBox(height: 4.0)),
+                          ].divide(const SizedBox(height: 4.0)),
                         ),
-                      ].divide(SizedBox(width: 12.0)),
+                      ].divide(const SizedBox(width: 12.0)),
                     ),
                   ),
                 ),
@@ -326,7 +323,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                         ),
                         direction: Axis.horizontal,
                         initialRating: _model.ratingBarValue ??=
-                            widget!.rating!.toDouble(),
+                            widget.rating!.toDouble(),
                         unratedColor: FlutterFlowTheme.of(context).secondary,
                         itemCount: 5,
                         itemSize: 24.0,
@@ -334,7 +331,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.topic,
+                          widget.topic,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -347,7 +344,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.commnt,
+                          widget.commnt,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -359,7 +356,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                               fontWeight: FontWeight.normal,
                             ),
                       ),
-                    ].divide(SizedBox(height: 10.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                 ),
                 Expanded(
@@ -371,7 +368,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.date,
+                          widget.date,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -391,7 +388,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                     flex: 4,
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -409,9 +406,9 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                     model: _model.statusCardModel,
                                     updateCallback: () => safeSetState(() {}),
                                     child: StatusCardWidget(
-                                      title: widget!.status!,
-                                      titleColor: widget!.statusColor!,
-                                      bgColor: widget!.staatusBG!,
+                                      title: widget.status!,
+                                      titleColor: widget.statusColor!,
+                                      bgColor: widget.staatusBG!,
                                     ),
                                   ),
                                 ],
@@ -430,6 +427,14 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                     opaque: false,
                                     cursor:
                                         MouseCursor.defer ?? MouseCursor.defer,
+                                    onEnter: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered2 = true);
+                                    }),
+                                    onExit: ((event) async {
+                                      safeSetState(() =>
+                                          _model.mouseRegionHovered2 = false);
+                                    }),
                                     child: Builder(
                                       builder: (context) => InkWell(
                                         splashColor: Colors.transparent,
@@ -441,16 +446,16 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                             context: context,
                                             isGlobal: false,
                                             avoidOverflow: false,
-                                            targetAnchor: AlignmentDirectional(
+                                            targetAnchor: const AlignmentDirectional(
                                                     -1.0, 1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                             followerAnchor:
-                                                AlignmentDirectional(0.0, 0.0)
+                                                const AlignmentDirectional(0.0, 0.0)
                                                     .resolve(Directionality.of(
                                                         context)),
                                             builder: (dialogContext) {
-                                              return Material(
+                                              return const Material(
                                                 color: Colors.transparent,
                                                 child: WebViewAware(
                                                   child: ReviewActionWidget(),
@@ -462,7 +467,7 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                         child: Icon(
                                           FFIcons.kdotsVertical,
                                           color: valueOrDefault<Color>(
-                                            _model.mouseRegionHovered2!
+                                            _model.mouseRegionHovered2
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
                                                 : FlutterFlowTheme.of(context)
@@ -474,23 +479,15 @@ class _ManageReviewWidgetState extends State<ManageReviewWidget> {
                                         ),
                                       ),
                                     ),
-                                    onEnter: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered2 = true);
-                                    }),
-                                    onExit: ((event) async {
-                                      safeSetState(() =>
-                                          _model.mouseRegionHovered2 = false);
-                                    }),
                                   ),
-                                ].divide(SizedBox(width: 6.0)),
+                                ].divide(const SizedBox(width: 6.0)),
                               ),
                             ),
-                        ].divide(SizedBox(width: 24.0)),
+                        ].divide(const SizedBox(width: 24.0)),
                       ),
                     ),
                   ),
-              ].divide(SizedBox(width: 24.0)),
+              ].divide(const SizedBox(width: 24.0)),
             ),
           ),
           Divider(

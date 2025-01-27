@@ -1,10 +1,7 @@
 import '/components_2/icon_box/icon_box_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'order_full_information_model.dart';
 export 'order_full_information_model.dart';
 
@@ -53,7 +50,7 @@ class _OrderFullInformationWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,10 +61,10 @@ class _OrderFullInformationWidgetState
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                 child: Text(
                   valueOrDefault<String>(
-                    widget!.data,
+                    widget.data,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -80,7 +77,7 @@ class _OrderFullInformationWidgetState
               ),
               Text(
                 valueOrDefault<String>(
-                  widget!.name,
+                  widget.name,
                   'ba',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -100,8 +97,8 @@ class _OrderFullInformationWidgetState
                 model: _model.iconBoxModel,
                 updateCallback: () => safeSetState(() {}),
                 child: IconBoxWidget(
-                  icon: widget!.icon!,
-                  bg: Color(0x33A8AAAE),
+                  icon: widget.icon!,
+                  bg: const Color(0x33A8AAAE),
                   size: 42.0,
                 ),
               ),

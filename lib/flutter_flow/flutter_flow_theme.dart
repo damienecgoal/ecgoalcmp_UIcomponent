@@ -155,18 +155,18 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFEA5455);
   late Color info = const Color(0xFF00CFE8);
 
-  late Color lineColor = Color(0xFFDBDADE);
-  late Color textFiled = Color(0xFFCAC8CF);
-  late Color secondaryHeader = Color(0xFF5D596C);
-  late Color secondaryTitle = Color(0xFF6F6B7D);
-  late Color unselectText = Color(0xFFC6C8CA);
-  late Color unselectBox = Color(0xFFF7F7F7);
-  late Color unselectHeader = Color(0xFF96939F);
-  late Color unselectTitle = Color(0xFFC8C7CD);
-  late Color unselectIcon = Color(0xFFA19FAF);
-  late Color darkWhite = Color(0xFFF8F7FA);
-  late Color whiteDark = Color(0xFF5D596C);
-  late Color checkBox = Color(0xFFF9F8F8);
+  late Color lineColor = const Color(0xFFDBDADE);
+  late Color textFiled = const Color(0xFFCAC8CF);
+  late Color secondaryHeader = const Color(0xFF5D596C);
+  late Color secondaryTitle = const Color(0xFF6F6B7D);
+  late Color unselectText = const Color(0xFFC6C8CA);
+  late Color unselectBox = const Color(0xFFF7F7F7);
+  late Color unselectHeader = const Color(0xFF96939F);
+  late Color unselectTitle = const Color(0xFFC8C7CD);
+  late Color unselectIcon = const Color(0xFFA19FAF);
+  late Color darkWhite = const Color(0xFFF8F7FA);
+  late Color whiteDark = const Color(0xFF5D596C);
+  late Color checkBox = const Color(0xFFF9F8F8);
 }
 
 abstract class Typography {
@@ -339,18 +339,18 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color error = const Color(0xFFEA5455);
   late Color info = const Color(0xFF00CFE8);
 
-  late Color lineColor = Color(0xFF434968);
-  late Color textFiled = Color(0xFF4B547D);
-  late Color secondaryHeader = Color(0xFFCFD3EC);
-  late Color secondaryTitle = Color(0xFFB6BEE3);
-  late Color unselectText = Color(0xFF7D818A);
-  late Color unselectBox = Color(0xFF34394E);
-  late Color unselectHeader = Color(0xFF979BB3);
-  late Color unselectTitle = Color(0xFF5B628D);
-  late Color unselectIcon = Color(0xFF868EAA);
-  late Color darkWhite = Color(0xFF25293C);
-  late Color whiteDark = Color(0xFF4A5072);
-  late Color checkBox = Color(0x663A3E59);
+  late Color lineColor = const Color(0xFF434968);
+  late Color textFiled = const Color(0xFF4B547D);
+  late Color secondaryHeader = const Color(0xFFCFD3EC);
+  late Color secondaryTitle = const Color(0xFFB6BEE3);
+  late Color unselectText = const Color(0xFF7D818A);
+  late Color unselectBox = const Color(0xFF34394E);
+  late Color unselectHeader = const Color(0xFF979BB3);
+  late Color unselectTitle = const Color(0xFF5B628D);
+  late Color unselectIcon = const Color(0xFF868EAA);
+  late Color darkWhite = const Color(0xFF25293C);
+  late Color whiteDark = const Color(0xFF4A5072);
+  late Color checkBox = const Color(0x663A3E59);
 }
 
 extension TextStyleHelper on TextStyle {

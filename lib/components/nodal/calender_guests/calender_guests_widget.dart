@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'calender_guests_model.dart';
 export 'calender_guests_model.dart';
 
@@ -41,12 +38,12 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(1.0, 0.0),
+      alignment: const AlignmentDirectional(1.0, 0.0),
       child: Container(
         width: 340.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x29000000),
@@ -57,15 +54,21 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
                 child: MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered1 = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered1 = false);
+                  }),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -82,8 +85,8 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                       decoration: BoxDecoration(
                         color: valueOrDefault<Color>(
                           () {
-                            if (_model.mouseRegionHovered1!) {
-                              return Color(0x327367F0);
+                            if (_model.mouseRegionHovered1) {
+                              return const Color(0x327367F0);
                             } else if (_model.select == 'Business') {
                               return FlutterFlowTheme.of(context).primary;
                             } else {
@@ -96,7 +99,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -105,7 +108,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                               width: 32.0,
                               height: 32.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
@@ -120,7 +123,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                   .override(
                                     fontFamily: 'Public Sans',
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered1!
+                                      _model.mouseRegionHovered1
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .secondaryTitle,
@@ -132,24 +135,24 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 12.0)),
+                          ].divide(const SizedBox(width: 12.0)),
                         ),
                       ),
                     ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered1 = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered1 = false);
-                  }),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
                 child: MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered2 = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered2 = false);
+                  }),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -166,8 +169,8 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                       decoration: BoxDecoration(
                         color: valueOrDefault<Color>(
                           () {
-                            if (_model.mouseRegionHovered2!) {
-                              return Color(0x327367F0);
+                            if (_model.mouseRegionHovered2) {
+                              return const Color(0x327367F0);
                             } else if (_model.select == 'Personal') {
                               return FlutterFlowTheme.of(context).primary;
                             } else {
@@ -180,7 +183,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -189,7 +192,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                               width: 32.0,
                               height: 32.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
@@ -204,7 +207,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                   .override(
                                     fontFamily: 'Public Sans',
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered2!
+                                      _model.mouseRegionHovered2
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .secondaryTitle,
@@ -216,24 +219,24 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 12.0)),
+                          ].divide(const SizedBox(width: 12.0)),
                         ),
                       ),
                     ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered2 = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered2 = false);
-                  }),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
                 child: MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered3 = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered3 = false);
+                  }),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -250,8 +253,8 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                       decoration: BoxDecoration(
                         color: valueOrDefault<Color>(
                           () {
-                            if (_model.mouseRegionHovered3!) {
-                              return Color(0x327367F0);
+                            if (_model.mouseRegionHovered3) {
+                              return const Color(0x327367F0);
                             } else if (_model.select == 'Family') {
                               return FlutterFlowTheme.of(context).primary;
                             } else {
@@ -264,7 +267,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -273,7 +276,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                               width: 32.0,
                               height: 32.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
@@ -288,7 +291,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                   .override(
                                     fontFamily: 'Public Sans',
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered3!
+                                      _model.mouseRegionHovered3
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .secondaryTitle,
@@ -300,24 +303,24 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 12.0)),
+                          ].divide(const SizedBox(width: 12.0)),
                         ),
                       ),
                     ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered3 = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered3 = false);
-                  }),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
                 child: MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered4 = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered4 = false);
+                  }),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -334,8 +337,8 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                       decoration: BoxDecoration(
                         color: valueOrDefault<Color>(
                           () {
-                            if (_model.mouseRegionHovered4!) {
-                              return Color(0x327367F0);
+                            if (_model.mouseRegionHovered4) {
+                              return const Color(0x327367F0);
                             } else if (_model.select == 'Holiday') {
                               return FlutterFlowTheme.of(context).primary;
                             } else {
@@ -348,7 +351,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -357,7 +360,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                               width: 32.0,
                               height: 32.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
@@ -372,7 +375,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                   .override(
                                     fontFamily: 'Public Sans',
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered4!
+                                      _model.mouseRegionHovered4
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .secondaryTitle,
@@ -384,24 +387,24 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 12.0)),
+                          ].divide(const SizedBox(width: 12.0)),
                         ),
                       ),
                     ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered4 = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered4 = false);
-                  }),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 6.0, 0.0),
                 child: MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered5 = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered5 = false);
+                  }),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -418,8 +421,8 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                       decoration: BoxDecoration(
                         color: valueOrDefault<Color>(
                           () {
-                            if (_model.mouseRegionHovered5!) {
-                              return Color(0x327367F0);
+                            if (_model.mouseRegionHovered5) {
+                              return const Color(0x327367F0);
                             } else if (_model.select == 'ETC') {
                               return FlutterFlowTheme.of(context).primary;
                             } else {
@@ -432,7 +435,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -441,7 +444,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                               width: 32.0,
                               height: 32.0,
                               clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
@@ -456,7 +459,7 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                   .override(
                                     fontFamily: 'Public Sans',
                                     color: valueOrDefault<Color>(
-                                      _model.mouseRegionHovered5!
+                                      _model.mouseRegionHovered5
                                           ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context)
                                               .secondaryTitle,
@@ -468,20 +471,14 @@ class _CalenderGuestsWidgetState extends State<CalenderGuestsWidget> {
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 12.0)),
+                          ].divide(const SizedBox(width: 12.0)),
                         ),
                       ),
                     ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered5 = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered5 = false);
-                  }),
                 ),
               ),
-            ].divide(SizedBox(height: 6.0)),
+            ].divide(const SizedBox(height: 6.0)),
           ),
         ),
       ),

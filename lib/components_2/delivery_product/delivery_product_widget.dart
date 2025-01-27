@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'delivery_product_model.dart';
 export 'delivery_product_model.dart';
 
@@ -41,7 +38,7 @@ class _DeliveryProductWidgetState extends State<DeliveryProductWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -62,12 +59,18 @@ class _DeliveryProductWidgetState extends State<DeliveryProductWidget> {
                 MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
+                  onEnter: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered = true);
+                  }),
+                  onExit: ((event) async {
+                    safeSetState(() => _model.mouseRegionHovered = false);
+                  }),
                   child: Text(
                     'Google - Google Home - White',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Public Sans',
                           color: valueOrDefault<Color>(
-                            _model.mouseRegionHovered!
+                            _model.mouseRegionHovered
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondaryTitle,
                             FlutterFlowTheme.of(context).secondaryTitle,
@@ -77,12 +80,6 @@ class _DeliveryProductWidgetState extends State<DeliveryProductWidget> {
                           lineHeight: 1.6,
                         ),
                   ),
-                  onEnter: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered = true);
-                  }),
-                  onExit: ((event) async {
-                    safeSetState(() => _model.mouseRegionHovered = false);
-                  }),
                 ),
                 Text(
                   '18th Nov 2021',
@@ -94,10 +91,10 @@ class _DeliveryProductWidgetState extends State<DeliveryProductWidget> {
                         fontWeight: FontWeight.w500,
                       ),
                 ),
-              ].divide(SizedBox(height: 10.0)),
+              ].divide(const SizedBox(height: 10.0)),
             ),
           ),
-        ].divide(SizedBox(width: 20.0)),
+        ].divide(const SizedBox(width: 20.0)),
       ),
     );
   }

@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'shipping_action_model.dart';
 export 'shipping_action_model.dart';
 
@@ -44,7 +41,7 @@ class _ShippingActionWidgetState extends State<ShippingActionWidget> {
       width: 170.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 20.0,
             color: Color(0x29000000),
@@ -55,34 +52,40 @@ class _ShippingActionWidgetState extends State<ShippingActionWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(6.0, 10.0, 6.0, 10.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(6.0, 10.0, 6.0, 10.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
+              onEnter: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered1 = true);
+              }),
+              onExit: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered1 = false);
+              }),
               child: Container(
                 width: double.infinity,
                 height: 42.0,
                 decoration: BoxDecoration(
                   color: valueOrDefault<Color>(
-                    _model.mouseRegionHovered1!
-                        ? Color(0x327367F0)
+                    _model.mouseRegionHovered1
+                        ? const Color(0x327367F0)
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     FlutterFlowTheme.of(context).secondaryBackground,
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Icon(
                         FFIcons.kedit,
                         color: valueOrDefault<Color>(
-                          _model.mouseRegionHovered1!
+                          _model.mouseRegionHovered1
                               ? FlutterFlowTheme.of(context).primary
                               : FlutterFlowTheme.of(context).secondaryTitle,
                           FlutterFlowTheme.of(context).secondaryTitle,
@@ -94,7 +97,7 @@ class _ShippingActionWidgetState extends State<ShippingActionWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Public Sans',
                               color: valueOrDefault<Color>(
-                                _model.mouseRegionHovered1!
+                                _model.mouseRegionHovered1
                                     ? FlutterFlowTheme.of(context).primary
                                     : FlutterFlowTheme.of(context)
                                         .secondaryTitle,
@@ -104,41 +107,41 @@ class _ShippingActionWidgetState extends State<ShippingActionWidget> {
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
               ),
-              onEnter: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered1 = true);
-              }),
-              onExit: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered1 = false);
-              }),
             ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
+              onEnter: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered2 = true);
+              }),
+              onExit: ((event) async {
+                safeSetState(() => _model.mouseRegionHovered2 = false);
+              }),
               child: Container(
                 width: double.infinity,
                 height: 42.0,
                 decoration: BoxDecoration(
                   color: valueOrDefault<Color>(
-                    _model.mouseRegionHovered2!
-                        ? Color(0x327367F0)
+                    _model.mouseRegionHovered2
+                        ? const Color(0x327367F0)
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     FlutterFlowTheme.of(context).secondaryBackground,
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Icon(
                         FFIcons.ktrash,
                         color: valueOrDefault<Color>(
-                          _model.mouseRegionHovered2!
+                          _model.mouseRegionHovered2
                               ? FlutterFlowTheme.of(context).primary
                               : FlutterFlowTheme.of(context).secondaryTitle,
                           FlutterFlowTheme.of(context).secondaryTitle,
@@ -150,7 +153,7 @@ class _ShippingActionWidgetState extends State<ShippingActionWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Public Sans',
                               color: valueOrDefault<Color>(
-                                _model.mouseRegionHovered2!
+                                _model.mouseRegionHovered2
                                     ? FlutterFlowTheme.of(context).primary
                                     : FlutterFlowTheme.of(context)
                                         .secondaryTitle,
@@ -160,18 +163,12 @@ class _ShippingActionWidgetState extends State<ShippingActionWidget> {
                               letterSpacing: 0.0,
                             ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 12.0)),
                   ),
                 ),
               ),
-              onEnter: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered2 = true);
-              }),
-              onExit: ((event) async {
-                safeSetState(() => _model.mouseRegionHovered2 = false);
-              }),
             ),
-          ].divide(SizedBox(height: 6.0)),
+          ].divide(const SizedBox(height: 6.0)),
         ),
       ),
     );

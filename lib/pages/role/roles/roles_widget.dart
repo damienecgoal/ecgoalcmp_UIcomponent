@@ -12,10 +12,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'roles_model.dart';
@@ -46,7 +44,7 @@ class _RolesWidgetState extends State<RolesWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -89,19 +87,19 @@ class _RolesWidgetState extends State<RolesWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -162,9 +160,9 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                   fontWeight: FontWeight.normal,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 6.0)),
+                                        ].divide(const SizedBox(height: 6.0)),
                                       ),
-                                    ].divide(SizedBox(height: 32.0)),
+                                    ].divide(const SizedBox(height: 32.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -174,7 +172,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           model: _model.roleCardModel1,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: RoleCardWidget(
+                                          child: const RoleCardWidget(
                                             total: 'Total 4 users',
                                             title: 'Administrator',
                                             image1:
@@ -195,7 +193,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           model: _model.roleCardModel2,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: RoleCardWidget(
+                                          child: const RoleCardWidget(
                                             total: 'Total 7 users',
                                             title: 'Manager',
                                             image1:
@@ -216,7 +214,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           model: _model.roleCardModel3,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: RoleCardWidget(
+                                          child: const RoleCardWidget(
                                             total: 'Total 5 users',
                                             title: 'Users',
                                             image1:
@@ -232,7 +230,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -242,7 +240,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           model: _model.roleCardModel4,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: RoleCardWidget(
+                                          child: const RoleCardWidget(
                                             total: 'Total 3 users',
                                             title: 'Support',
                                             image1:
@@ -263,7 +261,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           model: _model.roleCardModel5,
                                           updateCallback: () =>
                                               safeSetState(() {}),
-                                          child: RoleCardWidget(
+                                          child: const RoleCardWidget(
                                             total: 'Total 2 users',
                                             title: 'Restricted User',
                                             image1:
@@ -286,7 +284,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 12.0,
                                                 color: Color(0x14000000),
@@ -304,7 +302,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 20.0, 0.0, 0.0),
                                                 child: ClipRRect(
@@ -321,7 +319,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                               ),
                                               Expanded(
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(0.0, 20.0, 20.0,
                                                           20.0),
                                                   child: Column(
@@ -335,7 +333,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             FFButtonWidget(
                                                           onPressed: () async {
                                                             showDialog(
-                                                              barrierColor: Color(
+                                                              barrierColor: const Color(
                                                                   0x34000000),
                                                               context: context,
                                                               builder:
@@ -348,7 +346,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                   backgroundColor:
                                                                       Colors
                                                                           .transparent,
-                                                                  alignment: AlignmentDirectional(
+                                                                  alignment: const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -368,7 +366,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             ?.unfocus();
                                                                       },
                                                                       child:
-                                                                          EditRoleWidget(),
+                                                                          const EditRoleWidget(),
                                                                     ),
                                                                   ),
                                                                 );
@@ -380,14 +378,14 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                               FFButtonOptions(
                                                             height: 40.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -410,7 +408,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                     ),
                                                             elevation: 0.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 0.0,
@@ -438,7 +436,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 16.0)),
+                                                        const SizedBox(height: 16.0)),
                                                   ),
                                                 ),
                                               ),
@@ -446,10 +444,10 @@ class _RolesWidgetState extends State<RolesWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 28.0)),
+                                    ].divide(const SizedBox(width: 28.0)),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 34.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -464,7 +462,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 12.0,
                                                   color: Color(0x14000000),
@@ -479,7 +477,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 20.0),
                                               child: Column(
@@ -491,7 +489,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -508,7 +506,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                               flex: 5,
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             8.0,
@@ -542,13 +540,25 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                               .defer ??
                                                                           MouseCursor
                                                                               .defer,
+                                                                      onEnter:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered1 =
+                                                                                true);
+                                                                      }),
+                                                                      onExit:
+                                                                          ((event) async {
+                                                                        safeSetState(() =>
+                                                                            _model.mouseRegionHovered1 =
+                                                                                false);
+                                                                      }),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .dropDownValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           '10',
                                                                           '25',
                                                                           '50',
@@ -586,7 +596,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             6.0,
                                                                         borderColor:
                                                                             valueOrDefault<Color>(
-                                                                          _model.mouseRegionHovered1!
+                                                                          _model.mouseRegionHovered1
                                                                               ? FlutterFlowTheme.of(context).secondaryText
                                                                               : FlutterFlowTheme.of(context).lineColor,
                                                                           FlutterFlowTheme.of(context)
@@ -596,7 +606,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             1.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             0.0,
                                                                             12.0,
@@ -610,18 +620,6 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         isMultiSelect:
                                                                             false,
                                                                       ),
-                                                                      onEnter:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered1 =
-                                                                                true);
-                                                                      }),
-                                                                      onExit:
-                                                                          ((event) async {
-                                                                        safeSetState(() =>
-                                                                            _model.mouseRegionHovered1 =
-                                                                                false);
-                                                                      }),
                                                                     ),
                                                                     Expanded(
                                                                       flex: 6,
@@ -642,7 +640,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                          Container(
+                                                                          SizedBox(
                                                                             width:
                                                                                 200.0,
                                                                             child:
@@ -691,7 +689,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                   ),
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                 ),
-                                                                                contentPadding: EdgeInsets.all(14.0),
+                                                                                contentPadding: const EdgeInsets.all(14.0),
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Public Sans',
@@ -706,10 +704,18 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 false,
                                                                             cursor:
                                                                                 MouseCursor.defer ?? MouseCursor.defer,
+                                                                            onEnter:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered2 = true);
+                                                                            }),
+                                                                            onExit:
+                                                                                ((event) async {
+                                                                              safeSetState(() => _model.mouseRegionHovered2 = false);
+                                                                            }),
                                                                             child:
                                                                                 FlutterFlowDropDown<String>(
                                                                               controller: _model.dropDownValueController2 ??= FormFieldController<String>(null),
-                                                                              options: [
+                                                                              options: const [
                                                                                 'Select Role',
                                                                                 'Admin',
                                                                                 'Auther',
@@ -734,30 +740,22 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                               fillColor: FlutterFlowTheme.of(context).secondaryBackground,
                                                                               elevation: 6.0,
                                                                               borderColor: valueOrDefault<Color>(
-                                                                                _model.mouseRegionHovered2! ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
+                                                                                _model.mouseRegionHovered2 ? FlutterFlowTheme.of(context).secondaryText : FlutterFlowTheme.of(context).lineColor,
                                                                                 FlutterFlowTheme.of(context).lineColor,
                                                                               ),
                                                                               borderWidth: 1.0,
                                                                               borderRadius: 8.0,
-                                                                              margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                              margin: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                               hidesUnderline: true,
                                                                               isOverButton: false,
                                                                               isSearchable: false,
                                                                               isMultiSelect: false,
                                                                             ),
-                                                                            onEnter:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered2 = true);
-                                                                            }),
-                                                                            onExit:
-                                                                                ((event) async {
-                                                                              safeSetState(() => _model.mouseRegionHovered2 = false);
-                                                                            }),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 14.0)),
+                                                                        ].divide(const SizedBox(width: 14.0)),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           14.0)),
                                                                 ),
@@ -767,7 +765,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 20.0)),
+                                                        const SizedBox(height: 20.0)),
                                                   ),
                                                   Column(
                                                     mainAxisSize:
@@ -786,7 +784,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         8.0,
@@ -807,7 +805,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'USER',
                                                                     ),
@@ -823,7 +821,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'ROLE',
                                                                     ),
@@ -839,7 +837,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'PLAN',
                                                                     ),
@@ -855,7 +853,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'BILLING',
                                                                     ),
@@ -871,7 +869,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeaderWidget(
+                                                                        const ListHeaderWidget(
                                                                       title:
                                                                           'STATUS',
                                                                     ),
@@ -887,13 +885,13 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         safeSetState(
                                                                             () {}),
                                                                     child:
-                                                                        ListHeader2Widget(
+                                                                        const ListHeader2Widget(
                                                                       title:
                                                                           'ACTION',
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 24.0)),
                                                             ),
                                                           ),
@@ -928,14 +926,14 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x347367F0),
+                                                              const Color(0x347367F0),
                                                           plan: 'Enterprise',
                                                           billing: 'Auto Debit',
                                                           status: '\tActive',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .success,
-                                                          bg: Color(0x3328C76F),
+                                                          bg: const Color(0x3328C76F),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -959,7 +957,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x34FF9F43),
+                                                              const Color(0x34FF9F43),
                                                           plan: '\tBasic',
                                                           billing:
                                                               '\tAuto Debit',
@@ -967,7 +965,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondary,
-                                                          bg: Color(0x34A8AAAE),
+                                                          bg: const Color(0x34A8AAAE),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -992,14 +990,14 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x3300CFE8),
+                                                              const Color(0x3300CFE8),
                                                           plan: 'Team',
                                                           billing: 'Auto Debit',
                                                           status: 'Inactive',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondary,
-                                                          bg: Color(0x34A8AAAE),
+                                                          bg: const Color(0x34A8AAAE),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1023,7 +1021,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x3428C76F),
+                                                              const Color(0x3428C76F),
                                                           plan: 'Team',
                                                           billing:
                                                               'Manual - Paypal',
@@ -1031,7 +1029,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .success,
-                                                          bg: Color(0x3328C76F),
+                                                          bg: const Color(0x3328C76F),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1053,7 +1051,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x33FF9F43),
+                                                              const Color(0x33FF9F43),
                                                           plan: '\tTeam',
                                                           billing:
                                                               '\tManual - Cash',
@@ -1061,7 +1059,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x34FF9F43),
+                                                          bg: const Color(0x34FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1085,7 +1083,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x33A8AAAE),
+                                                              const Color(0x33A8AAAE),
                                                           plan:
                                                               '\tEnterprise\t',
                                                           billing:
@@ -1094,7 +1092,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .success,
-                                                          bg: Color(0x3328C76F),
+                                                          bg: const Color(0x3328C76F),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1119,7 +1117,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x3428C76F),
+                                                              const Color(0x3428C76F),
                                                           plan: 'Basic',
                                                           billing:
                                                               '\tAuto Debit',
@@ -1127,7 +1125,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x34FF9F43),
+                                                          bg: const Color(0x34FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1150,14 +1148,14 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x347367F0),
+                                                              const Color(0x347367F0),
                                                           plan: 'Enterprise',
                                                           billing: 'Auto Debit',
                                                           status: 'Pending',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x33FF9F43),
+                                                          bg: const Color(0x33FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1180,7 +1178,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x347367F0),
+                                                              const Color(0x347367F0),
                                                           plan: 'Company',
                                                           billing:
                                                               'Manual - Paypal',
@@ -1188,7 +1186,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .warning,
-                                                          bg: Color(0x34FF9F43),
+                                                          bg: const Color(0x34FF9F43),
                                                         ),
                                                       ),
                                                       wrapWithModel(
@@ -1214,7 +1212,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                             size: 24.0,
                                                           ),
                                                           roleBG:
-                                                              Color(0x33A8AAAE),
+                                                              const Color(0x33A8AAAE),
                                                           plan: '\tCompany',
                                                           billing:
                                                               'Manual - Cash',
@@ -1222,7 +1220,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondary,
-                                                          bg: Color(0x34A8AAAE),
+                                                          bg: const Color(0x34A8AAAE),
                                                         ),
                                                       ),
                                                       ListView(
@@ -1234,7 +1232,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                         children: [
                                                           Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                           ),
                                                         ],
                                                       ),
@@ -1247,7 +1245,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                         children: [
                                                           Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                           ),
                                                         ],
                                                       ),
@@ -1255,7 +1253,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -1265,7 +1263,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                         Expanded(
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             children: [
                                                               Text(
@@ -1285,7 +1283,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
                                                                 child: Row(
@@ -1308,12 +1306,12 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1331,7 +1329,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -1363,12 +1361,12 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1384,7 +1382,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1405,18 +1403,18 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1426,7 +1424,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1447,18 +1445,18 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1468,7 +1466,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1489,18 +1487,18 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1510,7 +1508,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1531,18 +1529,18 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 44.0,
                                                                             height:
                                                                                 44.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0),
                                                                             color:
-                                                                                Color(0x347983BB),
+                                                                                const Color(0x347983BB),
                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                   fontFamily: 'Public Sans',
                                                                                   color: FlutterFlowTheme.of(context).secondaryHeader,
@@ -1552,7 +1550,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             elevation:
                                                                                 0.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 0.0,
                                                                             ),
@@ -1560,7 +1558,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 4.0)),
                                                                     ),
                                                                     FFButtonWidget(
@@ -1575,17 +1573,17 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                           FFButtonOptions(
                                                                         height:
                                                                             44.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x347983BB),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -1598,7 +1596,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                         elevation:
                                                                             0.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -1608,7 +1606,7 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           4.0)),
                                                                 ),
@@ -1620,37 +1618,37 @@ class _RolesWidgetState extends State<RolesWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 18.0)),
+                                                    const SizedBox(height: 18.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 28.0)),
+                                      ].divide(const SizedBox(width: 28.0)),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

@@ -1,14 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'tow_step_verification_model.dart';
 export 'tow_step_verification_model.dart';
 
@@ -53,11 +49,11 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Stack(
               children: [
                 Align(
-                  alignment: AlignmentDirectional(-0.27, -0.6),
+                  alignment: const AlignmentDirectional(-0.27, -0.6),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: SvgPicture.asset(
@@ -67,7 +63,7 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.35, 0.59),
+                  alignment: const AlignmentDirectional(0.35, 0.59),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: SvgPicture.asset(
@@ -77,15 +73,15 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     child: Container(
                       width: 490.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 12.0,
                             color: Color(0x33000000),
@@ -98,7 +94,7 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(40.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -164,7 +160,7 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                         lineHeight: 1.5,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
                             Form(
                               key: _model.formKey,
@@ -210,7 +206,7 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                       fieldHeight: 52.0,
                                       fieldWidth: 52.0,
                                       borderWidth: 1.0,
-                                      borderRadius: BorderRadius.only(
+                                      borderRadius: const BorderRadius.only(
                                         bottomLeft: Radius.circular(8.0),
                                         bottomRight: Radius.circular(8.0),
                                         topLeft: Radius.circular(8.0),
@@ -243,10 +239,10 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                     options: FFButtonOptions(
                                       width: double.infinity,
                                       height: 44.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -258,7 +254,7 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -266,7 +262,7 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -276,13 +272,13 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                         Expanded(
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: RichText(
                                               textScaler: MediaQuery.of(context)
                                                   .textScaler,
                                               text: TextSpan(
                                                 children: [
-                                                  TextSpan(
+                                                  const TextSpan(
                                                     text:
                                                         'Didn\'t get the code?  ',
                                                     style: TextStyle(
@@ -315,10 +311,10 @@ class _TowStepVerificationWidgetState extends State<TowStepVerificationWidget> {
                                       ],
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 16.0)),
+                                ].divide(const SizedBox(height: 16.0)),
                               ),
                             ),
-                          ].divide(SizedBox(height: 28.0)),
+                          ].divide(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),

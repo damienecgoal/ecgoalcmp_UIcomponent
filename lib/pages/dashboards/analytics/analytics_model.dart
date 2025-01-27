@@ -1,10 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/campaing_state/campaing_state_widget.dart';
 import '/components/earning/earning_widget.dart';
-import '/components/nodal/analytics_source_visits/analytics_source_visits_widget.dart';
-import '/components/nodal/project_action/project_action_widget.dart';
-import '/components/nodal/refresh_share/refresh_share_widget.dart';
-import '/components/nodal/view_more_delete/view_more_delete_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/list_header/list_header_widget.dart';
 import '/components_2/list_header2/list_header2_widget.dart';
@@ -12,23 +8,9 @@ import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/sales_by_countries/sales_by_countries_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/visit_source/visit_source_widget.dart';
-import '/flutter_flow/flutter_flow_charts.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:async';
-import 'dart:ui';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'analytics_widget.dart' show AnalyticsWidget;
-import 'package:smooth_page_indicator/smooth_page_indicator.dart'
-    as smooth_page_indicator;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class AnalyticsModel extends FlutterFlowModel<AnalyticsWidget> {
   ///  State fields for stateful widgets in this page.

@@ -8,11 +8,8 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'faq_model.dart';
 export 'faq_model.dart';
@@ -42,7 +39,7 @@ class _FaqWidgetState extends State<FaqWidget> {
         context.pushNamed(
           'Register',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -85,19 +82,19 @@ class _FaqWidgetState extends State<FaqWidget> {
               wrapWithModel(
                 model: _model.navMenuModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NavMenuWidget(),
+                child: const NavMenuWidget(),
               ),
               Expanded(
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: Wrap(
                                 spacing: 28.0,
@@ -117,7 +114,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 12.0,
                                             color: Color(0x14000000),
@@ -133,7 +130,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       ),
                                       child: Stack(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         children: [
                                           ClipRRect(
                                             borderRadius:
@@ -166,7 +163,17 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                 opaque: false,
                                                 cursor: MouseCursor.defer ??
                                                     MouseCursor.defer,
-                                                child: Container(
+                                                onEnter: ((event) async {
+                                                  safeSetState(() => _model
+                                                          .mouseRegionHovered1 =
+                                                      true);
+                                                }),
+                                                onExit: ((event) async {
+                                                  safeSetState(() => _model
+                                                          .mouseRegionHovered1 =
+                                                      false);
+                                                }),
+                                                child: SizedBox(
                                                   width: 700.0,
                                                   child: TextFormField(
                                                     controller:
@@ -208,7 +215,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         borderSide: BorderSide(
                                                           color: valueOrDefault<
                                                               Color>(
-                                                            _model.mouseRegionHovered1!
+                                                            _model.mouseRegionHovered1
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText
@@ -266,7 +273,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                               .of(context)
                                                           .secondaryBackground,
                                                       contentPadding:
-                                                          EdgeInsets.all(18.0),
+                                                          const EdgeInsets.all(18.0),
                                                       prefixIcon: Icon(
                                                         FFIcons.ksearch,
                                                         color:
@@ -290,16 +297,6 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .asValidator(context),
                                                   ),
                                                 ),
-                                                onEnter: ((event) async {
-                                                  safeSetState(() => _model
-                                                          .mouseRegionHovered1 =
-                                                      true);
-                                                }),
-                                                onExit: ((event) async {
-                                                  safeSetState(() => _model
-                                                          .mouseRegionHovered1 =
-                                                      false);
-                                                }),
                                               ),
                                               Text(
                                                 'or choose a category to quicly fiend thee help you need',
@@ -316,7 +313,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                               ),
-                                            ].divide(SizedBox(height: 20.0)),
+                                            ].divide(const SizedBox(height: 20.0)),
                                           ),
                                         ],
                                       ),
@@ -331,7 +328,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                         flex: 3,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 40.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -343,6 +340,16 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered2 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered2 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -380,7 +387,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
@@ -404,7 +411,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                       return Colors
                                                                           .white;
                                                                     } else if (_model
-                                                                        .mouseRegionHovered2!) {
+                                                                        .mouseRegionHovered2) {
                                                                       return FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary;
@@ -435,7 +442,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               'Payment') {
                                                                             return Colors.white;
                                                                           } else if (_model
-                                                                              .mouseRegionHovered2!) {
+                                                                              .mouseRegionHovered2) {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
                                                                             return FlutterFlowTheme.of(context).secondaryTitle;
@@ -453,27 +460,27 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered2 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered2 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered3 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered3 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -511,7 +518,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
@@ -535,7 +542,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                       return Colors
                                                                           .white;
                                                                     } else if (_model
-                                                                        .mouseRegionHovered3!) {
+                                                                        .mouseRegionHovered3) {
                                                                       return FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary;
@@ -566,7 +573,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               'Delivery') {
                                                                             return Colors.white;
                                                                           } else if (_model
-                                                                              .mouseRegionHovered3!) {
+                                                                              .mouseRegionHovered3) {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
                                                                             return FlutterFlowTheme.of(context).secondaryTitle;
@@ -584,27 +591,27 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered3 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered3 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered4 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered4 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -642,7 +649,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
@@ -666,7 +673,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                       return Colors
                                                                           .white;
                                                                     } else if (_model
-                                                                        .mouseRegionHovered4!) {
+                                                                        .mouseRegionHovered4) {
                                                                       return FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary;
@@ -697,7 +704,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               'Cancellation & Return') {
                                                                             return Colors.white;
                                                                           } else if (_model
-                                                                              .mouseRegionHovered4!) {
+                                                                              .mouseRegionHovered4) {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
                                                                             return FlutterFlowTheme.of(context).secondaryTitle;
@@ -715,27 +722,27 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered4 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered4 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered5 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered5 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -773,7 +780,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
@@ -796,7 +803,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                       return Colors
                                                                           .white;
                                                                     } else if (_model
-                                                                        .mouseRegionHovered5!) {
+                                                                        .mouseRegionHovered5) {
                                                                       return FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary;
@@ -827,7 +834,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               'My Orders') {
                                                                             return Colors.white;
                                                                           } else if (_model
-                                                                              .mouseRegionHovered5!) {
+                                                                              .mouseRegionHovered5) {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
                                                                             return FlutterFlowTheme.of(context).secondaryTitle;
@@ -845,27 +852,27 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered5 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered5 =
-                                                          false);
-                                                    }),
                                                   ),
                                                   MouseRegion(
                                                     opaque: false,
                                                     cursor: MouseCursor.defer ??
                                                         MouseCursor.defer,
+                                                    onEnter: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered6 =
+                                                          true);
+                                                    }),
+                                                    onExit: ((event) async {
+                                                      safeSetState(() => _model
+                                                              .mouseRegionHovered6 =
+                                                          false);
+                                                    }),
                                                     child: InkWell(
                                                       splashColor:
                                                           Colors.transparent,
@@ -903,7 +910,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
@@ -927,7 +934,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                       return Colors
                                                                           .white;
                                                                     } else if (_model
-                                                                        .mouseRegionHovered6!) {
+                                                                        .mouseRegionHovered6) {
                                                                       return FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary;
@@ -958,7 +965,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               'Product & Services') {
                                                                             return Colors.white;
                                                                           } else if (_model
-                                                                              .mouseRegionHovered6!) {
+                                                                              .mouseRegionHovered6) {
                                                                             return FlutterFlowTheme.of(context).primary;
                                                                           } else {
                                                                             return FlutterFlowTheme.of(context).secondaryTitle;
@@ -976,22 +983,12 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                                               .w500,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 8.0)),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
-                                                    onEnter: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered6 =
-                                                          true);
-                                                    }),
-                                                    onExit: ((event) async {
-                                                      safeSetState(() => _model
-                                                              .mouseRegionHovered6 =
-                                                          false);
-                                                    }),
                                                   ),
                                                 ],
                                               ),
@@ -1005,7 +1002,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                   fit: BoxFit.contain,
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 40.0)),
+                                            ].divide(const SizedBox(height: 40.0)),
                                           ),
                                         ),
                                       ),
@@ -1019,7 +1016,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: wrapWithModel(
@@ -1046,7 +1043,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel1,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'How would you ship my order?',
                                                       comment1:
@@ -1061,7 +1058,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel2,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'What is the delivery cost of my order?',
                                                       comment1:
@@ -1076,7 +1073,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel3,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'What to do if my product arrives damaged?',
                                                       comment1:
@@ -1088,7 +1085,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 12.0)),
+                                                    const SizedBox(height: 12.0)),
                                               );
                                             } else if (_model.activeTab ==
                                                 'Cancellation & Return') {
@@ -1097,7 +1094,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: wrapWithModel(
@@ -1126,7 +1123,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel4,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Can I cancel my order?',
                                                       comment1:
@@ -1141,7 +1138,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel5,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Can I return my product?',
                                                       comment1:
@@ -1157,7 +1154,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel6,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Where can I view status of return?',
                                                       comment1:
@@ -1169,7 +1166,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 12.0)),
+                                                    const SizedBox(height: 12.0)),
                                               );
                                             } else if (_model.activeTab ==
                                                 'My Orders') {
@@ -1178,7 +1175,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: wrapWithModel(
@@ -1205,7 +1202,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel7,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Has my order been successful?',
                                                       comment1:
@@ -1220,7 +1217,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel8,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'My Promotion Code is not working, what can I do?',
                                                       comment1:
@@ -1235,7 +1232,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel9,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'How do I track my Orders?',
                                                       comment1:
@@ -1247,7 +1244,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 12.0)),
+                                                    const SizedBox(height: 12.0)),
                                               );
                                             } else if (_model.activeTab ==
                                                 'Product & Services') {
@@ -1256,7 +1253,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: wrapWithModel(
@@ -1284,7 +1281,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel10,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Will I be notified once my order has shipped?',
                                                       comment1:
@@ -1299,7 +1296,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel11,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Where can I find warranty information?',
                                                       comment1:
@@ -1314,7 +1311,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel12,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'How can I purchase additional warranty coverage?',
                                                       comment1:
@@ -1325,7 +1322,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 12.0)),
+                                                    const SizedBox(height: 12.0)),
                                               );
                                             } else {
                                               return Column(
@@ -1333,7 +1330,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
                                                     child: wrapWithModel(
@@ -1360,7 +1357,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel13,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'When is payment taken for my order?',
                                                       comment1:
@@ -1375,7 +1372,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel14,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'How do I pay for my order?',
                                                       comment1:
@@ -1390,7 +1387,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel15,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'What should I do if I\'m having trouble placing an order?',
                                                       comment1:
@@ -1408,7 +1405,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel16,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Which license do I need for an end product that is only accessible to paying users?',
                                                       comment1:
@@ -1423,7 +1420,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                         .helpContantModel17,
                                                     updateCallback: () =>
                                                         safeSetState(() {}),
-                                                    child: HelpContantWidget(
+                                                    child: const HelpContantWidget(
                                                       title:
                                                           'Does my subscription automatically renew?',
                                                       comment1:
@@ -1434,7 +1431,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                     ),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 12.0)),
+                                                    const SizedBox(height: 12.0)),
                                               );
                                             }
                                           },
@@ -1457,7 +1454,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                               titleColor:
                                                   FlutterFlowTheme.of(context)
                                                       .primary,
-                                              bgColor: Color(0x347367F0),
+                                              bgColor: const Color(0x347367F0),
                                             ),
                                           ),
                                           Text(
@@ -1484,7 +1481,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 16.0)),
+                                        ].divide(const SizedBox(height: 16.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1527,35 +1524,35 @@ class _FaqWidgetState extends State<FaqWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 28.0)),
+                                        ].divide(const SizedBox(width: 28.0)),
                                       ),
                                     ]
-                                        .divide(SizedBox(height: 40.0))
-                                        .addToEnd(SizedBox(height: 40.0)),
+                                        .divide(const SizedBox(height: 40.0))
+                                        .addToEnd(const SizedBox(height: 40.0)),
                                   ),
                                 ],
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   28.0, 0.0, 28.0, 0.0),
                               child: wrapWithModel(
                                 model: _model.footerModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: FooterWidget(),
+                                child: const FooterWidget(),
                               ),
                             ),
                           ]
-                              .divide(SizedBox(height: 28.0))
-                              .addToStart(SizedBox(height: 110.0))
-                              .addToEnd(SizedBox(height: 28.0)),
+                              .divide(const SizedBox(height: 28.0))
+                              .addToStart(const SizedBox(height: 110.0))
+                              .addToEnd(const SizedBox(height: 28.0)),
                         ),
                       ),
                     ),
                     wrapWithModel(
                       model: _model.searchBarModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: SearchBarWidget(),
+                      child: const SearchBarWidget(),
                     ),
                   ],
                 ),

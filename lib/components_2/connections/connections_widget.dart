@@ -3,11 +3,8 @@ import '/components_2/status_card/status_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'connections_model.dart';
 export 'connections_model.dart';
@@ -84,7 +81,7 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
       width: 600.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             blurRadius: 12.0,
             color: Color(0x14000000),
@@ -98,7 +95,7 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -114,16 +111,16 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       showAlignedDialog(
-                        barrierColor: Color(0x34000000),
+                        barrierColor: const Color(0x34000000),
                         context: context,
                         isGlobal: false,
                         avoidOverflow: false,
-                        targetAnchor: AlignmentDirectional(-1.0, 6.0)
+                        targetAnchor: const AlignmentDirectional(-1.0, 6.0)
                             .resolve(Directionality.of(context)),
-                        followerAnchor: AlignmentDirectional(0.0, 0.0)
+                        followerAnchor: const AlignmentDirectional(0.0, 0.0)
                             .resolve(Directionality.of(context)),
                         builder: (dialogContext) {
-                          return Material(
+                          return const Material(
                             color: Colors.transparent,
                             child: WebViewAware(
                               child: ConnectionActionWidget(),
@@ -148,17 +145,17 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                   width: 100.0,
                   height: 100.0,
                   clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                   ),
                   child: Image.network(
-                    widget!.avatar!,
+                    widget.avatar!,
                     fit: BoxFit.cover,
                   ),
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.name,
+                    widget.name,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -170,7 +167,7 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.profetion,
+                    widget.profetion,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -180,7 +177,7 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                         letterSpacing: 0.0,
                       ),
                 ),
-              ].divide(SizedBox(height: 16.0)),
+              ].divide(const SizedBox(height: 16.0)),
             ),
             Column(
               mainAxisSize: MainAxisSize.max,
@@ -193,21 +190,21 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                       model: _model.statusCardModel1,
                       updateCallback: () => safeSetState(() {}),
                       child: StatusCardWidget(
-                        title: widget!.status!,
-                        titleColor: widget!.color!,
-                        bgColor: widget!.bg!,
+                        title: widget.status!,
+                        titleColor: widget.color!,
+                        bgColor: widget.bg!,
                       ),
                     ),
                     wrapWithModel(
                       model: _model.statusCardModel2,
                       updateCallback: () => safeSetState(() {}),
                       child: StatusCardWidget(
-                        title: widget!.status2!,
-                        titleColor: widget!.color2!,
-                        bgColor: widget!.bg2!,
+                        title: widget.status2!,
+                        titleColor: widget.color2!,
+                        bgColor: widget.bg2!,
                       ),
                     ),
-                  ].divide(SizedBox(width: 16.0)),
+                  ].divide(const SizedBox(width: 16.0)),
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -218,7 +215,7 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.project,
+                            widget.project,
                             'na',
                           ),
                           style:
@@ -242,14 +239,14 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                                 fontWeight: FontWeight.w500,
                               ),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.task,
+                            widget.task,
                             'na',
                           ),
                           style:
@@ -273,14 +270,14 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                                 fontWeight: FontWeight.w500,
                               ),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.connection,
+                            widget.connection,
                             'na',
                           ),
                           style:
@@ -304,11 +301,11 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                                 fontWeight: FontWeight.w500,
                               ),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                   ],
                 ),
-              ].divide(SizedBox(height: 20.0)),
+              ].divide(const SizedBox(height: 20.0)),
             ),
             Row(
               mainAxisSize: MainAxisSize.max,
@@ -318,22 +315,22 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: widget!.connect!,
-                  icon: widget!.icon,
+                  text: widget.connect!,
+                  icon: widget.icon,
                   options: FFButtonOptions(
                     height: 44.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: widget!.bgConnect,
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: widget.bgConnect,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Public Sans',
-                          color: widget!.textColor,
+                          color: widget.textColor,
                           letterSpacing: 0.0,
                         ),
                     elevation: 0.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 0.0,
                     ),
@@ -353,26 +350,26 @@ class _ConnectionsWidgetState extends State<ConnectionsWidget> {
                   options: FFButtonOptions(
                     width: 44.0,
                     height: 44.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Color(0x34A8AAAE),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: const Color(0x34A8AAAE),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Public Sans',
                           color: Colors.white,
                           letterSpacing: 0.0,
                         ),
                     elevation: 0.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 0.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-              ].divide(SizedBox(width: 20.0)),
+              ].divide(const SizedBox(width: 20.0)),
             ),
-          ].divide(SizedBox(height: 20.0)),
+          ].divide(const SizedBox(height: 20.0)),
         ),
       ),
     );

@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'select_model.dart';
 export 'select_model.dart';
 
@@ -52,22 +50,22 @@ class _SelectWidgetState extends State<SelectWidget> {
       width: 22.0,
       height: 22.0,
       decoration: BoxDecoration(
-        color: widget!.fill,
+        color: widget.fill,
         shape: BoxShape.circle,
         border: Border.all(
           color: valueOrDefault<Color>(
-            widget!.border,
+            widget.border,
             FlutterFlowTheme.of(context).lineColor,
           ),
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(5.0),
         child: Container(
           width: 100.0,
           height: 100.0,
           decoration: BoxDecoration(
-            color: widget!.white,
+            color: widget.white,
             shape: BoxShape.circle,
           ),
         ),

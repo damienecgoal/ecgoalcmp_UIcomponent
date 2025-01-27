@@ -2,10 +2,7 @@ import '/backend/schema/enums/enums.dart';
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'contact_model.dart';
 export 'contact_model.dart';
 
@@ -15,7 +12,7 @@ class ContactWidget extends StatefulWidget {
     required this.contact,
     bool? selected,
     required this.selectAction,
-  }) : this.selected = selected ?? false;
+  }) : selected = selected ?? false;
 
   final UserStruct? contact;
   final bool selected;
@@ -58,14 +55,14 @@ class _ContactWidgetState extends State<ContactWidget> {
       highlightColor: Colors.transparent,
       onTap: () async {
         await widget.selectAction?.call(
-          widget!.contact,
+          widget.contact,
         );
       },
       child: Container(
         height: 100.0,
         decoration: BoxDecoration(
           color: valueOrDefault<Color>(
-            widget!.selected
+            widget.selected
                 ? FlutterFlowTheme.of(context).primary
                 : FlutterFlowTheme.of(context).secondaryBackground,
             FlutterFlowTheme.of(context).secondaryBackground,
@@ -76,7 +73,7 @@ class _ContactWidgetState extends State<ContactWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Stack(
-              alignment: AlignmentDirectional(1.0, 1.0),
+              alignment: const AlignmentDirectional(1.0, 1.0),
               children: [
                 Container(
                   width: 72.0,
@@ -87,7 +84,7 @@ class _ContactWidgetState extends State<ContactWidget> {
                       fit: BoxFit.cover,
                       image: Image.network(
                         valueOrDefault<String>(
-                          widget!.contact?.avatar,
+                          widget.contact?.avatar,
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/metronic-2a9tmj/assets/hff0usgdp2cl/user.png',
                         ),
                       ).image,
@@ -101,9 +98,9 @@ class _ContactWidgetState extends State<ContactWidget> {
                   decoration: BoxDecoration(
                     color: valueOrDefault<Color>(
                       () {
-                        if (widget!.contact?.status == Status.online) {
+                        if (widget.contact?.status == Status.online) {
                           return FlutterFlowTheme.of(context).success;
-                        } else if (widget!.contact?.status ==
+                        } else if (widget.contact?.status ==
                             Status.unavailable) {
                           return FlutterFlowTheme.of(context).warning;
                         } else {
@@ -125,7 +122,7 @@ class _ContactWidgetState extends State<ContactWidget> {
                 children: [
                   Text(
                     valueOrDefault<String>(
-                      widget!.contact?.name,
+                      widget.contact?.name,
                       'Unknown',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -137,7 +134,7 @@ class _ContactWidgetState extends State<ContactWidget> {
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.contact?.role,
+                      widget.contact?.role,
                       'Default',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -146,10 +143,10 @@ class _ContactWidgetState extends State<ContactWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
-                ].divide(SizedBox(height: 8.0)),
+                ].divide(const SizedBox(height: 8.0)),
               ),
             ),
-          ].divide(SizedBox(width: 12.0)).addToStart(SizedBox(width: 16.0)),
+          ].divide(const SizedBox(width: 12.0)).addToStart(const SizedBox(width: 16.0)),
         ),
       ),
     );

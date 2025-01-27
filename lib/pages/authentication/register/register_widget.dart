@@ -5,13 +5,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'register_model.dart';
 export 'register_model.dart';
 
@@ -66,7 +62,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(-0.26, -1.01),
+                alignment: const AlignmentDirectional(-0.26, -1.01),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: SvgPicture.asset(
@@ -76,7 +72,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.32, 0.95),
+                alignment: const AlignmentDirectional(0.32, 0.95),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: SvgPicture.asset(
@@ -86,14 +82,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                   child: Container(
                     width: 460.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 12.0,
                           color: Color(0x33000000),
@@ -106,7 +102,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(40.0),
+                      padding: const EdgeInsets.all(40.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -157,7 +153,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
-                            ].divide(SizedBox(height: 12.0)),
+                            ].divide(const SizedBox(height: 12.0)),
                           ),
                           Form(
                             key: _model.formKey,
@@ -182,6 +178,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       opaque: false,
                                       cursor: MouseCursor.defer ??
                                           MouseCursor.defer,
+                                      onEnter: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered1 = true);
+                                      }),
+                                      onExit: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered1 = false);
+                                      }),
                                       child: TextFormField(
                                         controller:
                                             _model.usernameTextController,
@@ -210,7 +214,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: valueOrDefault<Color>(
-                                                _model.mouseRegionHovered1!
+                                                _model.mouseRegionHovered1
                                                     ? FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText
@@ -267,16 +271,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                             .usernameTextControllerValidator
                                             .asValidator(context),
                                       ),
-                                      onEnter: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered1 = true);
-                                      }),
-                                      onExit: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered1 = false);
-                                      }),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -295,6 +291,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       opaque: false,
                                       cursor: MouseCursor.defer ??
                                           MouseCursor.defer,
+                                      onEnter: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered2 = true);
+                                      }),
+                                      onExit: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered2 = false);
+                                      }),
                                       child: TextFormField(
                                         controller: _model.emailTextController,
                                         focusNode: _model.emailFocusNode,
@@ -322,7 +326,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: valueOrDefault<Color>(
-                                                _model.mouseRegionHovered2!
+                                                _model.mouseRegionHovered2
                                                     ? FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText
@@ -379,16 +383,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                             .emailTextControllerValidator
                                             .asValidator(context),
                                       ),
-                                      onEnter: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered2 = true);
-                                      }),
-                                      onExit: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered2 = false);
-                                      }),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -428,6 +424,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       opaque: false,
                                       cursor: MouseCursor.defer ??
                                           MouseCursor.defer,
+                                      onEnter: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered3 = true);
+                                      }),
+                                      onExit: ((event) async {
+                                        safeSetState(() =>
+                                            _model.mouseRegionHovered3 = false);
+                                      }),
                                       child: TextFormField(
                                         controller:
                                             _model.passwordTextController,
@@ -456,7 +460,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: valueOrDefault<Color>(
-                                                _model.mouseRegionHovered3!
+                                                _model.mouseRegionHovered3
                                                     ? FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText
@@ -531,16 +535,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                             .passwordTextControllerValidator
                                             .asValidator(context),
                                       ),
-                                      onEnter: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered3 = true);
-                                      }),
-                                      onExit: ((event) async {
-                                        safeSetState(() =>
-                                            _model.mouseRegionHovered3 = false);
-                                      }),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -583,7 +579,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                             MediaQuery.of(context).textScaler,
                                         text: TextSpan(
                                           children: [
-                                            TextSpan(
+                                            const TextSpan(
                                               text: 'I agree to ',
                                               style: TextStyle(
                                                 fontSize: 15.0,
@@ -648,9 +644,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 44.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -661,7 +657,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -669,7 +665,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -689,7 +685,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                                 .textScaler,
                                             text: TextSpan(
                                               children: [
-                                                TextSpan(
+                                                const TextSpan(
                                                   text:
                                                       'Already have an account? ',
                                                   style: TextStyle(
@@ -721,7 +717,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     ],
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 16.0)),
+                              ].divide(const SizedBox(height: 16.0)),
                             ),
                           ),
                           Row(
@@ -754,7 +750,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(width: 12.0)),
+                            ].divide(const SizedBox(width: 12.0)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -763,8 +759,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                               FlutterFlowIconButton(
                                 borderRadius: 8.0,
                                 buttonSize: 44.0,
-                                fillColor: Color(0x343D87FF),
-                                icon: Icon(
+                                fillColor: const Color(0x343D87FF),
+                                icon: const Icon(
                                   FFIcons.kbrandFacebook,
                                   color: Color(0xC93D87FF),
                                   size: 22.0,
@@ -777,8 +773,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 borderColor: Colors.transparent,
                                 borderRadius: 8.0,
                                 buttonSize: 44.0,
-                                fillColor: Color(0x29EA5455),
-                                icon: Icon(
+                                fillColor: const Color(0x29EA5455),
+                                icon: const Icon(
                                   FFIcons.kbrandGoogle,
                                   color: Color(0xCDEA5455),
                                   size: 22.0,
@@ -791,8 +787,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 borderColor: Colors.transparent,
                                 borderRadius: 8.0,
                                 buttonSize: 44.0,
-                                fillColor: Color(0x33009AE8),
-                                icon: Icon(
+                                fillColor: const Color(0x33009AE8),
+                                icon: const Icon(
                                   FFIcons.kbrandTwitter,
                                   color: Color(0xFF009AE8),
                                   size: 22.0,
@@ -801,9 +797,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   print('IconButton pressed ...');
                                 },
                               ),
-                            ].divide(SizedBox(width: 18.0)),
+                            ].divide(const SizedBox(width: 18.0)),
                           ),
-                        ].divide(SizedBox(height: 28.0)),
+                        ].divide(const SizedBox(height: 28.0)),
                       ),
                     ),
                   ),

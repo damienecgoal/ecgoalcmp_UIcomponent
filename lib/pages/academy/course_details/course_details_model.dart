@@ -1,4 +1,3 @@
-import '/auth/base_auth_user_provider.dart';
 import '/components/avatar_name/avatar_name_widget.dart';
 import '/components/course_content_tile/course_content_tile_widget.dart';
 import '/components_2/footer/footer_widget.dart';
@@ -7,17 +6,10 @@ import '/components_2/lason_video/lason_video_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/flutter_flow_youtube_player.dart';
-import 'dart:ui';
 import 'course_details_widget.dart' show CourseDetailsWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CourseDetailsModel extends FlutterFlowModel<CourseDetailsWidget> {
   ///  Local state fields for this page.

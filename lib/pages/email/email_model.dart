@@ -1,36 +1,13 @@
-import '/auth/base_auth_user_provider.dart';
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/avatar_2/avatar2_widget.dart';
-import '/components/nodal/email_labels/email_labels_widget.dart';
-import '/components/nodal/email_list_action/email_list_action_widget.dart';
-import '/components/nodal/email_option/email_option_widget.dart';
-import '/components/nodal/mail_action/mail_action_widget.dart';
-import '/components/nodal/mail_actions/mail_actions_widget.dart';
-import '/components/nodal/mail_labels/mail_labels_widget.dart';
-import '/components/nodal/mail_option/mail_option_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/labels/labels_widget.dart';
 import '/components_2/mail_card/mail_card_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
 import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/text_style/text_style_widget.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
-import '/flutter_flow/custom_functions.dart' as functions;
-import '/flutter_flow/random_data_util.dart' as random_data;
 import 'email_widget.dart' show EmailWidget;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class EmailModel extends FlutterFlowModel<EmailWidget> {
   ///  Local state fields for this page.

@@ -1,11 +1,7 @@
-import '/auth/base_auth_user_provider.dart';
 import '/components/accounts/accounts_widget.dart';
-import '/components/edit_popup/one_time_password/one_time_password_widget.dart';
-import '/components/edit_popup/upgrade_plan/upgrade_plan_widget.dart';
 import '/components/list/in_voice_list/in_voice_list_widget.dart';
 import '/components/list/payment_card/payment_card_widget.dart';
 import '/components/list/recent_devices/recent_devices_widget.dart';
-import '/components/popup/warning_popup/warning_popup_widget.dart';
 import '/components_2/custom_switch/custom_switch_widget.dart';
 import '/components_2/footer/footer_widget.dart';
 import '/components_2/nav_menu/nav_menu_widget.dart';
@@ -14,20 +10,10 @@ import '/components_2/search_bar/search_bar_widget.dart';
 import '/components_2/server_key/server_key_widget.dart';
 import '/components_2/social_account/social_account_widget.dart';
 import '/components_2/status_card/status_card_widget.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'account_widget.dart' show AccountWidget;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:webviewx_plus/webviewx_plus.dart';
 
 class AccountModel extends FlutterFlowModel<AccountWidget> {
   ///  Local state fields for this page.

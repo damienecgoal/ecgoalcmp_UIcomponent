@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'coming_soon_model.dart';
 export 'coming_soon_model.dart';
 
@@ -63,7 +60,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                 tabletLandscape: false,
               ))
                 Padding(
-                  padding: EdgeInsets.all(60.0),
+                  padding: const EdgeInsets.all(60.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -88,8 +85,14 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                       MouseRegion(
                         opaque: false,
                         cursor: MouseCursor.defer ?? MouseCursor.defer,
+                        onEnter: ((event) async {
+                          safeSetState(() => _model.mouseRegionHovered = true);
+                        }),
+                        onExit: ((event) async {
+                          safeSetState(() => _model.mouseRegionHovered = false);
+                        }),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(0.0),
@@ -125,7 +128,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: valueOrDefault<Color>(
-                                              _model.mouseRegionHovered!
+                                              _model.mouseRegionHovered
                                                   ? FlutterFlowTheme.of(context)
                                                       .secondaryText
                                                   : FlutterFlowTheme.of(context)
@@ -135,7 +138,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                             ),
                                             width: 1.0,
                                           ),
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(0.0),
                                             topLeft: Radius.circular(12.0),
@@ -148,7 +151,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                                 .primary,
                                             width: 1.0,
                                           ),
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(0.0),
                                             topLeft: Radius.circular(12.0),
@@ -161,7 +164,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                                 .error,
                                             width: 1.0,
                                           ),
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(0.0),
                                             topLeft: Radius.circular(12.0),
@@ -174,7 +177,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                                 .error,
                                             width: 1.0,
                                           ),
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(0.0),
                                             topLeft: Radius.circular(12.0),
@@ -185,7 +188,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                         fillColor: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 16.0, 0.0, 16.0, 0.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -205,10 +208,10 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                     text: 'Notify',
                                     options: FFButtonOptions(
                                       height: 60.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -221,7 +224,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 0.0,
-                                      borderRadius: BorderRadius.only(
+                                      borderRadius: const BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(12.0),
                                         topLeft: Radius.circular(0.0),
@@ -234,14 +237,8 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                             ),
                           ),
                         ),
-                        onEnter: ((event) async {
-                          safeSetState(() => _model.mouseRegionHovered = true);
-                        }),
-                        onExit: ((event) async {
-                          safeSetState(() => _model.mouseRegionHovered = false);
-                        }),
                       ),
-                    ].divide(SizedBox(height: 14.0)),
+                    ].divide(const SizedBox(height: 14.0)),
                   ),
                 ),
               if (responsiveVisibility(
@@ -252,7 +249,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
               ))
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -275,7 +272,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
                           child: Container(
@@ -313,7 +310,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                               .lineColor,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -326,7 +323,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                               .primary,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -339,7 +336,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                               .error,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -352,7 +349,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                               .error,
                                           width: 1.0,
                                         ),
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(12.0),
@@ -363,7 +360,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                       fillColor: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               16.0, 0.0, 16.0, 0.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -383,9 +380,9 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                   text: 'Notify',
                                   options: FFButtonOptions(
                                     height: 60.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -397,7 +394,7 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 0.0,
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(12.0),
                                       topLeft: Radius.circular(0.0),
@@ -410,14 +407,14 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 14.0)),
+                    ].divide(const SizedBox(height: 14.0)),
                   ),
                 ),
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: Stack(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
@@ -435,9 +432,9 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                         tabletLandscape: false,
                       ))
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 80.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
@@ -456,9 +453,9 @@ class _ComingSoonWidgetState extends State<ComingSoonWidget> {
                         desktop: false,
                       ))
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 40.0, 0.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
